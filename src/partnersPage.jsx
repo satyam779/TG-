@@ -46,7 +46,7 @@ import stXaviersPublicSchoolChatrapur300x300 from "./assets/partnersPageImages/S
 //partners scroll images
 import maaEducation from "./assets/partnersPageImages/MAA Education Logo 400x400.png";
 import Austineducator from "./assets/partnersPageImages/Austin Educator.jpg";
-import sarvamKuteeram from "./assets/partnersPageImages/Sarvam Kuteeram.jpg";
+import sarvamKuteeram from "./assets/partnersPageImages/Sarvam Kutteram.jpg";
 import cyberpathashala from "./assets/partnersPageImages/Cyber Pathashala.png";
 import rmcElecricals from "./assets/partnersPageImages/rmcelecricals.png";
 import epicdigitallabs from "./assets/partnersPageImages/epicdigitallabs.png";
