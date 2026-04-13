@@ -17,7 +17,7 @@ import AboutRobothrone3 from './assets/RobothronePageImages/About Robothrone - 3
 
 //Eligibility & Age Divisions section images
 import junior from './assets/RobothronePageImages/Junior 8-10.png';
-import intermediate from './assets/RobothronePageImages/intermediate 11-13.png';
+import intermediate from './assets/RobothronePageImages/Intermediate 11-13.png';
 import senior from './assets/RobothronePageImages/Senior 14-16.png';
 //Competition Themes images
 import scratchProgrammingImage from './assets/RobothronePageImages/Scratch Programming Challenge.png';
