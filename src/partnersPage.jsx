@@ -33,7 +33,7 @@ import oakLeafHighSchool from "./assets/partnersPageImages/Oak Leaf High School.
 import phulbaniPublicSchool from "./assets/partnersPageImages/Phulbani Public School.jpg";
 import rakeshAcademyPilani from "./assets/partnersPageImages/Rakesh Academy Pilani.png";
 import sanskritiTheGurukulGuwahatiAssam from "./assets/partnersPageImages/Sanskriti The Gurukul, Guwahati, Assam.png";
-import santSinghSukhaSinghGroupOfSchoolsAndCollege from "./assets/partnersPageImages/Sant Singh Sukha Singh Group of Schools and College.jpg";
+import santSinghSukhaSinghGroupOfSchoolsAndCollege from "./assets/partnersPageImages/Sant Singh sukha Singh Group of schools and college.jpg";
 import shemfordSrSecSchoolHaldwani300x300 from "./assets/partnersPageImages/Shemford-Sr.-Sec.-School-Haldwani-300x300.jpg";
 import shemrockSchoolBalaghat from "./assets/partnersPageImages/Shemrock School Balaghat.jpeg";
 import shikshaBhavanMontessoriSchool from "./assets/partnersPageImages/Shiksha Bhavan Montessori School_.jpg";
@@ -44,10 +44,10 @@ import stJoansSchools from "./assets/partnersPageImages/St Joans Schools.png";
 import stMaryPublicInterCollege from "./assets/partnersPageImages/St Mary Public Inter College.png";
 import stXaviersPublicSchoolChatrapur300x300 from "./assets/partnersPageImages/St.-Xaviers-Public-School-Chatrapur-300x300.jpg";
 //partners scroll images
-import maaEducation from "./assets/partnersPageImages/MAA Education Logo 400x400.png";
+import maaEducation from "./assets/partnersPageImages/MAA Education logo 400x400.png";
 import Austineducator from "./assets/partnersPageImages/Austin Educator.jpg";
 import sarvamKuteeram from "./assets/partnersPageImages/Sarvam Kutteram.jpg";
-import cyberpathashala from "./assets/partnersPageImages/Cyber Pathashala.png";
+import cyberpathashala from "./assets/partnersPageImages/cyber pathashala.png";
 import rmcElecricals from "./assets/partnersPageImages/rmcelecricals.png";
 import epicdigitallabs from "./assets/partnersPageImages/epicdigitallabs.png";
 import vidyodam from "./assets/partnersPageImages/Vidyodam Logo.jpg";

@@ -18,7 +18,7 @@ function ImpactProgram() {
     jharkhand: new URL("./assets/impactImages/jharkhand.jpg", import.meta.url).href,
     odisha: new URL("./assets/impactImages/odisha.jpg", import.meta.url).href,
     gujarat: new URL("./assets/impactImages/gujarat.jpg", import.meta.url).href,
-    Lucknow: new URL("./assets/impactImages/Lucknow.jpg", import.meta.url).href,
+    Lucknow: new URL("./assets/impactImages/lucknow.jpg", import.meta.url).href,
     haryana: new URL("./assets/impactImages/haryana.jpeg", import.meta.url).href,
     hyderabad: new URL("./assets/impactImages/hyderabad.jpg", import.meta.url).href,
     oursolutions1: new URL("./assets/impactImages/Our solutions - 1.jpg", import.meta.url).href,
