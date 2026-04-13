@@ -25,9 +25,9 @@ import supportEcosystem4 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehens
 import supportEcosystem5 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 5.jpg";
 import supportEcosystem6 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 6.jpg";
 //Premium DIY Robotics Kits images
-import premiumDIYKit1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY Kit - 1.jpg";
-import premiumDIYKit2 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY Kit - 2.jpg";
-import premiumDIYKit3 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY Kit - 3.jpg";
+import premiumDIYKit1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 1.jpg";
+import premiumDIYKit2 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 2.jpg";
+import premiumDIYKit3 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 3.jpg";
 
 
 function AIRoboticsLabCBSE() {
