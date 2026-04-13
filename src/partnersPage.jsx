@@ -36,7 +36,7 @@ import sanskritiTheGurukulGuwahatiAssam from "./assets/partnersPageImages/Sanskr
 import santSinghSukhaSinghGroupOfSchoolsAndCollege from "./assets/partnersPageImages/Sant Singh sukha Singh Group of schools and college.jpg";
 import shemfordSrSecSchoolHaldwani300x300 from "./assets/partnersPageImages/Shemford-Sr.-Sec.-School-Haldwani-300x300.jpg";
 import shemrockSchoolBalaghat from "./assets/partnersPageImages/Shemrock School Balaghat.jpeg";
-import shikshaBhavanMontessoriSchool from "./assets/partnersPageImages/Shiksha Bhavan Montessori School_.jpg";
+import shikshaBhavanMontessoriSchool from "./assets/partnersPageImages/Shiksha bhavan Montessori School_.jpg";
 import shreeKunjilalGulkandiDeviPublicSchoolKagarol from "./assets/partnersPageImages/Shree Kunjilal Gulkandi Devi Public School - Kagarol.png";
 import spv from "./assets/partnersPageImages/SPV.png";
 import sriGuruTegBahadurPublicSchool from "./assets/partnersPageImages/Sri Guru Teg Bahadur Public School.png";
