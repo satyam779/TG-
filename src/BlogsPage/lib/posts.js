@@ -1,6 +1,6 @@
 import { isSupabaseConfigured, supabase } from "./supabase";
 
-const FALLBACK_IMAGE = "/children.jpg";
+const FALLBACK_IMAGE = "/children.webp";
 
 function formatPostDate(value) {
   if (!value) {

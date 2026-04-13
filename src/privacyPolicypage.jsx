@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from './components/SEO';
 import './privacyPolicyPage.css';
 
 export default function PrivacyPolicyPage() {
@@ -69,6 +70,11 @@ export default function PrivacyPolicyPage() {
 
     return (
         <div className="privacy-policy-page-root">
+            <SEO 
+                title="Privacy Policy | TechyGuide"
+                description="Read TechyGuide's privacy policy to understand how we collect, use, and safeguard your personal information."
+                canonical="https://techyguide.com/privacy-policy"
+            />
             <style>{`
                 .privacy-policy-page-root .toc ul {
                     display: block !important;
@@ -105,10 +111,6 @@ export default function PrivacyPolicyPage() {
                     background: linear-gradient(90deg, #eff6ff 0%, transparent 100%) !important;
                 }
             `}</style>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-            <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-            <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
             <div className="container">
                 

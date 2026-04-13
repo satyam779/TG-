@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SEO from './components/SEO';
 import './CheckOutPage.css';
 
 const CheckOutPage = () => {
@@ -24,16 +25,6 @@ const CheckOutPage = () => {
 	const ORDER_PAY_BASE_URL = import.meta.env.VITE_WP_ORDER_PAY_BASE_URL || 'https://www.techyguide.in';
 	const formatPrice = (price) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(price);
 
-  useEffect(() => {
-	const link = document.createElement('link');
-	link.rel = 'stylesheet';
-	link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-	document.head.appendChild(link);
-
-	return () => {
-	  document.head.removeChild(link);
-	};
-  }, []);
 
   useEffect(() => {
 	const savedData = JSON.parse(localStorage.getItem('checkoutData'));
@@ -182,6 +173,11 @@ const CheckOutPage = () => {
 
   return (
 	<div className="checkout-page-root checkout-page">
+	  <SEO 
+		title="Checkout | TechyGuide Shop"
+		description="Securely complete your purchase of TechyGuide robotics kits and STEM courses."
+		canonical="https://techyguide.com/checkout"
+	  />
 	  <div className="checkout-container">
           
 		  <div className="checkout-left">

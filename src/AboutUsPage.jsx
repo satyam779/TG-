@@ -1,52 +1,31 @@
 import { useEffect } from 'react'
+import SEO from './components/SEO';
 import './AboutUsPage.css'
-import teamimg1 from './assets/AboutUsImages/Team 1.png';
-import founderImage from './assets/AboutUsImages/5.png';
-import workspace1 from './assets/AboutUsImages/Our Team & Workspace - 1.jpg';
-import workspace2 from './assets/AboutUsImages/Our Team & Workspace - 2.jpg';
-import workspace3 from './assets/AboutUsImages/Our Team & Workspace - 3.jpg';
-import workspace4 from './assets/AboutUsImages/Our Team & Workspace - 4.jpg';
-import ourjourney from './assets/AboutUsImages/Asset_Website_About us page - Milestone 1.png';
-import heroImage from './assets/AboutUsImages/Hero.jpg';
+import teamimg1 from './assets/AboutUsImages/Team 1.webp';
+import founderImage from './assets/AboutUsImages/5.webp';
+import workspace1 from './assets/AboutUsImages/Our Team & Workspace - 1.webp';
+import workspace2 from './assets/AboutUsImages/Our Team & Workspace - 2.webp';
+import workspace3 from './assets/AboutUsImages/Our Team & Workspace - 3.webp';
+import workspace4 from './assets/AboutUsImages/Our Team & Workspace - 4.webp';
+import ourjourney from './assets/AboutUsImages/Asset_Website_About us page - Milestone 1.webp';
+import heroImage from './assets/AboutUsImages/Hero.webp';
 
 function AboutUsPage() {
 	const workspaceImages = [
-		{ src: {workspace1}, alt: 'College campus block' },
-		{ src: {workspace2}, alt: 'College library tower' },
-		{ src: {workspace3}, alt: 'College innovation studio' },
-		{ src: {workspace4}, alt: 'Student activity zone' }
+		{ src: workspace1, alt: 'College campus block' },
+		{ src: workspace2, alt: 'College library tower' },
+		{ src: workspace3, alt: 'College innovation studio' },
+		{ src: workspace4, alt: 'Student activity zone' }
 	];
 
-	// Set SEO metadata for About Us page
-	useEffect(() => {
-		// Set page title
-		document.title = 'About | TechyGuide STEM, Robotics & AI Education Company';
-
-		// Set or update meta description
-		let metaDescription = document.querySelector('meta[name="description"]');
-		if (metaDescription) {
-			metaDescription.setAttribute('content', 'Learn about TechyGuide, a STEM education and technology company providing robotics kits, AI courses, coding programs, IoT solutions, and hands-on innovation learning.');
-		} else {
-			metaDescription = document.createElement('meta');
-			metaDescription.setAttribute('name', 'description');
-			metaDescription.setAttribute('content', 'Learn about TechyGuide, a STEM education and technology company providing robotics kits, AI courses, coding programs, IoT solutions, and hands-on innovation learning.');
-			document.head.appendChild(metaDescription);
-		}
-
-		// Add or update canonical tag
-		let canonicalLink = document.querySelector('link[rel="canonical"]');
-		if (!canonicalLink) {
-			canonicalLink = document.createElement('link');
-			canonicalLink.setAttribute('rel', 'canonical');
-			canonicalLink.setAttribute('href', 'https://techyguide.com/about-techyguide');
-			document.head.appendChild(canonicalLink);
-		} else {
-			canonicalLink.setAttribute('href', 'https://techyguide.com/about-techyguide');
-		}
-	}, []);
 
 	return (
 		<div className="aboutus-page-root">
+			<SEO 
+				title="About | TechyGuide STEM, Robotics & AI Education Company"
+				description="Learn about TechyGuide, a STEM education and technology company providing robotics kits, AI courses, coding programs, IoT solutions, and hands-on innovation learning."
+				canonical="https://techyguide.com/about-techyguide"
+			/>
 			<section
 				className="hero"
 				style={{

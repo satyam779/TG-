@@ -1,51 +1,23 @@
 import React, { useEffect, useRef } from "react";
+import SEO from "../components/SEO";
 import "./AddOnKit.css";
 // hero section image
-import HeroImage from "../assets/ProductsAddOnImages/Hero image - 2.png";
+import HeroImage from "../assets/ProductsAddOnImages/Hero image - 2.webp";
 
 
 //kit images
-import roboticArmKit from "../assets/ProductsAddOnImages/Robotic Arm Kit.jpg";
-import TechBoTElectronicsKit from "../assets/ProductsAddOnImages/TechBoT Electronics Kit.jpg";
-import HumanoidKitIBOT from "../assets/ProductsAddOnImages/Humanoid Kit (I-BOT).jpg";
-import OttoStarterKit from "../assets/ProductsAddOnImages/Otto Starter Kit.jpg";
-import OttoLeeKit from "../assets/ProductsAddOnImages/Otto Lee Kit.jpg";
-import OttoSpiderKit from "../assets/ProductsAddOnImages/Otto Spider Kit.jpg";
+import roboticArmKit from "../assets/ProductsAddOnImages/Robotic Arm Kit.webp";
+import TechBoTElectronicsKit from "../assets/ProductsAddOnImages/TechBoT Electronics Kit.webp";
+import HumanoidKitIBOT from "../assets/ProductsAddOnImages/Humanoid Kit (I-BOT).webp";
+import OttoStarterKit from "../assets/ProductsAddOnImages/Otto Starter Kit.webp";
+import OttoLeeKit from "../assets/ProductsAddOnImages/Otto Lee Kit.webp";
+import OttoSpiderKit from "../assets/ProductsAddOnImages/Otto Spider Kit.webp";
 
 
 const AddOnKit = () => {
 	const addonHeroRef = useRef(null);
 	const addonHeroCanvasRef = useRef(null);
 
-	useEffect(() => {
-		document.title = "Add-on Students Robotics Kits | STEM & AI Expandable Kits";
-
-		let metaDescription = document.querySelector('meta[name="description"]');
-		if (metaDescription) {
-			metaDescription.setAttribute(
-				"content",
-				"Expandable advanced add-on robotics kits for students including robotic arm, humanoid robots, electronics kits, and Arduino learning kits designed for STEM education."
-			);
-		} else {
-			metaDescription = document.createElement("meta");
-			metaDescription.setAttribute("name", "description");
-			metaDescription.setAttribute(
-				"content",
-				"Expandable advanced add-on robotics kits for students including robotic arm, humanoid robots, electronics kits, and Arduino learning kits designed for STEM education."
-			);
-			document.head.appendChild(metaDescription);
-		}
-
-		let canonicalLink = document.querySelector('link[rel="canonical"]');
-		if (canonicalLink) {
-			canonicalLink.setAttribute("href", "https://techyguide.com/add-on-robotics-kits-for-students");
-		} else {
-			canonicalLink = document.createElement("link");
-			canonicalLink.setAttribute("rel", "canonical");
-			canonicalLink.setAttribute("href", "https://techyguide.com/add-on-robotics-kits-for-students");
-			document.head.appendChild(canonicalLink);
-		}
-	}, []);
 
 	useEffect(() => {
 		const hero = addonHeroRef.current;
@@ -616,6 +588,11 @@ const AddOnKit = () => {
 
 	return (
 		<div className="addonkit-page-root">
+			<SEO 
+				title="Add-on Students Robotics Kits | STEM & AI Expandable Kits"
+				description="Expandable advanced add-on robotics kits for students including robotic arm, humanoid robots, electronics kits, and Arduino learning kits designed for STEM education."
+				canonical="https://techyguide.com/add-on-robotics-kits-for-students"
+			/>
 			<div className="addonkit">
 				<header className="addon-hero-root" id="home" ref={addonHeroRef}>
 					<canvas className="addon-hero-canvas" aria-hidden="true" ref={addonHeroCanvasRef}></canvas>

@@ -1,79 +1,35 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import './CompositeSkillLab.css';
-import LogoImg from '../assets/ForSchoolsCompositeSkillLabImages/Logo_TG_Tagline 2.png';
-import LabImage1 from '../assets/ForSchoolsCompositeSkillLabImages/IMG20240604113822.jpg';
-import LabImage2 from '../assets/ForSchoolsCompositeSkillLabImages/IMG20241003111950.jpg';
-import LabImage3 from '../assets/ForSchoolsCompositeSkillLabImages/Media (8).jpeg';
-import LabImage4 from '../assets/ForSchoolsCompositeSkillLabImages/WhatsApp Image 2021-10-04 at 11.56.27 AM (2).jpeg';
-import LabImage5 from '../assets/ForSchoolsCompositeSkillLabImages/WhatsApp Image 2021-08-14 at 17.56.00 (1).jpeg';
-import LabImage6 from '../assets/ForSchoolsCompositeSkillLabImages/WhatsApp Image 2021-09-01 at 23.11.56.jpeg';
+import LogoImg from '../assets/ForSchoolsCompositeSkillLabImages/Logo_TG_Tagline 2.webp';
+import LabImage1 from '../assets/ForSchoolsCompositeSkillLabImages/IMG20240604113822.webp';
+import LabImage2 from '../assets/ForSchoolsCompositeSkillLabImages/IMG20241003111950.webp';
+import LabImage3 from '../assets/ForSchoolsCompositeSkillLabImages/Media (8).webp';
+import LabImage4 from '../assets/ForSchoolsCompositeSkillLabImages/WhatsApp Image 2021-10-04 at 11.56.27 AM (2).webp';
+import LabImage5 from '../assets/ForSchoolsCompositeSkillLabImages/WhatsApp Image 2021-08-14 at 17.56.00 (1).webp';
+import LabImage6 from '../assets/ForSchoolsCompositeSkillLabImages/WhatsApp Image 2021-09-01 at 23.11.56.webp';
 // hero image
-import HeroImage from '../assets/ForSchoolsCompositeSkillLabImages/Hero section - Composite skill lab V1.jpg';
-import HeroImage2 from '../assets/ForSchoolsCompositeSkillLabImages/IMG20240604113822.jpg';
+import HeroImage from '../assets/ForSchoolsCompositeSkillLabImages/Hero section - Composite skill lab V1.webp';
+import HeroImage2 from '../assets/ForSchoolsCompositeSkillLabImages/IMG20240604113822.webp';
 //Purpose & Strategic Benefits image
-import PurposeStrategicBenefits1 from '../assets/ForSchoolsCompositeSkillLabImages/Purpose & Strategic Benefits - 1.jpg';
-import PurposeStrategicBenefits2 from '../assets/ForSchoolsCompositeSkillLabImages/Purpose & Strategic Benefits - 2.jpg';
-import PurposeStrategicBenefits3 from '../assets/ForSchoolsCompositeSkillLabImages/Purpose & Strategic Benefits - 3.jpg';
-import PurposeStrategicBenefits4 from '../assets/ForSchoolsCompositeSkillLabImages/Purpose & Strategic Benefits - 4.jpg';
+import PurposeStrategicBenefits1 from '../assets/ForSchoolsCompositeSkillLabImages/Purpose & Strategic Benefits - 1.webp';
+import PurposeStrategicBenefits2 from '../assets/ForSchoolsCompositeSkillLabImages/Purpose & Strategic Benefits - 2.webp';
+import PurposeStrategicBenefits3 from '../assets/ForSchoolsCompositeSkillLabImages/Purpose & Strategic Benefits - 3.webp';
+import PurposeStrategicBenefits4 from '../assets/ForSchoolsCompositeSkillLabImages/Purpose & Strategic Benefits - 4.webp';
 //Curriculum & Skill Modules images
-import CurriculumSkillModules1 from '../assets/ForSchoolsCompositeSkillLabImages/Coding & Artificial Intelligence.png';
-import CurriculumSkillModules2 from '../assets/ForSchoolsCompositeSkillLabImages/AR_VR Technology.png';
-import CurriculumSkillModules3 from '../assets/ForSchoolsCompositeSkillLabImages/Design & Mass Media.png';
-import CurriculumSkillModules4 from '../assets/ForSchoolsCompositeSkillLabImages/STEM Robotics.png';
-import CurriculumSkillModules5 from '../assets/ForSchoolsCompositeSkillLabImages/3D Printing & CAD.png';
-import CurriculumSkillModules6 from '../assets/ForSchoolsCompositeSkillLabImages/Electronics & IoT.png';
-import CurriculumSkillModules7 from '../assets/ForSchoolsCompositeSkillLabImages/Machinery & Mechanics.png';
-import CurriculumSkillModules8 from '../assets/ForSchoolsCompositeSkillLabImages/Handicrafts & Arts.png';
-import CurriculumSkillModules9 from '../assets/ForSchoolsCompositeSkillLabImages/Aerospace & Drones.png';
+import CurriculumSkillModules1 from '../assets/ForSchoolsCompositeSkillLabImages/Coding & Artificial Intelligence.webp';
+import CurriculumSkillModules2 from '../assets/ForSchoolsCompositeSkillLabImages/AR_VR Technology.webp';
+import CurriculumSkillModules3 from '../assets/ForSchoolsCompositeSkillLabImages/Design & Mass Media.webp';
+import CurriculumSkillModules4 from '../assets/ForSchoolsCompositeSkillLabImages/STEM Robotics.webp';
+import CurriculumSkillModules5 from '../assets/ForSchoolsCompositeSkillLabImages/3D Printing & CAD.webp';
+import CurriculumSkillModules6 from '../assets/ForSchoolsCompositeSkillLabImages/Electronics & IoT.webp';
+import CurriculumSkillModules7 from '../assets/ForSchoolsCompositeSkillLabImages/Machinery & Mechanics.webp';
+import CurriculumSkillModules8 from '../assets/ForSchoolsCompositeSkillLabImages/Handicrafts & Arts.webp';
+import CurriculumSkillModules9 from '../assets/ForSchoolsCompositeSkillLabImages/Aerospace & Drones.webp';
 
 
 
 export default function CompositeSkillLab() {
-  // SEO Meta Tags & Document Title
-  useEffect(() => {
-    // Update document title
-    document.title = 'CBSE Composite Skill Lab Setup | 600 Sq Ft';
-
-    // Update or create meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.name = 'description';
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content = 'Complete CBSE Composite Skill Lab setup for schools with 600 sq ft mandatory infrastructure. End-to-end lab design, equipment, training & compliance support.';
-
-    // Set canonical URL
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = 'https://techyguide.com/cbse-composite-skill-lab-setup-for-schools-india';
-
-    // Update or create Open Graph tags
-    const ogTags = {
-      'og:title': 'CBSE Composite Skill Lab Setup | 600 Sq Ft Mandatory',
-      'og:description': 'Complete CBSE Composite Skill Lab setup for schools with 600 sq ft mandatory infrastructure. End-to-end lab design, equipment, training & compliance support.',
-      'og:url': 'https://techyguide.com/cbse-composite-skill-lab-setup-for-schools-india',
-      'og:type': 'website'
-    };
-
-    Object.entries(ogTags).forEach(([property, content]) => {
-      let ogTag = document.querySelector(`meta[property="${property}"]`);
-      if (!ogTag) {
-        ogTag = document.createElement('meta');
-        ogTag.setAttribute('property', property);
-        document.head.appendChild(ogTag);
-      }
-      ogTag.content = content;
-    });
-
-    return () => {
-      document.title = 'TechyGuide';
-    };
-  }, []);
 
   // DOM Interactions & Animations
   useEffect(() => {
@@ -256,6 +212,11 @@ export default function CompositeSkillLab() {
 
   return (
     <div className="composite-skill-lab-root">
+      <SEO 
+        title="CBSE Composite Skill Lab Setup | 600 Sq Ft"
+        description="Complete CBSE Composite Skill Lab setup for schools with 600 sq ft mandatory infrastructure. End-to-end lab design, equipment, training & compliance support."
+        canonical="https://techyguide.com/cbse-composite-skill-lab-setup-for-schools-india"
+      />
       <a href="#contact-section" className="floating-cta">
         <i className="fas fa-file-signature"></i> Get Compliance Quote
       </a>

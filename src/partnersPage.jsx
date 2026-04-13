@@ -1,116 +1,62 @@
 import { useEffect, useRef } from "react";
+import SEO from "./components/SEO";
 import "./partnersPage.css";
 import heroVideoSrc from "./assets/partnersPageImages/8523654-hd_1920_1080_25fps.mp4";
-import academicHeightsLogo from "./assets/partnersPageImages/academic-heights-logo.png";
-import agpnImage from "./assets/partnersPageImages/AGPN.jpg";
-import armyGoodwillSchoolUri from "./assets/partnersPageImages/Army Goodwill School Uri.png";
-import bhatkalEducationSociety from "./assets/partnersPageImages/Bhatkal Education Society.jpeg";
-import cbLogo from "./assets/partnersPageImages/CB Logo.jpg";
-import codeKidsTechnology from "./assets/partnersPageImages/Code Kids Technology.jpg";
-import deepRootsPreSchoolBikaner from "./assets/partnersPageImages/Deep Roots Pre School Bikaner.png";
-import delhiCambridgeSchool from "./assets/partnersPageImages/Delhi Cambridge School.png";
-import dhanraj from "./assets/partnersPageImages/Dhanraj.png";
-import evergreenSchool from "./assets/partnersPageImages/Evergreen School.jpeg";
-import govtGirlsHighSchoolRairangpurOdisha from "./assets/partnersPageImages/Govt. Girls High School, Rairangpur, Odisha.png";
-import greenValleySchoolTebo from "./assets/partnersPageImages/Green Valley School Tebo.png";
-import gyanVikashSchool from "./assets/partnersPageImages/Gyan Vikash School.jpg";
-import gurukulPublicSchoolOdisha from "./assets/partnersPageImages/Gurukul Public School, Odisha.png";
-import gvLovo from "./assets/partnersPageImages/GV Lovo.png";
-import harimayaInternationalSchool from "./assets/partnersPageImages/Harimaya International School.png";
-import hemSheela from "./assets/partnersPageImages/HemSheela.png";
-import immortalInternationalSchool from "./assets/partnersPageImages/Immortal International School.jpeg";
-import jajooInternationalSchool from "./assets/partnersPageImages/Jajoo International School.png";
-import jivatKashi from "./assets/partnersPageImages/Jivat-Kashi.jpg";
-import kvs from "./assets/partnersPageImages/KVS.jpg";
-import magadhamInternationalSchool from "./assets/partnersPageImages/Magadham International School.png";
-import montfortCentreOfEducationTuraMeghalaya from "./assets/partnersPageImages/Montfort Centre of Education, Tura, Meghalaya.png";
-import motherSuhagEducationCentreFatehpur from "./assets/partnersPageImages/Mother Suhag Education Centre Fatehpur.png";
-import mungiabariLogo from "./assets/partnersPageImages/Mungiabari Logo.jpg";
-import nilbagan from "./assets/partnersPageImages/Nilbagan.png";
-import nobleSchoolAlipur from "./assets/partnersPageImages/Noble School Alipur.png";
-import northDelhiPublicSchool from "./assets/partnersPageImages/North Delhi Public School.png";
-import oakLeafHighSchool from "./assets/partnersPageImages/Oak Leaf High School.jpg";
-import phulbaniPublicSchool from "./assets/partnersPageImages/Phulbani Public School.jpg";
-import rakeshAcademyPilani from "./assets/partnersPageImages/Rakesh Academy Pilani.png";
-import sanskritiTheGurukulGuwahatiAssam from "./assets/partnersPageImages/Sanskriti The Gurukul, Guwahati, Assam.png";
-import santSinghSukhaSinghGroupOfSchoolsAndCollege from "./assets/partnersPageImages/Sant Singh sukha Singh Group of schools and college.jpg";
-import shemfordSrSecSchoolHaldwani300x300 from "./assets/partnersPageImages/Shemford-Sr.-Sec.-School-Haldwani-300x300.jpg";
-import shemrockSchoolBalaghat from "./assets/partnersPageImages/Shemrock School Balaghat.jpeg";
-import shikshaBhavanMontessoriSchool from "./assets/partnersPageImages/Shiksha bhavan Montessori School_.jpg";
-import shreeKunjilalGulkandiDeviPublicSchoolKagarol from "./assets/partnersPageImages/Shree Kunjilal Gulkandi Devi Public School - Kagarol.png";
-import spv from "./assets/partnersPageImages/SPV.png";
-import sriGuruTegBahadurPublicSchool from "./assets/partnersPageImages/Sri Guru Teg Bahadur Public School.png";
-import stJoansSchools from "./assets/partnersPageImages/St Joans Schools.png";
-import stMaryPublicInterCollege from "./assets/partnersPageImages/St Mary Public Inter College.png";
-import stXaviersPublicSchoolChatrapur300x300 from "./assets/partnersPageImages/St.-Xaviers-Public-School-Chatrapur-300x300.jpg";
+import academicHeightsLogo from "./assets/partnersPageImages/academic-heights-logo.webp";
+import agpnImage from "./assets/partnersPageImages/AGPN.webp";
+import armyGoodwillSchoolUri from "./assets/partnersPageImages/Army Goodwill School Uri.webp";
+import bhatkalEducationSociety from "./assets/partnersPageImages/Bhatkal Education Society.webp";
+import cbLogo from "./assets/partnersPageImages/CB Logo.webp";
+import codeKidsTechnology from "./assets/partnersPageImages/Code Kids Technology.webp";
+import deepRootsPreSchoolBikaner from "./assets/partnersPageImages/Deep Roots Pre School Bikaner.webp";
+import delhiCambridgeSchool from "./assets/partnersPageImages/Delhi Cambridge School.webp";
+import dhanraj from "./assets/partnersPageImages/Dhanraj.webp";
+import evergreenSchool from "./assets/partnersPageImages/Evergreen School.webp";
+import govtGirlsHighSchoolRairangpurOdisha from "./assets/partnersPageImages/Govt. Girls High School, Rairangpur, Odisha.webp";
+import greenValleySchoolTebo from "./assets/partnersPageImages/Green Valley School Tebo.webp";
+import gyanVikashSchool from "./assets/partnersPageImages/Gyan Vikash School.webp";
+import gurukulPublicSchoolOdisha from "./assets/partnersPageImages/Gurukul Public School, Odisha.webp";
+import gvLovo from "./assets/partnersPageImages/GV Lovo.webp";
+import harimayaInternationalSchool from "./assets/partnersPageImages/Harimaya International School.webp";
+import hemSheela from "./assets/partnersPageImages/HemSheela.webp";
+import immortalInternationalSchool from "./assets/partnersPageImages/Immortal International School.webp";
+import jajooInternationalSchool from "./assets/partnersPageImages/Jajoo International School.webp";
+import jivatKashi from "./assets/partnersPageImages/Jivat-Kashi.webp";
+import kvs from "./assets/partnersPageImages/KVS.webp";
+import magadhamInternationalSchool from "./assets/partnersPageImages/Magadham International School.webp";
+import montfortCentreOfEducationTuraMeghalaya from "./assets/partnersPageImages/Montfort Centre of Education, Tura, Meghalaya.webp";
+import motherSuhagEducationCentreFatehpur from "./assets/partnersPageImages/Mother Suhag Education Centre Fatehpur.webp";
+import mungiabariLogo from "./assets/partnersPageImages/Mungiabari Logo.webp";
+import nilbagan from "./assets/partnersPageImages/Nilbagan.webp";
+import nobleSchoolAlipur from "./assets/partnersPageImages/Noble School Alipur.webp";
+import northDelhiPublicSchool from "./assets/partnersPageImages/North Delhi Public School.webp";
+import oakLeafHighSchool from "./assets/partnersPageImages/Oak Leaf High School.webp";
+import phulbaniPublicSchool from "./assets/partnersPageImages/Phulbani Public School.webp";
+import rakeshAcademyPilani from "./assets/partnersPageImages/Rakesh Academy Pilani.webp";
+import sanskritiTheGurukulGuwahatiAssam from "./assets/partnersPageImages/Sanskriti The Gurukul, Guwahati, Assam.webp";
+import santSinghSukhaSinghGroupOfSchoolsAndCollege from "./assets/partnersPageImages/Sant Singh sukha Singh Group of schools and college.webp";
+import shemfordSrSecSchoolHaldwani300x300 from "./assets/partnersPageImages/Shemford-Sr.-Sec.-School-Haldwani-300x300.webp";
+import shemrockSchoolBalaghat from "./assets/partnersPageImages/Shemrock School Balaghat.webp";
+import shikshaBhavanMontessoriSchool from "./assets/partnersPageImages/Shiksha bhavan Montessori School_.webp";
+import shreeKunjilalGulkandiDeviPublicSchoolKagarol from "./assets/partnersPageImages/Shree Kunjilal Gulkandi Devi Public School - Kagarol.webp";
+import spv from "./assets/partnersPageImages/SPV.webp";
+import sriGuruTegBahadurPublicSchool from "./assets/partnersPageImages/Sri Guru Teg Bahadur Public School.webp";
+import stJoansSchools from "./assets/partnersPageImages/St Joans Schools.webp";
+import stMaryPublicInterCollege from "./assets/partnersPageImages/St Mary Public Inter College.webp";
+import stXaviersPublicSchoolChatrapur300x300 from "./assets/partnersPageImages/St.-Xaviers-Public-School-Chatrapur-300x300.webp";
 //partners scroll images
-import maaEducation from "./assets/partnersPageImages/MAA Education logo 400x400.png";
-import Austineducator from "./assets/partnersPageImages/Austin Educator.jpg";
-import sarvamKuteeram from "./assets/partnersPageImages/Sarvam Kutteram.jpg";
-import cyberpathashala from "./assets/partnersPageImages/cyber pathashala.png";
-import rmcElecricals from "./assets/partnersPageImages/rmcelecricals.png";
-import epicdigitallabs from "./assets/partnersPageImages/epicdigitallabs.png";
-import vidyodam from "./assets/partnersPageImages/Vidyodam Logo.jpg";
+import maaEducation from "./assets/partnersPageImages/MAA Education logo 400x400.webp";
+import Austineducator from "./assets/partnersPageImages/Austin Educator.webp";
+import sarvamKuteeram from "./assets/partnersPageImages/Sarvam Kutteram.webp";
+import cyberpathashala from "./assets/partnersPageImages/cyber pathashala.webp";
+import rmcElecricals from "./assets/partnersPageImages/rmcelecricals.webp";
+import epicdigitallabs from "./assets/partnersPageImages/epicdigitallabs.webp";
+import vidyodam from "./assets/partnersPageImages/Vidyodam Logo.webp";
 
 function PartnersPage() {
 	const rootRef = useRef(null);
 	const videoRef = useRef(null);
 
-	useEffect(() => {
-		const previousTitle = document.title;
-		const existingMetaDescription = document.querySelector('meta[name="description"]');
-		const previousMetaDescriptionContent = existingMetaDescription?.getAttribute("content") ?? null;
-		const existingCanonical = document.querySelector('link[rel="canonical"]');
-		const previousCanonicalHref = existingCanonical?.getAttribute("href") ?? null;
-
-		document.title = "STEM Education Partners in India | TechyGuide Network";
-
-		let metaDescription = existingMetaDescription;
-		if (metaDescription) {
-			metaDescription.setAttribute(
-				"content",
-				"Discover TechyGuide's partner network across India including STEM lab collaborators, robotics education partners, and technology learning institutions."
-			);
-		} else {
-			metaDescription = document.createElement("meta");
-			metaDescription.setAttribute("name", "description");
-			metaDescription.setAttribute(
-				"content",
-				"Discover TechyGuide's partner network across India including STEM lab collaborators, robotics education partners, and technology learning institutions."
-			);
-			document.head.appendChild(metaDescription);
-		}
-
-		let canonicalLink = existingCanonical;
-		if (canonicalLink) {
-			canonicalLink.setAttribute("href", "https://techyguide.com/techyguide-partners-stem-education-india");
-		} else {
-			canonicalLink = document.createElement("link");
-			canonicalLink.setAttribute("rel", "canonical");
-			canonicalLink.setAttribute("href", "https://techyguide.com/techyguide-partners-stem-education-india");
-			document.head.appendChild(canonicalLink);
-		}
-
-		return () => {
-			document.title = previousTitle;
-
-			if (metaDescription) {
-				if (previousMetaDescriptionContent === null && !existingMetaDescription) {
-					metaDescription.remove();
-				} else if (previousMetaDescriptionContent !== null) {
-					metaDescription.setAttribute("content", previousMetaDescriptionContent);
-				}
-			}
-
-			if (canonicalLink) {
-				if (previousCanonicalHref === null && !existingCanonical) {
-					canonicalLink.remove();
-				} else if (previousCanonicalHref !== null) {
-					canonicalLink.setAttribute("href", previousCanonicalHref);
-				}
-			}
-		};
-	}, []);
 
 	const institutionalSchools = [
 		{ name: "Shemrock School Balaghat", logo: shemrockSchoolBalaghat },
@@ -316,6 +262,11 @@ function PartnersPage() {
 
 	return (
 		<div className="partners-page-root" ref={rootRef}>
+			<SEO 
+				title="STEM Education Partners in India | TechyGuide Network"
+				description="Discover TechyGuide's partner network across India including STEM lab collaborators, robotics education partners, and technology learning institutions."
+				canonical="https://techyguide.com/techyguide-partners-stem-education-india"
+			/>
 			<section className="partners-hero-video-section">
 				<video
 					ref={videoRef}

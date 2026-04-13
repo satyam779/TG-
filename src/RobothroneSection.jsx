@@ -1,5 +1,5 @@
-import robothroneImage from './assets/Robothrone.jpg';
-import robothroneLogo from './assets/Robothrone Logo.png';
+import robothroneImage from './assets/Robothrone.webp';
+import robothroneLogo from './assets/Robothrone Logo.webp';
 import './RobothroneSection.css';
 
 function RobothroneSection() {

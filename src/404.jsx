@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import SEO from "./components/SEO";
 import "./404.css";
 
 function NotFound() {
@@ -9,32 +10,12 @@ function NotFound() {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const fontLink = document.createElement("link");
-    fontLink.rel = "preconnect";
-    fontLink.href = "https://fonts.googleapis.com";
-
-    const fontLink2 = document.createElement("link");
-    fontLink2.rel = "preconnect";
-    fontLink2.href = "https://fonts.gstatic.com";
-    fontLink2.crossOrigin = "";
-
-    const fontSheet = document.createElement("link");
-    fontSheet.rel = "stylesheet";
-    fontSheet.href = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap";
-
-    document.head.appendChild(fontLink);
-    document.head.appendChild(fontLink2);
-    document.head.appendChild(fontSheet);
 
     const canvas = canvasRef.current;
     const ctx = canvas ? canvas.getContext("2d") : null;
 
     if (!canvas || !ctx) {
-      return () => {
-        if (fontLink.parentNode) fontLink.parentNode.removeChild(fontLink);
-        if (fontLink2.parentNode) fontLink2.parentNode.removeChild(fontLink2);
-        if (fontSheet.parentNode) fontSheet.parentNode.removeChild(fontSheet);
-      };
+      return () => {};
     }
 
     let W;
@@ -113,15 +94,15 @@ function NotFound() {
     return () => {
       window.removeEventListener("resize", resize);
       if (rafId) window.cancelAnimationFrame(rafId);
-
-      if (fontLink.parentNode) fontLink.parentNode.removeChild(fontLink);
-      if (fontLink2.parentNode) fontLink2.parentNode.removeChild(fontLink2);
-      if (fontSheet.parentNode) fontSheet.parentNode.removeChild(fontSheet);
     };
   }, []);
 
   return (
     <div className="not-found-page">
+      <SEO 
+        title="404 - Page Not Found | TechyGuide"
+        description="The page you are looking for does not exist. Explore TechyGuide STEM, robotics, and AI courses."
+      />
       <canvas id="bg404" ref={canvasRef}></canvas>
       <div className="background">
         <div className="grid-pattern"></div>

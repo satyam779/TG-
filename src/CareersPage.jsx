@@ -1,15 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import SEO from './components/SEO';
 import './CareersPage.css';
 //About Working at TechyGuide images
-import aboutWorking1 from './assets/CareersPageImages/About Working at TechyGuide - 1.jpg';
-import aboutWorking2 from './assets/CareersPageImages/About Working at TechyGuide - 2.jpg';
-import aboutWorking3 from './assets/CareersPageImages/About Working at TechyGuide - 3.jpg';
-import aboutWorking4 from './assets/CareersPageImages/About Working at TechyGuide - 4.jpg';
+import aboutWorking1 from './assets/CareersPageImages/About Working at TechyGuide - 1.webp';
+import aboutWorking2 from './assets/CareersPageImages/About Working at TechyGuide - 2.webp';
+import aboutWorking3 from './assets/CareersPageImages/About Working at TechyGuide - 3.webp';
+import aboutWorking4 from './assets/CareersPageImages/About Working at TechyGuide - 4.webp';
 //Why Join Us images
-import whyJionUs1 from './assets/CareersPageImages/Why Join Us - 1.jpg';
-import whyJionUs2 from './assets/CareersPageImages/Why Join Us - 2.jpg';
-import whyJionUs3 from './assets/CareersPageImages/Why Join Us - 3.jpg';
-import whyJionUs4 from './assets/CareersPageImages/Why Join Us - 4.jpg';
+import whyJionUs1 from './assets/CareersPageImages/Why Join Us - 1.webp';
+import whyJionUs2 from './assets/CareersPageImages/Why Join Us - 2.webp';
+import whyJionUs3 from './assets/CareersPageImages/Why Join Us - 3.webp';
+import whyJionUs4 from './assets/CareersPageImages/Why Join Us - 4.webp';
 
 
 
@@ -126,33 +127,6 @@ function CareersPage() {
     []
   );
 
-  useEffect(() => {
-    document.title = 'Careers at TechyGuide | STEM, Robotics, AI & IoT Jobs';
-
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        'content',
-        'Explore careers at TechyGuide in STEM education, robotics, AI, and IoT. Join our team of engineers, educators, and innovators.'
-      );
-    } else {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      metaDescription.setAttribute(
-        'content',
-        'Explore careers at TechyGuide in STEM education, robotics, AI, and IoT. Join our team of engineers, educators, and innovators.'
-      );
-      document.head.appendChild(metaDescription);
-    }
-
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.setAttribute('href', 'https://techyguide.com/careers-techyguide-stem-education-jobs');
-  }, []);
 
   const scrollToOpenings = () => {
     document.getElementById('tg-careers-openings')?.scrollIntoView({
@@ -268,6 +242,11 @@ function CareersPage() {
 
   return (
     <main className="tg-careers-page">
+      <SEO 
+        title="Careers at TechyGuide | STEM, Robotics, AI & IoT Jobs"
+        description="Explore careers at TechyGuide in STEM education, robotics, AI, and IoT. Join our team of engineers, educators, and innovators."
+        canonical="https://techyguide.com/careers-techyguide-stem-education-jobs"
+      />
       <section className="tg-careers-hero">
         <div className="tg-careers-hero-shapes" aria-hidden="true">
           <span className="tg-careers-dot tg-careers-dot-1"></span>

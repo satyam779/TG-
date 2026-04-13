@@ -1,42 +1,43 @@
 import React, { useEffect } from 'react';
+import SEO from './components/SEO';
 import './FranchisePage.css';
 //why choose techyguide section images
-import whychooseTechyguide1 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 1.jpg';
-import whychooseTechyguide2 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 2.jpg';
-import whychooseTechyguide3 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 3.jpg';
-import whychooseTechyguide4 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 4.jpg';
+import whychooseTechyguide1 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 1.webp';
+import whychooseTechyguide2 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 2.webp';
+import whychooseTechyguide3 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 3.webp';
+import whychooseTechyguide4 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 4.webp';
 
-import testimonial1 from './assets/FranchisePageImages/Partner Testimonial_1.png';
-import testimonial2 from './assets/FranchisePageImages/Partner Testimonial_2.png';
-import testimonial3 from './assets/FranchisePageImages/Partner Testimonial_3.png';
-import testimonial4 from './assets/FranchisePageImages/Partner Testimonial_4.png';
-import testimonial5 from './assets/FranchisePageImages/Partner Testimonial_5.png';
-import testimonial6 from './assets/FranchisePageImages/Partner Testimonial_6.png';
-import testimonial7 from './assets/FranchisePageImages/Partner Testimonial_7.png';
+import testimonial1 from './assets/FranchisePageImages/Partner Testimonial_1.webp';
+import testimonial2 from './assets/FranchisePageImages/Partner Testimonial_2.webp';
+import testimonial3 from './assets/FranchisePageImages/Partner Testimonial_3.webp';
+import testimonial4 from './assets/FranchisePageImages/Partner Testimonial_4.webp';
+import testimonial5 from './assets/FranchisePageImages/Partner Testimonial_5.webp';
+import testimonial6 from './assets/FranchisePageImages/Partner Testimonial_6.webp';
+import testimonial7 from './assets/FranchisePageImages/Partner Testimonial_7.webp';
 
 // What Will You Get? section images
-import WhatWillYouGet1 from './assets/FranchisePageImages/What Will You Get_ - 1.jpg';
-import WhatWillYouGet2 from './assets/FranchisePageImages/What Will You Get_ - 2.jpg';
-import WhatWillYouGet3 from './assets/FranchisePageImages/What Will You Get_ - 3.jpg';
-import WhatWillYouGet4 from './assets/FranchisePageImages/What Will You Get_ - 4.jpg';
+import WhatWillYouGet1 from './assets/FranchisePageImages/What Will You Get_ - 1.webp';
+import WhatWillYouGet2 from './assets/FranchisePageImages/What Will You Get_ - 2.webp';
+import WhatWillYouGet3 from './assets/FranchisePageImages/What Will You Get_ - 3.webp';
+import WhatWillYouGet4 from './assets/FranchisePageImages/What Will You Get_ - 4.webp';
 // some snapshots section
-import snapshot1 from './assets/FranchisePageImages/Some Snapshots - 1.jpg';
-import snapshot2 from './assets/FranchisePageImages/Some Snapshots - 2.jpg';
-import snapshot3 from './assets/FranchisePageImages/Some Snapshots - 3.jpg';
-import snapshot4 from './assets/FranchisePageImages/Some Snapshots - 4.jpg';
-import snapshot5 from './assets/FranchisePageImages/Some Snapshots - 5.jpg';
-import snapshot6 from './assets/FranchisePageImages/Some Snapshots - 6.jpg';
+import snapshot1 from './assets/FranchisePageImages/Some Snapshots - 1.webp';
+import snapshot2 from './assets/FranchisePageImages/Some Snapshots - 2.webp';
+import snapshot3 from './assets/FranchisePageImages/Some Snapshots - 3.webp';
+import snapshot4 from './assets/FranchisePageImages/Some Snapshots - 4.webp';
+import snapshot5 from './assets/FranchisePageImages/Some Snapshots - 5.webp';
+import snapshot6 from './assets/FranchisePageImages/Some Snapshots - 6.webp';
 //reventue streams section images
-import revenue1 from './assets/FranchisePageImages/Revenue Streams - 1.jpg';
-import revenue2 from './assets/FranchisePageImages/Revenue Streams - 2.jpg';
-import revenue3 from './assets/FranchisePageImages/Revenue Streams - 3.jpg';
-import revenue4 from './assets/FranchisePageImages/Revenue Streams - 4.jpg';
+import revenue1 from './assets/FranchisePageImages/Revenue Streams - 1.webp';
+import revenue2 from './assets/FranchisePageImages/Revenue Streams - 2.webp';
+import revenue3 from './assets/FranchisePageImages/Revenue Streams - 3.webp';
+import revenue4 from './assets/FranchisePageImages/Revenue Streams - 4.webp';
 // franchise support section images
-import franchiseSupport1 from './assets/FranchisePageImages/Franchise Support - 1.jpg';
-import franchiseSupport2 from './assets/FranchisePageImages/Franchise Support - 2.jpg';
-import franchiseSupport3 from './assets/FranchisePageImages/Franchise Support - 3.jpg';
-import franchiseSupport4 from './assets/FranchisePageImages/Franchise Support - 4.jpg';
-import franchiseSupport5 from './assets/FranchisePageImages/Franchise Support - 5.jpg';
+import franchiseSupport1 from './assets/FranchisePageImages/Franchise Support - 1.webp';
+import franchiseSupport2 from './assets/FranchisePageImages/Franchise Support - 2.webp';
+import franchiseSupport3 from './assets/FranchisePageImages/Franchise Support - 3.webp';
+import franchiseSupport4 from './assets/FranchisePageImages/Franchise Support - 4.webp';
+import franchiseSupport5 from './assets/FranchisePageImages/Franchise Support - 5.webp';
 
 
 function FranchisePage() {
@@ -48,29 +49,6 @@ function FranchisePage() {
         }
     };
 
-    // SEO Configuration
-    useEffect(() => {
-        // Set page title
-        document.title = "Start Robotics & Coding Franchise in India | STEM Business";
-
-        // Set or update meta description
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-            metaDescription = document.createElement('meta');
-            metaDescription.setAttribute('name', 'description');
-            document.head.appendChild(metaDescription);
-        }
-        metaDescription.setAttribute('content', 'Start a Robotics & Coding franchise in India with TechyGuide. Start a STEM learning center that delivers AI, robotics programs, DIY kits, and engaging workshops designed for young learners.');
-
-        // Set canonical link
-        let canonical = document.querySelector('link[rel="canonical"]');
-        if (!canonical) {
-            canonical = document.createElement('link');
-            canonical.setAttribute('rel', 'canonical');
-            document.head.appendChild(canonical);
-        }
-        canonical.setAttribute('href', 'https://techyguide.com/robotics-coding-franchise-india');
-    }, []);
 
     useEffect(() => {
         const counters = document.querySelectorAll('.counter');
@@ -269,6 +247,11 @@ function FranchisePage() {
 
     return (
         <div className="franchise-page">
+            <SEO 
+                title="Start Robotics & Coding Franchise in India | STEM Business"
+                description="Start a Robotics & Coding franchise in India with TechyGuide. Start a STEM learning center that delivers AI, robotics programs, DIY kits, and engaging workshops designed for young learners."
+                canonical="https://techyguide.com/robotics-coding-franchise-india"
+            />
             {/* ============ HEADER / HERO SECTION ============ */}
             <header className="hero" id="home">
                 <div className="hero-bottom-fade"></div>

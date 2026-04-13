@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SEO from './components/SEO';
 
 const styles = {
   page: {
@@ -105,6 +106,11 @@ const PaymentSuccess = () => {
 
   return (
     <div style={styles.page}>
+      <SEO 
+        title="Order Success | TechyGuide"
+        description="Your order has been placed successfully. Thank you for choosing TechyGuide."
+        canonical="https://techyguide.com/payment-success"
+      />
       <main style={styles.card}>
         <div style={styles.iconWrap} aria-hidden="true">
           <span style={styles.tick}>✓</span>

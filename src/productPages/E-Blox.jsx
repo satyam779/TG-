@@ -1,40 +1,41 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import './E-Blox.css';
 
 // hero section image
-import Heroimage from '../assets/ProductE-BloxImages/Hero image - 1.png';
+import Heroimage from '../assets/ProductE-BloxImages/Hero image - 1.webp';
 //introduction to eblox kit video section
 import ebloxIntroVideo from '../assets/ProductE-BloxImages/Website_Product_Page_E-Blox_V1.mp4';
 
 
 //technologies at focus section images
-import technologiesAtFocus1 from '../assets/ProductE-BloxImages/Technologies at Focus - 1.jpg';
-import technologiesAtFocus2 from '../assets/ProductE-BloxImages/Technologies at Focus - 2.jpg';
-import technologiesAtFocus3 from '../assets/ProductE-BloxImages/Technologies at Focus - 3.jpg';
-import technologiesAtFocus4 from '../assets/ProductE-BloxImages/Technologies at Focus - 4.jpg';
+import technologiesAtFocus1 from '../assets/ProductE-BloxImages/Technologies at Focus - 1.webp';
+import technologiesAtFocus2 from '../assets/ProductE-BloxImages/Technologies at Focus - 2.webp';
+import technologiesAtFocus3 from '../assets/ProductE-BloxImages/Technologies at Focus - 3.webp';
+import technologiesAtFocus4 from '../assets/ProductE-BloxImages/Technologies at Focus - 4.webp';
 // E-Blox Tech - Safe & Simple Design images
-import EBloxTech1 from '../assets/ProductE-BloxImages/E-Blox Tech - 1.jpg';
-import EBloxTech2 from '../assets/ProductE-BloxImages/E-Blox Tech - 2.jpg';
-import EBloxTech3 from '../assets/ProductE-BloxImages/E-Blox Tech - 3.jpg';
-import EBloxTech4 from '../assets/ProductE-BloxImages/E-Blox Tech - 4.jpg';
+import EBloxTech1 from '../assets/ProductE-BloxImages/E-Blox Tech - 1.webp';
+import EBloxTech2 from '../assets/ProductE-BloxImages/E-Blox Tech - 2.webp';
+import EBloxTech3 from '../assets/ProductE-BloxImages/E-Blox Tech - 3.webp';
+import EBloxTech4 from '../assets/ProductE-BloxImages/E-Blox Tech - 4.webp';
 //Why is e-Blox the Best for Early Learners? sections
-import whyEbloxBest1 from '../assets/ProductE-BloxImages/Why is e-Blox the Best for Early Learners_ - 1.jpg';
-import whyEbloxBest2 from '../assets/ProductE-BloxImages/Why is e-Blox the Best for Early Learners_ - 2.jpg';
-import whyEbloxBest3 from '../assets/ProductE-BloxImages/Why is e-Blox the Best for Early Learners_ - 3.jpg';
-import whyEbloxBest4 from '../assets/ProductE-BloxImages/Why is e-Blox the Best for Early Learners_ - 4.jpg';
+import whyEbloxBest1 from '../assets/ProductE-BloxImages/Why is e-Blox the Best for Early Learners_ - 1.webp';
+import whyEbloxBest2 from '../assets/ProductE-BloxImages/Why is e-Blox the Best for Early Learners_ - 2.webp';
+import whyEbloxBest3 from '../assets/ProductE-BloxImages/Why is e-Blox the Best for Early Learners_ - 3.webp';
+import whyEbloxBest4 from '../assets/ProductE-BloxImages/Why is e-Blox the Best for Early Learners_ - 4.webp';
 // eblox kit offerings section images
-import ebloxStarterKit from '../assets/ProductE-BloxImages/E-Blox Kit Offerings - 1.jpg';
-import ebloxMakerKit from '../assets/ProductE-BloxImages/E-Blox Kit Offerings - 2.jpg';
+import ebloxStarterKit from '../assets/ProductE-BloxImages/E-Blox Kit Offerings - 1.webp';
+import ebloxMakerKit from '../assets/ProductE-BloxImages/E-Blox Kit Offerings - 2.webp';
 
 //featured eblox projects section
-import windmill from '../assets/ProductE-BloxImages/Featured E blox Projects - 1.jpg';
-import Lamp from '../assets/ProductE-BloxImages/Featured E blox Projects - 2.jpg';
-import HomeAutomation from '../assets/ProductE-BloxImages/Featured E blox Projects - 3.jpg';
-import AutomaticCloseLight from '../assets/ProductE-BloxImages/Featured E blox Projects - 4.jpg';
-import SanitizerDispenser from '../assets/ProductE-BloxImages/Featured E blox Projects - 5.jpg';
-import car from '../assets/ProductE-BloxImages/Featured E blox Projects - 6.jpg';
-import MechanicalDoor from '../assets/ProductE-BloxImages/Featured E blox Projects - 7.jpg';
+import windmill from '../assets/ProductE-BloxImages/Featured E blox Projects - 1.webp';
+import Lamp from '../assets/ProductE-BloxImages/Featured E blox Projects - 2.webp';
+import HomeAutomation from '../assets/ProductE-BloxImages/Featured E blox Projects - 3.webp';
+import AutomaticCloseLight from '../assets/ProductE-BloxImages/Featured E blox Projects - 4.webp';
+import SanitizerDispenser from '../assets/ProductE-BloxImages/Featured E blox Projects - 5.webp';
+import car from '../assets/ProductE-BloxImages/Featured E blox Projects - 6.webp';
+import MechanicalDoor from '../assets/ProductE-BloxImages/Featured E blox Projects - 7.webp';
 
 
 
@@ -44,61 +45,6 @@ export default function EBlox() {
     const ebloxHeroRef = useRef(null);
     const ebloxHeroCanvasRef = useRef(null);
 
-    useEffect(() => {
-        const previousTitle = document.title;
-        const existingMetaDescription = document.querySelector('meta[name="description"]');
-        const previousMetaDescriptionContent = existingMetaDescription?.getAttribute('content') ?? null;
-        const existingCanonical = document.querySelector('link[rel="canonical"]');
-        const previousCanonicalHref = existingCanonical?.getAttribute('href') ?? null;
-
-        document.title = 'E-Blox Modular Electronics Kit for Kids | STEM Learning';
-
-        let metaDescription = existingMetaDescription;
-        if (metaDescription) {
-            metaDescription.setAttribute(
-                'content',
-                'Discover the E-Blox modular electronics kit for kids aged 5-10. Build 20+ STEM projects while learning circuits, renewable energy, and engineering concepts.'
-            );
-        } else {
-            metaDescription = document.createElement('meta');
-            metaDescription.setAttribute('name', 'description');
-            metaDescription.setAttribute(
-                'content',
-                'Discover the E-Blox modular electronics kit for kids aged 5-10. Build 20+ STEM projects while learning circuits, renewable energy, and engineering concepts.'
-            );
-            document.head.appendChild(metaDescription);
-        }
-
-        let canonicalLink = existingCanonical;
-        if (canonicalLink) {
-            canonicalLink.setAttribute('href', 'https://techyguide.com/e-blox-modular-electronics-kit-for-kids/');
-        } else {
-            canonicalLink = document.createElement('link');
-            canonicalLink.setAttribute('rel', 'canonical');
-            canonicalLink.setAttribute('href', 'https://techyguide.com/e-blox-modular-electronics-kit-for-kids/');
-            document.head.appendChild(canonicalLink);
-        }
-
-        return () => {
-            document.title = previousTitle;
-
-            if (metaDescription) {
-                if (previousMetaDescriptionContent === null && !existingMetaDescription) {
-                    metaDescription.remove();
-                } else if (previousMetaDescriptionContent !== null) {
-                    metaDescription.setAttribute('content', previousMetaDescriptionContent);
-                }
-            }
-
-            if (canonicalLink) {
-                if (previousCanonicalHref === null && !existingCanonical) {
-                    canonicalLink.remove();
-                } else if (previousCanonicalHref !== null) {
-                    canonicalLink.setAttribute('href', previousCanonicalHref);
-                }
-            }
-        };
-    }, []);
     
     const projectsList = [
        {
@@ -516,6 +462,11 @@ export default function EBlox() {
 
     return (
         <div className="eblox-page-root" style={{ overflow: 'hidden', scrollBehavior: 'auto' }}>
+            <SEO 
+                title="E-Blox Modular Electronics Kit for Kids | STEM Learning"
+                description="Discover the E-Blox modular electronics kit for kids aged 5-10. Build 20+ STEM projects while learning circuits, renewable energy, and engineering concepts."
+                canonical="https://techyguide.com/e-blox-modular-electronics-kit-for-kids/"
+            />
             <header className="eblox-hero-root" id="home" ref={ebloxHeroRef}>
                 <canvas className="eblox-hero-canvas" aria-hidden="true" ref={ebloxHeroCanvasRef}></canvas>
 

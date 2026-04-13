@@ -1,34 +1,35 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import './TeBoT.css';
 //hero image
-import heroImage from '../assets/ProductTeBoTImages/HERO Section Boy with Kit.png';
+import heroImage from '../assets/ProductTeBoTImages/HERO Section Boy with Kit.webp';
 // Explore, Create, and Innovate with TeBot section images
-import ReusableLearning from '../assets/ProductTeBoTImages/Reusable Learning.png';
-import ComprehensiveProjects from '../assets/ProductTeBoTImages/Comprehensive Projects.png';
-import IndustryAligned from '../assets/ProductTeBoTImages/Industry Aligned.png';
+import ReusableLearning from '../assets/ProductTeBoTImages/Reusable Learning.webp';
+import ComprehensiveProjects from '../assets/ProductTeBoTImages/Comprehensive Projects.webp';
+import IndustryAligned from '../assets/ProductTeBoTImages/Industry Aligned.webp';
 //Master the Technologies of Tomorrow images
-import RoboticsEngineering from '../assets/ProductTeBoTImages/Robotics & Engineering.png';
-import CodingProgramming from '../assets/ProductTeBoTImages/Coding & Programming.png';
+import RoboticsEngineering from '../assets/ProductTeBoTImages/Robotics & Engineering.webp';
+import CodingProgramming from '../assets/ProductTeBoTImages/Coding & Programming.webp';
 //The Advanced Tech Inside TeBot image
-import TheAdvancedTechInsideTeBot from '../assets/ProductTeBoTImages/The Advanced Tech Inside TeBot.jpg';
+import TheAdvancedTechInsideTeBot from '../assets/ProductTeBoTImages/The Advanced Tech Inside TeBot.webp';
 //Why TeBot is the Ultimate Learning Choice images
-import ChildSafeDurable from '../assets/ProductTeBoTImages/Why TeBot is the Ultimate Learning Choice - 1.jpg';
-import PlugPlaySimplicity from '../assets/ProductTeBoTImages/Why TeBot is the Ultimate Learning Choice - 2.jpg';
-import ProvenImpact from '../assets/ProductTeBoTImages/Why TeBot is the Ultimate Learning Choice - 3.jpg';
-import GuaranteedQuality from '../assets/ProductTeBoTImages/Why TeBot is the Ultimate Learning Choice - 4.jpg';
+import ChildSafeDurable from '../assets/ProductTeBoTImages/Why TeBot is the Ultimate Learning Choice - 1.webp';
+import PlugPlaySimplicity from '../assets/ProductTeBoTImages/Why TeBot is the Ultimate Learning Choice - 2.webp';
+import ProvenImpact from '../assets/ProductTeBoTImages/Why TeBot is the Ultimate Learning Choice - 3.webp';
+import GuaranteedQuality from '../assets/ProductTeBoTImages/Why TeBot is the Ultimate Learning Choice - 4.webp';
 //TeBot Kits for Students
-import TeBotKitsforStudents1 from '../assets/ProductTeBoTImages/TeBot Kits for Students - 1.jpg';
-import TeBotKitsforStudents2 from '../assets/ProductTeBoTImages/TeBot Kits for Students - 2.jpg';
-import TeBotKitsforStudents3 from '../assets/ProductTeBoTImages/TeBot Kits for Students - 3.jpg';
+import TeBotKitsforStudents1 from '../assets/ProductTeBoTImages/TeBot Kits for Students - 1.webp';
+import TeBotKitsforStudents2 from '../assets/ProductTeBoTImages/TeBot Kits for Students - 2.webp';
+import TeBotKitsforStudents3 from '../assets/ProductTeBoTImages/TeBot Kits for Students - 3.webp';
 import tebotIntroVideo from '../assets/ProductTeBoTImages/Website_Product_Page_TeBot_V1.mp4';
 // import ZohoBiginForm from '../components/ZohoBiginForm';
 //featured tebot projects images
-import soccerRobot from '../assets/ProductTeBoTImages/Featured TeBot Projects - 1.jpg';
-import LineFollower from '../assets/ProductTeBoTImages/Featured TeBot Projects - 2.jpg';
-import obstacleAvoidanceRobot from '../assets/ProductTeBoTImages/Featured TeBot Projects - 3.jpg';
-import BluetoothControlCar from '../assets/ProductTeBoTImages/Featured TeBot Projects - 4.jpg';
-import VoiceControlCar from '../assets/ProductTeBoTImages/Featured TeBot Projects - 5.jpg';
+import soccerRobot from '../assets/ProductTeBoTImages/Featured TeBot Projects - 1.webp';
+import LineFollower from '../assets/ProductTeBoTImages/Featured TeBot Projects - 2.webp';
+import obstacleAvoidanceRobot from '../assets/ProductTeBoTImages/Featured TeBot Projects - 3.webp';
+import BluetoothControlCar from '../assets/ProductTeBoTImages/Featured TeBot Projects - 4.webp';
+import VoiceControlCar from '../assets/ProductTeBoTImages/Featured TeBot Projects - 5.webp';
 
 
 function TeBoT() {
@@ -39,26 +40,6 @@ function TeBoT() {
     const heroSectionRef = useRef(null);
     const heroCanvasRef = useRef(null);
 
-    useEffect(() => {
-        document.title = 'TeBOT Robotics Kit for Classrooms | 50+ STEM Projects';
-
-        const metaDescriptionText = 'TeBOT is a robotics and IoT learning kit designed for school classrooms in India. Students can build 50+ hands-on STEM projects using safe, reusable components.';
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-            metaDescription = document.createElement('meta');
-            metaDescription.setAttribute('name', 'description');
-            document.head.appendChild(metaDescription);
-        }
-        metaDescription.setAttribute('content', metaDescriptionText);
-
-        let canonical = document.querySelector('link[rel="canonical"]');
-        if (!canonical) {
-            canonical = document.createElement('link');
-            canonical.setAttribute('rel', 'canonical');
-            document.head.appendChild(canonical);
-        }
-        canonical.setAttribute('href', 'https://techyguide.com/tebot-robotics-kit-for-schools/');
-    }, []);
 
     const projectsList = [
     { title: "Soccer Robot", description: "A robot designed to play mini soccer games using motor control and directional movement.", image: soccerRobot },
@@ -618,6 +599,11 @@ function TeBoT() {
 
     return (
         <div className="tebot-page-root">
+            <SEO 
+                title="TeBOT Robotics Kit for Classrooms | 50+ STEM Projects"
+                description="TeBOT is a robotics and IoT learning kit designed for school classrooms in India. Students can build 50+ hands-on STEM projects using safe, reusable components."
+                canonical="https://techyguide.com/tebot-robotics-kit-for-schools/"
+            />
             <header className="tebot-hero-section" id="home" ref={heroSectionRef}>
                 <canvas className="tebot-hero-canvas" aria-hidden="true" ref={heroCanvasRef}></canvas>
 

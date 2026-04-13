@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import SEO from "../../components/SEO";
 import { fetchPublishedPostById, fetchRecentPublishedPosts } from "../lib/posts";
 
 function renderFormattedText(text) {
@@ -164,6 +165,12 @@ function BlogPost() {
 
   return (
     <main className="blog-post-page">
+      <SEO 
+        title={`${post.title} | TechyGuide Blog`}
+        description={post.description || `Read about ${post.title} on the TechyGuide STEM and Robotics blog.`}
+        image={post.image}
+        article={true}
+      />
       <section className="blog-post-hero">
         <div className="blog-post-shell blog-post-hero-grid">
           <div className="blog-post-copy">

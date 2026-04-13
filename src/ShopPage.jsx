@@ -1,139 +1,140 @@
 // --- New Courses Images (Manual Import) ---
-import gameDevelopmentCourse1 from './assets/ShopPageImages/coursesCategoryImages/gameDevelopmentCourse-1.png';
-import gameDevelopmentCourse2 from './assets/ShopPageImages/coursesCategoryImages/gameDevelopmentCourse-2.png';
-import gameDevelopmentCourse3 from './assets/ShopPageImages/coursesCategoryImages/gameDevelopmentCourse-3.png';
-import gameDevelopmentCourse4 from './assets/ShopPageImages/coursesCategoryImages/gameDevelopmentCourse-4.png';
+import gameDevelopmentCourse1 from './assets/ShopPageImages/coursesCategoryImages/gameDevelopmentCourse-1.webp';
+import gameDevelopmentCourse2 from './assets/ShopPageImages/coursesCategoryImages/gameDevelopmentCourse-2.webp';
+import gameDevelopmentCourse3 from './assets/ShopPageImages/coursesCategoryImages/gameDevelopmentCourse-3.webp';
+import gameDevelopmentCourse4 from './assets/ShopPageImages/coursesCategoryImages/gameDevelopmentCourse-4.webp';
 
-import electronicsCourse1 from './assets/ShopPageImages/coursesCategoryImages/ElectronicsCourse-1.png';
-import electronicsCourse2 from './assets/ShopPageImages/coursesCategoryImages/ElectronicsCourse-2.png';
-import electronicsCourse3 from './assets/ShopPageImages/coursesCategoryImages/ElectronicsCourse-3.png';
-import electronicsCourse4 from './assets/ShopPageImages/coursesCategoryImages/ElectronicsCourse-4.png';
+import electronicsCourse1 from './assets/ShopPageImages/coursesCategoryImages/ElectronicsCourse-1.webp';
+import electronicsCourse2 from './assets/ShopPageImages/coursesCategoryImages/ElectronicsCourse-2.webp';
+import electronicsCourse3 from './assets/ShopPageImages/coursesCategoryImages/ElectronicsCourse-3.webp';
+import electronicsCourse4 from './assets/ShopPageImages/coursesCategoryImages/ElectronicsCourse-4.webp';
 
-import juniorRoboticsCourse1 from './assets/ShopPageImages/coursesCategoryImages/JuniorRoboticsCourse-1.png';
-import juniorRoboticsCourse2 from './assets/ShopPageImages/coursesCategoryImages/JuniorRoboticsCourse-2.png';
-import juniorRoboticsCourse3 from './assets/ShopPageImages/coursesCategoryImages/JuniorRoboticsCourse-3.png';
-import juniorRoboticsCourse4 from './assets/ShopPageImages/coursesCategoryImages/JuniorRoboticsCourse-4.png';
+import juniorRoboticsCourse1 from './assets/ShopPageImages/coursesCategoryImages/JuniorRoboticsCourse-1.webp';
+import juniorRoboticsCourse2 from './assets/ShopPageImages/coursesCategoryImages/JuniorRoboticsCourse-2.webp';
+import juniorRoboticsCourse3 from './assets/ShopPageImages/coursesCategoryImages/JuniorRoboticsCourse-3.webp';
+import juniorRoboticsCourse4 from './assets/ShopPageImages/coursesCategoryImages/JuniorRoboticsCourse-4.webp';
 
 
 
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import SEO from './components/SEO';
 import './ShopPage.css';
 
-import ottoman1 from './assets/ShopPageImages/E-Blox Starter - 1.jpg';
-import ottoman2 from './assets/ShopPageImages/E-Blox Starter - 2.jpg';
-import ottoman3 from './assets/ShopPageImages/E-Blox Starter - 3.jpg';
-import ottoman4 from './assets/ShopPageImages/E-Blox Starter - 4.jpg';
+import ottoman1 from './assets/ShopPageImages/E-Blox Starter - 1.webp';
+import ottoman2 from './assets/ShopPageImages/E-Blox Starter - 2.webp';
+import ottoman3 from './assets/ShopPageImages/E-Blox Starter - 3.webp';
+import ottoman4 from './assets/ShopPageImages/E-Blox Starter - 4.webp';
 
-import ebloxMaker1 from './assets/ShopPageImages/E-Blox maker - 1.jpg';
-import ebloxMaker2 from './assets/ShopPageImages/E-Blox maker - 2.jpg';
-import ebloxMaker3 from './assets/ShopPageImages/E-Blox maker - 3.jpg';
-import ebloxMaker4 from './assets/ShopPageImages/E-Blox maker - 4.jpg';
+import ebloxMaker1 from './assets/ShopPageImages/E-Blox maker - 1.webp';
+import ebloxMaker2 from './assets/ShopPageImages/E-Blox maker - 2.webp';
+import ebloxMaker3 from './assets/ShopPageImages/E-Blox maker - 3.webp';
+import ebloxMaker4 from './assets/ShopPageImages/E-Blox maker - 4.webp';
 
-import RoboticArmKit from './assets/ShopPageImages/Robotic arm kit - 1.jpg';
-import RoboticArmKit2 from './assets/ShopPageImages/Robotic arm kit - 2.jpg';
-import RoboticArmKit3 from './assets/ShopPageImages/Robotic arm kit - 3.jpg';
-import RoboticArmKit4 from './assets/ShopPageImages/Robotic arm kit - 4.jpg';
+import RoboticArmKit from './assets/ShopPageImages/Robotic arm kit - 1.webp';
+import RoboticArmKit2 from './assets/ShopPageImages/Robotic arm kit - 2.webp';
+import RoboticArmKit3 from './assets/ShopPageImages/Robotic arm kit - 3.webp';
+import RoboticArmKit4 from './assets/ShopPageImages/Robotic arm kit - 4.webp';
 
-import pen1 from './assets/ShopPageImages/3D Pen - 1.jpg';
-import pen2 from './assets/ShopPageImages/3D Pen - 2.jpg';
-import pen3 from './assets/ShopPageImages/3D Pen - 3.jpg';
-import pen4 from './assets/ShopPageImages/3D Pen - 4.jpg';
+import pen1 from './assets/ShopPageImages/3D Pen - 1.webp';
+import pen2 from './assets/ShopPageImages/3D Pen - 2.webp';
+import pen3 from './assets/ShopPageImages/3D Pen - 3.webp';
+import pen4 from './assets/ShopPageImages/3D Pen - 4.webp';
 
-import TechBotElectronicsKit1 from './assets/ShopPageImages/TechBot Electronics - 1.jpg';
-import TechBotElectronicsKit2 from './assets/ShopPageImages/TechBot Electronics - 2.jpg';
-import TechBotElectronicsKit3 from './assets/ShopPageImages/TechBot Electronics - 3.jpg';
-import TechBotElectronicsKit4 from './assets/ShopPageImages/TechBot Electronics - 4.jpg';
+import TechBotElectronicsKit1 from './assets/ShopPageImages/TechBot Electronics - 1.webp';
+import TechBotElectronicsKit2 from './assets/ShopPageImages/TechBot Electronics - 2.webp';
+import TechBotElectronicsKit3 from './assets/ShopPageImages/TechBot Electronics - 3.webp';
+import TechBotElectronicsKit4 from './assets/ShopPageImages/TechBot Electronics - 4.webp';
 
-import TechBotArdiunoKit1 from './assets/ShopPageImages/TechBot Arduino - 1.jpg';
-import TechBotArdiunoKit2 from './assets/ShopPageImages/TechBot Arduino - 2.jpg';
-import TechBotArdiunoKit3 from './assets/ShopPageImages/TechBot Arduino - 3.jpg';
-import TechBotArdiunoKit4 from './assets/ShopPageImages/TechBot Arduino - 4.jpg';
+import TechBotArdiunoKit1 from './assets/ShopPageImages/TechBot Arduino - 1.webp';
+import TechBotArdiunoKit2 from './assets/ShopPageImages/TechBot Arduino - 2.webp';
+import TechBotArdiunoKit3 from './assets/ShopPageImages/TechBot Arduino - 3.webp';
+import TechBotArdiunoKit4 from './assets/ShopPageImages/TechBot Arduino - 4.webp';
 
-import TeBotChampKit1 from './assets/ShopPageImages/TeBoT Champ - 1.jpg';
-import TeBotChampKit2 from './assets/ShopPageImages/TeBoT Champ - 2.jpg';
-import TeBotChampKit3 from './assets/ShopPageImages/TeBoT Champ - 3.jpg';
-import TeBotChampKit4 from './assets/ShopPageImages/TeBoT Champ - 4.jpg';
+import TeBotChampKit1 from './assets/ShopPageImages/TeBoT Champ - 1.webp';
+import TeBotChampKit2 from './assets/ShopPageImages/TeBoT Champ - 2.webp';
+import TeBotChampKit3 from './assets/ShopPageImages/TeBoT Champ - 3.webp';
+import TeBotChampKit4 from './assets/ShopPageImages/TeBoT Champ - 4.webp';
 
-import TeBotBasicKit1 from './assets/ShopPageImages/TeBot Basic - 1.jpg';
-import TeBotBasicKit2 from './assets/ShopPageImages/TeBot Basic - 2.jpg';
-import TeBotBasicKit3 from './assets/ShopPageImages/TeBot Basic - 3.jpg';
-import TeBotBasicKit4 from './assets/ShopPageImages/TeBot Basic - 4.jpg';
+import TeBotBasicKit1 from './assets/ShopPageImages/TeBot Basic - 1.webp';
+import TeBotBasicKit2 from './assets/ShopPageImages/TeBot Basic - 2.webp';
+import TeBotBasicKit3 from './assets/ShopPageImages/TeBot Basic - 3.webp';
+import TeBotBasicKit4 from './assets/ShopPageImages/TeBot Basic - 4.webp';
 
-import TeBotAdvanceKit1 from './assets/ShopPageImages/TeBot Advance - 1.jpg';
-import TeBotAdvanceKit2 from './assets/ShopPageImages/TeBot Advance - 2.jpg';
-import TeBotAdvanceKit3 from './assets/ShopPageImages/TeBot Advance - 3.jpg';
-import TeBotAdvanceKit4 from './assets/ShopPageImages/TeBot Advance - 4.jpg';
+import TeBotAdvanceKit1 from './assets/ShopPageImages/TeBot Advance - 1.webp';
+import TeBotAdvanceKit2 from './assets/ShopPageImages/TeBot Advance - 2.webp';
+import TeBotAdvanceKit3 from './assets/ShopPageImages/TeBot Advance - 3.webp';
+import TeBotAdvanceKit4 from './assets/ShopPageImages/TeBot Advance - 4.webp';
 
-import IBotAdvanceKit1 from './assets/ShopPageImages/I-Bot advance - 1.jpg';
-import IBotAdvanceKit2 from './assets/ShopPageImages/I-Bot advance - 2.jpg';
-import IBotAdvanceKit3 from './assets/ShopPageImages/I-Bot advance - 3.jpg';
-import IBotAdvanceKit4 from './assets/ShopPageImages/I-Bot advance - 4.jpg';
+import IBotAdvanceKit1 from './assets/ShopPageImages/I-Bot advance - 1.webp';
+import IBotAdvanceKit2 from './assets/ShopPageImages/I-Bot advance - 2.webp';
+import IBotAdvanceKit3 from './assets/ShopPageImages/I-Bot advance - 3.webp';
+import IBotAdvanceKit4 from './assets/ShopPageImages/I-Bot advance - 4.webp';
 
-import IBotStarterKit1 from './assets/ShopPageImages/I-Bot Starter - 1.jpg';
-import IBotStarterKit2 from './assets/ShopPageImages/I-Bot Starter - 2.jpg';
-import IBotStarterKit3 from './assets/ShopPageImages/I-Bot Starter - 3.jpg';
-import IBotStarterKit4 from './assets/ShopPageImages/I-Bot Starter - 4.jpg';
+import IBotStarterKit1 from './assets/ShopPageImages/I-Bot Starter - 1.webp';
+import IBotStarterKit2 from './assets/ShopPageImages/I-Bot Starter - 2.webp';
+import IBotStarterKit3 from './assets/ShopPageImages/I-Bot Starter - 3.webp';
+import IBotStarterKit4 from './assets/ShopPageImages/I-Bot Starter - 4.webp';
 
-import humanoidKit1 from './assets/ShopPageImages/Humanoid Kit - 1.jpg';
-import humanoidKit2 from './assets/ShopPageImages/Humanoid Kit - 2.jpg';
-import humanoidKit3 from './assets/ShopPageImages/Humanoid Kit - 3.jpg';
-import humanoidKit4 from './assets/ShopPageImages/Humanoid Kit - 4.jpg';
+import humanoidKit1 from './assets/ShopPageImages/Humanoid Kit - 1.webp';
+import humanoidKit2 from './assets/ShopPageImages/Humanoid Kit - 2.webp';
+import humanoidKit3 from './assets/ShopPageImages/Humanoid Kit - 3.webp';
+import humanoidKit4 from './assets/ShopPageImages/Humanoid Kit - 4.webp';
 
-import ottoStarterKit1 from './assets/ShopPageImages/Otto starter - 1.jpg';
-import ottoStarterKit2 from './assets/ShopPageImages/Otto starter - 2.jpg';
-import ottoStarterKit3 from './assets/ShopPageImages/Otto starter - 3.jpg';
-import ottoStarterKit4 from './assets/ShopPageImages/Otto starter - 4.jpg';
+import ottoStarterKit1 from './assets/ShopPageImages/Otto starter - 1.webp';
+import ottoStarterKit2 from './assets/ShopPageImages/Otto starter - 2.webp';
+import ottoStarterKit3 from './assets/ShopPageImages/Otto starter - 3.webp';
+import ottoStarterKit4 from './assets/ShopPageImages/Otto starter - 4.webp';
 
-import ottoLeeKit1 from './assets/ShopPageImages/otto Lee - 1.jpg';
-import ottoLeeKit2 from './assets/ShopPageImages/otto Lee - 2.jpg';
-import ottoLeeKit3 from './assets/ShopPageImages/otto Lee - 3.jpg';
-import ottoLeeKit4 from './assets/ShopPageImages/otto Lee - 4.jpg';
+import ottoLeeKit1 from './assets/ShopPageImages/otto Lee - 1.webp';
+import ottoLeeKit2 from './assets/ShopPageImages/otto Lee - 2.webp';
+import ottoLeeKit3 from './assets/ShopPageImages/otto Lee - 3.webp';
+import ottoLeeKit4 from './assets/ShopPageImages/otto Lee - 4.webp';
 
-import ottoSpiderKit1 from './assets/ShopPageImages/Otto spider - 1.jpg';
-import ottoSpiderKit2 from './assets/ShopPageImages/Otto spider - 2.jpg';
-import ottoSpiderKit3 from './assets/ShopPageImages/Otto spider - 3.jpg';
-import ottoSpiderKit4 from './assets/ShopPageImages/Otto spider - 4.jpg';
+import ottoSpiderKit1 from './assets/ShopPageImages/Otto spider - 1.webp';
+import ottoSpiderKit2 from './assets/ShopPageImages/Otto spider - 2.webp';
+import ottoSpiderKit3 from './assets/ShopPageImages/Otto spider - 3.webp';
+import ottoSpiderKit4 from './assets/ShopPageImages/Otto spider - 4.webp';
 
-import roboChampCourse1 from './assets/ShopPageImages/coursesCategoryImages/Robo Champ Course-1.png';
-import roboChampCourse2 from './assets/ShopPageImages/coursesCategoryImages/Robo Champ Course-2.png';
-import roboChampCourse3 from './assets/ShopPageImages/coursesCategoryImages/Robo Champ Course-3.png';
-import roboChampCourse4 from './assets/ShopPageImages/coursesCategoryImages/Robo Champ Course-4.png';
+import roboChampCourse1 from './assets/ShopPageImages/coursesCategoryImages/Robo Champ Course-1.webp';
+import roboChampCourse2 from './assets/ShopPageImages/coursesCategoryImages/Robo Champ Course-2.webp';
+import roboChampCourse3 from './assets/ShopPageImages/coursesCategoryImages/Robo Champ Course-3.webp';
+import roboChampCourse4 from './assets/ShopPageImages/coursesCategoryImages/Robo Champ Course-4.webp';
 
-import pythonCodingCourse1 from './assets/ShopPageImages/coursesCategoryImages/Python Coding Course-1.png';
-import pythonCodingCourse2 from './assets/ShopPageImages/coursesCategoryImages/Python Coding Course-2.png';
-import pythonCodingCourse3 from './assets/ShopPageImages/coursesCategoryImages/Python Coding Course-3.png';
-import pythonCodingCourse4 from './assets/ShopPageImages/coursesCategoryImages/Python Coding Course-4.png';
+import pythonCodingCourse1 from './assets/ShopPageImages/coursesCategoryImages/Python Coding Course-1.webp';
+import pythonCodingCourse2 from './assets/ShopPageImages/coursesCategoryImages/Python Coding Course-2.webp';
+import pythonCodingCourse3 from './assets/ShopPageImages/coursesCategoryImages/Python Coding Course-3.webp';
+import pythonCodingCourse4 from './assets/ShopPageImages/coursesCategoryImages/Python Coding Course-4.webp';
 
-import graphicalCodingCourse1 from './assets/ShopPageImages/coursesCategoryImages/Graphical Coding Course-01.png';
-import graphicalCodingCourse2 from './assets/ShopPageImages/coursesCategoryImages/Graphical Coding Course-02.png';
-import graphicalCodingCourse3 from './assets/ShopPageImages/coursesCategoryImages/Graphical Coding Course-03.png';
-import graphicalCodingCourse4 from './assets/ShopPageImages/coursesCategoryImages/Graphical Coding Course-04.png';
+import graphicalCodingCourse1 from './assets/ShopPageImages/coursesCategoryImages/Graphical Coding Course-01.webp';
+import graphicalCodingCourse2 from './assets/ShopPageImages/coursesCategoryImages/Graphical Coding Course-02.webp';
+import graphicalCodingCourse3 from './assets/ShopPageImages/coursesCategoryImages/Graphical Coding Course-03.webp';
+import graphicalCodingCourse4 from './assets/ShopPageImages/coursesCategoryImages/Graphical Coding Course-04.webp';
 
-import webDevelopmentCourse1 from './assets/ShopPageImages/coursesCategoryImages/Web Development Course-01.png';
-import webDevelopmentCourse2 from './assets/ShopPageImages/coursesCategoryImages/Web Development Course-02.png';
-import webDevelopmentCourse3 from './assets/ShopPageImages/coursesCategoryImages/Web Development Course-03.png';
-import webDevelopmentCourse4 from './assets/ShopPageImages/coursesCategoryImages/Web Development Course-04.png';
+import webDevelopmentCourse1 from './assets/ShopPageImages/coursesCategoryImages/Web Development Course-01.webp';
+import webDevelopmentCourse2 from './assets/ShopPageImages/coursesCategoryImages/Web Development Course-02.webp';
+import webDevelopmentCourse3 from './assets/ShopPageImages/coursesCategoryImages/Web Development Course-03.webp';
+import webDevelopmentCourse4 from './assets/ShopPageImages/coursesCategoryImages/Web Development Course-04.webp';
 
-import appDevelopmentCourse1 from './assets/ShopPageImages/coursesCategoryImages/App Development Course-01.png';
-import appDevelopmentCourse2 from './assets/ShopPageImages/coursesCategoryImages/App Development Course-02.png';
-import appDevelopmentCourse3 from './assets/ShopPageImages/coursesCategoryImages/App Development Course-03.png';
-import appDevelopmentCourse4 from './assets/ShopPageImages/coursesCategoryImages/App Development Course-04.png';
+import appDevelopmentCourse1 from './assets/ShopPageImages/coursesCategoryImages/App Development Course-01.webp';
+import appDevelopmentCourse2 from './assets/ShopPageImages/coursesCategoryImages/App Development Course-02.webp';
+import appDevelopmentCourse3 from './assets/ShopPageImages/coursesCategoryImages/App Development Course-03.webp';
+import appDevelopmentCourse4 from './assets/ShopPageImages/coursesCategoryImages/App Development Course-04.webp';
 
-import internetOfThingsCourse1 from './assets/ShopPageImages/coursesCategoryImages/Internet of Things Course-01.png';
-import internetOfThingsCourse2 from './assets/ShopPageImages/coursesCategoryImages/Internet of Things Course-02.png';
-import internetOfThingsCourse3 from './assets/ShopPageImages/coursesCategoryImages/Internet of Things Course-03.png';
-import internetOfThingsCourse4 from './assets/ShopPageImages/coursesCategoryImages/Internet of Things Course-04.png';
+import internetOfThingsCourse1 from './assets/ShopPageImages/coursesCategoryImages/Internet of Things Course-01.webp';
+import internetOfThingsCourse2 from './assets/ShopPageImages/coursesCategoryImages/Internet of Things Course-02.webp';
+import internetOfThingsCourse3 from './assets/ShopPageImages/coursesCategoryImages/Internet of Things Course-03.webp';
+import internetOfThingsCourse4 from './assets/ShopPageImages/coursesCategoryImages/Internet of Things Course-04.webp';
 
-import artificialIntelligenceCourse1 from './assets/ShopPageImages/coursesCategoryImages/Artificial Intelligence Course-01.png';
-import artificialIntelligenceCourse2 from './assets/ShopPageImages/coursesCategoryImages/Artificial Intelligence Course-02.png';
-import artificialIntelligenceCourse3 from './assets/ShopPageImages/coursesCategoryImages/Artificial Intelligence Course-03.png';
-import artificialIntelligenceCourse4 from './assets/ShopPageImages/coursesCategoryImages/Artificial Intelligence Course-04.png';
+import artificialIntelligenceCourse1 from './assets/ShopPageImages/coursesCategoryImages/Artificial Intelligence Course-01.webp';
+import artificialIntelligenceCourse2 from './assets/ShopPageImages/coursesCategoryImages/Artificial Intelligence Course-02.webp';
+import artificialIntelligenceCourse3 from './assets/ShopPageImages/coursesCategoryImages/Artificial Intelligence Course-03.webp';
+import artificialIntelligenceCourse4 from './assets/ShopPageImages/coursesCategoryImages/Artificial Intelligence Course-04.webp';
 
-import stemBundleCourse1 from './assets/ShopPageImages/coursesCategoryImages/STEM Bundle Course-01.png';
-import stemBundleCourse2 from './assets/ShopPageImages/coursesCategoryImages/STEM Bundle Course-02.png';
-import stemBundleCourse3 from './assets/ShopPageImages/coursesCategoryImages/STEM Bundle Course-03.png';
-import stemBundleCourse4 from './assets/ShopPageImages/coursesCategoryImages/STEM Bundle Course-04.png';
+import stemBundleCourse1 from './assets/ShopPageImages/coursesCategoryImages/STEM Bundle Course-01.webp';
+import stemBundleCourse2 from './assets/ShopPageImages/coursesCategoryImages/STEM Bundle Course-02.webp';
+import stemBundleCourse3 from './assets/ShopPageImages/coursesCategoryImages/STEM Bundle Course-03.webp';
+import stemBundleCourse4 from './assets/ShopPageImages/coursesCategoryImages/STEM Bundle Course-04.webp';
 
 
 
@@ -606,6 +607,11 @@ function ShopPage() {
 
     return (
         <div className="shop-page-wrapper">
+            <SEO 
+                title={currentCategory === 'Courses' ? 'STEM Courses | TechyGuide Shop' : 'Robotics & AI Kits | TechyGuide Shop'}
+                description={currentCategory === 'Courses' ? 'Master Robotics, AI, and Coding with TechyGuide expert courses. Hands-on learning modules available for students.' : 'Explore professional-grade robotics kits, Arduino packs, and AI learning tools from TechyGuide.'}
+                canonical="https://techyguide.com/shop"
+            />
             <div className="search-header">
                 <div className="header-content">
                     <div className="search-wrapper">

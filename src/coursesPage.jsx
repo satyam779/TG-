@@ -1,29 +1,30 @@
 import { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import { Link } from 'react-router-dom';
+import SEO from './components/SEO';
 import { courseDetails } from './coursesModalData';
 import './coursesPage.css';
 
-import appDevelopmentImage from './assets/CoursesPageImages/optimized/app-development.jpg';
-import artificialIntelligenceImage from './assets/CoursesPageImages/optimized/artificial-intelligence.jpg';
-import childImage from './assets/CoursesPageImages/optimized/child-image.png';
-import electronicsImage from './assets/CoursesPageImages/optimized/electronics.jpg';
-import gameDevelopmentImage from './assets/CoursesPageImages/optimized/game-development.jpg';
-import internetOfThingsImage from './assets/CoursesPageImages/optimized/internet-of-things-iot.jpg';
-import pythonProgrammingImage from './assets/CoursesPageImages/optimized/python-programming.jpg';
-import roboticsAutomationImage from './assets/CoursesPageImages/optimized/robotics-automation.jpg';
-import scratchProgrammingImage from './assets/CoursesPageImages/optimized/scratch-programming.jpg';
-import testimonial1Image from './assets/CoursesPageImages/optimized/testimonial-1.png';
-import testimonial2Image from './assets/CoursesPageImages/optimized/testimonial-2.png';
-import testimonial3Image from './assets/CoursesPageImages/optimized/testimonial-3.png';
-import testimonial4Image from './assets/CoursesPageImages/optimized/testimonial-4.png';
-import testimonial5Image from './assets/CoursesPageImages/optimized/testimonial-5.png';
-import testimonial6Image from './assets/CoursesPageImages/optimized/testimonial-6.png';
-import testimonial7Image from './assets/CoursesPageImages/optimized/testimonial-7.png';
-import testimonial8Image from './assets/CoursesPageImages/optimized/testimonial-8.png';
-import testimonial9Image from './assets/CoursesPageImages/optimized/testimonial-9.png';
-import testimonial10Image from './assets/CoursesPageImages/optimized/testimonial-10.png';
-import webDevelopmentImage from './assets/CoursesPageImages/optimized/web-development.jpg';
+import appDevelopmentImage from './assets/CoursesPageImages/optimized/app-development.webp';
+import artificialIntelligenceImage from './assets/CoursesPageImages/optimized/artificial-intelligence.webp';
+import childImage from './assets/CoursesPageImages/optimized/child-image.webp';
+import electronicsImage from './assets/CoursesPageImages/optimized/electronics.webp';
+import gameDevelopmentImage from './assets/CoursesPageImages/optimized/game-development.webp';
+import internetOfThingsImage from './assets/CoursesPageImages/optimized/internet-of-things-iot.webp';
+import pythonProgrammingImage from './assets/CoursesPageImages/optimized/python-programming.webp';
+import roboticsAutomationImage from './assets/CoursesPageImages/optimized/robotics-automation.webp';
+import scratchProgrammingImage from './assets/CoursesPageImages/optimized/scratch-programming.webp';
+import testimonial1Image from './assets/CoursesPageImages/optimized/testimonial-1.webp';
+import testimonial2Image from './assets/CoursesPageImages/optimized/testimonial-2.webp';
+import testimonial3Image from './assets/CoursesPageImages/optimized/testimonial-3.webp';
+import testimonial4Image from './assets/CoursesPageImages/optimized/testimonial-4.webp';
+import testimonial5Image from './assets/CoursesPageImages/optimized/testimonial-5.webp';
+import testimonial6Image from './assets/CoursesPageImages/optimized/testimonial-6.webp';
+import testimonial7Image from './assets/CoursesPageImages/optimized/testimonial-7.webp';
+import testimonial8Image from './assets/CoursesPageImages/optimized/testimonial-8.webp';
+import testimonial9Image from './assets/CoursesPageImages/optimized/testimonial-9.webp';
+import testimonial10Image from './assets/CoursesPageImages/optimized/testimonial-10.webp';
+import webDevelopmentImage from './assets/CoursesPageImages/optimized/web-development.webp';
 
 import cmsComputerAnimationJson from './assets/CoursesPageImages/CMS computer animation.json?url';
 import codingJson from './assets/CoursesPageImages/Coding.json?url';
@@ -204,7 +205,7 @@ function CoursesPage() {
 
     runHashScroll();
     window.addEventListener('hashchange', runHashScroll);
-    const pageRootNode = pageRootRef.current;
+
 
     return () => {
       bodyClassObserver.disconnect();
@@ -604,6 +605,11 @@ function CoursesPage() {
 
   return (
     <div className="courses-page-container" ref={pageRootRef}>
+      <SEO 
+        title="STEM & Robotics Courses for Students | TechyGuide Learning"
+        description="Join TechyGuide's expert-led courses in robotics, AI, python coding, IoT, and more. Practical hands-on learning designed for the future."
+        canonical="https://techyguide.com/courses"
+      />
       <header className="hero" id="home">
         <div id="heroBackgroundAnimation" className="hero-bg" aria-hidden="true"></div>
         <div className="hero-lottie" data-lottie={cmsComputerAnimationJson} aria-hidden="true"></div>

@@ -1,6 +1,5 @@
 /* Impact Program - Fully Isolated Styles */
 .impact-program {
-    all: initial;
     display: block;
     width: 100%;
     min-height: 100vh;
@@ -24,7 +23,6 @@
 .impact-program *:not(img):not(video):not(canvas):not(i):not(svg):not(path),
 .impact-program *::before,
 .impact-program *::after {
-    all: unset;
     display: revert;
     box-sizing: border-box;
 }
@@ -197,9 +195,7 @@
     justify-content: center;
     gap: 60px;
     margin-top: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background: rgba(25, 25, 25, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 30px 60px;
     border-radius: 20px;
@@ -338,7 +334,8 @@
     border-radius: 15px;
     border: 2px solid var(--border);
     box-shadow: 0 10px 26px rgba(10, 90, 177, 0.08);
-    transition: 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
     display: flex;
     flex-direction: column;
 }
@@ -413,7 +410,7 @@
     padding: 0px 12px 2px 12px;
     border-radius: 10px;
     border-left: 4px solid var(--accent);
-    transition: 0.3s;
+    transition: background 0.3s ease, border-color 0.3s ease;
     text-align: left;
 }
 
@@ -488,7 +485,8 @@
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid var(--border);
-    transition: 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform;
     box-shadow: 0 12px 30px rgba(10, 90, 177, 0.08);
     display: flex;
     flex-direction: column;
@@ -858,6 +856,7 @@
     gap: 30px;
     width: max-content;
     animation: impact-scroll 40s linear infinite;
+    will-change: transform;
 }
 
 .impact-program .testimonial-track:hover {

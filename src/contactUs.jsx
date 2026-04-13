@@ -1,87 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import SEO from './components/SEO';
 import './contactUs.css';
-import school1 from './assets/contactUsImages/school1.png';
-import school2 from './assets/contactUsImages/school2.png';
-import school3 from './assets/contactUsImages/school3.jpg';
-import school4 from './assets/contactUsImages/school4.jpg';
-import school5 from './assets/contactUsImages/school5.jpg';
-import school6 from './assets/contactUsImages/school6.png';
-import school7 from './assets/contactUsImages/school7.jpg';
-import school8 from './assets/contactUsImages/school8.png';
-import school9 from './assets/contactUsImages/school9.png';
+import school1 from './assets/contactUsImages/school1.webp';
+import school2 from './assets/contactUsImages/school2.webp';
+import school3 from './assets/contactUsImages/school3.webp';
+import school4 from './assets/contactUsImages/school4.webp';
+import school5 from './assets/contactUsImages/school5.webp';
+import school6 from './assets/contactUsImages/school6.webp';
+import school7 from './assets/contactUsImages/school7.webp';
+import school8 from './assets/contactUsImages/school8.webp';
+import school9 from './assets/contactUsImages/school9.webp';
 // contactus image
-import contactusimg from './assets/contactUsImages/Contact us - 1.png';
+import contactusimg from './assets/contactUsImages/Contact us - 1.webp';
 
 function ContactUs() {
 	const [activeFaqIndex, setActiveFaqIndex] = useState(1);
 
-	useEffect(() => {
-		const previousTitle = document.title;
-		const existingMetaDescription = document.querySelector('meta[name="description"]');
-		const previousMetaDescriptionContent = existingMetaDescription?.getAttribute("content") ?? null;
-		const existingCanonical = document.querySelector('link[rel="canonical"]');
-		const previousCanonicalHref = existingCanonical?.getAttribute("href") ?? null;
 
-		document.title = "Contact TechyGuide | STEM & Robotics Lab Setup India";
-
-		let metaDescription = existingMetaDescription;
-		if (metaDescription) {
-			metaDescription.setAttribute(
-				"content",
-				"Contact TechyGuide for CBSE STEM labs, robotics labs, and AI learning solutions for schools. Get expert support, lab setup consultation, and training."
-			);
-		} else {
-			metaDescription = document.createElement("meta");
-			metaDescription.setAttribute("name", "description");
-			metaDescription.setAttribute(
-				"content",
-				"Contact TechyGuide for CBSE STEM labs, robotics labs, and AI learning solutions for schools. Get expert support, lab setup consultation, and training."
-			);
-			document.head.appendChild(metaDescription);
-		}
-
-		let canonicalLink = existingCanonical;
-		if (canonicalLink) {
-			canonicalLink.setAttribute("href", "https://techyguide.com/contact-techyguide/");
-		} else {
-			canonicalLink = document.createElement("link");
-			canonicalLink.setAttribute("rel", "canonical");
-			canonicalLink.setAttribute("href", "https://techyguide.com/contact-techyguide/");
-			document.head.appendChild(canonicalLink);
-		}
-
-		return () => {
-			document.title = previousTitle;
-
-			if (metaDescription) {
-				if (previousMetaDescriptionContent === null && !existingMetaDescription) {
-					metaDescription.remove();
-				} else if (previousMetaDescriptionContent !== null) {
-					metaDescription.setAttribute("content", previousMetaDescriptionContent);
-				}
-			}
-
-			if (canonicalLink) {
-				if (previousCanonicalHref === null && !existingCanonical) {
-					canonicalLink.remove();
-				} else if (previousCanonicalHref !== null) {
-					canonicalLink.setAttribute("href", previousCanonicalHref);
-				}
-			}
-		};
-	}, []);
-
-	useEffect(() => {
-		let faLink = document.getElementById('tg-contactus-fa');
-
-		if (!faLink) {
-			faLink = document.createElement('link');
-			faLink.id = 'tg-contactus-fa';
-			faLink.rel = 'stylesheet';
-			faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-			document.head.appendChild(faLink);
-		}
-	}, []);
 
 	const handleFaqClick = (index) => {
 		setActiveFaqIndex((current) => (current === index ? -1 : index));
@@ -89,6 +24,11 @@ function ContactUs() {
 
 	return (
 		<div className="tg-contactus-page">
+			<SEO 
+				title="Contact TechyGuide | STEM & Robotics Lab Setup India"
+				description="Contact TechyGuide for CBSE STEM labs, robotics labs, and AI learning solutions for schools. Get expert support, lab setup consultation, and training."
+				canonical="https://techyguide.com/contact-techyguide/"
+			/>
 			<div className="main-wrapper">
 				<div className="split-container">
 					<section className="left-panel">

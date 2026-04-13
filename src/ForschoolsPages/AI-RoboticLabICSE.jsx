@@ -1,109 +1,38 @@
 import React, { useEffect, useRef } from "react";
+import SEO from "../components/SEO";
 import "./AI-RoboticLabICSE.css";
-import logoTagline from "../assets/ForSchools_AI-RoboticsLabICSE_images/Logo_TG_Tagline 2.png";
-import GalleryImg1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/2023-03-22 at 14.56.19.jpg";
-import GalleryImg2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Gitanjali Vidhyalay_ Students Doing Coding.jpg";
-import GalleryImg3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG_20240415_111354.jpg";
-import GalleryImg4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG-20230317-WA0002.jpg";
-import GalleryImg5 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG-20230925-WA0025.jpg";
-import GalleryImg6 from "../assets/ForSchools_AI-RoboticsLabICSE_images/20210727_134924.jpg";
-import GalleryImg7 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Robotic Lap.jpg";
+import logoTagline from "../assets/ForSchools_AI-RoboticsLabICSE_images/Logo_TG_Tagline 2.webp";
+import GalleryImg1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/2023-03-22 at 14.56.19.webp";
+import GalleryImg2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Gitanjali Vidhyalay_ Students Doing Coding.webp";
+import GalleryImg3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG_20240415_111354.webp";
+import GalleryImg4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG-20230317-WA0002.webp";
+import GalleryImg5 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG-20230925-WA0025.webp";
+import GalleryImg6 from "../assets/ForSchools_AI-RoboticsLabICSE_images/20210727_134924.webp";
+import GalleryImg7 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Robotic Lap.webp";
 // hero section image
-import heroImage from "../assets/ForSchools_AI-RoboticsLabICSE_images/Hero section - AI & Robotics lab ICSE.jpg";
+import heroImage from "../assets/ForSchools_AI-RoboticsLabICSE_images/Hero section - AI & Robotics lab ICSE.webp";
 // why setup an Ai-lab images
-import whyAiLab1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 1.jpg";
-import whyAiLab2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 2.jpg";
-import whyAiLab3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 3.jpg";
-import whyAiLab4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 4.jpg";
+import whyAiLab1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 1.webp";
+import whyAiLab2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 2.webp";
+import whyAiLab3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 3.webp";
+import whyAiLab4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 4.webp";
 // support ecosystem images
-import supportecosystem1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 1.jpg";
-import supportecosystem2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 2.jpg";
-import supportecosystem3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 3.jpg";
-import supportecosystem4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 4.jpg";
-import supportecosystem5 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 5.jpg";
-import supportecosystem6 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 6.jpg";
+import supportecosystem1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 1.webp";
+import supportecosystem2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 2.webp";
+import supportecosystem3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 3.webp";
+import supportecosystem4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 4.webp";
+import supportecosystem5 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 5.webp";
+import supportecosystem6 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 6.webp";
 // proprietry kits section images
-import proprietaryKit1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 1.jpg";
-import proprietaryKit2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 2.jpg";
-import proprietaryKit3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 3.jpg";
+import proprietaryKit1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 1.webp";
+import proprietaryKit2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 2.webp";
+import proprietaryKit3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 3.webp";
 
 
 const AIRoboticLabICSE = () => {
 	const rootRef = useRef(null);
 
 	useEffect(() => {
-		// SEO Configuration
-		const updateSEO = () => {
-			// Set page title
-			document.title = "AI & Robotics Lab for ICSE Schools | NEP 2020";
-
-			// Update or create meta description
-			let metaDescription = document.querySelector('meta[name="description"]');
-			if (!metaDescription) {
-				metaDescription = document.createElement("meta");
-				metaDescription.setAttribute("name", "description");
-				document.head.appendChild(metaDescription);
-			}
-			metaDescription.setAttribute("content", "Install AI & Robotics Lab for ICSE schools aligned with NEP 2020. Complete all setup, curriculum, teacher training & nationwide support.");
-
-			// Set robots meta tag
-			let metaRobots = document.querySelector('meta[name="robots"]');
-			if (!metaRobots) {
-				metaRobots = document.createElement("meta");
-				metaRobots.setAttribute("name", "robots");
-				document.head.appendChild(metaRobots);
-			}
-			metaRobots.setAttribute("content", "index, follow");
-
-			// Set canonical URL
-			let canonicalLink = document.querySelector('link[rel="canonical"]');
-			if (!canonicalLink) {
-				canonicalLink = document.createElement("link");
-				canonicalLink.setAttribute("rel", "canonical");
-				document.head.appendChild(canonicalLink);
-			}
-			canonicalLink.setAttribute("href", "https://yourdomain.com/ai-robotics-lab-icse-schools-india");
-
-			// Open Graph Tags
-			const ogTags = [
-				{ property: "og:title", content: "AI & Robotics Lab for ICSE Schools | NEP 2020" },
-				{ property: "og:description", content: "Install AI & Robotics Lab for ICSE schools aligned with NEP 2020. Complete all setup, curriculum, teacher training & nationwide support." },
-				{ property: "og:type", content: "website" },
-				{ property: "og:url", content: "https://yourdomain.com/ai-robotics-lab-icse-schools-india" },
-				{ property: "og:image", content: "https://yourdomain.com/og-image-icse-lab.jpg" },
-			];
-
-			ogTags.forEach(({ property, content }) => {
-				let tag = document.querySelector(`meta[property="${property}"]`);
-				if (!tag) {
-					tag = document.createElement("meta");
-					tag.setAttribute("property", property);
-					document.head.appendChild(tag);
-				}
-				tag.setAttribute("content", content);
-			});
-
-			// Twitter Card Tags
-			const twitterTags = [
-				{ name: "twitter:card", content: "summary_large_image" },
-				{ name: "twitter:title", content: "AI & Robotics Lab for ICSE Schools | NEP 2020" },
-				{ name: "twitter:description", content: "Install AI & Robotics Lab for ICSE schools aligned with NEP 2020. Complete all setup, curriculum, teacher training & nationwide support." },
-				{ name: "twitter:image", content: "https://yourdomain.com/twitter-image-icse-lab.jpg" },
-			];
-
-			twitterTags.forEach(({ name, content }) => {
-				let tag = document.querySelector(`meta[name="${name}"]`);
-				if (!tag) {
-					tag = document.createElement("meta");
-					tag.setAttribute("name", name);
-					document.head.appendChild(tag);
-				}
-				tag.setAttribute("content", content);
-			});
-		};
-
-		updateSEO();
-
 		const root = rootRef.current;
 		if (!root) return;
 		const animatedElements = root.querySelectorAll(".hidden-left, .hidden-right, .fade-up");
@@ -294,6 +223,13 @@ const AIRoboticLabICSE = () => {
 
 	return (
 		<div className="ai-roboticlab-icse-root" ref={rootRef}>
+			<SEO 
+				title="AI & Robotics Lab for ICSE Schools | NEP 2020"
+				description="Install AI & Robotics Lab for ICSE schools aligned with NEP 2020. Complete all setup, curriculum, teacher training & nationwide support."
+				canonical="https://techyguide.com/ai-robotics-lab-icse-schools-india"
+				ogType="website"
+				ogImage="https://techyguide.com/og-image-icse-lab.webp"
+			/>
 			<a href="#contact-section" className="floating-cta">
 				<i className="fas fa-file-invoice-dollar" /> Get ICSE Proposal
 			</a>

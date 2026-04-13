@@ -1,35 +1,36 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import './I-BoT.css';
 //hero image
-import heroimg from '../assets/ProductI-BoTImages/my-image.png';
+import heroimg from '../assets/ProductI-BoTImages/my-image.webp';
 //Technologies at Focus images
-import InternetofThings from '../assets/ProductI-BoTImages/Internet of Things (IoT).png';
-import WirelessCommunication from '../assets/ProductI-BoTImages/Wireless Communication.png';
-import AdvancedSensoryLogic from '../assets/ProductI-BoTImages/Advanced Sensory Logic.png';
-import AutomationEngineering from '../assets/ProductI-BoTImages/Automation Engineering.png';
-import DualProgramming from '../assets/ProductI-BoTImages/Dual Programming.png';
+import InternetofThings from '../assets/ProductI-BoTImages/Internet of Things (IoT).webp';
+import WirelessCommunication from '../assets/ProductI-BoTImages/Wireless Communication.webp';
+import AdvancedSensoryLogic from '../assets/ProductI-BoTImages/Advanced Sensory Logic.webp';
+import AutomationEngineering from '../assets/ProductI-BoTImages/Automation Engineering.webp';
+import DualProgramming from '../assets/ProductI-BoTImages/Dual Programming.webp';
 //i-Bot Technology: The Hardware images
-import TheBrain from '../assets/ProductI-BoTImages/The Brain.png';
-import AllinOneController from '../assets/ProductI-BoTImages/All-in-One Controller.png';
-import SafetyFirst from '../assets/ProductI-BoTImages/Safety First.png';
-import powerefficiency from '../assets/ProductI-BoTImages/Power Efficiency.png';
+import TheBrain from '../assets/ProductI-BoTImages/The Brain.webp';
+import AllinOneController from '../assets/ProductI-BoTImages/All-in-One Controller.webp';
+import SafetyFirst from '../assets/ProductI-BoTImages/Safety First.webp';
+import powerefficiency from '../assets/ProductI-BoTImages/Power Efficiency.webp';
 
 //kit offerings section images
-import ibotStarterKit from '../assets/ProductI-BoTImages/i-Bot Starter Kit.png';
-import ibotAdvancedKit from '../assets/ProductI-BoTImages/i-Bot Advance Kit.png';
+import ibotStarterKit from '../assets/ProductI-BoTImages/i-Bot Starter Kit.webp';
+import ibotAdvancedKit from '../assets/ProductI-BoTImages/i-Bot Advance Kit.webp';
 //Why i-Bot is the Best section
-import hundredPlusProjects from '../assets/ProductI-BoTImages/100_Unmatched Project Variety.png';
-import realworldApplications from '../assets/ProductI-BoTImages/Real World Applications.png';
-import modularAndScalable from '../assets/ProductI-BoTImages/Modular & Scalable.png';
-import DurabilityWarranty from '../assets/ProductI-BoTImages/Durability & Warranty.png';
+import hundredPlusProjects from '../assets/ProductI-BoTImages/100_Unmatched Project Variety.webp';
+import realworldApplications from '../assets/ProductI-BoTImages/Real World Applications.webp';
+import modularAndScalable from '../assets/ProductI-BoTImages/Modular & Scalable.webp';
+import DurabilityWarranty from '../assets/ProductI-BoTImages/Durability & Warranty.webp';
 import ibotIntroVideo from '../assets/ProductI-BoTImages/Website_Product_Page_I-Bot_V1.mp4';
 // featured ibot projects section images
-import SmartAttendanceSystem from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 1.jpg';
-import IotHouse from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 2.jpg';
-import Humaniod from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 3.jpg';
-import BluetoothControlledCar from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 4.jpg';
-import RoboticArm from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 5.jpg';
+import SmartAttendanceSystem from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 1.webp';
+import IotHouse from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 2.webp';
+import Humaniod from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 3.webp';
+import BluetoothControlledCar from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 4.webp';
+import RoboticArm from '../assets/ProductI-BoTImages/Featured i-Bot Projects - 5.webp';
 
 
 function IBoT() {
@@ -40,26 +41,6 @@ function IBoT() {
     const touchStartXRef = useRef(0);
     const touchEndXRef = useRef(0);
 
-    useEffect(() => {
-        document.title = 'i-Bot IoT & Robotics Kit | 100+ Wireless STEM Projects | Techyguide';
-
-        const metaDescriptionText = 'Master IoT with the i-Bot Advance Kit. Build smart home systems, voice-controlled robots, and 100+ projects using the ESP32 chip.';
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-            metaDescription = document.createElement('meta');
-            metaDescription.setAttribute('name', 'description');
-            document.head.appendChild(metaDescription);
-        }
-        metaDescription.setAttribute('content', metaDescriptionText);
-
-        let canonical = document.querySelector('link[rel="canonical"]');
-        if (!canonical) {
-            canonical = document.createElement('link');
-            canonical.setAttribute('rel', 'canonical');
-            document.head.appendChild(canonical);
-        }
-        canonical.setAttribute('href', 'https://techyguide.com/#/ibot');
-    }, []);
 
     useEffect(() => {
         const hero = ibotHeroRef.current;
@@ -357,6 +338,11 @@ function IBoT() {
 
     return (
         <div className="ibot-page-root">
+            <SEO 
+                title="i-Bot IoT & Robotics Kit | 100+ Wireless STEM Projects | Techyguide"
+                description="Master IoT with the i-Bot Advance Kit. Build smart home systems, voice-controlled robots, and 100+ projects using the ESP32 chip."
+                canonical="https://techyguide.com/ibot"
+            />
             <header className="ibot-hero-root" id="home" ref={ibotHeroRef}>
                 <canvas className="ibot-hero-canvas" aria-hidden="true" ref={ibotHeroCanvasRef}></canvas>
 

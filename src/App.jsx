@@ -1,26 +1,25 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
-//import reactLogo from './assets/react.svg'
-//import './App.css'
+import { useEffect } from 'react'
 import Header from './Header.jsx'
 import HeroSection from './HeroSection'
 import AboutSection from './AboutSection'
-import ShopSection from './ShopSection'
-import SchoolSection from './SchoolSection'
-import CollaborationSection from './CollaborationSection'
-import FranchiseSection from './FranchiseSection'
-import RobothroneSection from './RobothroneSection.jsx'
-import GallerySection from './GallerySection.jsx'
-import CommunitySection from './CommunitySection.jsx'
-import FooterSection from './FooterSection.jsx'
-import WhatsAppButton from './WhatsAppButton.jsx'
-//import SocialMediaIcons from './SocialMediaIcons.jsx'
 import RouteLoader from './components/RouteLoader.jsx'
-// import OpenResources from './OpenResources.jsx' // Commented out - Coming Soon
-//Blogs Import
+import Layout from './components/Layout.jsx'
+import SEO from './components/SEO.jsx'
 
 import './BlogsPage/BlogsPage.css';
 
+// Lazy load below-the-fold sections
+const ShopSection = lazy(() => import('./ShopSection'));
+const SchoolSection = lazy(() => import('./SchoolSection'));
+const CollaborationSection = lazy(() => import('./CollaborationSection'));
+const FranchiseSection = lazy(() => import('./FranchiseSection'));
+const RobothroneSection = lazy(() => import('./RobothroneSection.jsx'));
+const GallerySection = lazy(() => import('./GallerySection.jsx'));
+const CommunitySection = lazy(() => import('./CommunitySection.jsx'));
+
+// Lazy load Pages
 const ImpactProgram = lazy(() => import('./ImpactProgram.jsx'));
 const IBoT = lazy(() => import('./productPages/I-BoT.jsx'));
 const FranchisePage = lazy(() => import('./FranchisePage.jsx'));
@@ -49,319 +48,137 @@ const BlogPost = lazy(() => import('./BlogsPage/pages/BlogPost'));
 
 function ScrollToTop() {
   const { pathname } = useLocation()
-
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    window.scrollTo({ top: 0, behavior: 'auto' })
   }, [pathname])
-
   return null
 }
 
 function App() {
- return (
-  <>
-    <ScrollToTop />
-    {/* <SocialMediaIcons /> */}
-    <Header/>
-    <Suspense fallback={<RouteLoader />}>
-      <Routes>
-        <Route path="/" element={<Navigate to="/ai-robotics-stem-education-india" replace />} />
-        <Route path="/ai-robotics-stem-education-india" element={<HomePage />} />
-        <Route path="/government-csr-stem-robotics-education-initiatives" element={<ImpactProgram />} />
-        <Route path="/impact-program" element={<Navigate to="/government-csr-stem-robotics-education-initiatives" replace />} />
-        <Route path="/i-bot-iot-robotics-kit-for-students/" element={<IBoTPage />} />
-        <Route path="/ibot" element={<Navigate to="/i-bot-iot-robotics-kit-for-students/" replace />} />
-        <Route path="/tebot-robotics-kit-for-schools" element={<TeBoTPage />} />
-        <Route path="/tebot" element={<Navigate to="/tebot-robotics-kit-for-schools" replace />} />
-        <Route path="/e-blox-modular-electronics-kit-for-kids/" element={<EBloxPage />} />
-        <Route path="/e-blox" element={<Navigate to="/e-blox-modular-electronics-kit-for-kids/" replace />} />
-        <Route path="/add-on-robotics-kits-for-students" element={<EAddOnKitPage />} />
-        <Route path="/add-on-kits" element={<Navigate to="/add-on-robotics-kits-for-students" replace />} />
-        <Route path="/robothrone" element={<RobothronePageWrapper />} />
-        <Route path="/cbse-ai-robotics-lab-setup-nep-2020" element={<AIRoboticsLabCBSEPage />} />
-        <Route path="/ai-roboticslab-cbse" element={<Navigate to="/cbse-ai-robotics-lab-setup-nep-2020" replace />} />
-        <Route path="/ai-robotics-lab-icse-schools-india" element={<AIRoboticLabICSEPage />} />
-        <Route path="/ai-roboticslab-icse" element={<Navigate to="/ai-robotics-lab-icse-schools-india" replace />} />
-        <Route path="/stem-labs-for-schools" element={<StemLabPage />} />
-        <Route path="/schools/stem-lab" element={<Navigate to="/stem-labs-for-schools" replace />} />
-        <Route path="/stem-tinkering-lab-for-schools-india" element={<StemTinkeringLabPage />} />
-        <Route path="/schools/stem-tinkering-lab" element={<Navigate to="/stem-tinkering-lab-for-schools-india" replace />} />
-        <Route path="/cbse-composite-skill-lab-setup-for-schools-india" element={<CompositeSkillLabPage />} />
-        <Route path="/schools/composite-skill-lab" element={<Navigate to="/cbse-composite-skill-lab-setup-for-schools-india" replace />} />
-        <Route path="/stem-robotics-workshops-for-schools-india" element={<WorkshopPageWrapper />} />
-        <Route path="/schools/workshop" element={<Navigate to="/stem-robotics-workshops-for-schools-india" replace />} />
-        <Route path="/robotics-coding-franchise-india" element={<FranchisePageWrapper />} />
-        <Route path="/franchise" element={<Navigate to="/robotics-coding-franchise-india" replace />} />
-        <Route path="/courses" element={<CoursesPageWrapper />} />
-        <Route path="/shop" element={<ShopPageWrapper />} />
-        <Route path="/checkout" element={<CheckOutPage />} />
-        <Route path="/payment-success" element={<PaymentSuccess />} />
-        <Route path="/blogs" element={<BlogsPageWrapper />} />
-        <Route path="/blog/:id" element={<BlogPostWrapper />} />
-        {/* <Route path="/open-learning-library-stem-resources" element={<OpenResourcesWrapper />} /> */}
-        {/* <Route path="/open-resources" element={<Navigate to="/open-learning-library-stem-resources" replace />} /> */}
-        {/* OpenResources routes commented out -this page is Coming Soon */}
-        <Route path="/about-techyguide" element={<AboutUsPageWrapper />} />
-        <Route path="/about-us" element={<Navigate to="/about-techyguide" replace />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicyPageWrapper />} />
-        <Route path="/techyguide-partners-stem-education-india" element={<PartnersPageWrapper />} />
-        <Route path="/partners" element={<Navigate to="/techyguide-partners-stem-education-india" replace />} />
-        <Route path="/contact-techyguide/" element={<ContactUsPageWrapper />} />
-        <Route path="/contact-us" element={<Navigate to="/contact-techyguide/" replace />} />
-        <Route path="/careers-techyguide-stem-education-jobs" element={<CareersPageWrapper />} />
-        <Route path="/careers" element={<Navigate to="/careers-techyguide-stem-education-jobs" replace />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Suspense>
-    <WhatsAppButton/>
-  </>
-)
-}
-
-function HomePage() {
-  useEffect(() => {
-    // Set page title
-    document.title = 'AI Robotics STEM Education India | Labs, Kits & Courses';
-
-    // Set or update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explore AI, Robotics & STEM education in India with TechyGuide. Build innovation labs, DIY kits, workshops & courses for schools and students.');
-    } else {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      metaDescription.setAttribute('content', 'Explore AI, Robotics & STEM education in India with TechyGuide. Build innovation labs, DIY kits, workshops & courses for schools and students.');
-      document.head.appendChild(metaDescription);
-    }
-
-    // Add or update canonical tag
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      canonicalLink.setAttribute('href', 'https://techyguide.com/ai-robotics-stem-education-india');
-      document.head.appendChild(canonicalLink);
-    }
-  }, []);
-
   return (
     <>
-    <HeroSection/>
-    <AboutSection/>
-    <ShopSection/>
-    <SchoolSection/>
-    <CollaborationSection/>
-    <FranchiseSection/>
-    <RobothroneSection/>
-    <GallerySection/>
-    <CommunitySection/>
-    <FooterSection/>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Navigate to="/ai-robotics-stem-education-india" replace />} />
+          <Route path="/ai-robotics-stem-education-india" element={<HomePage />} />
+          <Route path="/government-csr-stem-robotics-education-initiatives" element={<ImpactProgramPage />} />
+          <Route path="/impact-program" element={<Navigate to="/government-csr-stem-robotics-education-initiatives" replace />} />
+          
+          <Route path="/i-bot-iot-robotics-kit-for-students/" element={<IBoT />} />
+          <Route path="/ibot" element={<Navigate to="/i-bot-iot-robotics-kit-for-students/" replace />} />
+          
+          <Route path="/tebot-robotics-kit-for-schools" element={<TeBoT />} />
+          <Route path="/tebot" element={<Navigate to="/tebot-robotics-kit-for-schools" replace />} />
+          
+          <Route path="/e-blox-modular-electronics-kit-for-kids/" element={<EBlox />} />
+          <Route path="/e-blox" element={<Navigate to="/e-blox-modular-electronics-kit-for-kids/" replace />} />
+          
+          <Route path="/add-on-robotics-kits-for-students" element={<EAddOnKit />} />
+          <Route path="/add-on-kits" element={<Navigate to="/add-on-robotics-kits-for-students" replace />} />
+          
+          <Route path="/robothrone" element={<RobothronePage />} />
+          
+          <Route path="/cbse-ai-robotics-lab-setup-nep-2020" element={<AIRoboticsLabCBSE />} />
+          <Route path="/ai-roboticslab-cbse" element={<Navigate to="/cbse-ai-robotics-lab-setup-nep-2020" replace />} />
+          
+          <Route path="/ai-robotics-lab-icse-schools-india" element={<AIRoboticLabICSE />} />
+          <Route path="/ai-roboticslab-icse" element={<Navigate to="/ai-robotics-lab-icse-schools-india" replace />} />
+          
+          <Route path="/stem-labs-for-schools" element={<StemLab />} />
+          <Route path="/schools/stem-lab" element={<Navigate to="/stem-labs-for-schools" replace />} />
+          
+          <Route path="/stem-tinkering-lab-for-schools-india" element={<StemTinkeringLab />} />
+          <Route path="/schools/stem-tinkering-lab" element={<Navigate to="/stem-tinkering-lab-for-schools-india" replace />} />
+          
+          <Route path="/cbse-composite-skill-lab-setup-for-schools-india" element={<CompositeSkillLab />} />
+          <Route path="/schools/composite-skill-lab" element={<Navigate to="/cbse-composite-skill-lab-setup-for-schools-india" replace />} />
+          
+          <Route path="/stem-robotics-workshops-for-schools-india" element={<WorkshopPage />} />
+          <Route path="/schools/workshop" element={<Navigate to="/stem-robotics-workshops-for-schools-india" replace />} />
+          
+          <Route path="/robotics-coding-franchise-india" element={<FranchisePage />} />
+          <Route path="/franchise" element={<Navigate to="/robotics-coding-franchise-india" replace />} />
+          
+          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/checkout" element={<CheckOutPage />} />
+          <Route path="/payment-success" element={<PaymentSuccess />} />
+          
+          <Route path="/blogs" element={<BlogsPageWrapper />} />
+          <Route path="/blog/:id" element={<BlogPostPage />} />
+          
+          <Route path="/about-techyguide" element={<AboutUsPage />} />
+          <Route path="/about-us" element={<Navigate to="/about-techyguide" replace />} />
+          
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          
+          <Route path="/techyguide-partners-stem-education-india" element={<PartnersPage />} />
+          <Route path="/partners" element={<Navigate to="/techyguide-partners-stem-education-india" replace />} />
+          
+          <Route path="/contact-techyguide/" element={<ContactUs />} />
+          <Route path="/contact-us" element={<Navigate to="/contact-techyguide/" replace />} />
+          
+          <Route path="/careers-techyguide-stem-education-jobs" element={<CareersPage />} />
+          <Route path="/careers" element={<Navigate to="/careers-techyguide-stem-education-jobs" replace />} />
+          
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
     </>
   )
 }
 
-function IBoTPage() {
+function HomePage() {
   return (
     <>
-      <IBoT />
-      <FooterSection />
+      <SEO 
+        title="AI Robotics STEM Education India | Labs, Kits & Courses"
+        description="Explore AI, Robotics & STEM education in India with TechyGuide. Build innovation labs, DIY kits, workshops & courses for schools and students."
+      />
+      <HeroSection />
+      <AboutSection />
+      <Suspense fallback={<div className="section-loader">Loading...</div>}>
+        <ShopSection />
+        <SchoolSection />
+        <CollaborationSection />
+        <FranchiseSection />
+        <RobothroneSection />
+        <GallerySection />
+        <CommunitySection />
+      </Suspense>
     </>
-  );
+  )
 }
 
-function TeBoTPage() {
+function ImpactProgramPage() {
   return (
     <>
-      <TeBoT />
-      <FooterSection />
+      <SEO 
+        title="Government & CSR STEM Education Programs | TechyGuide Impact"
+        description="Explore TechyGuide's Government and CSR initiatives empowering students with STEM, robotics, AI, and coding through innovation labs, workshops, and teacher training across India."
+        canonical="https://techyguide.com/government-csr-stem-robotics-education-initiatives"
+      />
+      <ImpactProgram />
     </>
-  );
-}
-
-function EBloxPage() {
-  return (
-    <>
-      <EBlox />
-      <FooterSection />
-    </>
-  );
-}
-
-function FranchisePageWrapper() {
-  return (
-    <>
-      <FranchisePage />
-      <FooterSection />
-    </>
-  );
-}
-
-function AIRoboticsLabCBSEPage() {
-  return (
-    <>
-      <AIRoboticsLabCBSE />
-      <FooterSection />
-    </>
-  );
-}
-
-function AIRoboticLabICSEPage() {
-  return (
-    <>
-      <AIRoboticLabICSE />
-      <FooterSection />
-    </>
-  );
-}
-
-function StemTinkeringLabPage() {
-  return (
-    <>
-      <StemTinkeringLab />
-      <FooterSection />
-    </>
-  );
-}
-
-function StemLabPage() {
-  return (
-    <>
-      <StemLab />
-      <FooterSection />
-    </>
-  );
-}
-
-function CompositeSkillLabPage() {
-  return (
-    <>
-      <CompositeSkillLab />
-      <FooterSection />
-    </>
-  );
-}
-
-function WorkshopPageWrapper() {
-  return (
-    <>
-      <WorkshopPage />
-      <FooterSection />
-    </>
-  );
-}
-
-function CoursesPageWrapper() {
-  return (
-    <>
-      <CoursesPage />
-      <FooterSection />
-    </>
-  );
-}
-
-function ShopPageWrapper() {
-  return (
-    <>
-      <ShopPage />
-      <FooterSection />
-    </>
-  );
-}
-
-function PrivacyPolicyPageWrapper() {
-  return (
-    <>
-      <PrivacyPolicyPage />
-      <FooterSection />
-    </>
-  );
-}
-
-function EAddOnKitPage() {
-  return (
-    <>
-      <EAddOnKit />
-      <FooterSection />
-    </>
-  );
-}
-
-function RobothronePageWrapper() {
-  return (
-    <>
-      <RobothronePage />
-      <FooterSection />
-    </>
-  );
-}
-
-// OpenResourcesWrapper commented out - Coming Soon
-// function OpenResourcesWrapper() {
-//   return (
-//     <>
-//       <OpenResources />
-//       <FooterSection />
-//     </>
-//   );
-// }
-
-function AboutUsPageWrapper() {
-  return (
-    <>
-      <AboutUsPage />
-      <FooterSection />
-    </>
-  );
-}
-
-function PartnersPageWrapper() {
-  return (
-    <>
-      <PartnersPage />
-      <FooterSection />
-    </>
-  );
-}
-
-function ContactUsPageWrapper() {
-  return (
-    <>
-      <ContactUs />
-      <FooterSection />
-    </>
-  );
-}
-
-function CareersPageWrapper() {
-  return (
-    <>
-      <CareersPage />
-      <FooterSection />
-    </>
-  );
+  )
 }
 
 function BlogsPageWrapper() {
   return (
-    <>
-      <div className="blogs-root">
-        <BlogHome />
-      </div>
-      <FooterSection />
-    </>
+    <div className="blogs-root">
+      <SEO title="Blogs | TechyGuide STEM Education Insights" />
+      <BlogHome />
+    </div>
   );
 }
 
-function BlogPostWrapper() {
+function BlogPostPage() {
   return (
-    <>
-      <div className="blogs-root">
-        <BlogPost />
-      </div>
-      <FooterSection />
-    </>
+    <div className="blogs-root">
+      <BlogPost />
+    </div>
   );
 }
-
 
 export default App

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import AILab from './assets/What Do We Do for Educational Institutions - 1.jpg'
-import StemImage from './assets/What Do We Do for Educational Institutions - 2.jpg'
-import LabViewImage from './assets/What Do We Do for Educational Institutions - 3.jpg'
-import StemWorkshopImage from './assets/What Do We Do for Educational Institutions - 4.jpg'
+import AILab from './assets/What Do We Do for Educational Institutions - 1.webp'
+import StemImage from './assets/What Do We Do for Educational Institutions - 2.webp'
+import LabViewImage from './assets/What Do We Do for Educational Institutions - 3.webp'
+import StemWorkshopImage from './assets/What Do We Do for Educational Institutions - 4.webp'
 import './SchoolSection.css';
 
 function SchoolSection() {

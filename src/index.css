@@ -25,7 +25,7 @@ body {
 
 html {
     scroll-behavior: smooth;
-    
+
 }
 
 section {
@@ -74,7 +74,10 @@ canvas {
     text-align: center;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: var(--secondary-color);
     margin-bottom: 15px;
     line-height: 1.3;

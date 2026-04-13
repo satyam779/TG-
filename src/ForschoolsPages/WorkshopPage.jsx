@@ -1,63 +1,17 @@
 import { useEffect } from 'react';
+import SEO from '../components/SEO';
 import './WorkshopPage.css';
-import LabImage5 from '../assets/ForSchoolsWorkShopImages/IMG-20230430-WA0001.jpg';
-import LabImage1 from '../assets/ForSchoolsWorkShopImages/IMG20230601140547.jpg';
-import LabImage3 from '../assets/ForSchoolsWorkShopImages/IMG20230924102104.jpg';
-import LabImage4 from '../assets/ForSchoolsWorkShopImages/IMG_20221114_094422.jpg';
-import LabImage2 from '../assets/ForSchoolsWorkShopImages/IMG20241005152514.jpg';
-import LabImage6 from '../assets/ForSchoolsWorkShopImages/WhatsApp Image 2021-08-15 at 15.20.01.jpeg';
-import LabImage7 from '../assets/ForSchoolsWorkShopImages/WhatsApp Image 2023-06-05 at 13.02.06.jpg';
+import LabImage5 from '../assets/ForSchoolsWorkShopImages/IMG-20230430-WA0001.webp';
+import LabImage1 from '../assets/ForSchoolsWorkShopImages/IMG20230601140547.webp';
+import LabImage3 from '../assets/ForSchoolsWorkShopImages/IMG20230924102104.webp';
+import LabImage4 from '../assets/ForSchoolsWorkShopImages/IMG_20221114_094422.webp';
+import LabImage2 from '../assets/ForSchoolsWorkShopImages/IMG20241005152514.webp';
+import LabImage6 from '../assets/ForSchoolsWorkShopImages/WhatsApp Image 2021-08-15 at 15.20.01.webp';
+import LabImage7 from '../assets/ForSchoolsWorkShopImages/WhatsApp Image 2023-06-05 at 13.02.06.webp';
 // hero images
-import heroimage from '../assets/ForSchoolsWorkShopImages/Hero section - 4.jpg';
+import heroimage from '../assets/ForSchoolsWorkShopImages/Hero section - 4.webp';
 
 function WorkshopPage() {
-	// ==========================================
-	// SEO META TAGS
-	// ==========================================
-	useEffect(() => {
-		// Set document title
-		document.title = "STEM Robotics Workshops for Schools | TechyGuide India";
-
-		// Update or create meta description
-		let metaDescription = document.querySelector('meta[name="description"]');
-		if (!metaDescription) {
-			metaDescription = document.createElement('meta');
-			metaDescription.name = 'description';
-			document.head.appendChild(metaDescription);
-		}
-		metaDescription.content = "Join TechyGuide STEM robotics workshops for schools. Practical learning in robotics, IoT, electronics & mechatronics with certifications nationwide.";
-
-		// Add canonical link
-		let canonical = document.querySelector('link[rel="canonical"]');
-		if (!canonical) {
-			canonical = document.createElement('link');
-			canonical.rel = 'canonical';
-			document.head.appendChild(canonical);
-		}
-		canonical.href = 'https://techyguide.com/stem-robotics-workshops-for-schools-india';
-
-		// Add Open Graph tags
-		const ogTags = [
-			{ property: 'og:title', content: 'STEM Robotics Workshops for Schools | TechyGuide India' },
-			{ property: 'og:description', content: 'Join TechyGuide STEM robotics workshops for schools. Practical learning in robotics, IoT, electronics & mechatronics with certifications nationwide.' },
-			{ property: 'og:url', content: 'https://techyguide.com/stem-robotics-workshops-for-schools-india' },
-			{ property: 'og:type', content: 'website' }
-		];
-
-		ogTags.forEach(tagData => {
-			let tag = document.querySelector(`meta[property="${tagData.property}"]`);
-			if (!tag) {
-				tag = document.createElement('meta');
-				tag.setAttribute('property', tagData.property);
-				document.head.appendChild(tag);
-			}
-			tag.content = tagData.content;
-		});
-
-		return () => {
-			// Cleanup is handled by document.title and meta tags remaining on page
-		};
-	}, []);
 
 	useEffect(() => {
 		// Smooth Scroll within workshop page root
@@ -150,6 +104,11 @@ function WorkshopPage() {
 
 	return (
 		<div className="workshop-page-root">
+			<SEO 
+				title="STEM Robotics Workshops for Schools | TechyGuide India"
+				description="Join TechyGuide STEM robotics workshops for schools. Practical learning in robotics, IoT, electronics & mechatronics with certifications nationwide."
+				canonical="https://techyguide.com/stem-robotics-workshops-for-schools-india"
+			/>
 			<a href="#contact-section" className="floating-cta">
 				<i className="fas fa-file-invoice-dollar"></i> Get Proposal
 			</a>

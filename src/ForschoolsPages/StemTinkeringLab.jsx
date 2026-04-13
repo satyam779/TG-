@@ -1,81 +1,35 @@
 import { useEffect } from 'react';
+import SEO from '../components/SEO';
 import './StemTinkeringLab.css';
-import logoImg from '../assets/ForSchoolsStemTinkeringLabImages/Logo_TG_Tagline 2.png';
-import GalleryImg1 from '../assets/ForSchoolsStemTinkeringLabImages/IMG-20240805-WA0001.jpg';
-import GalleryImg2 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20230907100904.jpg';
-import GalleryImg3 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20241106123513.jpg';
-import GalleryImg4 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20241226143613.jpg';
-import GalleryImg5 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20251016105208.jpg';
-import GalleryImg6 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20251017160909.jpg';
+import logoImg from '../assets/ForSchoolsStemTinkeringLabImages/Logo_TG_Tagline 2.webp';
+import GalleryImg1 from '../assets/ForSchoolsStemTinkeringLabImages/IMG-20240805-WA0001.webp';
+import GalleryImg2 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20230907100904.webp';
+import GalleryImg3 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20241106123513.webp';
+import GalleryImg4 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20241226143613.webp';
+import GalleryImg5 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20251016105208.webp';
+import GalleryImg6 from '../assets/ForSchoolsStemTinkeringLabImages/IMG20251017160909.webp';
 //hero section images
-// import herosectionimg from '../assets/ForSchoolsStemTinkeringLabImages/Hero section - STEM Tinkering lab.jpg';
+// import herosectionimg from '../assets/ForSchoolsStemTinkeringLabImages/Hero section - STEM Tinkering lab.webp';
 //WHY STEM TINKERING LABS? images
-import whystemTinkeringLab1 from '../assets/ForSchoolsStemTinkeringLabImages/WHY STEM TINKERING LABS_ - 1.jpg';
-import whystemTinkeringLab2 from '../assets/ForSchoolsStemTinkeringLabImages/WHY STEM TINKERING LABS_ - 2.jpg';
-import whystemTinkeringLab3 from '../assets/ForSchoolsStemTinkeringLabImages/WHY STEM TINKERING LABS_ - 3.jpg';
-import whystemTinkeringLab4 from '../assets/ForSchoolsStemTinkeringLabImages/WHY STEM TINKERING LABS_ - 4.jpg';
+import whystemTinkeringLab1 from '../assets/ForSchoolsStemTinkeringLabImages/WHY STEM TINKERING LABS_ - 1.webp';
+import whystemTinkeringLab2 from '../assets/ForSchoolsStemTinkeringLabImages/WHY STEM TINKERING LABS_ - 2.webp';
+import whystemTinkeringLab3 from '../assets/ForSchoolsStemTinkeringLabImages/WHY STEM TINKERING LABS_ - 3.webp';
+import whystemTinkeringLab4 from '../assets/ForSchoolsStemTinkeringLabImages/WHY STEM TINKERING LABS_ - 4.webp';
 //Support Ecosystem images
-import supportecosystem1 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 1.jpg';
-import supportecosystem2 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 2.jpg';
-import supportecosystem3 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 3.jpg';
-import supportecosystem4 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 4.jpg';
-import supportecosystem5 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 5.jpg';
-import supportecosystem6 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 6.jpg';
+import supportecosystem1 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 1.webp';
+import supportecosystem2 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 2.webp';
+import supportecosystem3 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 3.webp';
+import supportecosystem4 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 4.webp';
+import supportecosystem5 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 5.webp';
+import supportecosystem6 from '../assets/ForSchoolsStemTinkeringLabImages/Support Ecosystem - 6.webp';
 //Proprietary DIY Robotics Kits section images
-import proprietaryKits1 from '../assets/ForSchoolsStemTinkeringLabImages/Proprietary DIY Kits - 1.jpg';
-import proprietaryKits2 from '../assets/ForSchoolsStemTinkeringLabImages/Proprietary DIY Kits - 2.jpg';
-import proprietaryKits3 from '../assets/ForSchoolsStemTinkeringLabImages/Proprietary DIY Kits - 3.jpg';
+import proprietaryKits1 from '../assets/ForSchoolsStemTinkeringLabImages/Proprietary DIY Kits - 1.webp';
+import proprietaryKits2 from '../assets/ForSchoolsStemTinkeringLabImages/Proprietary DIY Kits - 2.webp';
+import proprietaryKits3 from '../assets/ForSchoolsStemTinkeringLabImages/Proprietary DIY Kits - 3.webp';
 import projectShowcaseVideo from '../assets/ForSchoolsStemLabImages/Website_Schools page_STEM Lab -  Project showcase.mp4';
 
 
 function StemTinkeringLab() {
-  // SEO Configuration
-  useEffect(() => {
-    // Helper function to set or update meta tags without creating duplicates
-    const setMetaTag = (name, content) => {
-      const isPropertyTag = name.startsWith('og:') || name.startsWith('twitter:');
-      const selector = isPropertyTag 
-        ? `meta[property="${name}"]` 
-        : `meta[name="${name}"]`;
-      
-      let element = document.querySelector(selector);
-      if (!element) {
-        element = document.createElement('meta');
-        element.setAttribute(isPropertyTag ? 'property' : 'name', name);
-        document.head.appendChild(element);
-      }
-      element.setAttribute('content', content);
-    };
-
-    // Set page title
-    document.title = 'STEM Tinkering Lab for Schools | NEP 2020 Aligned Setup';
-
-    // Set meta description
-    setMetaTag('description', 'Install NEP 2020 aligned STEM Tinkering Labs in schools. Robotics, AI, IoT & 3D Printing setup with training, curriculum & nationwide support.');
-
-    // Set robots meta tag
-    setMetaTag('robots', 'index, follow');
-
-    // Set canonical link
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', 'https://yourdomain.com/stem-tinkering-lab-for-schools-india');
-
-    // Open Graph Tags
-    setMetaTag('og:title', 'STEM Tinkering Lab for Schools | NEP 2020 Aligned Setup');
-    setMetaTag('og:description', 'Install NEP 2020 aligned STEM Tinkering Labs in schools. Robotics, AI, IoT & 3D Printing setup with training, curriculum & nationwide support.');
-    setMetaTag('og:type', 'website');
-    setMetaTag('og:url', 'https://yourdomain.com/stem-tinkering-lab-for-schools-india');
-
-    // Twitter Card Tags
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'STEM Tinkering Lab for Schools | NEP 2020 Aligned Setup');
-    setMetaTag('twitter:description', 'Install NEP 2020 aligned STEM Tinkering Labs in schools. Robotics, AI, IoT & 3D Printing setup with training, curriculum & nationwide support.');
-  }, []);
 
   useEffect(() => {
     // 1. Scroll Animation Observer
@@ -272,6 +226,11 @@ function StemTinkeringLab() {
 
   return (
     <div className="stem-tinkering-lab-root">
+      <SEO 
+        title="STEM Tinkering Lab for Schools | NEP 2020 Aligned Setup"
+        description="Install NEP 2020 aligned STEM Tinkering Labs in schools. Robotics, AI, IoT & 3D Printing setup with training, curriculum & nationwide support."
+        canonical="https://techyguide.com/stem-tinkering-lab-for-schools-india"
+      />
       <a href="#contact-section" className="floating-cta">
         <i className="fas fa-file-invoice-dollar"></i> Get STEM Proposal
       </a>

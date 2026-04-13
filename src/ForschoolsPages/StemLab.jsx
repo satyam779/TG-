@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import './StemLab.css';
-import GalleryImage1 from '../assets/ForSchoolsStemLabImages/IMG20240112172931.jpg';
-import GalleryImage2 from '../assets/ForSchoolsStemLabImages/IMG20240606114358.jpg';
-import GalleryImage3 from '../assets/ForSchoolsStemLabImages/RLS3jpg.jpg';
-import GalleryImage4 from '../assets/ForSchoolsStemLabImages/WhatsApp Image 2021-09-08 at 18.57.35.jpeg';
-import GalleryImage5 from '../assets/ForSchoolsStemLabImages/WhatsApp Image 2021-10-04 at 11.56.30 AM (2).jpeg';
-import GalleryImage6 from '../assets/ForSchoolsStemLabImages/WhatsApp Image 2025-06-04 at 11.12.23_14c0422d.jpg';
+import GalleryImage1 from '../assets/ForSchoolsStemLabImages/IMG20240112172931.webp';
+import GalleryImage2 from '../assets/ForSchoolsStemLabImages/IMG20240606114358.webp';
+import GalleryImage3 from '../assets/ForSchoolsStemLabImages/RLS3jpg.webp';
+import GalleryImage4 from '../assets/ForSchoolsStemLabImages/WhatsApp Image 2021-09-08 at 18.57.35.webp';
+import GalleryImage5 from '../assets/ForSchoolsStemLabImages/WhatsApp Image 2021-10-04 at 11.56.30 AM (2).webp';
+import GalleryImage6 from '../assets/ForSchoolsStemLabImages/WhatsApp Image 2025-06-04 at 11.12.23_14c0422d.webp';
 // hero image
-import heroImage from '../assets/ForSchoolsStemLabImages/Hero Section - STEM Lab.jpg';
+import heroImage from '../assets/ForSchoolsStemLabImages/Hero Section - STEM Lab.webp';
 
 function StemLab() {
     const handleGetProposalClick = (e) => {
@@ -25,62 +26,6 @@ function StemLab() {
         }
     };
 
-    // ==========================================
-    // SEO META TAGS
-    // ==========================================
-    useEffect(() => {
-        // Set document title
-        document.title = "STEM Labs for Schools in India | Hands-on STEM Education | TechyGuide";
-
-        // Update or create meta description
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-            metaDescription = document.createElement('meta');
-            metaDescription.name = 'description';
-            document.head.appendChild(metaDescription);
-        }
-        metaDescription.content = "TechyGuide STEM Labs empower students through hands-on Science, Technology, Engineering & Math learning. Practical STEM programs for schools across India.";
-
-        // Add or update meta keywords
-        let metaKeywords = document.querySelector('meta[name="keywords"]');
-        if (!metaKeywords) {
-            metaKeywords = document.createElement('meta');
-            metaKeywords.name = 'keywords';
-            document.head.appendChild(metaKeywords);
-        }
-        metaKeywords.content = "STEM labs, STEM education India, school STEM labs, hands-on STEM learning, robotics STEM labs, TechyGuide StemLabs";
-
-        // Add canonical link
-        let canonical = document.querySelector('link[rel="canonical"]');
-        if (!canonical) {
-            canonical = document.createElement('link');
-            canonical.rel = 'canonical';
-            document.head.appendChild(canonical);
-        }
-        canonical.href = 'https://techyguide.com/stem-labs-for-schools';
-
-        // Add Open Graph tags
-        const ogTags = [
-            { property: 'og:title', content: 'STEM Labs for Schools in India | Hands-on STEM Education | TechyGuide' },
-            { property: 'og:description', content: 'TechyGuide STEM Labs empower students through hands-on Science, Technology, Engineering & Math learning. Practical STEM programs for schools across India.' },
-            { property: 'og:url', content: 'https://techyguide.com/stem-labs-for-schools' },
-            { property: 'og:type', content: 'website' }
-        ];
-
-        ogTags.forEach(tagData => {
-            let tag = document.querySelector(`meta[property="${tagData.property}"]`);
-            if (!tag) {
-                tag = document.createElement('meta');
-                tag.setAttribute('property', tagData.property);
-                document.head.appendChild(tag);
-            }
-            tag.content = tagData.content;
-        });
-
-        return () => {
-            // Cleanup is handled by document.title and meta tags remaining on page
-        };
-    }, []);
 
     useEffect(() => {
         let statsObserver = null;
@@ -272,6 +217,11 @@ function StemLab() {
 
     return (
         <div className="stemlab-page-root">
+            <SEO 
+                title="STEM Labs for Schools in India | Hands-on STEM Education | TechyGuide"
+                description="TechyGuide STEM Labs empower students through hands-on Science, Technology, Engineering & Math learning. Practical STEM programs for schools across India."
+                canonical="https://techyguide.com/stem-labs-for-schools"
+            />
             <a href="#contact-section" className="floating-cta" onClick={handleGetProposalClick}>
                 <i className="fas fa-file-invoice-dollar"></i> Get Proposal
             </a>

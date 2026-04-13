@@ -1,38 +1,39 @@
 import React, { useState, useEffect, useRef } from "react";
+import SEO from "./components/SEO";
 import "./ImpactProgram.css";
-import FooterSection from "./FooterSection";
 import herobgvideo from "./assets/impactImages/Impact program - Hero section.mp4";
+
 function ImpactProgram() {
   // Image paths
   const images = {
-    bg2: new URL("./assets/impactImages/bg2.jpg", import.meta.url).href,
-    bg4: new URL("./assets/impactImages/bg4.jpg", import.meta.url).href,
-    csrInitiatives: new URL("./assets/impactImages/CSR Initiatives.jpg", import.meta.url).href,
-    governmentPrograms: new URL("./assets/impactImages/Government Programs.jpg", import.meta.url).href,
-    genderEquality: new URL("./assets/impactImages/GenderEquality.png", import.meta.url).href,
-    industry: new URL("./assets/impactImages/industry.png", import.meta.url).href,
-    inEqualities: new URL("./assets/impactImages/inEqualities.png", import.meta.url).href,
-    partnerships: new URL("./assets/impactImages/partnerships.png", import.meta.url).href,
-    qualityEducation: new URL("./assets/impactImages/qualityEducation.png", import.meta.url).href,
-    sustainable: new URL("./assets/impactImages/sustainable.png", import.meta.url).href,
-    jharkhand: new URL("./assets/impactImages/jharkhand.jpg", import.meta.url).href,
-    odisha: new URL("./assets/impactImages/odisha.jpg", import.meta.url).href,
-    gujarat: new URL("./assets/impactImages/gujarat.jpg", import.meta.url).href,
-    Lucknow: new URL("./assets/impactImages/lucknow.jpg", import.meta.url).href,
-    haryana: new URL("./assets/impactImages/haryana.jpeg", import.meta.url).href,
-    hyderabad: new URL("./assets/impactImages/hyderabad.jpg", import.meta.url).href,
-    oursolutions1: new URL("./assets/impactImages/Our solutions - 1.jpg", import.meta.url).href,
-    oursolutions2: new URL("./assets/impactImages/Our solutions - 2.jpg", import.meta.url).href,
-    oursolutions3: new URL("./assets/impactImages/Our solutions - 3.jpg", import.meta.url).href,
-    gallery1: new URL("./assets/impactImages/gallery1.jpeg", import.meta.url).href,
-    gallery2: new URL("./assets/impactImages/gallery2.jpeg", import.meta.url).href,
-    gallery3: new URL("./assets/impactImages/gallery3.jpg", import.meta.url).href,
-    gallery4: new URL("./assets/impactImages/gallery4.jpg", import.meta.url).href,
-    gallery5: new URL("./assets/impactImages/gallery5.jpg", import.meta.url).href,
-    gallery6: new URL("./assets/impactImages/gallery6.jpg", import.meta.url).href,
-    gallery7: new URL("./assets/impactImages/gallery7.jpg", import.meta.url).href,
-    gallery8: new URL("./assets/impactImages/gallery8.jpg", import.meta.url).href,
-    gallery9: new URL("./assets/impactImages/gallery9.jpg", import.meta.url).href,
+    bg2: new URL("./assets/impactImages/bg2.webp", import.meta.url).href,
+    bg4: new URL("./assets/impactImages/bg4.webp", import.meta.url).href,
+    csrInitiatives: new URL("./assets/impactImages/CSR Initiatives.webp", import.meta.url).href,
+    governmentPrograms: new URL("./assets/impactImages/Government Programs.webp", import.meta.url).href,
+    genderEquality: new URL("./assets/impactImages/GenderEquality.webp", import.meta.url).href,
+    industry: new URL("./assets/impactImages/industry.webp", import.meta.url).href,
+    inEqualities: new URL("./assets/impactImages/inEqualities.webp", import.meta.url).href,
+    partnerships: new URL("./assets/impactImages/partnerships.webp", import.meta.url).href,
+    qualityEducation: new URL("./assets/impactImages/qualityEducation.webp", import.meta.url).href,
+    sustainable: new URL("./assets/impactImages/sustainable.webp", import.meta.url).href,
+    jharkhand: new URL("./assets/impactImages/jharkhand.webp", import.meta.url).href,
+    odisha: new URL("./assets/impactImages/odisha.webp", import.meta.url).href,
+    gujarat: new URL("./assets/impactImages/gujarat.webp", import.meta.url).href,
+    Lucknow: new URL("./assets/impactImages/lucknow.webp", import.meta.url).href,
+    haryana: new URL("./assets/impactImages/haryana.webp", import.meta.url).href,
+    hyderabad: new URL("./assets/impactImages/hyderabad.webp", import.meta.url).href,
+    oursolutions1: new URL("./assets/impactImages/Our solutions - 1.webp", import.meta.url).href,
+    oursolutions2: new URL("./assets/impactImages/Our solutions - 2.webp", import.meta.url).href,
+    oursolutions3: new URL("./assets/impactImages/Our solutions - 3.webp", import.meta.url).href,
+    gallery1: new URL("./assets/impactImages/gallery1.webp", import.meta.url).href,
+    gallery2: new URL("./assets/impactImages/gallery2.webp", import.meta.url).href,
+    gallery3: new URL("./assets/impactImages/gallery3.webp", import.meta.url).href,
+    gallery4: new URL("./assets/impactImages/gallery4.webp", import.meta.url).href,
+    gallery5: new URL("./assets/impactImages/gallery5.webp", import.meta.url).href,
+    gallery6: new URL("./assets/impactImages/gallery6.webp", import.meta.url).href,
+    gallery7: new URL("./assets/impactImages/gallery7.webp", import.meta.url).href,
+    gallery8: new URL("./assets/impactImages/gallery8.webp", import.meta.url).href,
+    gallery9: new URL("./assets/impactImages/gallery9.webp", import.meta.url).href,
   };
   const galleryImages = [
     { src: images.gallery1, alt: "Impact program gallery image 1" },
@@ -48,33 +49,6 @@ function ImpactProgram() {
   const [lightbox, setLightbox] = useState({ open: false, src: "", alt: "" });
   const heroVideoRef = useRef(null);
 
-  // Set SEO metadata for Impact Program page
-  useEffect(() => {
-    // Set page title
-    document.title = 'Government & CSR STEM Education Programs | TechyGuide Impact';
-
-    // Set or update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explore TechyGuide\'s Government and CSR initiatives empowering students with STEM, robotics, AI, and coding through innovation labs, workshops, and teacher training across India.');
-    } else {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      metaDescription.setAttribute('content', 'Explore TechyGuide\'s Government and CSR initiatives empowering students with STEM, robotics, AI, and coding through innovation labs, workshops, and teacher training across India.');
-      document.head.appendChild(metaDescription);
-    }
-
-    // Add or update canonical tag
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      canonicalLink.setAttribute('href', 'https://techyguide.com/government-csr-stem-robotics-education-initiatives');
-      document.head.appendChild(canonicalLink);
-    } else {
-      canonicalLink.setAttribute('href', 'https://techyguide.com/government-csr-stem-robotics-education-initiatives');
-    }
-  }, []);
 
   useEffect(() => {
     const heroVideo = heroVideoRef.current;
@@ -113,6 +87,7 @@ function ImpactProgram() {
 
   return (
     <>
+
       <div className="impact-program">
         <section
           className="impact-hero"
@@ -674,7 +649,6 @@ Together, let’s empower communities with the power of education, innovation, a
           </button>
         </div>
       )}
-      <FooterSection />
     </>
   );
 }

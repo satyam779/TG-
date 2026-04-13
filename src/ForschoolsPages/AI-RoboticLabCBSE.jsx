@@ -1,79 +1,44 @@
 import React, { useEffect, useRef } from "react";
+import SEO from "../components/SEO";
 import "./AI-RoboticLabCBSE.css";
-import Logo from "../assets/ForSchoolsAI-RoboticslabCBSE/Logo_TG_Tagline 2.png";
-import GalleryImg1 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG20240428131408.jpg";
-import GalleryImg2 from "../assets/ForSchoolsAI-RoboticslabCBSE/HZ1A9459.JPG";
-import GalleryImg3 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG_20221125_104735.jpg";
-import GalleryImg4 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG_20240128_131052.jpg";
-import GalleryImg5 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG_8545.JPG";
-import GalleryImg6 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG_9372.JPG";
+import Logo from "../assets/ForSchoolsAI-RoboticslabCBSE/Logo_TG_Tagline 2.webp";
+import GalleryImg1 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG20240428131408.webp";
+import GalleryImg2 from "../assets/ForSchoolsAI-RoboticslabCBSE/HZ1A9459.webp";
+import GalleryImg3 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG_20221125_104735.webp";
+import GalleryImg4 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG_20240128_131052.webp";
+import GalleryImg5 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG_8545.webp";
+import GalleryImg6 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG_9372.webp";
 // why cbse lab for your school section
-import establishAiLab1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Why Establish an AI & Robotics Lab_ - 1 V2.jpg";
-import establishAiLab2 from "../assets/ForSchoolsAI-RoboticslabCBSE/Why Establish an AI & Robotics Lab_ - 2 V2.jpg";
-import establishAiLab3 from "../assets/ForSchoolsAI-RoboticslabCBSE/Why Establish an AI & Robotics Lab_ - 3.jpg";
-import establishAiLab4 from "../assets/ForSchoolsAI-RoboticslabCBSE/Why Establish an AI & Robotics Lab_ - 4 V2.jpg";
+import establishAiLab1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Why Establish an AI & Robotics Lab_ - 1 V2.webp";
+import establishAiLab2 from "../assets/ForSchoolsAI-RoboticslabCBSE/Why Establish an AI & Robotics Lab_ - 2 V2.webp";
+import establishAiLab3 from "../assets/ForSchoolsAI-RoboticslabCBSE/Why Establish an AI & Robotics Lab_ - 3.webp";
+import establishAiLab4 from "../assets/ForSchoolsAI-RoboticslabCBSE/Why Establish an AI & Robotics Lab_ - 4 V2.webp";
 //hero section image
-import heroImage1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Hero section.jpg";
-import heroImage2 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG20240606112350.jpg";
+import heroImage1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Hero section.webp";
+import heroImage2 from "../assets/ForSchoolsAI-RoboticslabCBSE/IMG20240606112350.webp";
 
 
 // support Ecosystem images
-import supportEcosystem1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 1.jpg";
-import supportEcosystem2 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 2.jpg";
-import supportEcosystem3 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 3.jpg";
-import supportEcosystem4 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 4.jpg";
-import supportEcosystem5 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 5.jpg";
-import supportEcosystem6 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 6.jpg";
+import supportEcosystem1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 1.webp";
+import supportEcosystem2 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 2.webp";
+import supportEcosystem3 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 3.webp";
+import supportEcosystem4 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 4.webp";
+import supportEcosystem5 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 5.webp";
+import supportEcosystem6 from "../assets/ForSchoolsAI-RoboticslabCBSE/Comprehensive Support Ecosystem - 6.webp";
 //Premium DIY Robotics Kits images
-import premiumDIYKit1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 1.jpg";
-import premiumDIYKit2 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 2.jpg";
-import premiumDIYKit3 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 3.jpg";
+import premiumDIYKit1 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 1.webp";
+import premiumDIYKit2 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 2.webp";
+import premiumDIYKit3 from "../assets/ForSchoolsAI-RoboticslabCBSE/Premium DIY kit - 3.webp";
 
 
 function AIRoboticsLabCBSE() {
   const rootRef = useRef(null);
 
-  // SEO Head Management
-  useEffect(() => {
-    // Set page title
-    document.title = "AI & Robotics Lab Setup for Schools | CBSE 417 & NEP 2020 | TechyGuide";
-
-    // Set or update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta");
-      metaDescription.name = "description";
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content = "GeM Registered AI & Robotics Lab Setup Company for Schools in India. 500+ Labs Installed. CBSE 417 Compliant & NEP 2020 Aligned Curriculum. Get Proposal Today.";
-
-    // Set or update canonical link
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement("link");
-      canonicalLink.rel = "canonical";
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.href = "https://yourdomain.com/cbse-ai-robotics-lab-setup-nep-2020";
-
-    return () => {
-      // Cleanup: Remove added elements on unmount if needed
-      // Note: Typically, you'd keep title and meta tags, but this ensures clean removal
-    };
-  }, []);
 
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return undefined;
 
-    const fontLink = document.createElement("link");
-    fontLink.rel = "stylesheet";
-    fontLink.href = "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap";
-    const faLink = document.createElement("link");
-    faLink.rel = "stylesheet";
-    faLink.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css";
-    document.head.appendChild(fontLink);
-    document.head.appendChild(faLink);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -232,13 +197,17 @@ function AIRoboticsLabCBSE() {
       anchors.forEach((anchor) => anchor.removeEventListener("click", anchorHandler));
       if (sliderTimeout) clearTimeout(sliderTimeout);
       if (form) form.removeEventListener("submit", formHandler);
-      if (fontLink.parentNode) fontLink.parentNode.removeChild(fontLink);
-      if (faLink.parentNode) faLink.parentNode.removeChild(faLink);
+
     };
   }, []);
 
   return (
     <div className="ai-roboticslab-cbse-root" ref={rootRef}>
+      <SEO 
+        title="AI & Robotics Lab Setup for Schools | CBSE 417 & NEP 2020 | TechyGuide"
+        description="GeM Registered AI & Robotics Lab Setup Company for Schools in India. 500+ Labs Installed. CBSE 417 Compliant & NEP 2020 Aligned Curriculum. Get Proposal Today."
+        canonical="https://techyguide.com/cbse-ai-robotics-lab-setup-nep-2020"
+      />
       <a href="#contact-section" className="floating-cta">
         <i className="fas fa-file-invoice-dollar"></i> Get Proposal
       </a>

@@ -1,41 +1,42 @@
 import { useEffect, useRef, useState } from 'react';
+import SEO from './components/SEO';
 import './RobothronePage.css';
 
 // Image imports
-import logoTG2 from './assets/RobothronePageImages/Logo_TG_Tagline 4.png';
+import logoTG2 from './assets/RobothronePageImages/Logo_TG_Tagline 4.webp';
 
 // Video import
 
 import heroVideo from './assets/RobothronePageImages/Website Backdrop Robothrone.mp4';
 
 // about robothrone section images
-import AboutRobothrone1 from './assets/RobothronePageImages/About Robothrone - 1.jpg';
-import AboutRobothrone2 from './assets/RobothronePageImages/About Robothrone - 2.jpg';
-import AboutRobothrone3 from './assets/RobothronePageImages/About Robothrone - 3.jpg';
+import AboutRobothrone1 from './assets/RobothronePageImages/About Robothrone - 1.webp';
+import AboutRobothrone2 from './assets/RobothronePageImages/About Robothrone - 2.webp';
+import AboutRobothrone3 from './assets/RobothronePageImages/About Robothrone - 3.webp';
 
 
 
 //Eligibility & Age Divisions section images
-import junior from './assets/RobothronePageImages/Junior 8-10.png';
-import intermediate from './assets/RobothronePageImages/Intermediate 11-13.png';
-import senior from './assets/RobothronePageImages/Senior 14-16.png';
+import junior from './assets/RobothronePageImages/Junior 8-10.webp';
+import intermediate from './assets/RobothronePageImages/Intermediate 11-13.webp';
+import senior from './assets/RobothronePageImages/Senior 14-16.webp';
 //Competition Themes images
-import scratchProgrammingImage from './assets/RobothronePageImages/Scratch Programming Challenge.png';
-import smartHomeHelpers from './assets/RobothronePageImages/Smart Home Helpers.png';
-import EnvironmentalMonitoring from './assets/RobothronePageImages/Environmental Monitoring.png';
-import SmartTransportation from './assets/RobothronePageImages/Smart Transportation.png';
-import IndustrySolutions from './assets/RobothronePageImages/Industry 4.0 Solutions.png';
-import HealthcareInnovation from './assets/RobothronePageImages/Healthcare Innovation.png';
+import scratchProgrammingImage from './assets/RobothronePageImages/Scratch Programming Challenge.webp';
+import smartHomeHelpers from './assets/RobothronePageImages/Smart Home Helpers.webp';
+import EnvironmentalMonitoring from './assets/RobothronePageImages/Environmental Monitoring.webp';
+import SmartTransportation from './assets/RobothronePageImages/Smart Transportation.webp';
+import IndustrySolutions from './assets/RobothronePageImages/Industry 4.0 Solutions.webp';
+import HealthcareInnovation from './assets/RobothronePageImages/Healthcare Innovation.webp';
 //competition snapshops section images
-import CompetitionSnapshots1 from './assets/RobothronePageImages/Competition Snapshots - 1.jpg';
-import CompetitionSnapshots2 from './assets/RobothronePageImages/Competition Snapshots - 2.jpg';
-import CompetitionSnapshots3 from './assets/RobothronePageImages/Competition Snapshots - 3.jpg';
-import CompetitionSnapshots4 from './assets/RobothronePageImages/Competition Snapshots - 4.jpg';
-import CompetitionSnapshots5 from './assets/RobothronePageImages/Competition Snapshots - 5.jpg';
-import CompetitionSnapshots6 from './assets/RobothronePageImages/Competition Snapshots - 6.jpg';
-import CompetitionSnapshots7 from './assets/RobothronePageImages/Competition Snapshots - 7.jpg';
-import CompetitionSnapshots8 from './assets/RobothronePageImages/Competition Snapshots - 8.jpg';
-import CompetitionSnapshots9 from './assets/RobothronePageImages/Competition Snapshots - 9.jpg';
+import CompetitionSnapshots1 from './assets/RobothronePageImages/Competition Snapshots - 1.webp';
+import CompetitionSnapshots2 from './assets/RobothronePageImages/Competition Snapshots - 2.webp';
+import CompetitionSnapshots3 from './assets/RobothronePageImages/Competition Snapshots - 3.webp';
+import CompetitionSnapshots4 from './assets/RobothronePageImages/Competition Snapshots - 4.webp';
+import CompetitionSnapshots5 from './assets/RobothronePageImages/Competition Snapshots - 5.webp';
+import CompetitionSnapshots6 from './assets/RobothronePageImages/Competition Snapshots - 6.webp';
+import CompetitionSnapshots7 from './assets/RobothronePageImages/Competition Snapshots - 7.webp';
+import CompetitionSnapshots8 from './assets/RobothronePageImages/Competition Snapshots - 8.webp';
+import CompetitionSnapshots9 from './assets/RobothronePageImages/Competition Snapshots - 9.webp';
 
 
 
@@ -53,33 +54,6 @@ export default function RobothronePage() {
   const [showCardsSection, setShowCardsSection] = useState(false);
   const sliderRef = useRef(null);
 
-  // Set SEO metadata for Robothrone page
-  useEffect(() => {
-    // Set page title
-    document.title = 'Robothrone Robotics & IoT Innovation Challenge for Students';
-
-    // Set or update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Robothrone by TechyGuide is an inter-school STEM innovation challenge where students design robotics and IoT projects, practice coding, and present creative technology solutions.');
-    } else {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      metaDescription.setAttribute('content', 'Robothrone by TechyGuide is an inter-school STEM innovation challenge where students design robotics and IoT projects, practice coding, and present creative technology solutions.');
-      document.head.appendChild(metaDescription);
-    }
-
-    // Add or update canonical tag
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      canonicalLink.setAttribute('href', 'https://techyguide.com/robothrone');
-      document.head.appendChild(canonicalLink);
-    } else {
-      canonicalLink.setAttribute('href', 'https://techyguide.com/robothrone');
-    }
-  }, []);
 
   // Countdown Timer
   useEffect(() => {
@@ -173,6 +147,11 @@ export default function RobothronePage() {
 
   return (
     <div className="robothrone-page-root">
+      <SEO 
+        title="Robothrone Robotics & IoT Innovation Challenge for Students"
+        description="Robothrone by TechyGuide is an inter-school STEM innovation challenge where students design robotics and IoT projects, practice coding, and present creative technology solutions."
+        canonical="https://techyguide.com/robothrone"
+      />
       {/* Hero Section */} 
       {/* <div className="robothrone-top-badge">
           ⭐ Registration extended till 01 March 2026.
