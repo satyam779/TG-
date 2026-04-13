@@ -1,13 +1,13 @@
 import { useEffect } from 'react'
 import './AboutUsPage.css'
-import teamimg1 from './assets/AboutUSImages/Team 1.png';
-import founderImage from './assets/AboutUSImages/5.png';
-import workspace1 from './assets/AboutUSImages/Our Team & Workspace - 1.jpg';
-import workspace2 from './assets/AboutUSImages/Our Team & Workspace - 2.jpg';
-import workspace3 from './assets/AboutUSImages/Our Team & Workspace - 3.jpg';
-import workspace4 from './assets/AboutUSImages/Our Team & Workspace - 4.jpg';
-import ourjourney from './assets/AboutUSImages/Asset_Website_About us page - Milestone 1.png';
-import heroImage from './assets/AboutUSImages/Hero.jpg';
+import teamimg1 from './assets/AboutUsImages/Team 1.png';
+import founderImage from './assets/AboutUsImages/5.png';
+import workspace1 from './assets/AboutUsImages/Our Team & Workspace - 1.jpg';
+import workspace2 from './assets/AboutUsImages/Our Team & Workspace - 2.jpg';
+import workspace3 from './assets/AboutUsImages/Our Team & Workspace - 3.jpg';
+import workspace4 from './assets/AboutUsImages/Our Team & Workspace - 4.jpg';
+import ourjourney from './assets/AboutUsImages/Asset_Website_About us page - Milestone 1.png';
+import heroImage from './assets/AboutUsImages/Hero.jpg';
 
 function AboutUsPage() {
 	const workspaceImages = [
