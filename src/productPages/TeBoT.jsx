@@ -42,12 +42,12 @@ function TeBoT() {
 
 
     const projectsList = [
-    { title: "Soccer Robot", description: "A robot designed to play mini soccer games using motor control and directional movement.", image: soccerRobot },
-    { title: "Line Follower", description: "A robot that follows a predefined path by detecting and tracking a line using sensors.", image: LineFollower },
-    { title: "Obstacle Avoidance Robot", description: "A smart robot that detects obstacles using sensors and automatically changes direction.", image: obstacleAvoidanceRobot },
-    { title: "Bluetooth Control Car", description: "A robotic car controlled wirelessly through a smartphone using Bluetooth connectivity.", image: BluetoothControlCar },
-    { title: "Voice Control Car", description: "A robotic car that moves based on voice commands given through a mobile device.", image: VoiceControlCar },
-];
+        { title: "Soccer Robot", description: "A robot designed to play mini soccer games using motor control and directional movement.", image: soccerRobot },
+        { title: "Line Follower", description: "A robot that follows a predefined path by detecting and tracking a line using sensors.", image: LineFollower },
+        { title: "Obstacle Avoidance Robot", description: "A smart robot that detects obstacles using sensors and automatically changes direction.", image: obstacleAvoidanceRobot },
+        { title: "Bluetooth Control Car", description: "A robotic car controlled wirelessly through a smartphone using Bluetooth connectivity.", image: BluetoothControlCar },
+        { title: "Voice Control Car", description: "A robotic car that moves based on voice commands given through a mobile device.", image: VoiceControlCar },
+    ];
 
     const kitOfferings = [
         {
@@ -491,7 +491,7 @@ function TeBoT() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { 
+        }, {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         });
@@ -509,12 +509,12 @@ function TeBoT() {
 
         const form = document.getElementById('inquiry-form');
         if (form) {
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
                 let isValid = true;
-                
+
                 inputs.forEach((input, index) => {
                     setTimeout(() => {
                         if (!input.value.trim()) {
@@ -531,7 +531,7 @@ function TeBoT() {
                         }
                     }, index * 50);
                 });
-                
+
                 setTimeout(() => {
                     if (isValid) {
                         const schoolName = form.querySelector('input[name="school_name"]').value;
@@ -539,7 +539,7 @@ function TeBoT() {
                         const email = form.querySelector('input[name="email"]').value;
                         const phone = form.querySelector('input[name="phone"]').value;
                         const message = form.querySelector('textarea[name="message"]').value;
-                        
+
                         const whatsappMessage = `*New Inquiry from TeBot Product Page*%0A%0A` +
                             `*School Name:* ${encodeURIComponent(schoolName)}%0A` +
                             `*Contact Person:* ${encodeURIComponent(contactPerson)}%0A` +
@@ -547,10 +547,10 @@ function TeBoT() {
                             `*Phone:* ${encodeURIComponent(phone)}%0A` +
                             `*Message:* ${encodeURIComponent(message)}%0A%0A` +
                             `*Page:* TeBot Product Page`;
-                        
+
                         const whatsappNumber = '918197984847';
                         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-                        
+
                         const button = form.querySelector('.form-btn');
                         const originalText = button.textContent;
                         button.style.transform = 'translateY(-1px)';
@@ -558,10 +558,10 @@ function TeBoT() {
                             button.textContent = '✅ Opening WhatsApp...';
                             button.style.background = 'linear-gradient(135deg, #4caf50 0%, #45a049 100%)';
                             button.style.transform = 'translateY(-2px)';
-                            
+
                             window.open(whatsappUrl, '_blank');
                         }, 150);
-                        
+
                         setTimeout(() => {
                             button.textContent = originalText;
                             button.style.background = 'linear-gradient(135deg, #1976d2 0%, #1565c0 100%)';
@@ -577,12 +577,12 @@ function TeBoT() {
             });
         }
 
-        const handleKeyDown = function(e) {
+        const handleKeyDown = function (e) {
             if (e.key === 'Enter' && e.target === heroButton) {
                 heroButton.click();
             }
         };
-        
+
         document.addEventListener('keydown', handleKeyDown);
 
         return () => {
@@ -599,7 +599,7 @@ function TeBoT() {
 
     return (
         <div className="tebot-page-root">
-            <SEO 
+            <SEO
                 title="TeBOT Robotics Kit for Classrooms | 50+ STEM Projects"
                 description="TeBOT is a robotics and IoT learning kit designed for school classrooms in India. Students can build 50+ hands-on STEM projects using safe, reusable components."
                 canonical="https://techyguide.com/tebot-robotics-kit-for-schools/"
@@ -613,7 +613,7 @@ function TeBoT() {
 
                 <div className="tebot-hero-layout">
                     <div className="tebot-hero-copy" data-depth="0.02">
-                        <p className="tebot-hero-eyebrow">STEM Learning For Kids</p>
+
                         <h1>
                             Build, Code &amp; Invent
                             <span>Awesome TeBot Projects</span>
@@ -657,7 +657,7 @@ function TeBoT() {
                             <h2>Introduction to <span>TeBot Advance Kit</span></h2>
                         </div>
                         <p className="intro-description">
-                          The TeBot Advance Kit is a robotics and IoT learning toolkit designed for young innovators. It includes sensors such as RFID, Bluetooth, and soil moisture modules, allowing students to build 50+ practical STEM projects. From smart security systems to voice-controlled vehicles, TeBOT helps students explore coding, electronics, and automation through hands-on learning, making it ideal for modern STEM education in schools. 
+                            The TeBot Advance Kit is a robotics and IoT learning toolkit designed for young innovators. It includes sensors such as RFID, Bluetooth, and soil moisture modules, allowing students to build 50+ practical STEM projects. From smart security systems to voice-controlled vehicles, TeBOT helps students explore coding, electronics, and automation through hands-on learning, making it ideal for modern STEM education in schools.
                         </p>
                         <div className="tebot-video-wrap">
                             <div className="tebot-video-container reveal-card">
@@ -674,11 +674,11 @@ function TeBoT() {
                 <section className="explore-section section-block section-plain" id="explore">
                     <div className="explore-container section-container">
                         <div className="section-header">
-                            <h2><span style={{color: '#008273'}}>Explore, Create, and Innovate</span> with TeBot</h2>
+                            <h2><span style={{ color: '#008273' }}>Explore, Create, and Innovate</span> with TeBot</h2>
                         </div>
                         <p className="explore-tagline">Your Gateway to the Future of Tech</p>
                         <p className="explore-subheading">
-                            TeBot is an all-in-one robotics kit for students that turns learners into tech creators. From LED projects to AI robots, TeBot helps students explore coding, electronics, and STEM through Practical learning. 
+                            TeBot is an all-in-one robotics kit for students that turns learners into tech creators. From LED projects to AI robots, TeBot helps students explore coding, electronics, and STEM through Practical learning.
                         </p>
                         <ul className="explore-list">
                             <li className="explore-point reveal-card">
@@ -725,7 +725,7 @@ function TeBoT() {
                 <section className="technologies-section section-block section-mist" id="technologies">
                     <div className="tech-container section-container">
                         <div className="section-header">
-                            <h2>Master the <span style={{color: '#008273'}}>Technologies of Tomorrow</span></h2>
+                            <h2>Master the <span style={{ color: '#008273' }}>Technologies of Tomorrow</span></h2>
                         </div>
                         <div className="tech-grid">
                             <div className="tech-card reveal-card">
@@ -750,7 +750,7 @@ function TeBoT() {
                 <section className="specs-section section-soft tebot-compact-section" id="specifications">
                     <div className="specs-container section-container">
                         <div className="section-header">
-                            <h2>The Advanced Tech Inside <span style={{color: '#008273'}}>TeBot</span></h2>
+                            <h2>The Advanced Tech Inside <span style={{ color: '#008273' }}>TeBot</span></h2>
                         </div>
                         <div className="specs-card reveal-card">
                             <div className="specs-image-wrap">
@@ -774,7 +774,7 @@ function TeBoT() {
                 <section className="why-tebot-section section-block section-plain" id="why-tebot">
                     <div className="why-container section-container">
                         <div className="section-header">
-                            <h2>Why <span style={{color: '#008273'}}>TeBot</span> is the <span style={{color: '#008273'}}>Ultimate Learning Choice</span></h2>
+                            <h2>Why <span style={{ color: '#008273' }}>TeBot</span> is the <span style={{ color: '#008273' }}>Ultimate Learning Choice</span></h2>
                         </div>
                         <div className="benefits-grid">
                             <div className="benefit-item reveal-card">
@@ -813,7 +813,7 @@ function TeBoT() {
                 <section className="kits-offerings-section section-mist tebot-compact-section" id="kits">
                     <div className="kits-container section-container">
                         <div className="section-header">
-                            <h2><span style={{color: '#008273'}}>TeBot Kits</span> for Students</h2>
+                            <h2><span style={{ color: '#008273' }}>TeBot Kits</span> for Students</h2>
                         </div>
                         <div
                             className="kits-main-slider reveal-card"
@@ -905,7 +905,7 @@ function TeBoT() {
                 <section className="featured-projects-section section-block section-soft" id="projects">
                     <div className="projects-container section-container">
                         <div className="section-header">
-                            <h2>Featured <span style={{color: '#008273'}}>TeBot Projects</span></h2>
+                            <h2>Featured <span style={{ color: '#008273' }}>TeBot Projects</span></h2>
                         </div>
                         <p className="projects-intro">Explore some of our 50+ amazing projects students can build:</p>
                         <div className="projects-scroll-wrap">

@@ -25,20 +25,26 @@
 }
 
 @media print {
-    .courses-page-container .hero, .courses-page-container .reels-section, .courses-page-container #stories, .courses-page-container .modal, .courses-page-container .hero-bg, .courses-page-container .future-point {
+
+    .courses-page-container .hero,
+    .courses-page-container .reels-section,
+    .courses-page-container #stories,
+    .courses-page-container .modal,
+    .courses-page-container .hero-bg,
+    .courses-page-container .future-point {
         display: none !important;
     }
-    
+
     .courses-page-container {
         background: white !important;
         color: black !important;
     }
-    
+
     .courses-page-container .courses-section {
         padding: 20px !important;
         background: white !important;
     }
-    
+
     .courses-page-container .card {
         break-inside: avoid;
         page-break-inside: avoid;
@@ -60,13 +66,14 @@
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
 }
+
 .courses-page-container {
     margin: 0;
 }
 
 
-.courses-page-container::-webkit-scrollbar, 
-.courses-page-container .modal-content::-webkit-scrollbar, 
+.courses-page-container::-webkit-scrollbar,
+.courses-page-container .modal-content::-webkit-scrollbar,
 .courses-page-container .reels-container::-webkit-scrollbar {
     display: none;
 }
@@ -100,15 +107,14 @@
 .courses-page-container .courses-section,
 .courses-page-container .info-flow-section,
 .courses-page-container .reels-section,
-.courses-page-container #stories {
-}
+.courses-page-container #stories {}
 
 .courses-page-container .orange {
     color: #ff8c00 !important;
 }
 
-.courses-page-container .accent { 
-    color: var(--primary-orange); 
+.courses-page-container .accent {
+    color: var(--primary-orange);
 }
 
 
@@ -145,7 +151,7 @@
 }
 
 .courses-page-container .hero-bg .hero-scene,
-.courses-page-container .hero-bg .hero-scene > g {
+.courses-page-container .hero-bg .hero-scene>g {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -167,9 +173,17 @@
     transform-origin: center;
 }
 
-.courses-page-container .hero-cloud-a { animation: driftCloud 30s ease-in-out infinite; }
-.courses-page-container .hero-cloud-b { animation: driftCloud 35s ease-in-out infinite reverse; }
-.courses-page-container .hero-cloud-c { animation: driftCloud 32s ease-in-out infinite; }
+.courses-page-container .hero-cloud-a {
+    animation: driftCloud 30s ease-in-out infinite;
+}
+
+.courses-page-container .hero-cloud-b {
+    animation: driftCloud 35s ease-in-out infinite reverse;
+}
+
+.courses-page-container .hero-cloud-c {
+    animation: driftCloud 32s ease-in-out infinite;
+}
 
 .courses-page-container .hero-icon {
     font-family: 'Fredoka', 'Poppins', sans-serif;
@@ -181,15 +195,38 @@
     transform-origin: center;
 }
 
-.courses-page-container .hero-icon-a { animation: floatIcon 12s ease-in-out infinite; }
-.courses-page-container .hero-icon-b { animation: floatIcon 14s ease-in-out infinite reverse; }
-.courses-page-container .hero-icon-c { animation: floatIcon 13s ease-in-out infinite 0.5s; }
-.courses-page-container .hero-icon-d { animation: floatIcon 11s ease-in-out infinite 1s; }
-.courses-page-container .hero-icon-e { animation: floatIcon 15s ease-in-out infinite 0.8s; }
+.courses-page-container .hero-icon-a {
+    animation: floatIcon 12s ease-in-out infinite;
+}
+
+.courses-page-container .hero-icon-b {
+    animation: floatIcon 14s ease-in-out infinite reverse;
+}
+
+.courses-page-container .hero-icon-c {
+    animation: floatIcon 13s ease-in-out infinite 0.5s;
+}
+
+.courses-page-container .hero-icon-d {
+    animation: floatIcon 11s ease-in-out infinite 1s;
+}
+
+.courses-page-container .hero-icon-e {
+    animation: floatIcon 15s ease-in-out infinite 0.8s;
+}
 
 @keyframes floatIcon {
-    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.2; }
-    50% { transform: translateY(-8px) rotate(2deg); opacity: 0.35; }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(2deg);
+        opacity: 0.35;
+    }
 }
 
 .courses-page-container .hero-gear {
@@ -201,37 +238,115 @@
     transform-origin: center;
 }
 
-.courses-page-container .hero-gear-a { animation: spinCW 20s linear infinite; }
-.courses-page-container .hero-gear-b { animation: spinCCW 18s linear infinite; }
-.courses-page-container .hero-gear-center { fill: rgba(255, 255, 255, 0.5); stroke: none; }
+.courses-page-container .hero-gear-a {
+    animation: spinCW 20s linear infinite;
+}
 
-.courses-page-container .hero-kid { transform-box: fill-box; }
-.courses-page-container .hero-kid-left { animation: kidBounce 4s ease-in-out infinite; }
-.courses-page-container .hero-kid-right { animation: kidHop 3.5s ease-in-out infinite; }
-.courses-page-container .hero-kid-coder { animation: coderNod 4s ease-in-out infinite; }
-.courses-page-container .kid-arm-wave { animation: kidWave 2.5s ease-in-out infinite; }
+.courses-page-container .hero-gear-b {
+    animation: spinCCW 18s linear infinite;
+}
 
-.courses-page-container .hero-robot { animation: robotBob 4.5s ease-in-out infinite; }
-.courses-page-container .robot-eye { animation: robotBlink 5s ease-in-out infinite; }
-.courses-page-container .robot-signal { animation: signalPulse 2.5s ease-in-out infinite; }
+.courses-page-container .hero-gear-center {
+    fill: rgba(255, 255, 255, 0.5);
+    stroke: none;
+}
 
-.courses-page-container .hero-hill-back { fill: #0d3d66; }
-.courses-page-container .hero-hill-front { fill: #0a3252; }
+.courses-page-container .hero-kid {
+    transform-box: fill-box;
+}
 
-.courses-page-container .kid-head { fill: #f4cba6; }
-.kid-.courses-page-container { fill: #e74c3c; }
-.kid-.courses-page-container-coder { fill: #3498db; }
-.kid-.courses-page-container-left { fill: #9b59b6; }
-.kid-.courses-page-container-right { fill: #e67e22; }
-.courses-page-container .kid-leg { stroke: #2c3e50; stroke-width: 8; stroke-linecap: round; }
-.courses-page-container .kid-arm { stroke: #f4cba6; stroke-width: 8; stroke-linecap: round; }
+.courses-page-container .hero-kid-left {
+    animation: kidBounce 4s ease-in-out infinite;
+}
 
-.robot-.courses-page-container { fill: #3498db; }
-.courses-page-container .robot-face { fill: #2980b9; }
-.courses-page-container .robot-eye { fill: #2ecc71; }
-.courses-page-container .robot-mouth { fill: #1abc9c; }
-.courses-page-container .robot-antenna { stroke: #95a5a6; stroke-width: 4; }
-.courses-page-container .robot-signal { fill: #e74c3c; }
+.courses-page-container .hero-kid-right {
+    animation: kidHop 3.5s ease-in-out infinite;
+}
+
+.courses-page-container .hero-kid-coder {
+    animation: coderNod 4s ease-in-out infinite;
+}
+
+.courses-page-container .kid-arm-wave {
+    animation: kidWave 2.5s ease-in-out infinite;
+}
+
+.courses-page-container .hero-robot {
+    animation: robotBob 4.5s ease-in-out infinite;
+}
+
+.courses-page-container .robot-eye {
+    animation: robotBlink 5s ease-in-out infinite;
+}
+
+.courses-page-container .robot-signal {
+    animation: signalPulse 2.5s ease-in-out infinite;
+}
+
+.courses-page-container .hero-hill-back {
+    fill: #0d3d66;
+}
+
+.courses-page-container .hero-hill-front {
+    fill: #0a3252;
+}
+
+.courses-page-container .kid-head {
+    fill: #f4cba6;
+}
+
+.kid-.courses-page-container {
+    fill: #e74c3c;
+}
+
+.kid-.courses-page-container-coder {
+    fill: #3498db;
+}
+
+.kid-.courses-page-container-left {
+    fill: #9b59b6;
+}
+
+.kid-.courses-page-container-right {
+    fill: #e67e22;
+}
+
+.courses-page-container .kid-leg {
+    stroke: #2c3e50;
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.courses-page-container .kid-arm {
+    stroke: #f4cba6;
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.robot-.courses-page-container {
+    fill: #3498db;
+}
+
+.courses-page-container .robot-face {
+    fill: #2980b9;
+}
+
+.courses-page-container .robot-eye {
+    fill: #2ecc71;
+}
+
+.courses-page-container .robot-mouth {
+    fill: #1abc9c;
+}
+
+.courses-page-container .robot-antenna {
+    stroke: #95a5a6;
+    stroke-width: 4;
+}
+
+.courses-page-container .robot-signal {
+    fill: #e74c3c;
+}
 
 .courses-page-container .hero-play-scene rect,
 .courses-page-container .hero-play-scene circle,
@@ -241,53 +356,144 @@
 }
 
 @keyframes bgFadeIn {
-    from { opacity: 0; transform: scale(1.05) translateY(0); }
-    to { opacity: 1; transform: scale(1.0) translateY(0); }
+    from {
+        opacity: 0;
+        transform: scale(1.05) translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.0) translateY(0);
+    }
 }
 
 @keyframes driftCloud {
-    0%, 100% { transform: translateX(0) translateY(0); }
-    50% { transform: translateX(20px) translateY(-6px); }
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(20px) translateY(-6px);
+    }
 }
 
-@keyframes spinCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@keyframes spinCCW { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+@keyframes spinCW {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinCCW {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
 
 @keyframes robotBob {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 @keyframes robotBlink {
-    0%, 44%, 48%, 100% { transform: scaleY(1); }
-    45%, 47% { transform: scaleY(0.1); }
+
+    0%,
+    44%,
+    48%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    45%,
+    47% {
+        transform: scaleY(0.1);
+    }
 }
 
 @keyframes signalPulse {
-    0%, 100% { opacity: 0.65; transform: scale(0.9); }
-    50% { opacity: 1; transform: scale(1.2); }
+
+    0%,
+    100% {
+        opacity: 0.65;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
 }
 
 @keyframes kidBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 @keyframes kidHop {
-    0%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-8px); }
-    60% { transform: translateY(-4px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-8px);
+    }
+
+    60% {
+        transform: translateY(-4px);
+    }
 }
 
 @keyframes coderNod {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    35% { transform: translateY(-3px) rotate(-1deg); }
-    65% { transform: translateY(0) rotate(1deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    35% {
+        transform: translateY(-3px) rotate(-1deg);
+    }
+
+    65% {
+        transform: translateY(0) rotate(1deg);
+    }
 }
 
 @keyframes kidWave {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(-12deg); }
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-12deg);
+    }
 }
 
 .courses-page-container .hero-container {
@@ -310,14 +516,20 @@
     animation: contentFadeIn 0.8s ease-out 0.2s backwards;
     will-change: transform, opacity;
     text-align: left;
-    margin-left: 20px;
     max-width: 700px;
     text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
 }
 
 @keyframes contentFadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .courses-page-container .hero-image {
@@ -335,7 +547,7 @@
     height: 350px;
     z-index: 1;
     opacity: 0.2;
-    animation:  0.8s ease-out 0.2s backwards;
+    animation: 0.8s ease-out 0.2s backwards;
     will-change: transform, opacity;
 }
 
@@ -347,7 +559,7 @@
     height: 350px;
     z-index: 1;
     opacity: 0.2;
-    animation:  0.8s ease-out 0.2s backwards;
+    animation: 0.8s ease-out 0.2s backwards;
     will-change: transform, opacity;
 }
 
@@ -364,8 +576,15 @@
 }
 
 @keyframes imageFadeIn {
-    from { opacity: 0; transform: translateY(30px) scale(0.95); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .courses-page-container .kit-title {
@@ -435,14 +654,14 @@
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at 20% 50%, rgb(255, 255, 255) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgb(255, 255, 255) 0%, transparent 50%);
+        radial-gradient(circle at 80% 20%, rgb(255, 255, 255) 0%, transparent 50%);
     pointer-events: none;
 }
 
 .courses-page-container .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px; 
+    gap: 24px;
     max-width: 1180px;
     margin: 50px auto;
     padding: 5px;
@@ -497,7 +716,7 @@
     object-fit: cover;
     display: block;
     margin: -1px -1px 0 -1px;
-    border:2px #0d0d0d;
+    border: 2px #0d0d0d;
     border-radius: 0;
 }
 
@@ -550,8 +769,10 @@
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     padding-top: var(--courses-header-offset);
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.7);
@@ -578,23 +799,47 @@
 }
 
 @keyframes modalFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes modalFadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes modalPopIn {
-    from { opacity: 0; transform: translateY(18px) scale(0.96); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 @keyframes modalPopOut {
-    from { opacity: 1; transform: translateY(0) scale(1); }
-    to { opacity: 0; transform: translateY(8px) scale(0.98); }
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
 }
 
 .courses-page-container .modal-content {
@@ -695,23 +940,52 @@
     opacity: 0.2;
 }
 
-.courses-page-container .why-choose-bg .shape-1 { animation: floatShape1 8s ease-in-out infinite; }
-.courses-page-container .why-choose-bg .shape-2 { animation: floatShape2 10s ease-in-out infinite; }
-.courses-page-container .why-choose-bg .shape-3 { animation: floatShape3 6s ease-in-out infinite; }
+.courses-page-container .why-choose-bg .shape-1 {
+    animation: floatShape1 8s ease-in-out infinite;
+}
+
+.courses-page-container .why-choose-bg .shape-2 {
+    animation: floatShape2 10s ease-in-out infinite;
+}
+
+.courses-page-container .why-choose-bg .shape-3 {
+    animation: floatShape3 6s ease-in-out infinite;
+}
 
 @keyframes floatShape1 {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    50% { transform: translate(20px, 20px) rotate(8deg); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(20px, 20px) rotate(8deg);
+    }
 }
 
 @keyframes floatShape2 {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    50% { transform: translate(-40px, -30px) rotate(15deg); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-40px, -30px) rotate(15deg);
+    }
 }
 
 @keyframes floatShape3 {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.2); }
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
 }
 
 .courses-page-container .content-wrapper {
@@ -845,7 +1119,7 @@
         radial-gradient(circle at 84% 80%, rgba(255, 94, 58, 0.14), transparent 30%);
 }
 
-.courses-page-container .reels-section > * {
+.courses-page-container .reels-section>* {
     position: relative;
     z-index: 1;
 }
@@ -998,28 +1272,32 @@
     height: 14px;
     margin-left: 0;
     border: none;
-    background: linear-gradient(
-        90deg,
-        #ffffff 0 38%,
-        transparent 38% 62%,
-        #ffffff 62% 100%
-    );
+    background: linear-gradient(90deg,
+            #ffffff 0 38%,
+            transparent 38% 62%,
+            #ffffff 62% 100%);
 }
 
-.courses-page-container .reel-info { color: white; }
+.courses-page-container .reel-info {
+    color: white;
+}
+
 /* stoyryyyyyyyyyyy */
 /* stoyryyyyyyyyyyy */
-.courses-page-container .container { 
+.courses-page-container .container {
     max-height: 80vh;
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 25px;
-    
+
 }
-.courses-page-container .section { padding: 10px 0; }
+
+.courses-page-container .section {
+    padding: 10px 0;
+}
 
 .courses-page-container #stories {
-    background: linear-gradient( #e9f7ff 100%);
+    background: linear-gradient(#e9f7ff 100%);
     padding: 50px 0;
     position: relative;
     overflow: hidden;
@@ -1079,8 +1357,13 @@
 }
 
 @keyframes scrollStories {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .courses-page-container .section-animate {
@@ -1154,7 +1437,9 @@
         gap: 22px;
     }
 
-    .courses-page-container .card-img { height: 260px; }
+    .courses-page-container .card-img {
+        height: 260px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -1196,20 +1481,29 @@
         padding: 0 15px;
     }
 
-    .courses-page-container .card-img { height: 245px; }
+    .courses-page-container .card-img {
+        height: 245px;
+    }
 
     .courses-page-container .reels-wrapper::before,
-    .courses-page-container .reels-wrapper::after { width: 20px; }
-    .courses-page-container .reel-card { min-width: 280px; height: 490px; }
+    .courses-page-container .reels-wrapper::after {
+        width: 20px;
+    }
+
+    .courses-page-container .reel-card {
+        min-width: 280px;
+        height: 490px;
+    }
 }
 
 @media (max-width: 768px) {
+
     .courses-page-container .future-point,
     .courses-page-container .future-point.reverse {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .courses-page-container .future-point .future-impact {
         text-align: left;
     }
@@ -1244,7 +1538,7 @@
     }
 
     .courses-page-container .hero-image {
-        transform: translate(0px, 145px); 
+        transform: translate(0px, 145px);
     }
 
     .courses-page-container .hero-img {
@@ -1255,6 +1549,7 @@
     .courses-page-container .hero-lottie {
         display: none;
     }
+
     .courses-page-container .hero-lottie2 {
         display: none;
     }
@@ -1271,9 +1566,11 @@
         gap: 5px;
     }
 
-    .courses-page-container .modal-content { padding: 20px;
-    min-height: 85vh;
-top: 20px; }
+    .courses-page-container .modal-content {
+        padding: 20px;
+        min-height: 85vh;
+        top: 20px;
+    }
 
     .courses-page-container #whyChooseBg,
     .courses-page-container .why-choose-bg {
@@ -1287,15 +1584,15 @@ top: 20px; }
     .courses-page-container .story-viewport {
         padding: 20px 10px;
     }
-    
+
     .courses-page-container .story-item {
         width: 350px;
     }
-    
+
     .courses-page-container .story-item img {
         height: 380px;
     }
-    
+
     .courses-page-container .story-track {
         gap: 20px;
         animation-duration: 40s;
@@ -1304,13 +1601,15 @@ top: 20px; }
 
 
 
-@media (min-width: 768px)  {
+@media (min-width: 768px) {
 
     .courses-page-container .hero {
         min-height: calc(100vh - var(--courses-header-offset));
         display: flex;
-        align-items: center;      /* vertical center */
-        justify-content: center;  /* horizontal center */
+        align-items: center;
+        /* vertical center */
+        justify-content: center;
+        /* horizontal center */
     }
 
     .courses-page-container .hero-container {
@@ -1340,7 +1639,7 @@ top: 20px; }
 
 
 @media (min-width: 1025px) {
-    
+
     .courses-page-container .hero {
         height: calc(100vh - var(--courses-header-offset));
         min-height: auto;
@@ -1370,7 +1669,7 @@ top: 20px; }
     .courses-page-container .hero-image {
         display: flex;
         justify-content: center;
-        transform: translate(220px, 120px); 
+        transform: translate(100px, 30px);
     }
 
     .courses-page-container .hero-img {

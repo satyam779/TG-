@@ -45,43 +45,43 @@ export default function EBlox() {
     const ebloxHeroRef = useRef(null);
     const ebloxHeroCanvasRef = useRef(null);
 
-    
+
     const projectsList = [
-       {
-    title: "Wind Mill",
-    description: "A small windmill model that generates motion or energy when wind moves the blades, demonstrating basic renewable energy concepts.",
-    image: windmill
-},
-{
-    title: "Lamp",
-    description: "A simple electronic lamp project that demonstrates how a circuit can be used to power and control a light source.",
-    image: Lamp
-},
-{
-    title: "Home Automation",
-    description: "A smart system that allows lights or appliances to be controlled automatically or remotely using sensors or wireless technology.",
-    image: HomeAutomation
-},
-{
-    title: "Automatic Close Light",
-    description: "A lighting system that automatically turns off when no one is nearby using sensors for energy-efficient operation.",
-    image: AutomaticCloseLight
-},
-{
-    title: "Sanitizer Dispenser",
-    description: "A touch-free sanitizer dispenser that releases sanitizer automatically when a hand is detected by a sensor.",
-    image: SanitizerDispenser
-},
-{
-    title: "Car",
-    description: "A simple robotic car project demonstrating basic motor control and movement using electronic components.",
-    image: car
-},
-{
-    title: "Mechanical Door",
-    description: "A door mechanism that opens or closes automatically using motors and simple mechanical and electronic control.",
-    image: MechanicalDoor
-}
+        {
+            title: "Wind Mill",
+            description: "A small windmill model that generates motion or energy when wind moves the blades, demonstrating basic renewable energy concepts.",
+            image: windmill
+        },
+        {
+            title: "Lamp",
+            description: "A simple electronic lamp project that demonstrates how a circuit can be used to power and control a light source.",
+            image: Lamp
+        },
+        {
+            title: "Home Automation",
+            description: "A smart system that allows lights or appliances to be controlled automatically or remotely using sensors or wireless technology.",
+            image: HomeAutomation
+        },
+        {
+            title: "Automatic Close Light",
+            description: "A lighting system that automatically turns off when no one is nearby using sensors for energy-efficient operation.",
+            image: AutomaticCloseLight
+        },
+        {
+            title: "Sanitizer Dispenser",
+            description: "A touch-free sanitizer dispenser that releases sanitizer automatically when a hand is detected by a sensor.",
+            image: SanitizerDispenser
+        },
+        {
+            title: "Car",
+            description: "A simple robotic car project demonstrating basic motor control and movement using electronic components.",
+            image: car
+        },
+        {
+            title: "Mechanical Door",
+            description: "A door mechanism that opens or closes automatically using motors and simple mechanical and electronic control.",
+            image: MechanicalDoor
+        }
         // { title: "Distance eBlox", description: "The distance sensor detects nearby objects and measures their proximity. It helps demonstrate how sensors are used for obstacle detection and automation systems." },
         // { title: "Motor Driver eBlox", description: "The motor driver controls the direction and power supplied to the motors. It is used to safely operate motors in electronic and robotics projects." },
         // { title: "Light Sensor  EBlox", description: " A   Light Sensor detects the intensity of light in the surrounding environment using an LDR module. It can automatically control devices like LEDs or lamps, turning them ON in darkness and OFF in bright light" },
@@ -462,7 +462,7 @@ export default function EBlox() {
 
     return (
         <div className="eblox-page-root" style={{ overflow: 'hidden', scrollBehavior: 'auto' }}>
-            <SEO 
+            <SEO
                 title="E-Blox Modular Electronics Kit for Kids | STEM Learning"
                 description="Discover the E-Blox modular electronics kit for kids aged 5-10. Build 20+ STEM projects while learning circuits, renewable energy, and engineering concepts."
                 canonical="https://techyguide.com/e-blox-modular-electronics-kit-for-kids/"
@@ -476,7 +476,6 @@ export default function EBlox() {
 
                 <div className="eblox-hero-layout">
                     <div className="eblox-hero-copy" data-depth="0.02">
-                        <p className="eblox-hero-eyebrow">Block-Based STEM For Kids</p>
                         <h1>
                             Snap, Stack &amp; Code
                             <span>Creative E-BLOX Missions</span>
@@ -534,7 +533,7 @@ export default function EBlox() {
 
                 {/* Technologies at Focus - 2 columns */}
                 <section className="eblox-page-section eblox-focus" id="eblox-tech-focus">
-                    <h2 className="eblox-section-title orange-title"><span style={{color: '#008273'}}>Technologies</span> at Focus</h2>
+                    <h2 className="eblox-section-title orange-title"><span style={{ color: '#008273' }}>Technologies</span> at Focus</h2>
                     <div className="eblox-focus-grid-2col">
                         <article className="eblox-focus-card-v2 reveal-card">
                             <div className="eblox-focus-image-v2">
@@ -569,7 +568,7 @@ export default function EBlox() {
 
                 {/* e-Blox Tech - 2 columns with image and data under */}
                 <section className="eblox-page-section eblox-tech-design">
-                    <h2 className="eblox-section-title">E-Blox Tech <span style={{color: '#000000'}}>- Safe & Simple Design</span></h2>
+                    <h2 className="eblox-section-title">E-Blox Tech <span style={{ color: '#000000' }}>- Safe & Simple Design</span></h2>
                     <div className="eblox-tech-grid-2col">
                         <article className="eblox-tech-card-v2 reveal-card">
                             <div className="eblox-tech-image-v2">
@@ -607,7 +606,7 @@ export default function EBlox() {
 
                 {/* Why is e-Blox Best - with images and reduced width */}
                 <section className="eblox-page-section eblox-why-best">
-                    <h2 className="eblox-section-title orange-title">Why is <span style={{color: '#008273'}}>e-Blox</span> the Best for <span style={{color: '#008273'}}>Early Learners</span>?</h2>
+                    <h2 className="eblox-section-title orange-title">Why is <span style={{ color: '#008273' }}>e-Blox</span> the Best for <span style={{ color: '#008273' }}>Early Learners</span>?</h2>
                     <div className="eblox-why-grid-v2">
                         <article className="eblox-why-card-v2 reveal-card">
                             <div className="eblox-why-image-v2">
@@ -642,7 +641,7 @@ export default function EBlox() {
 
                 {/* e-Blox Kit Offerings */}
                 <section className="eblox-page-section eblox-kit-offerings">
-                    <h2 className="eblox-section-title">E-Blox <span style={{color: '#000000'}}>Kit Offerings</span></h2>
+                    <h2 className="eblox-section-title">E-Blox <span style={{ color: '#000000' }}>Kit Offerings</span></h2>
                     <div
                         className="eblox-kits-main-slider reveal-card"
                         onMouseEnter={() => setIsKitSliderPaused(true)}
@@ -730,7 +729,7 @@ export default function EBlox() {
                                                 <li>Automatic Close Light</li>
                                                 <li>Home Automation</li>
                                                 <li>Sanitizer Dispenser</li>
-                                                 <li>Mechanical Door</li>
+                                                <li>Mechanical Door</li>
 
                                             </ul>
 
@@ -797,7 +796,7 @@ export default function EBlox() {
 
                 {/* Projects Showcase with Horizontal Scroll */}
                 <section className="eblox-page-section eblox-projects-section">
-                    <h2 className="eblox-section-title orange-title">Featured <span style={{color: '#008273'}}>E blox Projects</span></h2>
+                    <h2 className="eblox-section-title orange-title">Featured <span style={{ color: '#008273' }}>E blox Projects</span></h2>
                     <p className="eblox-projects-intro">Explore some of our 50+ amazing projects students can build:</p>
                     <div className="eblox-projects-scroll-wrap">
                         <div className="eblox-projects-track">

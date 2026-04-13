@@ -338,7 +338,7 @@ function IBoT() {
 
     return (
         <div className="ibot-page-root">
-            <SEO 
+            <SEO
                 title="i-Bot IoT & Robotics Kit | 100+ Wireless STEM Projects | Techyguide"
                 description="Master IoT with the i-Bot Advance Kit. Build smart home systems, voice-controlled robots, and 100+ projects using the ESP32 chip."
                 canonical="https://techyguide.com/ibot"
@@ -352,7 +352,6 @@ function IBoT() {
 
                 <div className="ibot-hero-layout">
                     <div className="ibot-hero-copy" data-depth="0.02">
-                        <p className="ibot-hero-eyebrow">STEM Learning For Kids</p>
                         <h1>
                             Build, Code &amp; Launch
                             <span>Real I-BoT Projects</span>
@@ -387,7 +386,7 @@ function IBoT() {
             </header>
 
             <div className="ibot-modern-page">
-                
+
                 {/* INTRODUCTION SECTION */}
                 <section className="ibot-section intro-section" id="introduction">
                     <div className="container">
@@ -395,7 +394,7 @@ function IBoT() {
                             <h2>Introduction to the<span className="highlight-text">I-Bot Kit</span></h2>
                         </div>
                         <p className="intro-description">
-The i-BoT robotics kit helps students explore IoT, robotics, wireless communication, and automation through hands-on learning. Built on the powerful ESP32 chip with integrated Wi-Fi and Bluetooth, the kit enables learners to design smart connected systems, from simple sensor-based projects to advanced voice-controlled robots. With over 100 guided projects and industry-grade sensors, i-BoT bridges classroom STEM education with practical technology skills used in modern innovation. 
+                            The i-BoT robotics kit helps students explore IoT, robotics, wireless communication, and automation through hands-on learning. Built on the powerful ESP32 chip with integrated Wi-Fi and Bluetooth, the kit enables learners to design smart connected systems, from simple sensor-based projects to advanced voice-controlled robots. With over 100 guided projects and industry-grade sensors, i-BoT bridges classroom STEM education with practical technology skills used in modern innovation.
                         </p>
                         <div className="ibot-video-wrap">
                             <div className="ibot-video-container">
@@ -412,20 +411,20 @@ The i-BoT robotics kit helps students explore IoT, robotics, wireless communicat
                 <section className="ibot-section smart-world-section">
                     <div className="container">
                         <h2 className="smart-world-headline">
-                            Build Your Own <span style={{color: '#008273'}}>Smart World with i-Bot</span> <br/> The Ultimate IoT Learning Ecosystem.
+                            Build Your Own <span style={{ color: '#008273' }}>Smart World with i-Bot</span> <br /> The Ultimate IoT Learning Ecosystem.
                         </h2>
                         <p className="smart-world-subheadline">
                             Empowering young innovators (Ages 7–14) to master the Internet of Things. i-Bot (TechIoT) isn't just a robot; it's a gateway to building smart homes, wireless gadgets, and connected cities.
                         </p>
-                       
+
                     </div>
                 </section>
-                
+
                 {/* SECTION 1: TECHNOLOGIES AT FOCUS */}
                 <section className="ibot-section tech-focus-section" id="ibot-tech-focus">
                     <div className="container">
                         <div className="section-header">
-                            <h2><span style={{color: '#008273'}}>Technologies</span> at Focus</h2>
+                            <h2><span style={{ color: '#008273' }}>Technologies</span> at Focus</h2>
                             <p>Master the core technologies shaping IoT and robotics innovation</p>
                         </div>
 
@@ -435,25 +434,25 @@ The i-BoT robotics kit helps students explore IoT, robotics, wireless communicat
                                 <h3>Internet of Things (IoT)</h3>
                                 <p>The core of i-Bot. Learn to send data to the cloud and control devices from your smartphone using the Blynk IoT platform.</p>
                             </div>
-                            
+
                             <div className="tech-card">
                                 <img src={WirelessCommunication} alt="Wireless Communication" className="tech-image" loading="lazy" decoding="async" />
                                 <h3>Wireless Communication</h3>
                                 <p>Master Wi-Fi and Bluetooth technologies for long-range remote control and automation.</p>
                             </div>
-                            
+
                             <div className="tech-card">
                                 <img src={AdvancedSensoryLogic} alt="Advanced Sensory Logic" className="tech-image" loading="lazy" decoding="async" />
                                 <h3>Advanced Sensory Logic</h3>
                                 <p>Use industry-grade sensors to detect Gas (MQ2), Flame, Rain, and Soil Moisture.</p>
                             </div>
-                            
+
                             <div className="tech-card">
                                 <img src={AutomationEngineering} alt="Automation Engineering" className="tech-image" loading="lazy" decoding="async" />
                                 <h3>Automation Engineering</h3>
                                 <p>Build complex systems like Smart Baby Cradles and Automated Sanitizer Dispensers.</p>
                             </div>
-                            
+
                             <div className="tech-card">
                                 <img src={DualProgramming} alt="Dual Programming" className="tech-image" loading="lazy" decoding="async" />
                                 <h3>Dual Programming</h3>
@@ -467,7 +466,7 @@ The i-BoT robotics kit helps students explore IoT, robotics, wireless communicat
                 <section className="ibot-section hardware-section">
                     <div className="container">
                         <div className="section-header">
-                            <h2><span style={{color: '#008273'}}>I-Bot Technology</span>: The Hardware</h2>
+                            <h2><span style={{ color: '#008273' }}>I-Bot Technology</span>: The Hardware</h2>
                             <p>Industrial-grade engineering with classroom-friendly design</p>
                         </div>
 
@@ -494,7 +493,7 @@ The i-BoT robotics kit helps students explore IoT, robotics, wireless communicat
                 <section className="ibot-section why-best-section">
                     <div className="container">
                         <div className="section-header">
-                            <h2>Why <span style={{color: '#008273'}}>i-Bot</span> is the Best</h2>
+                            <h2>Why <span style={{ color: '#008273' }}>i-Bot</span> is the Best</h2>
                             <p>A complete IoT learning platform built for modern educators</p>
                         </div>
 
@@ -540,7 +539,7 @@ The i-BoT robotics kit helps students explore IoT, robotics, wireless communicat
                 <section className="ibot-section kits-section" id="kits">
                     <div className="container">
                         <div className="section-header">
-                            <h2><span style={{color: '#008273'}}>i-Bot Kits</span> for Students</h2>
+                            <h2><span style={{ color: '#008273' }}>i-Bot Kits</span> for Students</h2>
                             <p>Choose the perfect kit for your learning journey</p>
                         </div>
 
@@ -707,64 +706,64 @@ The i-BoT robotics kit helps students explore IoT, robotics, wireless communicat
                 <section className="ibot-section featured-projects-section" id="projects">
                     <div className="container">
                         <div className="section-header">
-                            <h2>Featured <span style={{color: '#008273'}}>i-Bot Projects</span></h2>
+                            <h2>Featured <span style={{ color: '#008273' }}>i-Bot Projects</span></h2>
                         </div>
                         <p className="projects-intro">Explore some of our 100+ amazing projects students can build:</p>
                         <div className="projects-scroll-wrap">
                             <div className="projects-scroll-track">
                                 {[
-                                   {
-    title: "Smart Attendance System",
-    description: "An automated system that records attendance using sensors, RFID, or smart identification methods.",
-    image: SmartAttendanceSystem
-},
-{
-    title: "IoT House",
-    description: "A smart home model where devices like lights and appliances are controlled using IoT technology.",
-    image: IotHouse
-},
-{
-    title: "Humanoid",
-    description: "A human-like robot designed to perform actions such as walking, moving arms, or interacting with users.",
-    image: Humaniod
-},
-{
-    title: "Bluetooth Controlled Car",
-    description: "A robotic car that can be controlled wirelessly using Bluetooth from a smartphone or controller.",
-    image: BluetoothControlledCar
-},
-{
-    title: "Robotic Arm",
-    description: "A programmable robotic arm capable of picking, placing, and manipulating objects using motors and sensors.",
-    image: RoboticArm
-}
-                                    
+                                    {
+                                        title: "Smart Attendance System",
+                                        description: "An automated system that records attendance using sensors, RFID, or smart identification methods.",
+                                        image: SmartAttendanceSystem
+                                    },
+                                    {
+                                        title: "IoT House",
+                                        description: "A smart home model where devices like lights and appliances are controlled using IoT technology.",
+                                        image: IotHouse
+                                    },
+                                    {
+                                        title: "Humanoid",
+                                        description: "A human-like robot designed to perform actions such as walking, moving arms, or interacting with users.",
+                                        image: Humaniod
+                                    },
+                                    {
+                                        title: "Bluetooth Controlled Car",
+                                        description: "A robotic car that can be controlled wirelessly using Bluetooth from a smartphone or controller.",
+                                        image: BluetoothControlledCar
+                                    },
+                                    {
+                                        title: "Robotic Arm",
+                                        description: "A programmable robotic arm capable of picking, placing, and manipulating objects using motors and sensors.",
+                                        image: RoboticArm
+                                    }
+
                                 ].concat([
                                     {
-    title: "Smart Attendance System",
-    description: "An automated system that records attendance using sensors, RFID, or smart identification methods.",
-    image: SmartAttendanceSystem
-},
-{
-    title: "IoT House",
-    description: "A smart home model where devices like lights and appliances are controlled using IoT technology.",
-    image: IotHouse
-},
-{
-    title: "Humanoid",
-    description: "A human-like robot designed to perform actions such as walking, moving arms, or interacting with users.",
-    image: Humaniod
-},
-{
-    title: "Bluetooth Controlled Car",
-    description: "A robotic car that can be controlled wirelessly using Bluetooth from a smartphone or controller.",
-    image: BluetoothControlledCar
-},
-{
-    title: "Robotic Arm",
-    description: "A programmable robotic arm capable of picking, placing, and manipulating objects using motors and sensors.",
-    image: RoboticArm
-}
+                                        title: "Smart Attendance System",
+                                        description: "An automated system that records attendance using sensors, RFID, or smart identification methods.",
+                                        image: SmartAttendanceSystem
+                                    },
+                                    {
+                                        title: "IoT House",
+                                        description: "A smart home model where devices like lights and appliances are controlled using IoT technology.",
+                                        image: IotHouse
+                                    },
+                                    {
+                                        title: "Humanoid",
+                                        description: "A human-like robot designed to perform actions such as walking, moving arms, or interacting with users.",
+                                        image: Humaniod
+                                    },
+                                    {
+                                        title: "Bluetooth Controlled Car",
+                                        description: "A robotic car that can be controlled wirelessly using Bluetooth from a smartphone or controller.",
+                                        image: BluetoothControlledCar
+                                    },
+                                    {
+                                        title: "Robotic Arm",
+                                        description: "A programmable robotic arm capable of picking, placing, and manipulating objects using motors and sensors.",
+                                        image: RoboticArm
+                                    }
                                 ]).map((project, index) => (
                                     <div key={`${project.title}-${index}`} className="project-card">
                                         <img src={project.image} alt="project icon" className="project-number" loading="lazy" decoding="async" />

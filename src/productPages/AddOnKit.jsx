@@ -322,10 +322,10 @@ const AddOnKit = () => {
 			tick();
 		};
 
-        let isVisible = true;
+		let isVisible = true;
 
 		const onVisibilityChange = () => {
-            if (document.hidden || !isVisible) {
+			if (document.hidden || !isVisible) {
 				stop();
 				return;
 			}
@@ -339,7 +339,7 @@ const AddOnKit = () => {
 				pointer.active = false;
 				resetParallax();
 			}
-            if (isVisible && !document.hidden) start();
+			if (isVisible && !document.hidden) start();
 		};
 
 		window.addEventListener("resize", resize);
@@ -354,15 +354,15 @@ const AddOnKit = () => {
 		hero.dataset.reducedMotion = reducedMotion ? "true" : "false";
 		resize();
 
-        const observer = new IntersectionObserver((entries) => {
-            isVisible = entries[0].isIntersecting;
-            onVisibilityChange();
-        });
-        observer.observe(hero);
+		const observer = new IntersectionObserver((entries) => {
+			isVisible = entries[0].isIntersecting;
+			onVisibilityChange();
+		});
+		observer.observe(hero);
 
 		return () => {
 			stop();
-            observer.disconnect();
+			observer.disconnect();
 			window.removeEventListener("resize", resize);
 			document.removeEventListener("visibilitychange", onVisibilityChange);
 
@@ -588,7 +588,7 @@ const AddOnKit = () => {
 
 	return (
 		<div className="addonkit-page-root">
-			<SEO 
+			<SEO
 				title="Add-on Students Robotics Kits | STEM & AI Expandable Kits"
 				description="Expandable advanced add-on robotics kits for students including robotic arm, humanoid robots, electronics kits, and Arduino learning kits designed for STEM education."
 				canonical="https://techyguide.com/add-on-robotics-kits-for-students"
@@ -603,7 +603,6 @@ const AddOnKit = () => {
 
 					<div className="addon-hero-layout">
 						<div className="addon-hero-copy" data-depth="0.02">
-							<p className="addon-hero-eyebrow">Upgrade Robotics Adventures</p>
 							<h1>
 								Boost Every Build
 								<span>Smart Add-on Kit Modules</span>
@@ -611,7 +610,7 @@ const AddOnKit = () => {
 							<p className="addon-hero-subcopy">
 								Kids power up robot projects with sensors, lights, motion parts, and coding mini missions.
 							</p>
-							<br/>
+							<br />
 							<a className="addon-hero-btn addon-hero-btn-primary" href="#products" aria-label="Explore Add-on kit">
 								Explore Add-on Kit
 							</a>
