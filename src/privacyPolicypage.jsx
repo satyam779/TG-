@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './privacyPolicypage.css';
+import './PrivacyPolicyPage.css';
 
 export default function PrivacyPolicyPage() {
     useEffect(() => {
