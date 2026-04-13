@@ -1,0 +1,187 @@
+.schools-section {
+	padding: 80px 0;
+	background-color: #fff9f0;
+}
+
+.school-tab-header {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.school-tab-link {
+	background-color: #d1d5db;
+	border: none;
+	padding: 12px 25px;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #4b5563;
+	cursor: pointer;
+	border-radius: 8px 8px 0 0;
+	flex: 1;
+	min-width: 150px;
+	transition: 0.3s;
+}
+
+.school-tab-link:hover {
+	background-color: #9ca3af;
+	color: white;
+}
+
+.school-tab-link.active:nth-child(1) { background-color: #008080; color: white; }
+.school-tab-link.active:nth-child(2) { background-color: #008080; color: white; }
+.school-tab-link.active:nth-child(3) { background-color: #008080; color: white; }
+.school-tab-link.active:nth-child(4) { background-color: #008080; color: white; }
+
+.school-content-box {
+	background: white;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	padding: 40px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	top: -1px;
+}
+
+.school-tab-content {
+	display: none;
+	animation: fadeEffect 0.5s;
+}
+
+.school-desc {
+	color: #666;
+	margin-bottom: 18px;
+	font-size: 1.05rem;
+}
+
+.school-list {
+	list-style: none;
+}
+
+.school-list li {
+	margin-bottom: 11px;
+	padding-left: 25px;
+	position: relative;
+	color: #374151;
+	font-weight: 500;
+}
+
+.school-list li::before {
+	content: "•";
+	color: #003366;
+	font-size: 1.5rem;
+	position: absolute;
+	left: 0;
+	top: -6px;
+}
+
+/* Shared tab grid layout reused from tab styles */
+.tab-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+	align-items: center;
+}
+
+.tab-text h3 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.tab-image img {
+	border-radius: 15px;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+	.schools-section {
+		padding: 50px 0;
+	}
+
+	.school-tab-header {
+		gap: 5px;
+		padding: 20px 10px;
+	}
+
+	.school-tab-link {
+		padding: 10px 15px;
+		font-size: 0.9rem;
+		min-width: auto;
+		flex: 1 1 45%;
+	}
+
+	.school-content-box {
+		padding: 25px 20px;
+		margin: 0 15px;
+	}
+
+	.tab-grid {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.tab-text h3 {
+		font-size: 1.5rem;
+	}
+
+	.school-desc {
+		font-size: 0.95rem;
+	}
+
+	.school-list li {
+		padding-left: 20px;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.schools-section {
+		padding: 40px 0;
+	}
+
+	.school-tab-header {
+		flex-direction: column;
+	}
+
+	.school-tab-link {
+		padding: 12px;
+		font-size: 0.85rem;
+		border-radius: 8px;
+		width: 100%;
+	}
+
+	.school-content-box {
+		padding: 20px 15px;
+		margin: 0 10px;
+	}
+
+	.tab-text h3 {
+		font-size: 1.3rem;
+	}
+}
+
+@keyframes fadeEffect {
+	from {opacity: 0; transform: translateY(10px);} 
+	to {opacity: 1; transform: translateY(0);} 
+}
+
+@media (max-width: 768px) {
+	.tab-image {
+		order: -1;
+		width: 100%;
+		max-width: 450px;
+		margin: 0 auto;
+	}
+}

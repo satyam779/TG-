@@ -1,0 +1,298 @@
+@media (max-width: 850px) {
+  /* Product pages mobile-friendly stack and image sizing */
+  .tebot-page-root .content-layout,
+  .eblox-page-root .content-layout,
+  .ibot-page .content-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    padding: 10px !important;
+    text-align: center !important;
+  }
+
+  .tebot-page-root .image-section img,
+  .eblox-page-root .image-section img,
+  .ibot-page .image-section img,
+  .ibot-page .feature-image img,
+  .eblox-page-root .feature-image img,
+  .tebot-page-root .feature-image img {
+    width: 90vw !important;
+    max-width: 420px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+  }
+
+  .tebot-page-root .feature-item,
+  .eblox-page-root .feature-item,
+  .ibot-page .feature-item {
+    grid-template-columns: 1fr !important;
+    padding: 18px !important;
+    gap: 18px !important;
+    text-align: center !important;
+  }
+
+  .tebot-page-root .feature-content,
+  .eblox-page-root .feature-content,
+  .ibot-page .feature-content {
+    text-align: center !important;
+    padding: 0 10px !important;
+  }
+
+  /* Prevent horizontal overflow caused by images or grids */
+  .tebot-page-root, .eblox-page-root, .ibot-page {
+    overflow-x: hidden !important;
+  }
+}
+
+/* Workshop Page desktop/tablet safeguard: prevent I-BoT global .tech-card rules from leaking */
+.workshop-page-root .tech-card:nth-child(1),
+.workshop-page-root .tech-card:nth-child(2),
+.workshop-page-root .tech-card:nth-child(3),
+.workshop-page-root .tech-card:nth-child(4),
+.workshop-page-root .tech-card:nth-child(5) {
+  grid-column: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  justify-self: stretch !important;
+}
+
+@media (max-width: 768px) {
+  /* TeBot Page - Explore Section: Stack image above content */
+  .tebot-page-root .explore-list {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 !important;
+  }
+
+  .tebot-page-root .explore-point {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  .tebot-page-root .explore-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    object-fit: cover !important;
+    margin: 0 0 16px 0 !important;
+    border-radius: 12px !important;
+  }
+
+  .tebot-page-root .explore-content {
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .tebot-page-root .explore-point h3 {
+    font-size: 18px !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .tebot-page-root .explore-point p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+  }
+
+  /* TeBot Page - Technologies Section: Vertical alignment */
+  .tebot-page-root .tech-grid {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 20px !important;
+    padding: 0 15px !important;
+  }
+
+  .tebot-page-root .tech-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tebot-page-root .tech-icon {
+    width: 100% !important;
+    height: 200px !important;
+    margin: 0 !important;
+  }
+
+  .tebot-page-root .tech-icon img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .tebot-page-root .technologies-section .tech-card h3 {
+    font-size: 18px !important;
+    padding: 16px 20px 10px !important;
+    margin: 0 !important;
+  }
+
+  .tebot-page-root .technologies-section .tech-card p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    padding: 0 20px 20px !important;
+    margin: 0 !important;
+  }
+
+  /* I-BoT Page - Technologies at Focus Section: Vertical alignment */
+  .ibot-page-root .tech-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-top: 30px !important;
+    padding: 0 15px !important;
+  }
+
+  .ibot-page-root .tech-card {
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .ibot-page-root .tech-image {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+
+  .ibot-page-root .tech-card h3 {
+    font-size: 18px !important;
+    padding: 16px 20px 10px !important;
+    margin: 0 !important;
+  }
+
+  .ibot-page-root .tech-card p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    padding: 0 20px 20px !important;
+    margin: 0 !important;
+  }
+
+  /* E-Blox Page - Technologies at Focus Section: Vertical alignment */
+  .eblox-page-root .eblox-focus-grid-2col {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 15px !important;
+  }
+
+  .eblox-page-root .eblox-focus-card-v2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    min-height: auto !important;
+  }
+
+  .eblox-page-root .eblox-focus-image-v2 {
+    width: 100% !important;
+    height: 180px !important;
+  }
+
+  .eblox-page-root .eblox-focus-image-v2 img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .eblox-page-root .eblox-focus-card-v2 h3 {
+    font-size: 18px !important;
+    padding: 16px 20px 10px !important;
+  }
+
+  .eblox-page-root .eblox-focus-card-v2 p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    padding: 0 20px 20px !important;
+  }
+
+  /* E-Blox Page - Kit Offerings: prevent clipped content and improve heading */
+  .eblox-page-root .eblox-kit-offerings {
+    padding-top: 72px !important;
+  }
+
+  .eblox-page-root .eblox-kit-offerings .eblox-section-title {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .eblox-page-root .eblox-kit-offerings .eblox-kits-slider-window {
+    overflow: visible !important;
+  }
+
+  .eblox-page-root .eblox-kit-offerings .eblox-kit-scroll-card {
+    min-height: auto !important;
+  }
+
+  .eblox-page-root .eblox-kit-offerings .eblox-kit-scroll-content {
+    max-height: none !important;
+    overflow-y: visible !important;
+    height: auto !important;
+    padding: 20px !important;
+  }
+
+  .eblox-page-root .eblox-kit-offerings .eblox-kit-scroll-content h3 {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .eblox-page-root .eblox-kit-offerings .eblox-kit-scroll-content h4 {
+    font-size: 16px !important;
+    margin-top: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .eblox-page-root .eblox-kit-offerings .eblox-kit-scroll-content p,
+  .eblox-page-root .eblox-kit-offerings .eblox-list {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Workshop Page - Technology In Focus: fix mobile card alignment */
+  .workshop-page-root .tech-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-top: 28px !important;
+  }
+
+  .workshop-page-root .tech-card,
+  .workshop-page-root .tech-card:nth-child(1),
+  .workshop-page-root .tech-card:nth-child(2),
+  .workshop-page-root .tech-card:nth-child(3),
+  .workshop-page-root .tech-card:nth-child(4),
+  .workshop-page-root .tech-card:nth-child(5) {
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-self: stretch !important;
+    margin: 0 !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+  }
+
+  .workshop-page-root .card-icon {
+    margin-bottom: 14px !important;
+  }
+
+  .workshop-page-root .card-body h3 {
+    margin-bottom: 8px !important;
+    font-size: 1.2rem !important;
+  }
+
+  .workshop-page-root .card-body p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+}

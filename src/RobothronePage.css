@@ -1,0 +1,1462 @@
+/* ===============================
+   ROBOTHRONE PAGE - FULLY SCOPED CSS
+   All selectors prefixed with .robothrone-page-root
+================================ */
+
+/* GLOBAL PERFORMANCE SAFETY & OPTIMIZATION */
+.robothrone-page-root * {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.robothrone-page-root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.robothrone-page-root {
+  scroll-behavior: smooth;
+  background: #ffffff;
+  color: #000;
+  overflow-x: hidden;
+}
+
+.robothrone-page-root h1 {
+  color: #ff9500;
+}
+
+/* Top Badge */
+.robothrone-page-root .robothrone-top-badge {
+  position: fixed;
+  top: 120px;
+  right: 10px;
+  background: linear-gradient(135deg, #ff7a5c, #ff9f43);
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  z-index: 99;
+  
+}
+
+/* Hero */
+.robothrone-page-root .robothrone-hero {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin-top: 0;
+}
+
+.robothrone-page-root #robothrone-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.robothrone-page-root .robothrone-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.robothrone-page-root .robothrone-hero h1 {
+  font-size: 3.8rem;
+  line-height: 1.3;
+  color: #008273;
+  position: relative;
+  z-index: 1;
+  padding: 30px 0;
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+}
+
+.robothrone-page-root .robothrone-hero h1 span {
+  color: #ff9500;
+}
+
+.robothrone-page-root .robothrone-subtitle {
+  opacity: 0.85;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Pills */
+.robothrone-page-root .robothrone-pill {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255, 255, 255, 0.326);
+  border-radius: 999px;
+  padding: 14px 28px;
+  margin-bottom: 15px;
+  width: min(450px, 100%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.robothrone-page-root .robothrone-pills {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255, 255, 255, 0.313);
+  border-radius: 999px;
+  padding: 14px 28px;
+  margin-bottom: 15px;
+  width: 250px !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.robothrone-page-root .robothrone-pill strong {
+  color: #00ff9c;
+}
+
+.robothrone-page-root .robothrone-pills strong {
+  color: #00ff9c;
+}
+
+.robothrone-page-root .robothrone-final-submission {
+  color: #fff;
+}
+
+/* Countdown */
+.robothrone-page-root .robothrone-countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.robothrone-page-root .robothrone-time-box {
+  background: rgba(0,0,0,0.4);
+  border: 2px solid rgba(255,170,0,0.5);
+  border-radius: 12px;
+  padding: 6px 8px;
+  min-width: 70px;
+  height: auto;
+}
+
+.robothrone-page-root .robothrone-time-box span {
+  font-size: 1.44rem;
+  color: #ffb703;
+  display: block;
+}
+
+.robothrone-page-root .robothrone-time-box small {
+  font-size: 0.56rem;
+  opacity: 0.7;
+  color: white;
+}
+
+.robothrone-page-root .robothrone-dots {
+  color: #ffb703;
+  font-size: 1.44rem;
+}
+
+/* Buttons */
+.robothrone-page-root .robothrone-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 20px;
+}
+
+.robothrone-page-root .robothrone-actions button {
+  padding: 14px 34px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.robothrone-page-root .robothrone-register-btn {
+  background: #ff9f1a;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.robothrone-page-root .robothrone-register-btn:hover {
+  transform: translateY(-5px);
+}
+
+.robothrone-page-root .robothrone-download-btn {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.333) !important;
+  transition: transform 0.3s ease;
+}
+
+.robothrone-page-root .robothrone-download-btn:hover {
+  transform: translateY(-5px);
+}
+
+/* Modal Styles */
+.robothrone-page-root .robothrone-cards-section {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding-top: 110px;
+}
+
+.robothrone-page-root .robothrone-cards-section.robothrone-hidden {
+  display: none;
+}
+
+.robothrone-page-root .robothrone-cards-wrapper {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255, 255, 255, 0.356);
+  border-radius: 16px;
+  padding: 30px 26px;
+  width: 92%;
+  max-width: 1200px;
+  position: relative;
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+}
+
+/* Close button */
+.robothrone-page-root .robothrone-close-btn {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.robothrone-page-root .robothrone-close-btn:hover {
+  color: #ff9f1a;
+}
+
+/* Resource Cards */
+.robothrone-page-root .robothrone-resource-card {
+  background: rgba(255, 255, 255, 0.745);
+  border: 2px solid rgba(33, 2, 2, 0.329);
+  border-radius: 12px;
+  padding: 22px 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.robothrone-page-root .robothrone-resource-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.robothrone-page-root .robothrone-card-icon {
+  font-size: 3.2rem;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+.robothrone-page-root .robothrone-card-btn{
+   background: rgba(215, 210, 210, 0.12);
+  color: #050404;
+  border: 2px solid rgba(255, 255, 255, 0.333) !important;
+  padding: 10px 10px;
+  border-radius: 20px;
+  background-color: white;
+  font-weight: 600;
+}
+
+/* Responsive Breakpoints for Modal */
+@media (max-width: 1024px) {
+  .robothrone-page-root .robothrone-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .robothrone-page-root .robothrone-cards-wrapper {
+    grid-template-columns: 1fr;
+    padding: 18px 16px;
+    max-height: 85vh;
+    overflow-y: auto;
+    width: 94%;
+  }
+
+  .robothrone-page-root .robothrone-resource-card {
+    padding: 18px 14px;
+  }
+
+  .robothrone-page-root .robothrone-card-icon {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+  }
+}
+
+/* ABOUT ROBOTHRONE */
+.robothrone-page-root .robothrone-about-robothrone {
+  padding: 50px 8%;
+  position: relative;
+  z-index: 2;
+  background: #caffdf;
+}
+
+.robothrone-page-root .robothrone-about-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #000000;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+.robothrone-page-root .robothrone-about-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: rgba(0, 0, 0, 0.762);
+  border-radius: 10px;
+}
+
+/* Wrapper */
+.robothrone-page-root .robothrone-about-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* Left Card */
+.robothrone-page-root .robothrone-about-left {
+  background: #caffdf;
+  border-radius: 18px;
+  padding: 10px;
+  color: #123;
+}
+
+.robothrone-page-root .robothrone-about-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: 500;
+}
+
+/* Powered By */
+.robothrone-page-root .robothrone-about-powered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.robothrone-page-root .robothrone-about-powered img {
+  width: 250px;
+}
+
+.robothrone-page-root .robothrone-about-powered strong {
+  display: block;
+  font-size: 15px;
+  text-align: center;
+}
+
+.robothrone-page-root .robothrone-about-powered span {
+  text-align: center;
+}
+
+/* Right Card */
+.robothrone-page-root .robothrone-about-right {
+  background: linear-gradient(135deg, #00000000, #00000000);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider */
+.robothrone-page-root .robothrone-slider-track {
+  display: flex;
+  width: calc(400px * 8);
+  animation: robothrone-aboutScroll 30s linear infinite;
+  will-change: transform;
+}
+
+.robothrone-page-root .robothrone-slider-track img {
+  width: 450px;
+  height: 460px;
+  object-fit: cover;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+/* Auto Scroll Animation */
+@keyframes robothrone-aboutScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Responsive - About */
+@media (max-width: 900px) {
+  .robothrone-page-root .robothrone-about-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .robothrone-page-root .robothrone-about-right {
+    margin-top: 25px;
+  }
+
+  .robothrone-page-root .robothrone-slider-track img {
+    width: 280px;
+    height: 360px;
+  }
+}
+
+/* WHAT TO EXPECT SECTION */
+.robothrone-page-root .robothrone-expect-section {
+  padding: 70px 8%;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.robothrone-page-root .robothrone-expect-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.robothrone-page-root .robothrone-expect-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: rgba(0, 0, 0, 0.704);
+  border-radius: 10px;
+}
+
+.robothrone-page-root .robothrone-expect-title-h4 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.robothrone-page-root .robothrone-expect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.robothrone-page-root .robothrone-expect-card {
+  background: rgba(0, 128, 128, 0.126);
+  border: 2px solid teal;
+  border-radius: 18px;
+  padding: 30px 26px;
+  text-align: center;
+  color: #000;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(10px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.robothrone-page-root .robothrone-expect-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* Icon */
+.robothrone-page-root .robothrone-expect-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+/* Text */
+.robothrone-page-root .robothrone-expect-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: teal;
+}
+
+.robothrone-page-root .robothrone-expect-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* COMPETITION SNAPSHOTS */
+.robothrone-page-root .robothrone-snapshots-section {
+  padding: 70px 8%;
+  position: relative;
+  z-index: 2;
+}
+
+.robothrone-page-root .robothrone-snapshots-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+  margin-top: -1cm;
+  color: #000000;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.robothrone-page-root .robothrone-snapshots-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: rgba(16, 1, 1, 0.77);
+  border-radius: 10px;
+}
+
+/* Grid */
+.robothrone-page-root .robothrone-snapshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Card */
+.robothrone-page-root .robothrone-snapshot-card {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  transform: perspective(800px) rotateY(0deg);
+  transition: transform 0.6s ease, box-shadow 0.4s ease;
+}
+
+/* Image Fit */
+.robothrone-page-root .robothrone-snapshot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.5s ease;
+}
+
+/* On Hover */
+.robothrone-page-root .robothrone-snapshot-card:hover {
+  transform: perspective(800px) rotateY(10deg) scale(1.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.robothrone-page-root .robothrone-snapshot-card:hover img {
+  transform: scale(1.15) rotate(2deg);
+}
+
+/* Optional Border Glow */
+.robothrone-page-root .robothrone-snapshot-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  background: linear-gradient(
+    45deg,
+    rgba(0,255,156,0.25),
+    rgba(0,198,255,0.25),
+    rgba(255,170,0,0.25),
+    rgba(0,255,156,0.25)
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.robothrone-page-root .robothrone-snapshot-card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive - Snapshots */
+@media (max-width: 900px) {
+  .robothrone-page-root .robothrone-snapshots-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .robothrone-page-root .robothrone-snapshots-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ELIGIBILITY SECTION */
+.robothrone-page-root .robothrone-eligibility-section {
+  padding: 60px 8%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.robothrone-page-root .robothrone-eligibility-title {
+  font-size: 34px;
+  margin-bottom: 8px;
+  color: #000000;
+  font-weight: 800;
+}
+
+.robothrone-page-root .robothrone-eligibility-sub {
+  margin-top: -35px;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Grid */
+.robothrone-page-root .robothrone-eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.robothrone-page-root .robothrone-eligibility-card {
+  background: rgba(88, 180, 180, 0.204);
+  -webkit-backdrop-filter: blur(70px);
+  backdrop-filter: blur(1px);
+  border: 2px solid orangered;
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.40s ease, box-shadow 0.35s ease;
+}
+
+.robothrone-page-root .robothrone-eligibility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.5);
+}
+
+/* Image */
+.robothrone-page-root .robothrone-eligibility-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Header */
+.robothrone-page-root .robothrone-card-head {
+  padding: 18px 20px;
+  text-align: center;
+}
+
+.robothrone-page-root .robothrone-card-head h3 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.robothrone-page-root .robothrone-card-head span {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* List */
+.robothrone-page-root .robothrone-card-list {
+  list-style: none;
+  padding: 18px 22px 24px;
+  margin: 0;
+}
+
+.robothrone-page-root .robothrone-card-list li {
+  font-size: 0.92rem;
+  padding: 8px 0;
+  position: relative;
+  padding-left: 18px;
+  opacity: 0.85;
+}
+
+.robothrone-page-root .robothrone-card-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f80303e6;
+}
+
+/* Featured (Center Card) */
+.robothrone-page-root .robothrone-eligibility-card.robothrone-featured {
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 30px 65px rgba(0,0,0,0.6);
+}
+
+/* Responsive - Eligibility */
+@media (max-width: 1024px) {
+  .robothrone-page-root .robothrone-eligibility-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .robothrone-page-root .robothrone-eligibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .robothrone-page-root .robothrone-eligibility-title {
+    font-size: 26px;
+  }
+}
+
+/* THEMES SECTION */
+.robothrone-page-root .robothrone-themes-section {
+  padding: 80px 8%;
+  position: relative;
+  z-index: 2;
+}
+
+.robothrone-page-root .robothrone-themes-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 10px;
+  margin-top: -2cm;
+  color: #000000;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.robothrone-page-root .robothrone-themes-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: rgba(6, 0, 0, 0.815);
+  border-radius: 10px;
+}
+
+.robothrone-page-root .robothrone-themes-sub {
+  text-align: center;
+  opacity: 2.0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.robothrone-page-root .robothrone-division-title {
+  font-size: 1.4rem;
+  margin: 60px 0 24px;
+  opacity: 0.9;
+}
+
+/* Grid */
+.robothrone-page-root .robothrone-themes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.robothrone-page-root .robothrone-theme-card {
+  background: rgba(0, 128, 128, 0.132);
+  border: 2px solid teal;
+  border-radius: 20px;
+  padding: 22px;
+  color: #000;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.robothrone-page-root .robothrone-theme-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+/* Top Image + Icon */
+.robothrone-page-root .robothrone-theme-top {
+  position: relative;
+  margin: -22px -22px 14px -22px;
+  overflow: hidden;
+  border-radius: 14px 14px 0 0;
+  padding: 0;
+  background: #000;
+}
+
+.robothrone-page-root .robothrone-theme-top img {
+  width: 100%;
+  height: 80%;
+  aspect-ratio: 550 / 350;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.robothrone-page-root .robothrone-theme-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.6rem;
+  background: rgba(255,255,255,0.25);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+/* Header */
+.robothrone-page-root .robothrone-theme-head h4 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.robothrone-page-root .robothrone-theme-head span {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* List */
+.robothrone-page-root .robothrone-theme-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 14px;
+}
+
+.robothrone-page-root .robothrone-theme-card li {
+  padding: 7px 0;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 18px;
+  opacity: 0.9;
+}
+
+.robothrone-page-root .robothrone-theme-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #006941;
+  font-weight: 700;
+  opacity: 0.9;
+  text-shadow:
+    0 0 4px rgba(0,255,156,0.6),
+    0 0 10px rgba(0,255,156,0.45),
+    0 0 18px rgba(0,255,156,0.25);
+}
+
+/* Responsive - Themes */
+@media (max-width: 1024px) {
+  .robothrone-page-root .robothrone-themes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .robothrone-page-root .robothrone-themes-title {
+    font-size: 26px;
+  }
+
+  .robothrone-page-root .robothrone-theme-card {
+    padding: 18px;
+  }
+
+  .robothrone-page-root .robothrone-theme-top {
+    margin: -18px -18px 14px -18px;
+  }
+
+  .robothrone-page-root .robothrone-theme-top img {
+    aspect-ratio: 550 / 350;
+  }
+}
+
+/* JUDGING SECTION */
+.robothrone-page-root .robothrone-judging-section {
+  position: relative;
+  padding: 70px 6%;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Glass Layer */
+.robothrone-page-root .robothrone-judging-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.112);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  z-index: -1;
+}
+
+/* Header */
+.robothrone-page-root .robothrone-judging-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.robothrone-page-root .robothrone-judging-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #000;
+  margin-top: -2cm;
+}
+
+.robothrone-page-root .robothrone-judging-header p {
+  color: #000000;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.robothrone-page-root .robothrone-divider {
+  display: none;
+}
+
+/* Layout */
+.robothrone-page-root .robothrone-judging-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 35px;
+}
+
+/* Cards */
+.robothrone-page-root .robothrone-judging-card {
+  background: rgba(0, 128, 128, 0.132);
+  border-radius: 24px;
+  padding: 36px;
+  border: 2px solid teal;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    inset 0 0 25px rgba(255, 255, 255, 0.22);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+/* Hover lift + glow */
+.robothrone-page-root .robothrone-judging-card:hover {
+  transform: translate3d(0, -6px, 0);
+}
+
+/* Card Titles */
+.robothrone-page-root .robothrone-judging-card h3 {
+  margin-bottom: 26px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #0b0d03;
+}
+
+/* Criteria Bars */
+.robothrone-page-root .robothrone-criteria {
+  margin-bottom: 20px;
+}
+
+.robothrone-page-root .robothrone-criteria span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Bar background */
+.robothrone-page-root .robothrone-bar {
+  width: 100%;
+  background: rgba(8, 40, 25, 0.7);
+  height: 18px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+/* Fill animation */
+.robothrone-page-root .robothrone-fill {
+  height: 100%;
+  font-size: 11px;
+  color: #ffffff;
+  text-align: right;
+  padding-top: 3px;
+  padding-right: 8px;
+  line-height: 12px;
+  border-radius: 20px;
+}
+
+@keyframes robothrone-growBar {
+  from { width: 0; }
+}
+
+/* Bar Colors */
+.robothrone-page-root .robothrone-pink {
+  background: linear-gradient(90deg, #ff4d79, #ff9fb5);
+}
+
+.robothrone-page-root .robothrone-blue {
+  background: linear-gradient(90deg, #3f51ff, #7f8cff);
+}
+
+.robothrone-page-root .robothrone-green {
+  background: linear-gradient(90deg, #00ff99, #00c896);
+}
+
+.robothrone-page-root .robothrone-orange {
+  background: linear-gradient(90deg, #ff9f1c, #ffd166);
+}
+
+.robothrone-page-root .robothrone-cyan {
+  background: linear-gradient(90deg, #00d2ff, #6ffcff);
+}
+
+/* Key Points */
+.robothrone-page-root .robothrone-points {
+  list-style: none;
+  padding: 0;
+}
+
+.robothrone-page-root .robothrone-points li {
+  padding: 14px 0;
+  font-size: 15px;
+  color: #000000;
+  position: relative;
+  padding-left: 28px;
+}
+
+.robothrone-page-root .robothrone-points li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #00674d;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* PRIZE SECTION */
+.robothrone-page-root .robothrone-prize-section {
+  position: relative;
+  margin: 80px 6%;
+  padding: 60px 6%;
+  border-radius: 48px;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    rgba(158, 150, 138, 0.226),
+    rgba(122, 132, 139, 0.21)
+  );
+  box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+}
+
+/* Glass overlay */
+.robothrone-page-root .robothrone-prize-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  background: rgba(126, 222, 222, 0.233);
+  z-index: 0;
+}
+
+/* Header */
+.robothrone-page-root .robothrone-prize-header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 60px;
+}
+
+.robothrone-page-root .robothrone-prize-header h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #000;
+}
+
+.robothrone-page-root .robothrone-prize-header p {
+  opacity: 0.9;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.robothrone-page-root .robothrone-prize-divider {
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 14px auto 0;
+  border-radius: 999px;
+  background: #000;
+}
+
+/* Grid */
+.robothrone-page-root .robothrone-prize-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 34px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card */
+.robothrone-page-root .robothrone-prize-card {
+  background: rgba(0, 128, 128, 0.222);
+  border-radius: 20px;
+  padding: 28px;
+  border: 2px solid teal;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.robothrone-page-root .robothrone-prize-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 65px rgba(0,0,0,0.45);
+}
+
+/* Top Strip */
+.robothrone-page-root .robothrone-prize-top {
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.robothrone-page-root .robothrone-prize-top h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.robothrone-page-root .robothrone-prize-top strong {
+  font-size: 22px;
+  color: #ffd166;
+}
+
+.robothrone-page-root .robothrone-icon {
+  font-size: 28px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Color variants */
+.robothrone-page-root .robothrone-junior {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+}
+
+.robothrone-page-root .robothrone-intermediate {
+  background: linear-gradient(135deg, #b71c1c, #e57373);
+}
+
+.robothrone-page-root .robothrone-senior {
+  background: linear-gradient(135deg, #2d8428, #acc851e2);
+}
+
+/* List */
+.robothrone-page-root .robothrone-prize-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.robothrone-page-root .robothrone-prize-card li {
+  padding: 10px 0 10px 24px;
+  position: relative;
+  font-size: 15px;
+}
+
+.robothrone-page-root .robothrone-prize-card li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #00774a;
+}
+
+/* Responsive - Prize */
+@media (max-width: 768px) {
+  .robothrone-page-root .robothrone-prize-section {
+    padding: 70px 6%;
+    border-radius: 32px;
+  }
+
+  .robothrone-page-root .robothrone-prize-header h2 {
+    font-size: 28px;
+  }
+}
+
+/* CONTACT SECTION */
+.robothrone-page-root .robothrone-contact-section {
+  padding: 40px 6%;
+  position: relative;
+}
+
+/* Header */
+.robothrone-page-root .robothrone-contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.robothrone-page-root .robothrone-contact-header h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #000;
+}
+
+.robothrone-page-root .robothrone-contact-header p {
+  opacity: 0.85;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.robothrone-page-root .robothrone-contact-divider {
+  display: none;
+}
+
+/* Grid */
+.robothrone-page-root .robothrone-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.robothrone-page-root .robothrone-contact-card {
+  background: rgba(0, 128, 128, 0.158);
+  border-radius: 18px;
+  padding: 28px;
+  border: 2px solid teal;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.robothrone-page-root .robothrone-contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.45);
+}
+
+/* Icon */
+.robothrone-page-root .robothrone-contact-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  margin-bottom: 16px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* Titles */
+.robothrone-page-root .robothrone-contact-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.robothrone-page-root .robothrone-contact-card p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+/* Links */
+.robothrone-page-root .robothrone-contact-card a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Color Variants */
+.robothrone-page-root .robothrone-contact-card.robothrone-email a {
+  color: #008250;
+}
+
+.robothrone-page-root .robothrone-contact-card.robothrone-call a {
+  color: #834f00;
+}
+
+.robothrone-page-root .robothrone-contact-card.robothrone-whatsapp a {
+  color: #008042;
+}
+
+.robothrone-page-root .robothrone-contact-card.robothrone-discord a {
+  color: #005296;
+}
+
+.robothrone-page-root .robothrone-contact-card.robothrone-email .robothrone-contact-icon {
+  border: 2px solid #00955c;
+}
+
+.robothrone-page-root .robothrone-contact-card.robothrone-call .robothrone-contact-icon {
+  border: 2px solid #ad6904;
+}
+
+.robothrone-page-root .robothrone-contact-card.robothrone-whatsapp .robothrone-contact-icon {
+  border: 2px solid #00b15c;
+}
+
+.robothrone-page-root .robothrone-contact-card.robothrone-discord .robothrone-contact-icon {
+  border: 2px solid #006cc5;
+}
+
+/* Responsive - Contact */
+@media (max-width: 768px) {
+  .robothrone-page-root .robothrone-contact-header h2 {
+    font-size: 28px;
+  }
+}
+
+/* MOBILE OPTIMIZATION (PHONES) */
+@media (max-width: 768px) {
+  .robothrone-page-root * {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .robothrone-page-root .robothrone-hero {
+    height: 100vh;
+    min-height: auto;
+    overflow: hidden;
+  }
+
+  /* Hero */
+  .robothrone-page-root .robothrone-hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    padding: 10px 0;
+  }
+
+  .robothrone-page-root .robothrone-subtitle {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .robothrone-page-root .robothrone-pill {
+    width: 100% !important;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .robothrone-page-root .robothrone-pills {
+    width: 75% !important;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .robothrone-page-root .robothrone-countdown {
+    gap: 7px;
+    margin: 15px 0;
+  }
+
+  .robothrone-page-root .robothrone-time-box {
+    min-width: 55px;
+    padding: 8px 6px;
+  }
+
+  .robothrone-page-root .robothrone-time-box span {
+    font-size: 1.25rem;
+  }
+
+  .robothrone-page-root .robothrone-dots {
+    font-size: 1.25rem;
+  }
+
+  .robothrone-page-root .robothrone-actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .robothrone-page-root .robothrone-actions button {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 0 auto;
+    display: block;
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+
+  .robothrone-page-root .robothrone-download-btn {
+    width: 100%;
+  }
+
+  /* Top Badge */
+  .robothrone-page-root .robothrone-top-badge {
+    top: 120px;
+    right: 10px;
+    font-size: 0.75rem;
+    padding: 8px 14px;
+  }
+
+  /* About Section */
+  .robothrone-page-root .robothrone-about-title {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  .robothrone-page-root .robothrone-about-left {
+    padding: 24px;
+  }
+
+  .robothrone-page-root .robothrone-about-left p {
+    font-size: 15px;
+  }
+
+  .robothrone-page-root .robothrone-about-powered {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .robothrone-page-root .robothrone-about-powered img {
+    width: 150px;
+  }
+
+  .robothrone-page-root .robothrone-about-right {
+    border-radius: 14px;
+  }
+
+  .robothrone-page-root .robothrone-slider-track img {
+    width: 260px;
+    height: 300px;
+  }
+
+  /* Expect Section */
+  .robothrone-page-root .robothrone-expect-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .robothrone-page-root .robothrone-expect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .robothrone-page-root .robothrone-expect-card {
+    padding: 24px 20px;
+  }
+
+  .robothrone-page-root .robothrone-expect-icon {
+    font-size: 2rem;
+  }
+
+  .robothrone-page-root .robothrone-expect-card h4 {
+    font-size: 1.05rem;
+  }
+
+  .robothrone-page-root .robothrone-expect-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .robothrone-page-root * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

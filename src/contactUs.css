@@ -1,0 +1,178 @@
+.tg-contactus-page {
+	--deep-green: teal;
+	--brand-orange: #ff6b00;
+	--teal-bg: #f3f9f9;
+	--input-blue: #e8f1f8;
+}
+
+.tg-contactus-page * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+.tg-contactus-page .main-wrapper { width: 100%; display: flex; flex-direction: column; }
+.tg-contactus-page .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+.tg-contactus-page .split-container { display: flex; min-height: 90vh; margin-top: 110px;}
+.tg-contactus-page .left-panel {
+	background: var(--deep-green);
+	width: 50%; color: white; padding: 60px 8%;
+	position: relative; overflow: hidden; display: flex; align-items: center;
+}
+.tg-contactus-page .left-panel::before, .tg-contactus-page .left-panel::after {
+	content: ''; position: absolute; border-radius: 50%;
+	background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+}
+.tg-contactus-page .left-panel::before { width: 450px; height: 450px; top: -100px; left: -100px; }
+.tg-contactus-page .left-panel::after { width: 300px; height: 300px; bottom: -50px; right: -50px; }
+.tg-contactus-page .content-wrapper { position: relative; z-index: 2; }
+.tg-contactus-page .badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 6px 15px; border-radius: 20px; font-size: 13px; width: fit-content; margin-bottom: 20px; }
+.tg-contactus-page .tg-contactus-title { font-size: 3rem; margin-bottom: 20px; line-height: 1.1; }
+.tg-contactus-page .tg-contactus-title span { color: var(--brand-orange); }
+.tg-contactus-page .tg-contactus-heading-image {
+	width: 100%;
+	max-width: 420px;
+	max-height: 280px;
+	height: auto;
+	display: block;
+	margin: 0 0 24px;
+	border-radius: 14px;
+	border: none;
+	object-fit: cover;
+	box-shadow: none;
+}
+.tg-contactus-page .description { opacity: 0.8; margin-bottom: 30px; font-size: 1.05rem; }
+.tg-contactus-page .features { list-style: none; margin-bottom: 30px; }
+.tg-contactus-page .features li { display: flex; gap: 15px; margin-bottom: 18px; align-items: flex-start; }
+.tg-contactus-page .icon-box { background: white; color: var(--deep-green); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; }
+.tg-contactus-page .features strong { display: block; font-size: 1.05rem; }
+.tg-contactus-page .features p { font-size: 0.9rem; opacity: 0.7; }
+.tg-contactus-page .divider { border: none; border-top: 1px solid rgba(255,255,255,0.2); margin-bottom: 25px; }
+.tg-contactus-page .contact-footer { display: flex; gap: 30px; font-weight: 600; font-size: 0.95rem; }
+.tg-contactus-page .contact-footer i { color: var(--brand-orange); margin-right: 8px; }
+
+.tg-contactus-page .right-panel { background-color: orange; width: 50%; display: flex; align-items: center; justify-content: center; padding: 0; }
+.tg-contactus-page .form-card { background: teal; width: 100%; max-width: none; padding: 0; border-radius: 0; border-top: none; box-shadow: none; }
+.tg-contactus-page .field { margin-bottom: 15px; }
+.tg-contactus-page .field label { font-size: 0.85rem; font-weight: 600; color: #444; }
+.tg-contactus-page .input-container { position: relative; margin-top: 6px; }
+.tg-contactus-page .input-container i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #2e7d32; }
+.tg-contactus-page .input-container input { width: 100%; padding: 12px 12px 12px 45px; border: none; border-radius: 8px; background: var(--input-blue); font-size: 0.95rem; }
+.tg-contactus-page .row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.tg-contactus-page .submit-btn { width: 100%; background: var(--brand-orange); color: white; padding: 15px; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+.tg-contactus-page .submit-btn:hover { background: #e65100; transform: translateY(-2px); }
+
+.tg-contactus-page .logo-cloud.premium-showcase {
+	padding: 100px 0;
+	background: #ffffff;
+	position: relative;
+	border-top: none;
+	overflow: hidden;
+}
+
+.tg-contactus-page .showcase-title {
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #888;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin-bottom: 60px;
+}
+
+.tg-contactus-page .showcase-title span { color: var(--deep-green); }
+
+.tg-contactus-page .logo-viewport {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	min-height: 180px;
+	display: flex;
+	align-items: center;
+}
+
+.tg-contactus-page .logo-track.colorful-grid {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 60px;
+	animation: tgContactusScrollLogos 20s linear infinite;
+	width: fit-content;
+	flex-shrink: 0;
+}
+
+@keyframes tgContactusScrollLogos {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.tg-contactus-page .logo-item {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: #fff;
+	border-radius: 16px;
+	transition: 0.4s ease;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.tg-contactus-page .logo-item img {
+	height: 120px;
+	width: 120px;
+	min-width: 120px;
+	min-height: 120px;
+	display: block;
+	object-fit: contain;
+	filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+	transition: transform 0.3s ease, filter 0.3s ease;
+	flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+	.tg-contactus-page .tg-contactus-heading-image {
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+.tg-contactus-page .logo-item.color-1:hover img { filter: drop-shadow(0 0 10px rgba(0,128,0,0.4)); transform: scale(1.08); }
+.tg-contactus-page .logo-item.color-2:hover img { filter: drop-shadow(0 0 10px rgba(255,107,0,0.4)); transform: scale(1.08); }
+.tg-contactus-page .logo-item.color-3:hover img { filter: drop-shadow(0 0 10px rgba(0,0,255,0.4)); transform: scale(1.08); }
+.tg-contactus-page .logo-item.color-4:hover img { filter: drop-shadow(0 0 10px rgba(255,0,0,0.4)); transform: scale(1.08); }
+.tg-contactus-page .logo-item.color-5:hover img { filter: drop-shadow(0 0 10px rgba(128,0,128,0.4)); transform: scale(1.08); }
+
+.tg-contactus-page .faq-section { padding: 100px 8%; background: var(--teal-bg); }
+.tg-contactus-page .section-header { text-align: center; margin-bottom: 60px; }
+.tg-contactus-page .tg-contactus-question-title { font-size: 2.5rem; color: var(--deep-green); }
+.tg-contactus-page .tg-contactus-question-title span { color: var(--brand-orange); }
+.tg-contactus-page .faq-container { max-width: 800px; margin: 0 auto; }
+.tg-contactus-page .faq-item { border-bottom: 1px solid rgba(0, 77, 64, 0.1); margin-bottom: 10px; background: #fff; border-radius: 12px; }
+.tg-contactus-page .faq-question { width: 100%; padding: 25px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; text-align: left; font-size: 1.1rem; font-weight: 600; color: var(--deep-green); cursor: pointer; transition: 0.3s; }
+.tg-contactus-page .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; color: #555; line-height: 1.6; padding: 0 25px; }
+.tg-contactus-page .faq-item.active .faq-answer { max-height: 200px; padding-bottom: 25px; }
+.tg-contactus-page .faq-item.active i { transform: rotate(45deg); color: var(--brand-orange); }
+
+.tg-contactus-page .office-map-section { display: flex; gap: 30px; padding: 60px 8%; background: white; flex-wrap: wrap; justify-content: center; }
+.tg-contactus-page .office-card { flex: 1; min-width: 320px; max-width: 500px; background: var(--teal-bg); padding: 25px; border-radius: 20px; border-bottom: 5px solid var(--deep-green); display: flex; flex-direction: column; }
+.tg-contactus-page .office-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; color: var(--deep-green); }
+.tg-contactus-page .office-header i { color: var(--orange); font-size: 22px; }
+.tg-contactus-page .office-card p { font-size: 0.9rem; color: #555; margin-bottom: 20px; min-height: 45px; }
+.tg-contactus-page .map-container { height: 260px; border-radius: 12px; overflow: hidden; border: 3px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+.tg-contactus-page .map-container iframe { width: 100%; height: 100%; border: none; }
+.tg-contactus-page .directions-btn { margin-top: 20px; background: var(--brand-orange); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+
+/* Bigin CRM Form Styling */
+.tg-contactus-page .right-panel iframe { width: 100%; height: 100%; display: block; border: none; margin: 0; padding: 0; }
+
+@media (max-width: 1024px) { .tg-contactus-page .split-container { flex-direction: column; margin-top: 60px;} .tg-contactus-page .left-panel, .tg-contactus-page .right-panel { width: 100%; } }
+
+@media (max-width: 768px) {
+	.tg-contactus-page .right-panel iframe {
+		height: 980px;
+		overflow: hidden;
+	}
+}

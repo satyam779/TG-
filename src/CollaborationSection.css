@@ -1,0 +1,54 @@
+.collaboration {
+	padding: 50px 0;
+	background: #eef2f5;
+}
+.collaboration-h2{
+	color: rgb(0, 0, 0);
+}
+.collaboration-h2-span{
+	color: teal;
+}
+.partners {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.partner-box {
+	background: orange;
+	padding: 15px 30px;
+	border-radius: 50px;
+	font-weight: 900;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+	color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+	.collaboration {
+		padding: 40px 0;
+	}
+
+	.partners {
+		gap: 15px;
+		padding: 0 15px;
+	}
+
+	.partner-box {
+		padding: 12px 20px;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.collaboration {
+		padding: 30px 0;
+	}
+
+	.partner-box {
+		padding: 10px 15px;
+		font-size: 0.85rem;
+	}
+}

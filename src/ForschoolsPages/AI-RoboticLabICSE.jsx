@@ -1,0 +1,973 @@
+import React, { useEffect, useRef } from "react";
+import "./AI-RoboticLabICSE.css";
+import logoTagline from "../assets/ForSchools_AI-RoboticsLabICSE_images/Logo_TG_Tagline 2.png";
+import GalleryImg1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/2023-03-22 at 14.56.19.jpg";
+import GalleryImg2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Gitanjali Vidhyalay_ Students Doing Coding.jpg";
+import GalleryImg3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG_20240415_111354.jpg";
+import GalleryImg4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG-20230317-WA0002.jpg";
+import GalleryImg5 from "../assets/ForSchools_AI-RoboticsLabICSE_images/IMG-20230925-WA0025.jpg";
+import GalleryImg6 from "../assets/ForSchools_AI-RoboticsLabICSE_images/20210727_134924.jpg";
+import GalleryImg7 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Robotic Lap.jpg";
+// hero section image
+import heroImage from "../assets/ForSchools_AI-RoboticsLabICSE_images/Hero section - AI & Robotics lab ICSE.jpg";
+// why setup an Ai-lab images
+import whyAiLab1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 1.jpg";
+import whyAiLab2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 2.jpg";
+import whyAiLab3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 3.jpg";
+import whyAiLab4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Why Setup an AI Lab_ - 4.jpg";
+// support ecosystem images
+import supportecosystem1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 1.jpg";
+import supportecosystem2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 2.jpg";
+import supportecosystem3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 3.jpg";
+import supportecosystem4 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 4.jpg";
+import supportecosystem5 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 5.jpg";
+import supportecosystem6 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Support Ecosystem - 6.jpg";
+// proprietry kits section images
+import proprietaryKit1 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 1.jpg";
+import proprietaryKit2 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 2.jpg";
+import proprietaryKit3 from "../assets/ForSchools_AI-RoboticsLabICSE_images/Proprietary kit 3.jpg";
+
+
+const AIRoboticLabICSE = () => {
+	const rootRef = useRef(null);
+
+	useEffect(() => {
+		// SEO Configuration
+		const updateSEO = () => {
+			// Set page title
+			document.title = "AI & Robotics Lab for ICSE Schools | NEP 2020";
+
+			// Update or create meta description
+			let metaDescription = document.querySelector('meta[name="description"]');
+			if (!metaDescription) {
+				metaDescription = document.createElement("meta");
+				metaDescription.setAttribute("name", "description");
+				document.head.appendChild(metaDescription);
+			}
+			metaDescription.setAttribute("content", "Install AI & Robotics Lab for ICSE schools aligned with NEP 2020. Complete all setup, curriculum, teacher training & nationwide support.");
+
+			// Set robots meta tag
+			let metaRobots = document.querySelector('meta[name="robots"]');
+			if (!metaRobots) {
+				metaRobots = document.createElement("meta");
+				metaRobots.setAttribute("name", "robots");
+				document.head.appendChild(metaRobots);
+			}
+			metaRobots.setAttribute("content", "index, follow");
+
+			// Set canonical URL
+			let canonicalLink = document.querySelector('link[rel="canonical"]');
+			if (!canonicalLink) {
+				canonicalLink = document.createElement("link");
+				canonicalLink.setAttribute("rel", "canonical");
+				document.head.appendChild(canonicalLink);
+			}
+			canonicalLink.setAttribute("href", "https://yourdomain.com/ai-robotics-lab-icse-schools-india");
+
+			// Open Graph Tags
+			const ogTags = [
+				{ property: "og:title", content: "AI & Robotics Lab for ICSE Schools | NEP 2020" },
+				{ property: "og:description", content: "Install AI & Robotics Lab for ICSE schools aligned with NEP 2020. Complete all setup, curriculum, teacher training & nationwide support." },
+				{ property: "og:type", content: "website" },
+				{ property: "og:url", content: "https://yourdomain.com/ai-robotics-lab-icse-schools-india" },
+				{ property: "og:image", content: "https://yourdomain.com/og-image-icse-lab.jpg" },
+			];
+
+			ogTags.forEach(({ property, content }) => {
+				let tag = document.querySelector(`meta[property="${property}"]`);
+				if (!tag) {
+					tag = document.createElement("meta");
+					tag.setAttribute("property", property);
+					document.head.appendChild(tag);
+				}
+				tag.setAttribute("content", content);
+			});
+
+			// Twitter Card Tags
+			const twitterTags = [
+				{ name: "twitter:card", content: "summary_large_image" },
+				{ name: "twitter:title", content: "AI & Robotics Lab for ICSE Schools | NEP 2020" },
+				{ name: "twitter:description", content: "Install AI & Robotics Lab for ICSE schools aligned with NEP 2020. Complete all setup, curriculum, teacher training & nationwide support." },
+				{ name: "twitter:image", content: "https://yourdomain.com/twitter-image-icse-lab.jpg" },
+			];
+
+			twitterTags.forEach(({ name, content }) => {
+				let tag = document.querySelector(`meta[name="${name}"]`);
+				if (!tag) {
+					tag = document.createElement("meta");
+					tag.setAttribute("name", name);
+					document.head.appendChild(tag);
+				}
+				tag.setAttribute("content", content);
+			});
+		};
+
+		updateSEO();
+
+		const root = rootRef.current;
+		if (!root) return;
+		const animatedElements = root.querySelectorAll(".hidden-left, .hidden-right, .fade-up");
+
+		// 1. Scroll Animation Observer
+		let observer;
+		if ("IntersectionObserver" in window) {
+			observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("show");
+						}
+					});
+				},
+				{ threshold: 0.1 }
+			);
+
+			animatedElements.forEach((el) => observer.observe(el));
+		} else {
+			animatedElements.forEach((el) => el.classList.add("show"));
+		}
+
+		// 2. Animated Counters
+		const statsSection = root.querySelector(".stats-section");
+		let counted = false;
+
+		const formatNumber = (num) => {
+			return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		};
+
+		let statsObserver;
+		if ("IntersectionObserver" in window) {
+			statsObserver = new IntersectionObserver(
+				(entries) => {
+					if (entries[0].isIntersecting && !counted) {
+						root.querySelectorAll(".counter").forEach((counter) => {
+							const target = +counter.getAttribute("data-target");
+							let count = 0;
+							const inc = target / 100;
+							const update = () => {
+								count += inc;
+								if (count < target) {
+									counter.innerText = formatNumber(Math.ceil(count));
+									requestAnimationFrame(update);
+								} else {
+									counter.innerText = formatNumber(target);
+								}
+							};
+							update();
+						});
+						counted = true;
+					}
+				},
+				{ threshold: 0.5 }
+			);
+
+			if (statsSection) statsObserver.observe(statsSection);
+		}
+
+		// 3. Curriculum Tabs
+		const tabBtns = root.querySelectorAll(".tab-btn");
+		const tabPanes = root.querySelectorAll(".tab-pane");
+		const tabHandlers = [];
+
+		const tabHandler = (btn) => () => {
+			tabBtns.forEach((b) => b.classList.remove("active"));
+			tabPanes.forEach((p) => p.classList.remove("active"));
+			btn.classList.add("active");
+			const target = btn.getAttribute("data-tab");
+			const pane = root.querySelector(`#${target}`);
+			if (pane) {
+				pane.classList.add("active");
+			}
+		};
+
+		tabBtns.forEach((btn) => {
+			const handler = tabHandler(btn);
+			tabHandlers.push({ btn, handler });
+			btn.addEventListener("click", handler);
+		});
+
+		// 4. FAQ Accordion
+		const accordionHeaders = root.querySelectorAll(".accordion-header");
+		const accordionHandlers = [];
+		accordionHeaders.forEach((header) => {
+			const handler = () => {
+				const body = header.nextElementSibling;
+				header.classList.toggle("active");
+				if (header.classList.contains("active")) {
+					body.style.maxHeight = body.scrollHeight + "px";
+				} else {
+					body.style.maxHeight = 0;
+				}
+			};
+			accordionHandlers.push({ header, handler });
+			header.addEventListener("click", handler);
+		});
+
+		// 6. Smooth Scroll
+		const anchorHandlerMap = [];
+		root.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+			const handler = (e) => {
+				e.preventDefault();
+				const targetSelector = anchor.getAttribute("href");
+				const targetEl = targetSelector ? root.querySelector(targetSelector) : null;
+				if (targetEl) {
+					targetEl.scrollIntoView({ behavior: "smooth" });
+				}
+			};
+			anchorHandlerMap.push({ anchor, handler });
+			anchor.addEventListener("click", handler);
+		});
+
+		// --- DIY Kit Slider Logic ---
+		let slideIndex = 0;
+		const slides = root.querySelectorAll(".diy-slide");
+		let sliderTimeout;
+
+		if (slides.length > 0) {
+			slides.forEach((slide) => (slide.style.display = "none"));
+
+			const showSlides = () => {
+				slides.forEach((slide) => (slide.style.display = "none"));
+				slideIndex++;
+				if (slideIndex > slides.length) {
+					slideIndex = 1;
+				}
+				slides[slideIndex - 1].style.display = "block";
+				sliderTimeout = setTimeout(showSlides, 3000);
+			};
+
+			showSlides();
+		}
+
+		// Form submission
+		const form = root.querySelector("#enquiryForm");
+		const formHandler = (e) => {
+			e.preventDefault();
+			const btn = form.querySelector("button");
+			const originalText = btn.innerHTML;
+			const school = root.querySelector("#schoolName")?.value || "";
+			const name = root.querySelector("#fullName")?.value || "";
+			const phone = root.querySelector("#phoneNumber")?.value || "";
+			const email = root.querySelector("#emailId")?.value || "";
+			const state = root.querySelector("#state")?.value || "";
+			const msg = root.querySelector("#message")?.value || "";
+
+			btn.innerText = "Opening WhatsApp...";
+			btn.style.opacity = "0.7";
+
+			setTimeout(() => {
+				const businessPhone = "918197984847";
+				const text = `*New ICSE Lab Enquiry* %0a%0a` +
+					`*School:* ${school}%0a` +
+					`*Name:* ${name}%0a` +
+					`*Phone:* ${phone}%0a` +
+					`*Email:* ${email}%0a` +
+					`*State:* ${state}%0a` +
+					`*Message:* ${msg}`;
+
+				const whatsappUrl = `https://wa.me/${businessPhone}?text=${text}`;
+				window.open(whatsappUrl, "_blank");
+				form.reset();
+				btn.innerHTML = originalText;
+				btn.style.opacity = "1";
+			}, 1000);
+		};
+
+		if (form) {
+			form.addEventListener("submit", formHandler);
+		}
+
+		return () => {
+			if (observer) observer.disconnect();
+			if (statsObserver) statsObserver.disconnect();
+			tabHandlers.forEach(({ btn, handler }) => btn.removeEventListener("click", handler));
+			accordionHandlers.forEach(({ header, handler }) => header.removeEventListener("click", handler));
+			anchorHandlerMap.forEach(({ anchor, handler }) => anchor.removeEventListener("click", handler));
+			if (sliderTimeout) {
+				clearTimeout(sliderTimeout);
+			}
+			if (form) {
+				form.removeEventListener("submit", formHandler);
+			}
+		};
+	}, []);
+
+	return (
+		<div className="ai-roboticlab-icse-root" ref={rootRef}>
+			<a href="#contact-section" className="floating-cta">
+				<i className="fas fa-file-invoice-dollar" /> Get ICSE Proposal
+			</a>
+
+			<section className="hero-section">
+				<div className="hero-bg-animation" />
+				<div className="container hero-container">
+					<div className="hero-text hidden-left">
+						<div className="brand-tag">
+							<img src={logoTagline} alt="TechyGuide Logo" className="hero-logo" />
+							<span>ICSE Aligned</span>
+						</div>
+						<h1>
+							AI & Robotics Lab Setup for  <br />
+							<span className="highlight-text">ICSE Schools in India</span>
+						</h1>
+						<p>
+							Comprehensive Lab Solutions for <strong>Subject Code 066 (AI)</strong>. Fully aligned with CISCE guidelines and NEP 2020 to foster innovation and hands-on learning.
+						</p>
+						<div className="hero-btns">
+							<a href="#packages" className="btn btn-orange">Setup Lab</a>
+							<a href="#curriculum" className="btn btn-glass">Curriculum</a>
+						</div>
+					</div>
+					<div className="hero-visual hidden-right">
+						<div className="icse-hero-grid" aria-label="ICSE lab highlights">
+							<div className="icse-hero-card icse-hero-card--1">
+								<img src={heroImage} alt="AI Robotics Lab ICSE" />
+							</div>
+							<div className="icse-hero-card icse-hero-card--3">
+								<img src={GalleryImg2} alt="ICSE coding session" />
+							</div>
+							<div className="icse-hero-card icse-hero-card--4">
+								<img src={GalleryImg4} alt="ICSE robotics workshop" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="guidelines-section" id="mandates">
+				<div className="container">
+					<div className="guideline-header text-center fade-up">
+						<h2 className="section-heading">AI & Robotics Lab for ICSE Schools: Why Setup Now?</h2>
+						<p className="section-subtext icse-intro-subtext">The AI & Robotics Lab for ICSE Schools strengthens academic excellence while meeting modern technology education standards defined by the Council for the Indian School Certificate Examinations (CISCE). With NEP 2020 alignment, ICSE schools now have the perfect framework to establish world-class labs that prepare students for the future.</p>
+					</div>
+
+					<div className="guidelines-grid">
+						<div className="guide-card fade-up">
+							<div className="guide-img">
+								<img src={whyAiLab1} alt="Robotics Lab Setup for ICSE Schools following CISCE AI Subject Code 066 guidelines " />
+								<div className="guide-badge">Subject Code 066</div>
+							</div>
+							<div className="guide-content">
+								<h3>ICSE Artificial Intelligence</h3>
+								<p>CISCE has introduced <strong>Subject Code 066</strong> to provide foundational knowledge of AI concepts, algorithms, machine learning, and ethical use of technology.</p>
+							</div>
+						</div>
+
+						<div className="guide-card fade-up">
+							<div className="guide-img">
+								<img src={whyAiLab2} alt="CSE Artificial Intelligence Subject Code 066 practical coding session " />
+								<div className="guide-badge">NEP 2020</div>
+							</div>
+							<div className="guide-content">
+								<h3>Experiential Learning Approach</h3>
+								<p>Aligned with <strong>NEP 2020</strong>, the curriculum supports project-based learning. It bridges the gap between theory and real-world application through hands-on robotics.</p>
+							</div>
+						</div>
+
+						<div className="guide-card fade-up">
+							<div className="guide-img">
+								<img src={whyAiLab3} alt="Project-based robotics learning for ICSE schools under NEP 2020 framework " />
+								<div className="guide-badge">21st Century Skills</div>
+							</div>
+							<div className="guide-content">
+								<h3>Critical Skill Development</h3>
+								<p>Our labs nurture essential skills such as critical thinking, problem-solving, logical reasoning, and creativity, preparing students for future challenges.</p>
+							</div>
+						</div>
+
+						<div className="guide-card fade-up">
+							<div className="guide-img">
+								<img src={whyAiLab4} alt="ICSE students developing problem-solving skills through AI and robotics lab" />
+								<div className="guide-badge">Integrated STEM</div>
+							</div>
+							<div className="guide-content">
+								<h3>Interdisciplinary Approach</h3>
+								<p>Promotes the integration of concepts from <strong>Physics, Mathematics, and Computer Science</strong>, ensuring a holistic educational experience.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="stats-section">
+				<div className="container stats-grid">
+					<div className="stat-item fade-up">
+						<h2><span className="counter" data-target="2500">0</span>+</h2>
+						<p>Teachers Trained</p>
+					</div>
+					<div className="stat-item fade-up">
+						<h2><span className="counter" data-target="700">0</span>+</h2>
+						<p>Schools Served</p>
+					</div>
+					<div className="stat-item fade-up">
+						<h2><span className="counter" data-target="200000">0</span>+</h2>
+						<p>Students Impacted</p>
+					</div>
+					<div className="stat-item fade-up">
+						<h2><span className="counter" data-target="26">0</span>+</h2>
+						<p>States Covered</p>
+					</div>
+				</div>
+			</section>
+
+			<section className="curriculum-section" id="curriculum">
+				<div className="container">
+					<h2 className="section-heading text-center fade-up">Comprehensive Curriculum for AI & Robotics Lab in ICSE Schools</h2>
+					<p className="section-subtext text-center fade-up">Our AI & Robotics Lab for ICSE Schools covers Subject Code 066, Coding, and Robotics from Grades 1-10, aligned with latest NEP 2020 standards.</p>
+
+					<div className="tabs-wrapper fade-up">
+						<div className="tabs-header">
+							<button className="tab-btn active" data-tab="primary">Primary (1-5)</button>
+							<button className="tab-btn" data-tab="middle">Middle (6-8)</button>
+							<button className="tab-btn" data-tab="senior">Secondary (9-10)</button>
+						</div>
+            
+						<div className="tabs-content">
+							<div className="tab-pane active" id="primary">
+								<div className="curr-grid">
+									<div className="curr-card">
+										<h4><i className="fas fa-bolt" /> Electronics</h4>
+										<ul>
+											<li>LED Circuits &amp; Switches</li>
+											<li>Understanding Sensors (IR, Sound)</li>
+											<li>Batteries &amp; Motors</li>
+										</ul>
+									</div>
+									<div className="curr-card">
+										<h4><i className="fas fa-cat" /> Coding (Scratch)</h4>
+										<ul>
+											<li>Animations &amp; Storytelling</li>
+											<li>Interactive Games (Catch the Ball)</li>
+											<li>Drawing Shapes &amp; Loops</li>
+										</ul>
+									</div>
+									<div className="curr-card">
+										<h4><i className="fas fa-robot" /> Robotics</h4>
+										<ul>
+											<li>Introduction to Robotics</li>
+											<li>Simple projects using Sensors</li>
+											<li>Smart Doorbell, Blind Stick</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div className="tab-pane" id="middle">
+								<div className="curr-grid">
+									<div className="curr-card">
+										<h4><i className="fab fa-python" /> Python & AI</h4>
+										<ul>
+											<li>Python Basics (Variables, Loops)</li>
+											<li>Intro to AI & Algorithms</li>
+											<li>Data Handling</li>
+										</ul>
+									</div>
+									<div className="curr-card">
+										<h4><i className="fas fa-robot" /> Robotics</h4>
+										<ul>
+											<li>Line Follower Robots</li>
+											<li>Obstacle Avoidance</li>
+											<li>Sensor Integration</li>
+										</ul>
+									</div>
+									<div className="curr-card">
+										<h4><i className="fas fa-wifi" /> IoT Basics</h4>
+										<ul>
+											<li>Smart Home Automation</li>
+											<li>Wireless Control</li>
+											<li>Introduction to Cloud</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div className="tab-pane" id="senior">
+								<div className="curr-grid">
+									<div className="curr-card">
+										<h4><i className="fas fa-cogs" /> Robotics & Tinkercad</h4>
+										<ul>
+											<li><strong>Concepts:</strong> Evolution, Laws of Robotics, & Cobots</li>
+											<li><strong>Components:</strong> Gears, Actuators, & Control Systems</li>
+											<li><strong>Design:</strong> Visualization & Simulation using Tinkercad</li>
+										</ul>
+									</div>
+
+									<div className="curr-card">
+										<h4><i className="fas fa-brain" /> AI & Python Libraries</h4>
+										<ul>
+											<li><strong>AI Framework:</strong> Problem Scoping to Evaluation</li>
+											<li><strong>Python Data:</strong> NumPy, Pandas, Matplotlib & SciPy</li>
+											<li><strong>Theory:</strong> Machine Learning, Neural Networks & Ethics</li>
+										</ul>
+									</div>
+
+									<div className="curr-card">
+										<h4><i className="fas fa-microchip" /> Mobile Robotics Lab</h4>
+										<ul>
+											<li><strong>Line Follower:</strong> Sensor-based path tracking</li>
+											<li><strong>Obstacle Avoider:</strong> Ultrasonic sensor integration</li>
+											<li><strong>Edge Detector:</strong> Surface boundary detection logic</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="infra-section">
+				<div className="container">
+					<h2 className="section-heading text-white fade-up">Required Lab Infrastructure</h2>
+					<div className="infra-grid">
+						<div className="infra-box fade-up">
+							<i className="fas fa-laptop" />
+							<h3>Computing</h3>
+							<p><strong>Ratio:</strong> 2:1 (Student to Device)</p>
+							<p><strong>Specs:</strong> Intel i5, 8GB RAM, Win 10+</p>
+							<p><strong>Features:</strong> Bluetooth, Webcam, Wi-Fi</p>
+						</div>
+						<div className="infra-box fade-up">
+							<i className="fas fa-chair" />
+							<h3>Furniture</h3>
+							<p><strong>Activity Tables:</strong> 1 per 4 students</p>
+							<p><strong>Arena Tables:</strong> 2 for testing</p>
+							<p><strong>Storage:</strong> 1 Lockable Cupboard</p>
+						</div>
+						<div className="infra-box fade-up">
+							<i className="fas fa-project-diagram" />
+							<h3>Presentation</h3>
+							<p>Projector with proper screen setup for demonstrations and class presentations.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="packages-section" id="packages">
+				<div className="container">
+					<h2 className="section-heading text-center fade-up">ICSE Lab Packages</h2>
+					<br />
+					<div className="pricing-wrapper">
+						<div className="pricing-card fade-up">
+							<h3>Mini Lab</h3>
+							{/* <div className="price-tag">₹ 90,000 <small>(GST Inc.)</small></div> */}
+							<div className="capacity">Up to 500 Students</div>
+							<ul>
+								<li><i className="fas fa-box" /> <strong>6</strong> I-BoT Starter Kits</li>
+								<li><i className="fas fa-microchip" /> <strong>6</strong> TechBoT Electronics Kit</li>
+								<li><i className="fas fa-cube" /> <strong>1</strong> E-Blox Kit</li>
+								<li><i className="fas fa-box-open" /> <strong>3</strong> Set of Consumables</li>
+								<li><i className="fas fa-chalkboard-teacher" /> 3 Days Physical Training</li>
+								<li><i className="fas fa-video" /> 10 Online Training Session</li>
+								<li><i className="fas fa-paint-roller" /> Lab Decorations</li>
+								<li><i className="fas fa-book" /> Content from Grade 3 to 12</li>
+								<li><i className="fas fa-user-graduate" /> LMS Access for Students &amp; Teachers</li>
+							</ul>
+							<a href="#contact-section" className="btn btn-outline-dark">Request Details</a>
+						</div>
+
+						<div className="pricing-card popular fade-up">
+							<div className="badge">Recommended</div>
+							<h3>Medium Lab</h3>
+							{/* <div className="price-tag">₹ 2,20,000 <small>(GST Inc.)</small></div> */}
+							<div className="capacity">Up to 1000 Students</div>
+							<ul>
+								<li><i className="fas fa-box" /> <strong>12</strong> I-BoT Starter Kits</li>
+								<li><i className="fas fa-microchip" /> <strong>12</strong> TechBoT Electronics Kit</li>
+								<li><i className="fas fa-cube" /> <strong>2</strong> E-Blox Kit</li>
+								<li><i className="fas fa-robot" /> <strong>1</strong> Set of Humanoid &amp; Spider Bot</li>
+								<li><i className="fas fa-tools" /> <strong>1</strong> Set of Lee &amp; Robotic Arm Kit</li>
+								<li><i className="fas fa-box-open" /> <strong>5</strong> Set of Consumables</li>
+								<li><i className="fas fa-chalkboard-teacher" /> 3 Days Physical Training</li>
+								<li><i className="fas fa-video" /> 15 Online Training Session</li>
+								<li><i className="fas fa-paint-roller" /> Lab Decorations</li>
+								<li><i className="fas fa-book" /> Content from Grade 3 to 12</li>
+								<li><i className="fas fa-user-graduate" /> LMS Access for Students &amp; Teachers</li>
+							</ul>
+							<a href="#contact-section" className="btn btn-orange">Request Details</a>
+						</div>
+
+						<div className="pricing-card fade-up">
+							<h3>Large Lab</h3>
+							{/* <div className="price-tag">₹ 3,40,000 <small>(GST Inc.)</small></div> */}
+							<div className="capacity">Up to 1500 Students</div>
+							<ul>
+								<li><i className="fas fa-box" /> <strong>20</strong> I-BoT Starter Kits</li>
+								<li><i className="fas fa-microchip" /> <strong>20</strong> TechBoT Electronics Kit</li>
+								<li><i className="fas fa-cube" /> <strong>3</strong> E-Blox Kit</li>
+								<li><i className="fas fa-robot" /> <strong>2</strong> Set of Humanoid &amp; Spider Bot</li>
+								<li><i className="fas fa-tools" /> <strong>2</strong> Set of Lee &amp; Robotic Arm Kit</li>
+								<li><i className="fas fa-box-open" /> <strong>10</strong> Set of Consumables</li>
+								<li><i className="fas fa-chalkboard-teacher" /> 3 Days Physical Training</li>
+								<li><i className="fas fa-video" /> 24 Online Training Session</li>
+								<li><i className="fas fa-paint-roller" /> Lab Decorations</li>
+								<li><i className="fas fa-book" /> Content from Grade 3 to 12</li>
+								<li><i className="fas fa-user-graduate" /> LMS Access for Students &amp; Teachers</li>
+							</ul>
+							<a href="#contact-section" className="btn btn-outline-dark">Request Details</a>
+						</div>
+
+						<div className="pricing-card wide-card fade-up">
+							<div className="badge-wide">Official Syllabus Aligned</div>
+							<h3>ICSE Class 9-10 Expert Lab</h3>
+							<p className="package-subtitle">Tailored for Subject Code 66 (Robotics &amp; AI)</p>
+              
+							<div className="wide-card-grid">
+								<div className="wc-column">
+									<h4><i className="fas fa-laptop-code" /> Computing &amp; Software</h4>
+									<ul>
+										<li><strong>15</strong> Desktop/Laptops (Python &amp; Tinkercad Pre-installed)</li>
+										<li><strong>30</strong> Student Registration IDs for Tinkercad</li>
+										<li>Python Coding Environment Setup</li>
+									</ul>
+								</div>
+								<div className="wc-column">
+									<h4><i className="fas fa-microchip" /> Core Hardware</h4>
+									<ul>
+										<li><strong>10 Sets</strong> Single Board Computers (Arduino Uno / Raspberry Pi)</li>
+										<li><strong>10 Sets</strong> Robotics Components (Servo Motors, Ultrasonic &amp; IR Sensors)</li>
+										<li>Soldering Stations, Allen Wrenches, Crimpers</li>
+									</ul>
+								</div>
+								<div className="wc-column">
+									<h4><i className="fas fa-robot" /> Advanced Projects</h4>
+									<ul>
+										<li>Line Follower &amp; Obstacle Avoidance Robots</li>
+										<li>Edge Detection Mobile Robots</li>
+										<li>Intelligent Waste Bin Projects</li>
+									</ul>
+								</div>
+							</div>
+              
+							<div className="wc-footer">
+								<div className="price-tag-wide">Custom Quote <small>(Based on Batch Size)</small></div>
+								<a href="#contact-section" className="btn btn-full btn-orange">Request Syllabus Quote</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="diy-section">
+				<div className="container">
+					<div className="diy-container fade-up">
+						<div className="diy-content">
+							<div className="badge-diy">Hardware</div>
+							<h2>Proprietary DIY Robotics Kits</h2>
+							<p>Our labs feature in-house developed kits like I-BoT and TeBoT, designed for infinite prototyping and durability.</p>
+              
+							<ul className="diy-features">
+								<li><i className="fas fa-microchip" /> <strong>Core  Compatibility :</strong> Arduino / ESP32 Compatible</li>
+								<li><i className="fas fa-plug" /> <strong>Parts:</strong> Sensors, Motors, Jumpers</li>
+								<li><i className="fas fa-tools" /> <strong>Build:</strong> Modular &amp; Reusable</li>
+								<li><i className="fas fa-wifi" /> <strong>Tech:</strong> Bluetooth/WiFi Enabled</li>
+							</ul>
+							<a href="#contact-section" className="btn btn-light btn-mt">View Kit Specs</a>
+						</div>
+            
+						<div className="diy-image slider-wrapper">
+							<div className="diy-slide fade">
+								<img src={proprietaryKit1} alt="Modular I-BoT robotics kit compatible with Arduino and ESP32 for ICSE labs " />
+								{/* <div className="slide-caption">I-BoT Starter Kit</div> */}
+							</div>
+							<div className="diy-slide fade">
+								<img src={proprietaryKit2} alt="TeBoT DIY robotics kit for ICSE AI and robotics lab projects " />
+								{/* <div className="slide-caption">TeBoT Kit</div> */}
+							</div>
+							<div className="diy-slide fade">
+								<img src={proprietaryKit3} alt="E-Blox Kit" />
+								{/* <div className="slide-caption">E-Blox Kit</div> */}
+							</div>
+							<div className="floating-kit-tag">Designed for ICSE</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="support-section">
+				<div className="container">
+					<h2 className="section-heading text-center fade-up">Support Ecosystem</h2>
+					<p className="section-subtext text-center fade-up">Year-round support to ensure successful lab implementation.</p>
+
+					<div className="support-grid fade-up">
+						<div className="support-card">
+							<div className="card-image"><img src={supportecosystem1} alt="Onsite teacher training for ICSE AI and Robotics Lab implementation " /></div>
+							<div className="card-content">
+								<div className="card-icon"><i className="fas fa-chalkboard-teacher" /></div>
+								<h4>3 Days Onsite Training</h4>
+								<p>Physical training for teachers to kickstart the lab operations.</p>
+							</div>
+						</div>
+						<div className="support-card">
+							<div className="card-image"><img src={supportecosystem2} alt=" Annual innovation competition for ICSE robotics lab students" /></div>
+							<div className="card-content">
+								<div className="card-icon"><i className="fas fa-laptop-code" /></div>
+								<h4>24 Days Virtual Training</h4>
+								<p>Ongoing virtual teacher training sessions throughout the first year.</p>
+							</div>
+						</div>
+						<div className="support-card">
+							<div className="card-image"><img src={supportecosystem3} alt="35 day execution timeline for ICSE AI and Robotics Lab setup" /></div>
+							<div className="card-content">
+								<div className="card-icon"><i className="fas fa-eye" /></div>
+								<h4>Quarterly Monitoring</h4>
+								<p>Regular virtual or onsite monitoring to ensure lab quality.</p>
+							</div>
+						</div>
+						<div className="support-card">
+							<div className="card-image"><img src={supportecosystem4} alt="ICSE school testimonial for AI and Robotics Lab services " /></div>
+							<div className="card-content">
+								<div className="card-icon"><i className="fas fa-certificate" /></div>
+								<h4>Certification</h4>
+								<p>Certification for Schools and Teachers upon completion.</p>
+							</div>
+						</div>
+						<div className="support-card">
+							<div className="card-image"><img src={supportecosystem5} alt="Frequently asked questions about AI and Robotics Lab for ICSE schools " /></div>
+							<div className="card-content">
+								<div className="card-icon"><i className="fas fa-clipboard-list" /></div>
+								<h4>Assessment &amp; Question Bank</h4>
+								<p>Provided question banks for conducting student assessments.</p>
+							</div>
+						</div>
+						<div className="support-card">
+							<div className="card-image"><img src={supportecosystem6} alt="AI and Robotics Lab provider serving ICSE schools across India " /></div>
+							<div className="card-content">
+								<div className="card-icon"><i className="fas fa-trophy" /></div>
+								<h4>Innovation Fest</h4>
+								<p>Yearly innovation competition opportunity for students.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/*
+			<section className="video-section">
+				<div className="container">
+					<div className="video-content-wrapper">
+						<h2 className="section-heading text-center text-white fade-up">See Innovation in Action</h2>
+						<p className="section-subtext text-center text-white fade-up" style={{ opacity: 0.9 }}>
+							Transforming classrooms into hubs of creativity and logic.
+						</p>
+						<div className="video-container fade-up">
+							<iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?rel=0&modestbranding=1" title="TechyGuide Lab Video" allowFullScreen />
+						</div>
+					</div>
+				</div>
+			</section>
+			*/}
+
+			<section className="timeline-section">
+				<div className="container">
+					<h2 className="section-heading text-center fade-up">Execution Timeline (35 Days)</h2>
+					<div className="timeline-box fade-up">
+						<div className="t-item"><span>Day 0</span><p>MoU Signed</p></div>
+						<div className="t-line" />
+						<div className="t-item"><span>Day 5</span><p>50% Advance</p></div>
+						<div className="t-line" />
+						<div className="t-item"><span>Day 20</span><p>Material Delivery</p></div>
+						<div className="t-line" />
+						<div className="t-item"><span>Day 30</span><p>Setup &amp; Training</p></div>
+						<div className="t-line" />
+						<div className="t-item"><span>Day 33</span><p>Lab Go-Live</p></div>
+						<div className="t-line" />
+						<div className="t-item"><span>Day 35</span><p>Certification</p></div>
+					</div>
+				</div>
+			</section>
+
+			<section className="gallery-section">
+				<div className="container">
+					<h2 className="section-heading text-center fade-up">Our Labs in Action</h2>
+					<p className="section-subtext icse-gallery-subtext text-center fade-up">Deployed in 350+ Schools including Gitanjali Vidyalaya, Millenium Public School, and more.</p>
+					<div className="gallery-grid">
+						<div className="gallery-item large fade-up"><img src={GalleryImg1} alt="Hands-on Learning" /><div className="gallery-overlay"><h5>Hands-on Learning</h5></div></div>
+						<div className="gallery-item fade-up"><img src={GalleryImg2} alt="Student Coding" /><div className="gallery-overlay"><h5>Student Coding</h5></div></div>
+						<div className="gallery-item fade-up"><img src={GalleryImg3} alt="Lab Workshop" /><div className="gallery-overlay"><h5>Lab Workshop</h5></div></div>
+						<div className="gallery-item fade-up"><img src={GalleryImg4} alt="AI Programming" /><div className="gallery-overlay"><h5>AI Programming</h5></div></div>
+						<div className="gallery-item fade-up"><img src={GalleryImg5} alt="Robotics Activity" /><div className="gallery-overlay"><h5>Robotics Activity</h5></div></div>
+						<div className="gallery-item fade-up"><img src={GalleryImg6} alt="Student Project" /><div className="gallery-overlay"><h5>Student Project</h5></div></div>
+					</div>
+				</div>
+			</section>
+
+			<section className="testimonial-section">
+				<div className="container">
+					<h2 className="section-heading text-center fade-up">TESTIMONIALS (SOCIAL PROOF)</h2>
+				</div>
+				<div className="slider">
+					<div className="slide-track">
+						{/* First set of cards */}
+						<div className="testimonial-card">
+							<div className="stars">★★★★★</div>
+							<p>“TechyGuide’s ICSE lab services are excellent and highly responsive.” </p>
+							<div className="profile">
+								<div className="profile-icon">GJ</div>
+								<div className="profile-info">
+									<h4>Mr. Gopinath Jena</h4>
+									<span>HM, LN Nobel High School</span>
+								</div>
+							</div>
+						</div>
+						<div className="testimonial-card">
+							<div className="stars">★★★★★</div>
+							<p>“AI, robotics and coding courses helped my students immensely.”</p>
+							<div className="profile">
+								<div className="profile-icon">PD</div>
+								<div className="profile-info">
+									<h4>Pankaj Kumar Dey</h4>
+									<span>Govt. Gandhi Sec. School</span>
+								</div>
+							</div>
+						</div>
+						<div className="testimonial-card">
+							<div className="stars">★★★★★</div>
+							<p>"Trainers are exceptionally good at their knowledge. They did amazing to our skills. Thank you!"</p>
+							<div className="profile">
+								<div className="profile-icon">JS</div>
+								<div className="profile-info">
+									<h4>Teacher</h4>
+									<span>Jajoo Int. School</span>
+								</div>
+							</div>
+						</div>
+						<div className="testimonial-card">
+							<div className="stars">★★★★★</div>
+							<p>"All the activities are exciting and engaging. I thank TechyGuide to develop such a product and course."</p>
+							<div className="profile">
+								<div className="profile-icon">NS</div>
+								<div className="profile-info">
+									<h4>Teacher</h4>
+									<span>Noble School, Karnataka</span>
+								</div>
+							</div>
+						</div>
+						{/* Duplicate set for seamless loop */}
+						<div className="testimonial-card">
+							<div className="stars">★★★★★</div>
+							<p>"We have used TechyGuide's ATL service. Their services were very good and always respond to our queries promptly."</p>
+							<div className="profile">
+								<div className="profile-icon">GJ</div>
+								<div className="profile-info">
+									<h4>Mr. Gopinath Jena</h4>
+									<span>HM, LN Nobel High School</span>
+								</div>
+							</div>
+						</div>
+						<div className="testimonial-card">
+							<div className="stars">★★★★★</div>
+							<p>"I have learned AI, Robotics, Coding, and 3D printing. These courses are very interesting to me and helpful for my students."</p>
+							<div className="profile">
+								<div className="profile-icon">PD</div>
+								<div className="profile-info">
+									<h4>Pankaj Kumar Dey</h4>
+									<span>Govt. Gandhi Sec. School</span>
+								</div>
+							</div>
+						</div>
+						<div className="testimonial-card">
+							<div className="stars">★★★★★</div>
+							<p>"Trainers are exceptionally good at their knowledge. They did amazing to our skills. Thank you!"</p>
+							<div className="profile">
+								<div className="profile-icon">JS</div>
+								<div className="profile-info">
+									<h4>Teacher</h4>
+									<span>Jajoo Int. School</span>
+								</div>
+							</div>
+						</div>
+						<div className="testimonial-card">
+							<div className="stars">★★★★★</div>
+							<p>"All the activities are exciting and engaging. I thank TechyGuide to develop such a product and course."</p>
+							<div className="profile">
+								<div className="profile-icon">NS</div>
+								<div className="profile-info">
+									<h4>Teacher</h4>
+									<span>Noble School, Karnataka</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="faq-section">
+				<div className="container small-container">
+					<h2 className="section-heading fade-up">Frequently Asked Questions</h2>
+					<div className="accordion fade-up">
+						<div className="accordion-item"><button className="accordion-header">Does the package include GST?</button><div className="accordion-body"><p>Yes, all prices listed are inclusive of GST.</p></div></div>
+						<div className="accordion-item"><button className="accordion-header">Is there a warranty on the equipment?</button><div className="accordion-body"><p>Yes, we provide a 1-year manufacturing warranty on all microcontrollers.</p></div></div>
+						<div className="accordion-item"><button className="accordion-header">What does the teacher training cover?</button><div className="accordion-body"><p>The program includes 3 days of onsite physical training and 24 online sessions covering Coding, Robotics, AI, and IoT.</p></div></div>
+					</div>
+				</div>
+			</section>
+
+			<section className="contact-area" id="contact-section">
+				<div className="container contact-grid">
+					<div className="contact-info fade-up">
+						<h2 >Contact TechyGuide</h2>
+						<p><strong>Corporate Office:</strong> #80, 2nd Floor, 1st Main, VSR Layout, A Narayanapura Main Road, Bangalore 560016.</p>
+						<p><strong>Registered Office:</strong> 1st &amp; 2nd Floor, Jyoti Complex, Bhoisahi, Balasore-756001, Odisha.</p>
+            
+						<div className="info-box">
+							<i className="fas fa-phone-alt" />
+							<div>
+								<strong>Call Us</strong>
+								<p>+91 91140 36376</p>
+							</div>
+						</div>
+						<div className="info-box">
+							<i className="fas fa-envelope" />
+							<div>
+								<strong>Email Us</strong>
+								<p>Sales@techyguide.in</p>
+							</div>
+						</div>
+					</div>
+
+					<div className="contact-form-wrapper fade-up">
+						<form id="enquiryForm">
+							<div className="form-group">
+								<label htmlFor="schoolName">School Name</label>
+								<input type="text" id="schoolName" name="schoolName" required placeholder="Enter School Name" />
+							</div>
+
+							<div className="form-row">
+								<div className="form-group">
+									<label htmlFor="fullName">Name</label>
+									<input type="text" id="fullName" name="fullName" required placeholder="Your Name" />
+								</div>
+								<div className="form-group">
+									<label htmlFor="phoneNumber">Phone Number</label>
+									<input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Mobile Number" />
+								</div>
+							</div>
+
+							<div className="form-row">
+								<div className="form-group">
+									<label htmlFor="emailId">Email ID</label>
+									<input type="email" id="emailId" name="emailId" required placeholder="email@example.com" />
+								</div>
+								<div className="form-group">
+									<label htmlFor="state">State</label>
+									<input type="text" id="state" name="state" required placeholder="State" />
+								</div>
+							</div>
+
+							<div className="form-group">
+								<label htmlFor="message">Message</label>
+								<textarea id="message" name="message" rows="3" placeholder="Any specific requirement?"></textarea>
+							</div>
+							
+							<button type="submit" className="btn btn-full">Send via WhatsApp <i className="fab fa-whatsapp" /></button>
+						</form>
+					</div>
+				</div>
+				
+			</section>
+		</div>
+	);
+};
+
+export default AIRoboticLabICSE;
