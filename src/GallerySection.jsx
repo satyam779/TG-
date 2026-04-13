@@ -1,9 +1,9 @@
-import g1 from '/src/assets/stemlab.jpg'
-import g2 from '/src/assets/studentAtRoboticWorkshop.jpg'
-import g3 from '/src/assets/handsonLearning.jpg'
-import g4 from '/src/assets/kit.jpg'
-import g5 from '/src/assets/Ai&Robotics.jpeg'
-import g6 from '/src/assets/tinkerfestCompetition.jpg'
+import g1 from './assets/stemlab.jpg'
+import g2 from './assets/studentAtRoboticWorkshop.jpg'
+import g3 from './assets/handsonLearning.jpg'
+import g4 from './assets/kit.jpg'
+import g5 from './assets/Ai&Robotics.jpeg'
+import g6 from './assets/tinkerfestCompetition.jpg'
 import './GallerySection.css';
 
 function GallerySection(){

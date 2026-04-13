@@ -1,7 +1,7 @@
 //import './Header.css'
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import Logo from '/src/assets/logo.png'
+import Logo from './assets/logo.png'
 import './Header.css';
 
 function Header() {
