@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import './FranchisePage.css';
 //why choose techyguide section images
-import whychooseTechyguide1 from './assets/franchisepageimages/Why Choose TechyGuide_ - 1.jpg';
-import whychooseTechyguide2 from './assets/franchisepageimages/Why Choose TechyGuide_ - 2.jpg';
-import whychooseTechyguide3 from './assets/franchisepageimages/Why Choose TechyGuide_ - 3.jpg';
-import whychooseTechyguide4 from './assets/franchisepageimages/Why Choose TechyGuide_ - 4.jpg';
+import whychooseTechyguide1 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 1.jpg';
+import whychooseTechyguide2 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 2.jpg';
+import whychooseTechyguide3 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 3.jpg';
+import whychooseTechyguide4 from './assets/FranchisePageImages/Why Choose TechyGuide_ - 4.jpg';
 
-import testimonial1 from './assets/franchisepageimages/Partner Testimonial_1.png';
-import testimonial2 from './assets/franchisepageimages/Partner Testimonial_2.png';
-import testimonial3 from './assets/franchisepageimages/Partner Testimonial_3.png';
-import testimonial4 from './assets/franchisepageimages/Partner Testimonial_4.png';
-import testimonial5 from './assets/franchisepageimages/Partner Testimonial_5.png';
-import testimonial6 from './assets/franchisepageimages/Partner Testimonial_6.png';
-import testimonial7 from './assets/franchisepageimages/Partner Testimonial_7.png';
+import testimonial1 from './assets/FranchisePageImages/Partner Testimonial_1.png';
+import testimonial2 from './assets/FranchisePageImages/Partner Testimonial_2.png';
+import testimonial3 from './assets/FranchisePageImages/Partner Testimonial_3.png';
+import testimonial4 from './assets/FranchisePageImages/Partner Testimonial_4.png';
+import testimonial5 from './assets/FranchisePageImages/Partner Testimonial_5.png';
+import testimonial6 from './assets/FranchisePageImages/Partner Testimonial_6.png';
+import testimonial7 from './assets/FranchisePageImages/Partner Testimonial_7.png';
 
 // What Will You Get? section images
 import WhatWillYouGet1 from './assets/FranchisePageImages/What Will You Get_ - 1.jpg';
