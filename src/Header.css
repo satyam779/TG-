@@ -10,7 +10,7 @@
     right: 0;
     width: 100%;
     z-index: 10000;
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .top-bar.hidden {
@@ -25,8 +25,10 @@
 
 /* Fix for Inverted Phone Icon */
 .top-bar .fa-phone-alt {
-    display: inline-block; /* Required for transform to work */
-    transform: scaleX(-1); /* Flips the icon horizontally */
+    display: inline-block;
+    /* Required for transform to work */
+    transform: scaleX(-1);
+    /* Flips the icon horizontally */
 }
 
 /* Header */
@@ -39,7 +41,7 @@ header {
     right: 0;
     width: 100%;
     z-index: 9999;
-    transition: top 0.1s ease-in-out;
+    transition: top 0.2s ease-in-out;
 }
 
 header.shifted {
@@ -129,9 +131,12 @@ nav ul li a:hover {
 
 /* Cart Animation */
 @keyframes cartBounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
+
     50% {
         transform: translateX(3px);
     }
@@ -142,43 +147,56 @@ nav ul li a:hover {
 }
 
 @keyframes cartShake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    75% { transform: translateX(2px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    75% {
+        transform: translateX(2px);
+    }
 }
 
 /* --- Dropdown Menu Styles --- */
 
 /* Parent List Item */
 .dropdown {
-    position: relative; /* Needed to position the dropdown box relative to this item */
+    position: relative;
+    /* Needed to position the dropdown box relative to this item */
 }
 
 .dropdown i {
     font-size: 0.7rem;
     margin-left: 5px;
     vertical-align: middle;
-    
+
 }
 
 /* The Dropdown Box (Hidden by default) */
 .dropdown-menu {
     position: absolute;
-    top: 100%; /* Positions it right below the link */
+    top: 100%;
+    /* Positions it right below the link */
     left: 0;
     background-color: var(--white);
     min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px 0;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s ease;
-    display: flex; /* Overrides the default flex row from parent ul */
+    display: flex;
+    /* Overrides the default flex row from parent ul */
     flex-direction: column;
     z-index: 1000;
-    
+
 }
 
 /* Show Dropdown on Hover */
@@ -221,12 +239,12 @@ nav ul li a:hover {
         font-size: 0.75rem;
     }
 
-    .top-bar .container { 
+    .top-bar .container {
         justify-content: center;
-        gap: 12px; 
+        gap: 12px;
     }
 
-    .nav-container { 
+    .nav-container {
         position: relative;
         height: 70px;
         gap: 20px;
@@ -235,14 +253,14 @@ nav ul li a:hover {
     .logo img {
         height: 45px;
     }
-    
-    .hamburger { 
-        display: block; 
+
+    .hamburger {
+        display: block;
         color: var(--secondary-color);
         margin-left: auto;
         font-size: 1.8rem;
     }
-    
+
     nav ul {
         display: none;
         position: absolute;
@@ -254,14 +272,14 @@ nav ul li a:hover {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 20px 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         align-items: flex-start;
         margin: 0;
         max-height: calc(100vh - 140px);
         overflow-y: auto;
         z-index: 999;
     }
-    
+
     nav ul li {
         width: 100%;
         text-align: left;
@@ -274,7 +292,7 @@ nav ul li a:hover {
         padding-right: 10px;
         text-align: center;
     }
-    
+
     nav ul li a {
         display: block;
         padding: 12px 0;
@@ -292,10 +310,10 @@ nav ul li a:hover {
         margin-right: 0;
     }
 
-    nav ul.active { 
-        display: flex; 
+    nav ul.active {
+        display: flex;
     }
-    
+
     /* Reset dropdown for mobile */
     .dropdown-menu {
         position: static !important;
@@ -325,15 +343,16 @@ nav ul li a:hover {
         transition: transform 0.3s;
     }
 
-    .dropdown.active > a > i,
-    .dropdown-menu.active ~ i {
+    .dropdown.active>a>i,
+    .dropdown-menu.active~i {
         transform: rotate(180deg);
     }
 }
 
 @media (max-width: 480px) {
     .top-bar {
-        display: block; /* ensure top-bar is visible on small screens */
+        display: block;
+        /* ensure top-bar is visible on small screens */
     }
 
     .nav-container {

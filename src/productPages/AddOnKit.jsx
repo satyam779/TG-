@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import SEO from "../components/SEO";
 import "./AddOnKit.css";
 // hero section image
@@ -17,6 +18,7 @@ import OttoSpiderKit from "../assets/ProductsAddOnImages/Otto Spider Kit.webp";
 const AddOnKit = () => {
 	const addonHeroRef = useRef(null);
 	const addonHeroCanvasRef = useRef(null);
+	const navigate = useNavigate();
 
 
 	useEffect(() => {
@@ -492,7 +494,7 @@ const AddOnKit = () => {
 			if (contactModalButton) {
 				contactModalButton.addEventListener('click', () => {
 					modal.remove();
-					window.location.hash = '/contact-techyguide/';
+					navigate('/contact-techyguide/');
 				});
 			}
 
