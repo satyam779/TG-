@@ -739,10 +739,10 @@ const AIRoboticLabICSE = () => {
 							<div className="stars">★★★★★</div>
 							<p>“TechyGuide’s ICSE lab services are excellent and highly responsive.” </p>
 							<div className="profile">
-								<div className="profile-icon">GJ</div>
+								<div className="profile-icon">SB</div>
 								<div className="profile-info">
-									<h4>Mr. Gopinath Jena</h4>
-									<span>HM, LN Nobel High School</span>
+									<h4>Headmaster</h4>
+									<span>Shemrock School Balaghat</span>
 								</div>
 							</div>
 						</div>
@@ -750,10 +750,10 @@ const AIRoboticLabICSE = () => {
 							<div className="stars">★★★★★</div>
 							<p>“AI, robotics and coding courses helped my students immensely.”</p>
 							<div className="profile">
-								<div className="profile-icon">PD</div>
+								<div className="profile-icon">SJ</div>
 								<div className="profile-info">
-									<h4>Pankaj Kumar Dey</h4>
-									<span>Govt. Gandhi Sec. School</span>
+									<h4>Teacher</h4>
+									<span>St. Joans School</span>
 								</div>
 							</div>
 						</div>
@@ -761,10 +761,10 @@ const AIRoboticLabICSE = () => {
 							<div className="stars">★★★★★</div>
 							<p>"Trainers are exceptionally good at their knowledge. They did amazing to our skills. Thank you!"</p>
 							<div className="profile">
-								<div className="profile-icon">JS</div>
+								<div className="profile-icon">ND</div>
 								<div className="profile-info">
 									<h4>Teacher</h4>
-									<span>Jajoo Int. School</span>
+									<span>North Delhi Public School</span>
 								</div>
 							</div>
 						</div>
@@ -772,10 +772,10 @@ const AIRoboticLabICSE = () => {
 							<div className="stars">★★★★★</div>
 							<p>"All the activities are exciting and engaging. I thank TechyGuide to develop such a product and course."</p>
 							<div className="profile">
-								<div className="profile-icon">NS</div>
+								<div className="profile-icon">NA</div>
 								<div className="profile-info">
 									<h4>Teacher</h4>
-									<span>Noble School, Karnataka</span>
+									<span>Noble School Alipur</span>
 								</div>
 							</div>
 						</div>
@@ -784,10 +784,10 @@ const AIRoboticLabICSE = () => {
 							<div className="stars">★★★★★</div>
 							<p>"We have used TechyGuide's ATL service. Their services were very good and always respond to our queries promptly."</p>
 							<div className="profile">
-								<div className="profile-icon">GJ</div>
+								<div className="profile-icon">NM</div>
 								<div className="profile-info">
-									<h4>Mr. Gopinath Jena</h4>
-									<span>HM, LN Nobel High School</span>
+									<h4>Headmaster</h4>
+									<span>Nilbagan Model School, Assam</span>
 								</div>
 							</div>
 						</div>
@@ -795,10 +795,10 @@ const AIRoboticLabICSE = () => {
 							<div className="stars">★★★★★</div>
 							<p>"I have learned AI, Robotics, Coding, and 3D printing. These courses are very interesting to me and helpful for my students."</p>
 							<div className="profile">
-								<div className="profile-icon">PD</div>
+								<div className="profile-icon">MI</div>
 								<div className="profile-info">
-									<h4>Pankaj Kumar Dey</h4>
-									<span>Govt. Gandhi Sec. School</span>
+									<h4>Teacher</h4>
+									<span>Magadham International School</span>
 								</div>
 							</div>
 						</div>
@@ -806,10 +806,10 @@ const AIRoboticLabICSE = () => {
 							<div className="stars">★★★★★</div>
 							<p>"Trainers are exceptionally good at their knowledge. They did amazing to our skills. Thank you!"</p>
 							<div className="profile">
-								<div className="profile-icon">JS</div>
+								<div className="profile-icon">JI</div>
 								<div className="profile-info">
 									<h4>Teacher</h4>
-									<span>Jajoo Int. School</span>
+									<span>Jajoo International School</span>
 								</div>
 							</div>
 						</div>
@@ -817,10 +817,10 @@ const AIRoboticLabICSE = () => {
 							<div className="stars">★★★★★</div>
 							<p>"All the activities are exciting and engaging. I thank TechyGuide to develop such a product and course."</p>
 							<div className="profile">
-								<div className="profile-icon">NS</div>
+								<div className="profile-icon">HI</div>
 								<div className="profile-info">
 									<h4>Teacher</h4>
-									<span>Noble School, Karnataka</span>
+									<span>Harimaya International School</span>
 								</div>
 							</div>
 						</div>

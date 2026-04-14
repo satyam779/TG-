@@ -23,9 +23,9 @@ function CommunitySection(){
                                 <div className="author">
                                     <div className="avatar" style={{background: "#003366"}}>MS</div>
                                     <div className="info">
-                                        <h4>Meera Singh</h4>
-                                        <p>Parent</p>
-                                        <small>Cambridge International, Pune</small>
+                                        <h4>Parent</h4>
+                                        {/* <p>Parent</p> */}
+                                        <small>North Delhi Public school</small>
                                     </div>
                                 </div>
                             </div>
@@ -40,9 +40,9 @@ function CommunitySection(){
                                 <div className="author">
                                     <div className="avatar" style={{background: "#003366"}}>PS</div>
                                     <div className="info">
-                                        <h4>Dr. Priya Sharma</h4>
-                                        <p>Principal</p>
-                                        <small>Delhi Public School, New Delhi</small>
+                                        <h4>Principal</h4>
+                                        {/* <p>Principal</p> */}
+                                        <small>Harimaya International School</small>
                                     </div>
                                 </div>
                             </div>
@@ -56,9 +56,9 @@ function CommunitySection(){
                                 <div className="author">
                                     <div className="avatar">RK</div>
                                     <div className="info">
-                                        <h4>Rajesh Kumar</h4>
-                                        <p>STEM Coordinator</p>
-                                        <small>St. Xavier's High School, Mumbai</small>
+                                        <h4>STEM Coordinator</h4>
+                                        {/* <p>STEM Coordinator</p> */}
+                                        <small>St. Xavier's High School, Chatrapur</small>
                                     </div>
                                 </div>
                             </div>
@@ -72,9 +72,9 @@ function CommunitySection(){
                                 <div className="author">
                                     <div className="avatar">AP</div>
                                     <div className="info">
-                                        <h4>Anjali Patel</h4>
-                                        <p>Student</p>
-                                        <small>Modern Academy, Bangalore</small>
+                                        <h4>Student</h4>
+                                        {/* <p>Student</p> */}
+                                        <small>St Mary Public Inter College</small>
                                     </div>
                                 </div>
                             </div>
@@ -89,14 +89,14 @@ function CommunitySection(){
                                 <div className="author">
                                     <div className="avatar">RI</div>
                                     <div className="info">
-                                        <h4>Prof. Ramesh Iyer</h4>
-                                        <p>Head of Department</p>
-                                        <small>National Public School, Chennai</small>
+                                        <h4>Head of Department</h4>
+                                        {/* <p>Head of Department</p> */}
+                                        <small>Jajoo International School</small>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="testimonial-card">
+                             <div className="testimonial-card">
                                 <div className="quote-icon">"</div>
                                 <p>
                                     "My daughter's confidence has grown tremendously since joining
@@ -106,9 +106,9 @@ function CommunitySection(){
                                 <div className="author">
                                     <div className="avatar" style={{background: "#003366"}}>MS</div>
                                     <div className="info">
-                                        <h4>Meera Singh</h4>
-                                        <p>Parent</p>
-                                        <small>Cambridge International, Pune</small>
+                                        <h4>Parent</h4>
+                                        {/* <p>Parent</p> */}
+                                        <small>North Delhi Public school</small>
                                     </div>
                                 </div>
                             </div>
@@ -117,16 +117,15 @@ function CommunitySection(){
                                 <div className="quote-icon">"</div>
                                 <p>
                                     "TechyGuide transformed our school's approach to STEM education.
-                                    The AI & Robotics Lab has sparked unprecedented interest among
-                                    students, and we've seen remarkable improvement in their
-                                    problem-solving skills."
+                                   The AI & Robotics Lab sparked unprecedented interest among 
+                                   students and improved problem-solving skills."
                                 </p>
                                 <div className="author">
                                     <div className="avatar" style={{background: "#003366"}}>PS</div>
                                     <div className="info">
-                                        <h4>Dr. Priya Sharma</h4>
-                                        <p>Principal</p>
-                                        <small>Delhi Public School, New Delhi</small>
+                                        <h4>Principal</h4>
+                                        {/* <p>Principal</p> */}
+                                        <small>Harimaya International School</small>
                                     </div>
                                 </div>
                             </div>
@@ -134,16 +133,15 @@ function CommunitySection(){
                             <div className="testimonial-card">
                                 <div className="quote-icon">"</div>
                                 <p>
-                                    "The DIY kits and virtual courses are exceptional. Our students
-                                    are now participating in national-level competitions and
-                                    winning! The support from TechyGuide team has been outstanding."
+                                    "DIY kits and virtual courses helped our students win
+                                 national-level competitions. Outstanding support from TechyGuide!"
                                 </p>
                                 <div className="author">
                                     <div className="avatar">RK</div>
                                     <div className="info">
-                                        <h4>Rajesh Kumar</h4>
-                                        <p>STEM Coordinator</p>
-                                        <small>St. Xavier's High School, Mumbai</small>
+                                        <h4>STEM Coordinator</h4>
+                                        {/* <p>STEM Coordinator</p> */}
+                                        <small>St. Xavier's High School, Chatrapur</small>
                                     </div>
                                 </div>
                             </div>
@@ -151,16 +149,15 @@ function CommunitySection(){
                             <div className="testimonial-card">
                                 <div className="quote-icon">"</div>
                                 <p>
-                                    "Learning robotics at TechyGuide lab changed my life! I went
-                                    from being afraid of technology to winning the Robothrone
-                                    competition. Now I want to become an AI engineer."
+                                    "Learning robotics changed my life! I went from being afraid of technology
+                                     to winning Robothrone and now aim to become an AI engineer."
                                 </p>
                                 <div className="author">
                                     <div className="avatar">AP</div>
                                     <div className="info">
-                                        <h4>Anjali Patel</h4>
-                                        <p>Student</p>
-                                        <small>Modern Academy, Bangalore</small>
+                                        <h4>Student</h4>
+                                        {/* <p>Student</p> */}
+                                        <small>St Mary Public Inter College</small>
                                     </div>
                                 </div>
                             </div>
@@ -175,9 +172,9 @@ function CommunitySection(){
                                 <div className="author">
                                     <div className="avatar">RI</div>
                                     <div className="info">
-                                        <h4>Prof. Ramesh Iyer</h4>
-                                        <p>Head of Department</p>
-                                        <small>National Public School, Chennai</small>
+                                        <h4>Head of Department</h4>
+                                        {/* <p>Head of Department</p> */}
+                                        <small>Jajoo International School</small>
                                     </div>
                                 </div>
                             </div>

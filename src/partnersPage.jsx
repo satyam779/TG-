@@ -296,15 +296,15 @@ function PartnersPage() {
 
 					<div className="partners-stat-glass-container">
 						<div className="partners-stat-glass">
-							<h3>50+</h3>
+							<h3>700+</h3>
 							<p>Schools Onboard</p>
 						</div>
 						<div className="partners-stat-glass">
-							<h3>4+</h3>
+							<h3>26+</h3>
 							<p>States Covered</p>
 						</div>
 						<div className="partners-stat-glass">
-							<h3>10k+</h3>
+							<h3>200k+</h3>
 							<p>Students Impacted</p>
 						</div>
 					</div>
@@ -415,7 +415,7 @@ function PartnersPage() {
 							</p>
 							<div className="partners-user-info">
 								<div className="partners-avatar">P</div>
-								<span>Principal, DPS</span>
+								<span>Principal</span>
 							</div>
 						</div>
 						<div className="partners-testimonial-glass">
@@ -461,7 +461,7 @@ function PartnersPage() {
 							<p>"TechyGuide workshops brought real innovation to our labs."</p>
 							<div className="partners-user-info">
 								<div className="partners-avatar">P</div>
-								<span>Principal, DPS</span>
+								<span>Principal</span>
 							</div>
 						</div>
 					</div>
