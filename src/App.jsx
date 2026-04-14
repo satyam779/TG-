@@ -138,7 +138,7 @@ function HomePage() {
       />
       <HeroSection />
       <AboutSection />
-      <Suspense fallback={<div className="section-loader">Loading...</div>}>
+      <Suspense fallback={<RouteLoader />}>
         <ShopSection />
         <SchoolSection />
         <CollaborationSection />

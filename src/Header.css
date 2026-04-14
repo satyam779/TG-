@@ -10,7 +10,7 @@
     right: 0;
     width: 100%;
     z-index: 10000;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .top-bar.hidden {
@@ -41,7 +41,7 @@ header {
     right: 0;
     width: 100%;
     z-index: 9999;
-    transition: top 0.2s ease-in-out;
+    transition: top 0.3s ease-in-out;
 }
 
 header.shifted {

@@ -30,15 +30,22 @@ function WhatsAppButton() {
   const hideOnThisRoute = isSchoolRoute();
 
   useEffect(() => {
+    let ticking = false;
     const togglePosition = () => {
-      if (window.pageYOffset > 300) {
-        setIsShifted(true);
-      } else {
-        setIsShifted(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.pageYOffset > 300) {
+            setIsShifted(true);
+          } else {
+            setIsShifted(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', togglePosition);
+    window.addEventListener('scroll', togglePosition, { passive: true });
     return () => {
       window.removeEventListener('scroll', togglePosition);
     };

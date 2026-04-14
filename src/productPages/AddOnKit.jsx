@@ -401,15 +401,22 @@ const AddOnKit = () => {
 
 		// Navbar scroll effect
 		const navbar = root.querySelector('.navbar');
+		let tickingNavbar = false;
 		const onScrollNavbar = () => {
 			if (!navbar) return;
-			if (window.scrollY > 50) {
-				navbar.classList.add('scrolled');
-			} else {
-				navbar.classList.remove('scrolled');
+			if (!tickingNavbar) {
+				window.requestAnimationFrame(() => {
+					if (window.scrollY > 50) {
+						navbar.classList.add('scrolled');
+					} else {
+						navbar.classList.remove('scrolled');
+					}
+					tickingNavbar = false;
+				});
+				tickingNavbar = true;
 			}
 		};
-		window.addEventListener('scroll', onScrollNavbar);
+		window.addEventListener('scroll', onScrollNavbar, { passive: true });
 
 		// Mobile navigation
 		const hamburger = root.querySelector('.hamburger');
@@ -442,16 +449,23 @@ const AddOnKit = () => {
 
 		// Back to top button
 		const backToTop = root.querySelector('#backToTop');
+		let tickingBackToTop = false;
 		const onScrollBackToTop = () => {
 			if (!backToTop) return;
-			if (window.pageYOffset > 300) {
-				backToTop.classList.add('show');
-			} else {
-				backToTop.classList.remove('show');
+			if (!tickingBackToTop) {
+				window.requestAnimationFrame(() => {
+					if (window.pageYOffset > 300) {
+						backToTop.classList.add('show');
+					} else {
+						backToTop.classList.remove('show');
+					}
+					tickingBackToTop = false;
+				});
+				tickingBackToTop = true;
 			}
 		};
 		if (backToTop) {
-			window.addEventListener('scroll', onScrollBackToTop);
+			window.addEventListener('scroll', onScrollBackToTop, { passive: true });
 			backToTop.addEventListener('click', () => {
 				window.scrollTo({ top: 0, behavior: 'smooth' });
 			});

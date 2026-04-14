@@ -19,25 +19,32 @@ export default function PrivacyPolicyPage() {
         // Offset calculation for sticky headers/padding
         const offset = 100;
 
+        let ticking = false;
         const onScroll = () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                
-                if (window.scrollY >= (sectionTop - offset)) {
-                    current = section.getAttribute('id');
-                }
-            });
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    let current = '';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        
+                        if (window.scrollY >= (sectionTop - offset)) {
+                            current = section.getAttribute('id');
+                        }
+                    });
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').includes(current)) {
+                            link.classList.add('active');
+                        }
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
         };
 
-        window.addEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
 
         // 3. Smooth Scrolling for Anchors - ONLY within privacy policy
         const privacyRoot = document.querySelector('.privacy-policy-page-root');

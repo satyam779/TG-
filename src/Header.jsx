@@ -19,13 +19,13 @@ function Header() {
     setProductsOpen(false);
     setSchoolsOpen(false);
   };
-  
+
   const toggleProductsDropdown = (e) => {
     e.preventDefault();
     setProductsOpen(prev => !prev);
     setSchoolsOpen(false);
   };
-  
+
   const toggleSchoolsDropdown = (e) => {
     e.preventDefault();
     setSchoolsOpen(prev => !prev);
@@ -52,22 +52,31 @@ function Header() {
   // Handle scroll to hide/show top bar
   useEffect(() => {
     let lastScrollY = window.scrollY;
+    let ticking = false;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsTopBarVisible(false);
-      } else {
-        setIsTopBarVisible(true);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY > lastScrollY && currentScrollY > 50) {
+            setIsTopBarVisible(false);
+          } else {
+            setIsTopBarVisible(true);
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
       }
-      lastScrollY = currentScrollY;
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLogoClick = () => {
+  const handleLogoClick = (e) => {
+    if (e) e.preventDefault();
     closeMenu();
-    if (location.pathname !== '/') {
+    if (location.pathname !== '/' && location.pathname !== '/ai-robotics-stem-education-india') {
       navigate('/');
       setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
     } else {
@@ -79,12 +88,17 @@ function Header() {
     closeMenu();
     setProductsOpen(false);
     setSchoolsOpen(false);
-    
-    // Always navigate and scroll to top
-    navigate(path);
-    setTimeout(() => {
+
+    const isHome = path === '/' && (location.pathname === '/' || location.pathname === '/ai-robotics-stem-education-india');
+
+    if (isHome || location.pathname === path) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 50);
+    } else {
+      navigate(path);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 50);
+    }
   };
 
   return (
@@ -126,7 +140,7 @@ function Header() {
               </li>
 
               <li><a href="/courses" onClick={(e) => { e.preventDefault(); handlePageNavigation('/courses'); }}>Courses</a></li>
-              
+
               <li className="dropdown">
                 <a href="#schools" onClick={toggleSchoolsDropdown}>
                   Schools <i className="fas fa-chevron-down"></i>
@@ -142,22 +156,22 @@ function Header() {
 
                 </ul>
               </li>
-              
+
               <li><a href="/government-csr-stem-robotics-education-initiatives" onClick={(e) => { e.preventDefault(); handlePageNavigation('/government-csr-stem-robotics-education-initiatives'); }}>Impact Program</a></li>
               <li><a href="/robothrone" onClick={(e) => { e.preventDefault(); handlePageNavigation('/robothrone'); }}> Robothrone </a></li>
 
               <li><a href="/robotics-coding-franchise-india" onClick={(e) => { e.preventDefault(); handlePageNavigation('/robotics-coding-franchise-india'); }}>Franchise</a></li>
-                {/* <li><a href="#contact" onClick={(e) => handleAnchorClick(e, '#contact')}>Contact</a></li> */}             
-                <li><a href="/shop" className="btn-nav nav-shop-cta shop-icon" onClick={(e) => { e.preventDefault(); handlePageNavigation('/shop'); }}><i className="fas fa-cart-shopping"></i></a></li>
+              {/* <li><a href="#contact" onClick={(e) => handleAnchorClick(e, '#contact')}>Contact</a></li> */}
+              <li><a href="/shop" className="btn-nav nav-shop-cta shop-icon" onClick={(e) => { e.preventDefault(); handlePageNavigation('/shop'); }}><i className="fas fa-cart-shopping"></i></a></li>
               <li>
-               <a
+                <a
                   href="https://course.techyguide.in"
                   className="btn-nav nav-shop-cta"
                   target="_blank"
                   rel="noopener noreferrer"
-                             >
-                             LMS Login
-                                </a>
+                >
+                  LMS Login
+                </a>
 
               </li>
             </ul>

@@ -40,7 +40,11 @@ import CompetitionSnapshots9 from './assets/RobothronePageImages/Competition Sna
 
 
 
-// NOTE: Binary files (.pdf, .docx) are served via URL, not imported
+// Document imports
+import competitionHandbook from './assets/RobothronePageImages/competition_handbook.pdf';
+import projectIdeation from './assets/RobothronePageImages/Project_Ideation.pdf';
+import projectReport from './assets/RobothronePageImages/project_report.docx';
+
 // Video files are imported for better Vite handling
 
 export default function RobothronePage() {
@@ -136,10 +140,10 @@ export default function RobothronePage() {
   };
 
   // Handle download
-  const handleDownload = (fileName) => {
+  const handleDownload = (fileUrl, defaultName) => {
     const a = document.createElement("a");
-    a.href = new URL(`./assets/RobothronePageImages/${fileName}`, import.meta.url).href;
-    a.download = "";
+    a.href = fileUrl;
+    a.download = defaultName;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -147,23 +151,23 @@ export default function RobothronePage() {
 
   return (
     <div className="robothrone-page-root">
-      <SEO 
+      <SEO
         title="Robothrone Robotics & IoT Innovation Challenge for Students"
         description="Robothrone by TechyGuide is an inter-school STEM innovation challenge where students design robotics and IoT projects, practice coding, and present creative technology solutions."
         canonical="https://techyguide.com/robothrone"
       />
-      {/* Hero Section */} 
+      {/* Hero Section */}
       {/* <div className="robothrone-top-badge">
           ⭐ Registration extended till 01 March 2026.
         </div> */}
       <section className="robothrone-hero" style={{ marginTop: '80px' }}>
         {/* Top Badge */}
-       
-        
-        <video 
-          autoPlay 
-          muted 
-          loop 
+
+
+        <video
+          autoPlay
+          muted
+          loop
           playsInline
           id="robothrone-hero-video"
           src={heroVideo}
@@ -204,8 +208,8 @@ export default function RobothronePage() {
       </section>
 
       {/* Download Cards Section */}
-      <section 
-        className={`robothrone-cards-section ${!showCardsSection ? 'robothrone-hidden' : ''}`} 
+      <section
+        className={`robothrone-cards-section ${!showCardsSection ? 'robothrone-hidden' : ''}`}
         id="cardsSection"
         onClick={(e) => {
           if (e.target === e.currentTarget) {
@@ -221,7 +225,7 @@ export default function RobothronePage() {
             <div className="robothrone-card-icon">📖</div>
             <h4>Competition Handbook</h4>
             <p>Complete guide with rules, timelines, and submission guidelines.</p>
-            <button className="robothrone-card-btn" onClick={() => handleDownload('competition_handbook.pdf')}>
+            <button className="robothrone-card-btn" onClick={() => handleDownload(competitionHandbook, 'competition_handbook.pdf')}>
               Download
             </button>
           </div>
@@ -231,7 +235,7 @@ export default function RobothronePage() {
             <div className="robothrone-card-icon">💡</div>
             <h4>Project Ideation</h4>
             <p>Theme-related documents to help you brainstorm and plan your project.</p>
-            <button className="robothrone-card-btn" onClick={() => handleDownload('Project_Ideation.pdf')}>
+            <button className="robothrone-card-btn" onClick={() => handleDownload(projectIdeation, 'Project_Ideation.pdf')}>
               Download
             </button>
           </div>
@@ -251,7 +255,7 @@ export default function RobothronePage() {
             <div className="robothrone-card-icon">📄</div>
             <h4>Report Template</h4>
             <p>Download the official project report template for your submission.</p>
-            <button className="robothrone-card-btn" onClick={() => handleDownload('project_report.docx')}>
+            <button className="robothrone-card-btn" onClick={() => handleDownload(projectReport, 'project_report.docx')}>
               Download
             </button>
           </div>
@@ -266,15 +270,15 @@ export default function RobothronePage() {
           {/* LEFT CARD */}
           <div className="robothrone-about-left">
             <p>
-             Robothrone is a dynamic inter-school competition designed to ignite students’ passion for robotics, IoT, and innovation. This platform enables learners from grades 3 to 9 to showcase their creative ideas, technical abilities, and problem-solving skills through hands-on STEM experiences.
+              Robothrone is a dynamic inter-school competition designed to ignite students’ passion for robotics, IoT, and innovation. This platform enables learners from grades 3 to 9 to showcase their creative ideas, technical abilities, and problem-solving skills through hands-on STEM experiences.
             </p>
 
             <p>
-             Participants work in collaborative teams to design, build, and program robots or smart IoT solutions that address real-world challenges. The competition promotes creativity, critical thinking, and teamwork while strengthening foundational knowledge in science, technology, engineering, and mathematics. 
+              Participants work in collaborative teams to design, build, and program robots or smart IoT solutions that address real-world challenges. The competition promotes creativity, critical thinking, and teamwork while strengthening foundational knowledge in science, technology, engineering, and mathematics.
             </p>
 
             <p>
-             With expert mentorship, guided workshops, and structured learning resources, Robothrone goes beyond a typical competition. It is a journey of exploration and innovation that equips students with future-ready skills and prepares them to meet the technological challenges of tomorrow. 
+              With expert mentorship, guided workshops, and structured learning resources, Robothrone goes beyond a typical competition. It is a journey of exploration and innovation that equips students with future-ready skills and prepares them to meet the technological challenges of tomorrow.
             </p>
 
             <div className="robothrone-about-powered">
@@ -350,12 +354,12 @@ export default function RobothronePage() {
           {/* JUNIOR */}
           <div className="robothrone-eligibility-card">
             <img src={junior} loading="lazy" decoding="async" width="400" height="250" alt="" />
-            
+
             <div className="robothrone-card-head">
               <h3>🧒 Junior</h3>
               <span>Ages 8–10</span>
             </div>
-            
+
             <ul className="robothrone-card-list">
               <li>Solo or duo</li>
               <li>Basic robotics concepts</li>
@@ -368,12 +372,12 @@ export default function RobothronePage() {
           {/* INTERMEDIATE */}
           <div className="robothrone-eligibility-card">
             <img src={intermediate} loading="lazy" decoding="async" width="400" height="250" alt="" />
-            
+
             <div className="robothrone-card-head">
               <h3>🧑‍💻 Intermediate</h3>
               <span>Ages 11–13</span>
             </div>
-            
+
             <ul className="robothrone-card-list">
               <li>Solo or duo</li>
               <li>Intermediate robotics concepts</li>
@@ -386,12 +390,12 @@ export default function RobothronePage() {
           {/* SENIOR */}
           <div className="robothrone-eligibility-card">
             <img src={senior} loading="lazy" decoding="async" width="400" height="250" alt="" />
-            
+
             <div className="robothrone-card-head">
               <h3>🧠 Senior</h3>
               <span>Ages 14–16</span>
             </div>
-            
+
             <ul className="robothrone-card-list">
               <li>Solo or duo</li>
               <li>Advanced robotics and IoT</li>
