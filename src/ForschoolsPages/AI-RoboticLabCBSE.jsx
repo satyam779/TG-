@@ -788,10 +788,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "We have used TechyGuide's ATL service. Their services were very good and they always respond to our queries promptly."
               </p>
               <div className="profile">
-                <div className="profile-icon">GJ</div>
+                <div className="profile-icon">SB</div>
                 <div className="profile-info">
-                  <h4>Mr. Gopinath Jena</h4>
-                  <span>HM, LN Nobel High School</span>
+                  <h4>Headmaster</h4>
+                  <span>Shemrock School Balaghat</span>
                 </div>
               </div>
             </div>
@@ -802,10 +802,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "I have learned AI, Robotics, Coding, and 3D printing. These courses are very interesting and helpful for my students."
               </p>
               <div className="profile">
-                <div className="profile-icon">PD</div>
+                <div className="profile-icon">SJ</div>
                 <div className="profile-info">
-                  <h4>Pankaj Kumar Dey</h4>
-                  <span>Govt. Gandhi Sec. School</span>
+                  <h4>Teacher</h4>
+                  <span>St. Joans School</span>
                 </div>
               </div>
             </div>
@@ -816,10 +816,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "Very much satisfied with TechyGuide's service and products. All activities are exciting and engaging."
               </p>
               <div className="profile">
-                <div className="profile-icon">NS</div>
+                <div className="profile-icon">ND</div>
                 <div className="profile-info">
                   <h4>Teacher</h4>
-                  <span>Nobel School, Karnataka</span>
+                  <span>North Delhi Public School</span>
                 </div>
               </div>
             </div>
@@ -830,10 +830,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "Trainers are exceptionally good at their knowledge. They did amazing to our skills. Thank you!"
               </p>
               <div className="profile">
-                <div className="profile-icon">JS</div>
+                <div className="profile-icon">NA</div>
                 <div className="profile-info">
                   <h4>Teacher</h4>
-                  <span>Jajoo Int. School, Maharashtra</span>
+                  <span>Noble School Alipur</span>
                 </div>
               </div>
             </div>
@@ -844,10 +844,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "We have used TechyGuide's ATL service. Their services were very good and they always respond to our queries promptly."
               </p>
               <div className="profile">
-                <div className="profile-icon">GJ</div>
+                <div className="profile-icon">NM</div>
                 <div className="profile-info">
-                  <h4>Mr. Gopinath Jena</h4>
-                  <span>HM, LN Nobel High School</span>
+                  <h4>Headmaster</h4>
+                  <span>Nilbagan Model School, Assam</span>
                 </div>
               </div>
             </div>
@@ -858,10 +858,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "I have learned AI, Robotics, Coding, and 3D printing. These courses are very interesting and helpful for my students."
               </p>
               <div className="profile">
-                <div className="profile-icon">PD</div>
+                <div className="profile-icon">MI</div>
                 <div className="profile-info">
-                  <h4>Pankaj Kumar Dey</h4>
-                  <span>Govt. Gandhi Sec. School</span>
+                  <h4>Teacher</h4>
+                  <span>Magadham International School</span>
                 </div>
               </div>
             </div>
@@ -872,10 +872,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "We have used TechyGuide's ATL service. Their services were very good and they always respond to our queries promptly."
               </p>
               <div className="profile">
-                <div className="profile-icon">GJ</div>
+                <div className="profile-icon">JI</div>
                 <div className="profile-info">
-                  <h4>Mr. Gopinath Jena</h4>
-                  <span>HM, LN Nobel High School</span>
+                  <h4>Headmaster</h4>
+                  <span>Jajoo International School</span>
                 </div>
               </div>
             </div>
@@ -886,10 +886,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "I have learned AI, Robotics, Coding, and 3D printing. These courses are very interesting and helpful for my students."
               </p>
               <div className="profile">
-                <div className="profile-icon">PD</div>
+                <div className="profile-icon">HI</div>
                 <div className="profile-info">
-                  <h4>Pankaj Kumar Dey</h4>
-                  <span>Govt. Gandhi Sec. School</span>
+                  <h4>Teacher</h4>
+                  <span>Harimaya International School</span>
                 </div>
               </div>
             </div>
@@ -900,10 +900,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "Very much satisfied with TechyGuide's service and products. All activities are exciting and engaging."
               </p>
               <div className="profile">
-                <div className="profile-icon">NS</div>
+                <div className="profile-icon">GP</div>
                 <div className="profile-info">
                   <h4>Teacher</h4>
-                  <span>Nobel School, Karnataka</span>
+                  <span>Gurukul Public School, Odisha</span>
                 </div>
               </div>
             </div>
@@ -914,10 +914,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "Trainers are exceptionally good at their knowledge. They did amazing to our skills. Thank you!"
               </p>
               <div className="profile">
-                <div className="profile-icon">JS</div>
+                <div className="profile-icon">GV</div>
                 <div className="profile-info">
                   <h4>Teacher</h4>
-                  <span>Jajoo Int. School, Maharashtra</span>
+                  <span>Green Valley School Tebo</span>
                 </div>
               </div>
             </div>
@@ -928,10 +928,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "We have used TechyGuide's ATL service. Their services were very good and they always respond to our queries promptly."
               </p>
               <div className="profile">
-                <div className="profile-icon">GJ</div>
+                <div className="profile-icon">GG</div>
                 <div className="profile-info">
-                  <h4>Mr. Gopinath Jena</h4>
-                  <span>HM, LN Nobel High School</span>
+                  <h4>Headmaster</h4>
+                  <span>Govt. Girls High School, Rairangpur, Odisha</span>
                 </div>
               </div>
             </div>
@@ -942,10 +942,10 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
                 "I have learned AI, Robotics, Coding, and 3D printing. These courses are very interesting and helpful for my students."
               </p>
               <div className="profile">
-                <div className="profile-icon">PD</div>
+                <div className="profile-icon">SK</div>
                 <div className="profile-info">
-                  <h4>Pankaj Kumar Dey</h4>
-                  <span>Govt. Gandhi Sec. School</span>
+                  <h4>Teacher</h4>
+                  <span>Shree Kunjilal Gulkandi Devi Public School - Kagarol</span>
                 </div>
               </div>
             </div>

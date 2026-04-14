@@ -144,7 +144,7 @@ function ImpactProgram() {
             <div className="mission-text">
               <h2>Breaking Barriers in STEM</h2>
               <p>
-                TechyGuide is an innovative education technology ecosystem designed for students aged 7–18. Our impact programs empower educators and learners with tools to build coding, robotics, and problem-solving skills. By promoting creativity, innovation, and inclusion, we contribute to the United Nations Sustainable Development Goals — advancing quality education, gender equality, and industry-driven innovation. 
+                TechyGuide is an innovative education technology ecosystem designed for students aged 7-18. Our impact programs empower educators and learners with tools to build coding, robotics, and problem-solving skills. By promoting creativity, innovation, and inclusion, we contribute to the United Nations Sustainable Development Goals - advancing quality education, gender equality, and industry-driven innovation. 
               </p>
               <p>
                 <strong>
@@ -483,9 +483,8 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                   <div className="author">
                     <div className="avatar" style={{background: "#003366"}}>PS</div>
                     <div className="info">
-                      <h4>Dr. Priya Sharma</h4>
-                      <p>Principal</p>
-                      <small>Delhi Public School, New Delhi</small>
+                      <h4>Principal</h4>
+                      <small>Delhi Cambridge School</small>
                     </div>
                   </div>
                 </div>
@@ -498,9 +497,8 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                   <div className="author">
                     <div className="avatar">RK</div>
                     <div className="info">
-                      <h4>Rajesh Kumar</h4>
-                      <p>STEM Coordinator</p>
-                      <small>St. Xavier's High School, Mumbai</small>
+                      <h4>STEM Coordinator</h4>
+                      <small>St. Xavier's Public School, Chatrapur</small>
                     </div>
                   </div>
                 </div>
@@ -513,9 +511,8 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                   <div className="author">
                     <div className="avatar">AP</div>
                     <div className="info">
-                      <h4>Anjali Patel</h4>
-                      <p>Student</p>
-                      <small>Modern Academy, Bangalore</small>
+                      <h4>Student</h4>
+                      <small>Chaman Bhartiya School</small>
                     </div>
                   </div>
                 </div>
@@ -523,14 +520,13 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                 <div className="testimonial-card">
                   <div className="quote-icon">"</div>
                   <p>
-                    The ATL Lab setup was seamless and the training provided to our teachers was comprehensive. TechyGuide doesn't just provide equipment — they build capability.
+                    The ATL Lab setup was seamless and the training provided to our teachers was comprehensive. TechyGuide doesn't just provide equipment - they build capability.
                   </p>
                   <div className="author">
                     <div className="avatar">RI</div>
                     <div className="info">
-                      <h4>Prof. Ramesh Iyer</h4>
-                      <p>Head of Department</p>
-                      <small>National Public School, Chennai</small>
+                      <h4>Head of Department</h4>
+                      <small>Shemford Sr. Sec. School, Haldwani</small>
                     </div>
                   </div>
                 </div>
@@ -544,9 +540,8 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                   <div className="author">
                     <div className="avatar" style={{background: "#003366"}}>MS</div>
                     <div className="info">
-                      <h4>Meera Singh</h4>
-                      <p>Parent</p>
-                      <small>Cambridge International, Pune</small>
+                      <h4>Parent</h4>
+                      <small>Gurukul Public School, Odisha</small>
                     </div>
                   </div>
                 </div>
@@ -559,9 +554,8 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                   <div className="author">
                     <div className="avatar" style={{background: "#003366"}}>PS</div>
                     <div className="info">
-                      <h4>Dr. Priya Sharma</h4>
-                      <p>Principal</p>
-                      <small>Delhi Public School, New Delhi</small>
+                      <h4>Principal</h4>
+                      <small>Delhi Cambridge School</small>
                     </div>
                   </div>
                 </div>
@@ -574,9 +568,8 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                   <div className="author">
                     <div className="avatar">RK</div>
                     <div className="info">
-                      <h4>Rajesh Kumar</h4>
-                      <p>STEM Coordinator</p>
-                      <small>St. Xavier's High School, Mumbai</small>
+                      <h4>STEM Coordinator</h4>
+                      <small>St. Xavier's Public School, Chatrapur</small>
                     </div>
                   </div>
                 </div>
@@ -589,9 +582,8 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                   <div className="author">
                     <div className="avatar">AP</div>
                     <div className="info">
-                      <h4>Anjali Patel</h4>
-                      <p>Student</p>
-                      <small>Modern Academy, Bangalore</small>
+                      <h4>Student</h4>
+                      <small>Chaman Bhartiya School</small>
                     </div>
                   </div>
                 </div>
@@ -599,14 +591,13 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                 <div className="testimonial-card">
                   <div className="quote-icon">"</div>
                   <p>
-                    The ATL Lab setup was seamless and the training provided to our teachers was comprehensive. TechyGuide doesn't just provide equipment — they build capability.
+                    The ATL Lab setup was seamless and the training provided to our teachers was comprehensive. TechyGuide doesn't just provide equipment - they build capability.
                   </p>
                   <div className="author">
                     <div className="avatar">RI</div>
                     <div className="info">
-                      <h4>Prof. Ramesh Iyer</h4>
-                      <p>Head of Department</p>
-                      <small>National Public School, Chennai</small>
+                      <h4>Head of Department</h4>
+                      <small>Shemford Sr. Sec. School, Haldwani</small>
                     </div>
                   </div>
                 </div>
@@ -619,7 +610,7 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
           <div className="container">
             <h2>Ready to Empower Communities?</h2>
             <p>
-Together, let’s empower communities with the power of education, innovation, and technology.         </p>
+                Together, let's empower communities with the power of education, innovation, and technology.         </p>
             <div className="contact-details">
               <a href="tel:+919114036376" className="btn">
                 <i className="fa-solid fa-phone"></i> +91 91140 36376
@@ -645,7 +636,7 @@ Together, let’s empower communities with the power of education, innovation, a
             }}
             aria-label="Close"
           >
-            ×
+            x
           </button>
         </div>
       )}
