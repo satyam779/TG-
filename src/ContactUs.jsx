@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import SEO from './components/SEO';
-import './contactUs.css';
+import './ContactUs.css';
 import school1 from './assets/contactUsImages/school1.webp';
 import school2 from './assets/contactUsImages/school2.webp';
 import school3 from './assets/contactUsImages/school3.webp';
@@ -35,7 +35,7 @@ function ContactUs() {
 						<div className="content-wrapper">
 							<div className="badge">Official Partners</div>
 							<h1 className="tg-contactus-title">Build Your <span>Dream Lab</span> Today.</h1>
-							<img className="tg-contactus-heading-image" src={contactusimg} alt="Dream Lab setup visual" />
+							<img className="tg-contactus-heading-image" src={contactusimg} alt="Dream Lab setup visual" loading="eager" fetchpriority="high" />
 							<p className="description">TechyGuide provides turnkey solutions for CBSE Composite Skill Labs, STEM Tinkering, and ICSE Robotics. Fully compliant with government mandates. </p>
 
 							<ul className="features">
@@ -82,24 +82,24 @@ function ContactUs() {
 						<p className="showcase-title">Official Partners & Paving the Way in <span>700+ Schools</span></p>
 						<div className="logo-viewport">
 							<div className="logo-track colorful-grid">
-								<div className="logo-item color-1"><img src={school1} alt="CBSE" /></div>
-								<div className="logo-item color-2"><img src={school2} alt="STEM Partner" /></div>
-								<div className="logo-item color-3"><img src={school3} alt="ICSE" /></div>
-								<div className="logo-item color-4"><img src={school4} alt="Robotics Partner" /></div>
-								<div className="logo-item color-5"><img src={school5} alt="Govt. Partner" /></div>
-								<div className="logo-item color-5"><img src={school6} alt="Govt. Partner" /></div>
-								<div className="logo-item color-5"><img src={school7} alt="Govt. Partner" /></div>
-								<div className="logo-item color-5"><img src={school8} alt="Govt. Partner" /></div>
-								<div className="logo-item color-5"><img src={school9} alt="Govt. Partner" /></div>
-								<div className="logo-item color-1"><img src={school1} alt="CBSE" /></div>
-								<div className="logo-item color-2"><img src={school2} alt="STEM Partner" /></div>
-								<div className="logo-item color-3"><img src={school3} alt="ICSE" /></div>
-								<div className="logo-item color-4"><img src={school4} alt="Robotics Partner" /></div>
-								<div className="logo-item color-5"><img src={school5} alt="Govt. Partner" /></div>
-								<div className="logo-item color-5"><img src={school6} alt="Govt. Partner" /></div>
-								<div className="logo-item color-5"><img src={school7} alt="Govt. Partner" /></div>
-								<div className="logo-item color-5"><img src={school8} alt="Govt. Partner" /></div>
-								<div className="logo-item color-5"><img src={school9} alt="Govt. Partner" /></div>
+								<div className="logo-item color-1"><img src={school1} alt="CBSE" loading="lazy" /></div>
+								<div className="logo-item color-2"><img src={school2} alt="STEM Partner" loading="lazy" /></div>
+								<div className="logo-item color-3"><img src={school3} alt="ICSE" loading="lazy" /></div>
+								<div className="logo-item color-4"><img src={school4} alt="Robotics Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school5} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school6} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school7} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school8} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school9} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-1"><img src={school1} alt="CBSE" loading="lazy" /></div>
+								<div className="logo-item color-2"><img src={school2} alt="STEM Partner" loading="lazy" /></div>
+								<div className="logo-item color-3"><img src={school3} alt="ICSE" loading="lazy" /></div>
+								<div className="logo-item color-4"><img src={school4} alt="Robotics Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school5} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school6} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school7} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school8} alt="Govt. Partner" loading="lazy" /></div>
+								<div className="logo-item color-5"><img src={school9} alt="Govt. Partner" loading="lazy" /></div>
 							</div>
 						</div>
 					</div>

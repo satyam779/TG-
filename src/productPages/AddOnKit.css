@@ -462,7 +462,7 @@
 	}
 
 	.addonkit-page-root .addon-hero-visual {
-		width: min(480px, 95vw);
+		width: 98vw;
 		top: 85px;
 		margin-top: 1rem;
 	}
@@ -521,9 +521,9 @@
 	}
 
 	.addonkit-page-root .addon-hero-copy h1 {
-		font-size: clamp(1.6rem, 7vw, 2.2rem);
-		margin-top: 0;
-		line-height: 1.05;
+		font-size: clamp(2rem, 8.5vw, 2.6rem);
+		margin-top: 0.2rem;
+		line-height: 1.1;
 	}
 
 	.addonkit-page-root .addon-hero-copy h1 span {
@@ -531,7 +531,7 @@
 	}
 
 	.addonkit-page-root .addon-hero-subcopy {
-		font-size: 0.95rem;
+		font-size: 1.05rem;
 		margin-top: 0;
 		max-width: 100%;
 		line-height: 1.4;
@@ -544,8 +544,8 @@
 	}
 
 	.addonkit-page-root .addon-hero-visual {
-		width: min(340px, 88vw);
-		margin-top: 0.5rem;
+		width: 98vw;
+		margin-top: 0;
 	}
 
 	.addonkit-page-root .addon-hero-photo {
@@ -595,13 +595,13 @@
 	}
 
 	.addonkit-page-root .addon-hero-copy h1 {
-		font-size: 1.5rem;
-		line-height: 1.1;
+		font-size: 1.85rem;
+		line-height: 1.15;
 		margin-top: 0;
 	}
 
 	.addonkit-page-root .addon-hero-subcopy {
-		font-size: 0.85rem;
+		font-size: 0.98rem;
 		margin-top: 0;
 		line-height: 1.4;
 	}

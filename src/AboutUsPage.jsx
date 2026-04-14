@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import SEO from './components/SEO';
 import './AboutUsPage.css'
 import teamimg1 from './assets/AboutUsImages/Team 1.webp';

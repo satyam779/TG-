@@ -3,13 +3,36 @@ import { useNavigate } from "react-router-dom";
 import SEO from "./components/SEO";
 import "./404.css";
 
+class Node {
+  constructor(W, H) {
+    this.x = Math.random() * W;
+    this.y = Math.random() * H;
+    this.vx = (Math.random() - 0.5) * 0.4;
+    this.vy = (Math.random() - 0.5) * 0.4;
+  }
+
+  update(W, H) {
+    this.x += this.vx;
+    this.y += this.vy;
+
+    if (this.x < 0 || this.x > W) this.vx *= -1;
+    if (this.y < 0 || this.y > H) this.vy *= -1;
+  }
+
+  draw(ctx) {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+    ctx.fillStyle = "#00ff9c";
+    ctx.fill();
+  }
+}
+
 function NotFound() {
   const navigate = useNavigate();
   const canvasRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
 
     const canvas = canvasRef.current;
     const ctx = canvas ? canvas.getContext("2d") : null;
@@ -32,32 +55,8 @@ function NotFound() {
     const nodes = [];
     const COUNT = 80;
 
-    class Node {
-      constructor() {
-        this.x = Math.random() * W;
-        this.y = Math.random() * H;
-        this.vx = (Math.random() - 0.5) * 0.4;
-        this.vy = (Math.random() - 0.5) * 0.4;
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        if (this.x < 0 || this.x > W) this.vx *= -1;
-        if (this.y < 0 || this.y > H) this.vy *= -1;
-      }
-
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = "#00ff9c";
-        ctx.fill();
-      }
-    }
-
     for (let i = 0; i < COUNT; i++) {
-      nodes.push(new Node());
+      nodes.push(new Node(W, H));
     }
 
     let rafId;
@@ -67,8 +66,8 @@ function NotFound() {
 
       for (let i = 0; i < nodes.length; i++) {
         const n1 = nodes[i];
-        n1.update();
-        n1.draw();
+        n1.update(W, H);
+        n1.draw(ctx);
 
         for (let j = i + 1; j < nodes.length; j++) {
           const n2 = nodes[j];

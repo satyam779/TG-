@@ -428,7 +428,7 @@
     }
 
     .ibot-page-root .ibot-hero-visual {
-        width: min(520px, 95vw);
+        width: 98vw;
         top: 85px;
         margin-top: 1rem;
     }
@@ -492,9 +492,9 @@
     }
 
     .ibot-page-root .ibot-hero-copy h1 {
-        font-size: clamp(1.6rem, 7vw, 2.2rem);
-        margin-top: 0;
-        line-height: 1.05;
+        font-size: clamp(2rem, 8.5vw, 2.6rem);
+        margin-top: 0.2rem;
+        line-height: 1.1;
     }
 
     .ibot-page-root .ibot-hero-copy h1 span {
@@ -502,7 +502,7 @@
     }
 
     .ibot-page-root .ibot-hero-subcopy {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
         margin-top: 0;
         max-width: 100%;
         line-height: 1.4;
@@ -515,8 +515,8 @@
     }
 
     .ibot-page-root .ibot-hero-visual {
-        width: min(340px, 88vw);
-        margin-top: 0.5rem;
+        width: 98vw;
+        margin-top: 0;
     }
 
     .ibot-page-root .ibot-hero-visual-ring {
@@ -575,13 +575,13 @@
     }
 
     .ibot-page-root .ibot-hero-copy h1 {
-        font-size: 1.5rem;
-        line-height: 1.1;
+        font-size: 1.85rem;
+        line-height: 1.15;
         margin-top: 0;
     }
 
     .ibot-page-root .ibot-hero-subcopy {
-        font-size: 0.85rem;
+        font-size: 0.98rem;
         margin-top: 0;
         line-height: 1.4;
     }
@@ -594,7 +594,7 @@
     }
 
     .ibot-page-root .ibot-hero-visual {
-        width: min(260px, 85vw);
+        width: min(300px, 90vw);
         margin-top: 0.5rem;
     }
 

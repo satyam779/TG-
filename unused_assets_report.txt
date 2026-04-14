@@ -1,0 +1,54 @@
+Unused Assets Report
+====================
+
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\6. STEM Tinkering Lab.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\7. ATL lab.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\8. STEM Workshop.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\AI&Roboticlab.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ai-robotics-lab.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\company-intro.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\diy-kits.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\DIYEducationalKit.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\g1.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\g3.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\g6.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\hero-bg.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\lab view.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\stem-tinkering-lab.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\stem-workshop-students.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\stem-workshop-training.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\virtual-learning.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\workshopImage.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\CoursesPageImages\video.mp4
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ForSchoolsStemLabImages\virtual-learning-MZKzsgnz.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\HARDWARE & SOFTWARE.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\ROBOTICS COMPETITIONS.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\ROBOTICS COURSES FOR KIDS.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\SALE OF ROBOTICS KITS & PRODUCTS.avif
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\STEMWORKSHOPSINSCHOOLS.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\students.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\TRAINING & SUPPORT.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\Website Testimonial_1.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\Website Testimonial_11.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\Website Testimonial_13.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\Website Testimonial_14.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\Website Testimonial_15.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\FranchisePageImages\Website Testimonial_16.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\impactImages\DIY-Learning-Kit-1.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\impactImages\lab1.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\impactImages\lab2.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\impactImages\lab3.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\impactImages\lab4.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\impactImages\lab5.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\impactImages\lab6.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\impactImages\STEM-Lab.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ProductI-BoTImages\hero-I-BOT.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ProductI-BoTImages\home automation.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ProductI-BoTImages\main board.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ProductI-BoTImages\plant monitor.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ProductI-BoTImages\smoke detection.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ProductTeBoTImages\5073198.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ProductTeBoTImages\9743539.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\ProductTeBoTImages\robot_2582246.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\RobothronePageImages\Logo_TG_Tagline logo.webp
+c:\Users\satya\Desktop\TechyGuide Website\TG\src\assets\RobothronePageImages\robot-style-car-with-joystick.webp

@@ -3,7 +3,7 @@ import lottie from 'lottie-web';
 import { Link } from 'react-router-dom';
 import SEO from './components/SEO';
 import { courseDetails } from './coursesModalData';
-import './coursesPage.css';
+import './CoursesPage.css';
 
 import appDevelopmentImage from './assets/CoursesPageImages/optimized/app-development.webp';
 import artificialIntelligenceImage from './assets/CoursesPageImages/optimized/artificial-intelligence.webp';
@@ -605,10 +605,10 @@ function CoursesPage() {
 
   return (
     <div className="courses-page-container" ref={pageRootRef}>
-      <SEO 
+      <SEO
         title="STEM & Robotics Courses for Students | TechyGuide Learning"
         description="Join TechyGuide's expert-led courses in robotics, AI, python coding, IoT, and more. Practical hands-on learning designed for the future."
-        canonical="https://techyguide.com/courses"
+        canonical="https://techyguide.in/courses"
       />
       <header className="hero" id="home">
         <div id="heroBackgroundAnimation" className="hero-bg" aria-hidden="true"></div>
@@ -616,6 +616,7 @@ function CoursesPage() {
         <div className="hero-lottie2" data-lottie={roboheadLoadingJson} aria-hidden="true"></div>
         <div className="hero-container">
           <div className="hero-content">
+            <div className="hero-capsule">Let your children build the future</div>
             <h1 className="kit-title">
               Leading the Future of Tech Education with <span className="accent">Robotics & Coding</span>
             </h1>
@@ -778,7 +779,7 @@ function CoursesPage() {
                 height="280"
               />
               <h2 className="courses-name">Scratch Programming</h2>
-              <p>Learn Scratch programming <br/>fundamentals through creative visual coding.</p>
+              <p>Learn Scratch programming <br />fundamentals through creative visual coding.</p>
               <p>Build interactive games and animations using events, variables and game logic.</p>
               <button type="button" className="know-more" data-course="Scratch">Know more</button>
               <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy Scratch Programming course">Buy Now</Link>
@@ -796,7 +797,7 @@ function CoursesPage() {
                 height="280"
               />
               <h2 className="courses-name">Electronics </h2>
-              <p>Learn electronics fundamentals<br/> through practical circuit building.</p>
+              <p>Learn electronics fundamentals<br /> through practical circuit building.</p>
               <p>Build interactive electronic projects<br /> using LEDs, motors, sensors, and control circuits.</p>
               <button type="button" className="know-more" data-course="Electronics">Know more</button>
               <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy Electronics course">Buy Now</Link>

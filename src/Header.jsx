@@ -118,7 +118,7 @@ function Header() {
         <div className="container nav-container">
           <div className="logo">
             <Link to="/" className="logo-link" onClick={handleLogoClick}>
-              <img src={Logo} alt="TechyGuide Logo" />
+              <img src={Logo} alt="TechyGuide Logo" loading="eager" fetchpriority="high" />
             </Link>
           </div>
 

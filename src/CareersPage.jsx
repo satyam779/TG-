@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import SEO from './components/SEO';
 import './CareersPage.css';
 //About Working at TechyGuide images
@@ -37,8 +37,8 @@ const openings = [
   //   description:
   //     'Build and test IoT-enabled learning kits and create real-world classroom applications for connected systems.'
   // },
-  
- 
+
+
   {
     title: 'Sales Executive (EdTech)',
     location: 'Pan India',
@@ -242,10 +242,10 @@ function CareersPage() {
 
   return (
     <main className="tg-careers-page">
-      <SEO 
+      <SEO
         title="Careers at TechyGuide | STEM, Robotics, AI & IoT Jobs"
         description="Explore careers at TechyGuide in STEM education, robotics, AI, and IoT. Join our team of engineers, educators, and innovators."
-        canonical="https://techyguide.com/careers-techyguide-stem-education-jobs"
+        canonical="https://techyguide.in/careers-techyguide-stem-education-jobs"
       />
       <section className="tg-careers-hero">
         <div className="tg-careers-hero-shapes" aria-hidden="true">
@@ -276,7 +276,7 @@ function CareersPage() {
 
       <section className="tg-careers-section tg-careers-about">
         <div className="container">
-          <div className="tg-careers-section-head"><br/><br/>
+          <div className="tg-careers-section-head"><br /><br />
             <h2>About Working at TechyGuide</h2>
             <p>
               We are a STEM education company focused on Robotics, AI, IoT, and Innovation Labs. Our team includes Robotics

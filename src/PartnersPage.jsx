@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import SEO from "./components/SEO";
-import "./partnersPage.css";
+import VanillaTilt from "vanilla-tilt";
+import "./PartnersPage.css";
 import heroVideoSrc from "./assets/partnersPageImages/8523654-hd_1920_1080_25fps.mp4";
 import academicHeightsLogo from "./assets/partnersPageImages/academic-heights-logo.webp";
 import agpnImage from "./assets/partnersPageImages/AGPN.webp";
@@ -194,8 +195,8 @@ function PartnersPage() {
 		playVideo();
 
 		const tiltElements = root.querySelectorAll("[data-tilt]");
-		if (typeof window !== "undefined" && window.VanillaTilt) {
-			window.VanillaTilt.init(tiltElements, {
+		if (tiltElements.length > 0) {
+			VanillaTilt.init(tiltElements, {
 				max: 15,
 				speed: 400,
 				glare: true,

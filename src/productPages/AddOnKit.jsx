@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import SEO from "../components/SEO";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./AddOnKit.css";
 // hero section image
 import HeroImage from "../assets/ProductsAddOnImages/Hero image - 2.webp";
@@ -381,9 +383,8 @@ const AddOnKit = () => {
 		if (!root) return;
 
 		// AOS init (scoped)
-		if (window.AOS) {
-			window.AOS.init({ duration: 1000, once: true, offset: 100 });
-		}
+		AOS.init({ duration: 1000, once: true, offset: 100 });
+		AOS.refresh();
 
 		// Loading screen
 		const loadingScreen = root.querySelector('#loadingScreen');
@@ -600,7 +601,7 @@ const AddOnKit = () => {
 			if (backToTop) window.removeEventListener('scroll', onScrollBackToTop);
 			if (observer) observer.disconnect();
 		};
-	}, []);
+	}, [navigate]);
 
 	return (
 		<div className="addonkit-page-root">
@@ -640,6 +641,7 @@ const AddOnKit = () => {
 									className="addon-hero-photo"
 									width="700"
 									height="480"
+									loading="eager"
 									fetchPriority="high"
 									decoding="async"
 								/>
@@ -669,7 +671,7 @@ const AddOnKit = () => {
 					</div>
 					<div className="image-box" data-aos="fade-left">
 						<span className="category-tag">Robotics</span>
-						<img src={roboticArmKit} alt="Robotic Arm Kit" className="product-image" />
+						<img src={roboticArmKit} alt="Robotic Arm Kit" className="product-image" loading="lazy" />
 					</div>
 				</div>
 
@@ -688,7 +690,7 @@ const AddOnKit = () => {
 					</div>
 					<div className="image-box" data-aos="fade-right">
 						<span className="category-tag">Electronics</span>
-						<img src={TechBoTElectronicsKit} alt="TechBoT Electronics Kit" className="product-image" />
+						<img src={TechBoTElectronicsKit} alt="TechBoT Electronics Kit" className="product-image" loading="lazy" />
 					</div>
 				</div>
 
@@ -707,7 +709,7 @@ const AddOnKit = () => {
 					</div>
 					<div className="image-box" data-aos="zoom-in">
 						<span className="category-tag">Advanced Robotics</span>
-						<img src={HumanoidKitIBOT} alt="Humanoid Kit" className="product-image" />
+						<img src={HumanoidKitIBOT} alt="Humanoid Kit" className="product-image" loading="lazy" />
 					</div>
 				</div>
 
@@ -726,7 +728,7 @@ const AddOnKit = () => {
 					</div>
 					<div className="image-box" data-aos="fade-right">
 						<span className="category-tag">Robotics</span>
-						<img src={OttoStarterKit} alt="Otto Starter Kit" className="product-image" />
+						<img src={OttoStarterKit} alt="Otto Starter Kit" className="product-image" loading="lazy" />
 					</div>
 				</div>
 
@@ -745,7 +747,7 @@ const AddOnKit = () => {
 					</div>
 					<div className="image-box" data-aos="zoom-in">
 						<span className="category-tag">Advanced Robotics</span>
-						<img src={OttoLeeKit} alt="Otto Lee Kit" className="product-image" />
+						<img src={OttoLeeKit} alt="Otto Lee Kit" className="product-image" loading="lazy" />
 					</div>
 				</div>
 
@@ -764,7 +766,7 @@ const AddOnKit = () => {
 					</div>
 					<div className="image-box" data-aos="fade-right">
 						<span className="category-tag">Manufacturing</span>
-						<img src={OttoSpiderKit} alt="Otto Spider Kit" className="product-image" />
+						<img src={OttoSpiderKit} alt="Otto Spider Kit" className="product-image" loading="lazy" />
 					</div>
 				</div>
 			</section>

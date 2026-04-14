@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import SEO from './components/SEO';
-import './privacyPolicyPage.css';
+import './PrivacyPolicyPage.css';
 
 export default function PrivacyPolicyPage() {
     useEffect(() => {
