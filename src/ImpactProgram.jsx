@@ -468,9 +468,9 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                   <div className="author">
                     <div className="avatar" style={{background: "#003366"}}>MS</div>
                     <div className="info">
-                      <h4>Meera Singh</h4>
-                      <p>Parent</p>
-                      <small>Cambridge International, Pune</small>
+                      <h4>Parent</h4>
+                      {/* <p>Parent</p> */}
+                      <small>Gurukul Public School, Odisha</small>
                     </div>
                   </div>
                 </div>
