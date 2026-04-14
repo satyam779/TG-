@@ -212,10 +212,10 @@ export default function CompositeSkillLab() {
 
   return (
     <div className="composite-skill-lab-root">
-      <SEO 
+      <SEO
         title="CBSE Composite Skill Lab Setup | 600 Sq Ft"
         description="Complete CBSE Composite Skill Lab setup for schools with 600 sq ft mandatory infrastructure. End-to-end lab design, equipment, training & compliance support."
-        canonical="https://techyguide.com/cbse-composite-skill-lab-setup-for-schools-india"
+        canonical="https://techyguide.in/cbse-composite-skill-lab-setup-for-schools-india"
       />
       <a href="#contact-section" className="floating-cta">
         <i className="fas fa-file-signature"></i> Get Compliance Quote

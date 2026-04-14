@@ -141,12 +141,12 @@ function AIRoboticsLabCBSE() {
     const form = root.querySelector("#enquiryForm");
     const formHandler = (e) => {
       e.preventDefault();
-      
+
       if (!form) return;
-      
+
       const btn = form.querySelector("button");
       if (!btn) return;
-      
+
       const originalText = btn.innerHTML;
       const school = form.querySelector("#schoolName")?.value || "";
       const person = form.querySelector("#fullName")?.value || "";
@@ -154,16 +154,16 @@ function AIRoboticsLabCBSE() {
       const email = form.querySelector("#emailId")?.value || "";
       const state = form.querySelector("#state")?.value || "";
       const msg = form.querySelector("#message")?.value || "";
-      
+
       // Validate required fields
       if (!school || !person || !phone) {
         alert("Please fill in all required fields");
         return;
       }
-      
+
       btn.innerText = "Opening WhatsApp...";
       btn.style.opacity = "0.7";
-      
+
       setTimeout(() => {
         try {
           const businessPhone = "918197984847";
@@ -173,7 +173,7 @@ function AIRoboticsLabCBSE() {
             `*Phone Number:* ${phone}%0a` +
             `*Email:* ${email}%0a` +
             `*State:* ${state}%0a` +
-            `*Message:* ${msg}%0a%0a` ;
+            `*Message:* ${msg}%0a%0a`;
           const whatsappUrl = `https://wa.me/${businessPhone}?text=${text}`;
           window.open(whatsappUrl, "_blank");
           form.reset();
@@ -203,10 +203,10 @@ function AIRoboticsLabCBSE() {
 
   return (
     <div className="ai-roboticslab-cbse-root" ref={rootRef}>
-      <SEO 
+      <SEO
         title="AI & Robotics Lab Setup for Schools | CBSE 417 & NEP 2020 | TechyGuide"
         description="GeM Registered AI & Robotics Lab Setup Company for Schools in India. 500+ Labs Installed. CBSE 417 Compliant & NEP 2020 Aligned Curriculum. Get Proposal Today."
-        canonical="https://techyguide.com/cbse-ai-robotics-lab-setup-nep-2020"
+        canonical="https://techyguide.in/cbse-ai-robotics-lab-setup-nep-2020"
       />
       <a href="#contact-section" className="floating-cta">
         <i className="fas fa-file-invoice-dollar"></i> Get Proposal
@@ -221,7 +221,7 @@ function AIRoboticsLabCBSE() {
               <span>GeM Registered Vendor</span>
             </div>
             <h1>
-             AI & Robotics Lab Setup for  <br />
+              AI & Robotics Lab Setup for  <br />
               <span className="highlight-text">CBSE Schools</span>
             </h1>
             <p>
@@ -958,7 +958,7 @@ Watch how TechyGuide’s state-of-the-art AI & Robotics Labs are transforming cl
           <h2 className="section-heading fade-up">Frequently Asked Questions(FAQ)</h2>
 
           <div className="accordion fade-up">
-            
+
             <div className="accordion-item">
               <button className="accordion-header">Is there a warranty on the equipment?</button>
               <div className="accordion-body">

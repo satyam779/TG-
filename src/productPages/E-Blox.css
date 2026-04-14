@@ -1,4 +1,3 @@
-
 .eblox-page-root {
     margin: 0;
     padding: 0;
@@ -24,6 +23,7 @@
 .eblox-page-root::-webkit-scrollbar {
     display: none !important;
 }
+
 .eblox-page-root {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -214,11 +214,8 @@
 
 .eblox-page-root .eblox-hero-photo-card {
     background: transparent;
-    border: 0;
-    border-radius: 0;
     box-shadow: none;
     overflow: visible;
-    padding: 0;
 }
 
 .eblox-page-root .eblox-hero-photo {
@@ -266,20 +263,37 @@
 }
 
 @keyframes eblox-hero-cloud-drift {
-    0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(2.4%, -2%, 0); }
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(2.4%, -2%, 0);
+    }
 }
 
 @keyframes eblox-hero-badge-float-1 {
+
     0%,
-    100% { transform: translateY(0); }
-    50% { transform: translateY(-9px); }
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
 }
 
 @keyframes eblox-hero-badge-float-2 {
+
     0%,
-    100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 @media (max-width: 980px) {
@@ -339,6 +353,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .eblox-page-root .eblox-hero-root::before,
     .eblox-page-root .eblox-hero-photo,
     .eblox-page-root .eblox-hero-badge-one,
@@ -375,6 +390,7 @@
 .eblox-page::-webkit-scrollbar {
     display: none;
 }
+
 .eblox-page {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -674,6 +690,7 @@
 .eblox-page .eblox-kit-scroll-content::-webkit-scrollbar {
     display: none;
 }
+
 .eblox-page .eblox-kit-scroll-content {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -901,7 +918,7 @@
     color: #1f2937;
     margin-bottom: 15px;
     text-align: center;
-    
+
 }
 
 .eblox-page .eblox-projects-intro {
@@ -920,6 +937,7 @@
 .eblox-page .eblox-projects-scroll-wrap::-webkit-scrollbar {
     display: none;
 }
+
 .eblox-page .eblox-projects-scroll-wrap {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -990,6 +1008,7 @@
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(calc(-50% - 10px));
     }
@@ -1052,6 +1071,7 @@
         height: calc(100vh - var(--eblox-header-offset));
         padding: 0 clamp(1rem, 3vw, 2rem);
     }
+
     .eblox-page-root .eblox-hero-nav {
         top: 1rem;
         padding: 0 clamp(1rem, 3vw, 2rem);
@@ -1115,7 +1135,7 @@
     .eblox-page .eblox-kit-scroll-content {
         width: 100%;
         padding: 20px;
-        max-height: none;    
+        max-height: none;
     }
 
     .eblox-page .eblox-kits-arrow {

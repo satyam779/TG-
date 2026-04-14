@@ -154,7 +154,7 @@ export default function RobothronePage() {
       <SEO
         title="Robothrone Robotics & IoT Innovation Challenge for Students"
         description="Robothrone by TechyGuide is an inter-school STEM innovation challenge where students design robotics and IoT projects, practice coding, and present creative technology solutions."
-        canonical="https://techyguide.com/robothrone"
+        canonical="https://techyguide.in/robothrone"
       />
       {/* Hero Section */}
       {/* <div className="robothrone-top-badge">

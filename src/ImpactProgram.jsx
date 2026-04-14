@@ -608,7 +608,7 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
 
         <section className="contact" id="impact">
           <div className="container">
-            <h2>Ready to Empower Communities?</h2>
+            <h2 style={{ color: '#ff9500' }}>Ready to Empower Communities?</h2>
             <p>
                 Together, let's empower communities with the power of education, innovation, and technology.         </p>
             <div className="contact-details">

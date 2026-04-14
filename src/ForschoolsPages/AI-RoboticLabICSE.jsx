@@ -223,12 +223,12 @@ const AIRoboticLabICSE = () => {
 
 	return (
 		<div className="ai-roboticlab-icse-root" ref={rootRef}>
-			<SEO 
+			<SEO
 				title="AI & Robotics Lab for ICSE Schools | NEP 2020"
 				description="Install AI & Robotics Lab for ICSE schools aligned with NEP 2020. Complete all setup, curriculum, teacher training & nationwide support."
-				canonical="https://techyguide.com/ai-robotics-lab-icse-schools-india"
+				canonical="https://techyguide.in/ai-robotics-lab-icse-schools-india"
 				ogType="website"
-				ogImage="https://techyguide.com/og-image-icse-lab.webp"
+				ogImage="https://techyguide.in/og-image-icse-lab.webp"
 			/>
 			<a href="#contact-section" className="floating-cta">
 				<i className="fas fa-file-invoice-dollar" /> Get ICSE Proposal
@@ -357,7 +357,7 @@ const AIRoboticLabICSE = () => {
 							<button className="tab-btn" data-tab="middle">Middle (6-8)</button>
 							<button className="tab-btn" data-tab="senior">Secondary (9-10)</button>
 						</div>
-            
+
 						<div className="tabs-content">
 							<div className="tab-pane active" id="primary">
 								<div className="curr-grid">
@@ -547,7 +547,7 @@ const AIRoboticLabICSE = () => {
 							<div className="badge-wide">Official Syllabus Aligned</div>
 							<h3>ICSE Class 9-10 Expert Lab</h3>
 							<p className="package-subtitle">Tailored for Subject Code 66 (Robotics &amp; AI)</p>
-              
+
 							<div className="wide-card-grid">
 								<div className="wc-column">
 									<h4><i className="fas fa-laptop-code" /> Computing &amp; Software</h4>
@@ -574,7 +574,7 @@ const AIRoboticLabICSE = () => {
 									</ul>
 								</div>
 							</div>
-              
+
 							<div className="wc-footer">
 								<div className="price-tag-wide">Custom Quote <small>(Based on Batch Size)</small></div>
 								<a href="#contact-section" className="btn btn-full btn-orange">Request Syllabus Quote</a>
@@ -591,7 +591,7 @@ const AIRoboticLabICSE = () => {
 							<div className="badge-diy">Hardware</div>
 							<h2>Proprietary DIY Robotics Kits</h2>
 							<p>Our labs feature in-house developed kits like I-BoT and TeBoT, designed for infinite prototyping and durability.</p>
-              
+
 							<ul className="diy-features">
 								<li><i className="fas fa-microchip" /> <strong>Core  Compatibility :</strong> Arduino / ESP32 Compatible</li>
 								<li><i className="fas fa-plug" /> <strong>Parts:</strong> Sensors, Motors, Jumpers</li>
@@ -600,7 +600,7 @@ const AIRoboticLabICSE = () => {
 							</ul>
 							<a href="#contact-section" className="btn btn-light btn-mt">View Kit Specs</a>
 						</div>
-            
+
 						<div className="diy-image slider-wrapper">
 							<div className="diy-slide fade">
 								<img src={proprietaryKit1} alt="Modular I-BoT robotics kit compatible with Arduino and ESP32 for ICSE labs " />
@@ -845,7 +845,7 @@ const AIRoboticLabICSE = () => {
 						<h2 >Contact TechyGuide</h2>
 						<p><strong>Corporate Office:</strong> #80, 2nd Floor, 1st Main, VSR Layout, A Narayanapura Main Road, Bangalore 560016.</p>
 						<p><strong>Registered Office:</strong> 1st &amp; 2nd Floor, Jyoti Complex, Bhoisahi, Balasore-756001, Odisha.</p>
-            
+
 						<div className="info-box">
 							<i className="fas fa-phone-alt" />
 							<div>
@@ -895,12 +895,12 @@ const AIRoboticLabICSE = () => {
 								<label htmlFor="message">Message</label>
 								<textarea id="message" name="message" rows="3" placeholder="Any specific requirement?"></textarea>
 							</div>
-							
+
 							<button type="submit" className="btn btn-full">Send via WhatsApp <i className="fab fa-whatsapp" /></button>
 						</form>
 					</div>
 				</div>
-				
+
 			</section>
 		</div>
 	);

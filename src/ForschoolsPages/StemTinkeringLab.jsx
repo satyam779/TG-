@@ -156,16 +156,16 @@ function StemTinkeringLab() {
     // 5. DIY Kit Slider Logic
     let slideIndex = 0;
     const slides = document.querySelectorAll(".diy-slide");
-    
+
     if (slides.length > 0) {
-      slides.forEach(slide => slide.style.display = "none"); 
-      
+      slides.forEach(slide => slide.style.display = "none");
+
       const showSlides = () => {
         slides.forEach(slide => slide.style.display = "none");
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1; }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000); 
+        setTimeout(showSlides, 3000);
       };
 
       showSlides();
@@ -190,20 +190,20 @@ function StemTinkeringLab() {
 
         btn.innerText = 'Opening WhatsApp...';
         btn.style.opacity = '0.7';
-        
+
         setTimeout(() => {
-          const businessPhone = "918197984847"; 
+          const businessPhone = "918197984847";
           const text = `*STEM TINKERING LAB* %0a%0a` +
-                       `*School:* ${school}%0a` +
-                       `*Name:* ${name}%0a` +
-                       `*Phone:* ${phone}%0a` +
-                       `*Email:* ${email}%0a` +
-                       `*State:* ${state}%0a` +
-                       `*Message:* ${msg}`;
+            `*School:* ${school}%0a` +
+            `*Name:* ${name}%0a` +
+            `*Phone:* ${phone}%0a` +
+            `*Email:* ${email}%0a` +
+            `*State:* ${state}%0a` +
+            `*Message:* ${msg}`;
 
           const whatsappUrl = `https://wa.me/${businessPhone}?text=${text}`;
           window.open(whatsappUrl, '_blank');
-          
+
           form.reset();
           btn.innerHTML = originalText;
           btn.style.opacity = '1';
@@ -226,10 +226,10 @@ function StemTinkeringLab() {
 
   return (
     <div className="stem-tinkering-lab-root">
-      <SEO 
+      <SEO
         title="STEM Tinkering Lab for Schools | NEP 2020 Aligned Setup"
         description="Install NEP 2020 aligned STEM Tinkering Labs in schools. Robotics, AI, IoT & 3D Printing setup with training, curriculum & nationwide support."
-        canonical="https://techyguide.com/stem-tinkering-lab-for-schools-india"
+        canonical="https://techyguide.in/stem-tinkering-lab-for-schools-india"
       />
       <a href="#contact-section" className="floating-cta">
         <i className="fas fa-file-invoice-dollar"></i> Get STEM Proposal
@@ -326,7 +326,7 @@ function StemTinkeringLab() {
             <h2><span className="counter" data-target="26">0</span>+</h2>
             <p>States Covered</p>
           </div>
-          
+
         </div>
       </section>
 
@@ -341,7 +341,7 @@ function StemTinkeringLab() {
               <button className="tab-btn" data-tab="middle">Middle (6-8)</button>
               <button className="tab-btn" data-tab="senior">Secondary (9-10)</button>
             </div>
-            
+
             <div className="tabs-content">
               <div className="tab-pane active" id="primary">
                 <div className="curr-grid">
@@ -553,7 +553,7 @@ function StemTinkeringLab() {
               <div className="badge-diy">In-House Innovation</div>
               <h2>Proprietary DIY Kits</h2>
               <p>Our labs feature robust, modular kits developed in-house, designed for infinite prototyping and durability.</p>
-              
+
               <ul className="diy-features">
                 <li><i className="fas fa-microchip"></i> <strong>Core:</strong> Arduino / ESP32 Compatible</li>
                 <li><i className="fas fa-plug"></i> <strong>Parts:</strong> Modular Sensors & Motors</li>
@@ -562,7 +562,7 @@ function StemTinkeringLab() {
               </ul>
               <a href="#contact-section" className="btn btn-light btn-mt">View Kit Specs</a>
             </div>
-            
+
             <div className="diy-image slider-wrapper">
               <div className="diy-slide fade">
                 <img src={proprietaryKits1} alt="I-BoT Kit" />
@@ -851,7 +851,7 @@ function StemTinkeringLab() {
           <div className="contact-info fade-up">
             <p><strong>Corporate Office:</strong> #80, 2nd Floor, 1st Main, VSR Layout, A Narayanapura Main Road, Bangalore 560016.</p>
             <p><strong>Registered Office:</strong> 1st & 2nd Floor, Jyoti Complex, Bhoisahi, Balasore-756001, Odisha.</p>
-            
+
             <div className="info-box">
               <i className="fas fa-phone-alt"></i>
               <div>
@@ -901,7 +901,7 @@ function StemTinkeringLab() {
                 <label htmlFor="message">Message</label>
                 <textarea id="message" name="message" rows="3" placeholder="Any specific requirement?"></textarea>
               </div>
-              
+
               <button type="submit" className="btn btn-full">Send via WhatsApp <i className="fab fa-whatsapp"></i></button>
             </form>
           </div>

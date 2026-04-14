@@ -43,12 +43,12 @@ function WorkshopPage() {
 		const form = document.querySelector('.workshop-page-root #enquiryForm');
 		const formHandler = (e) => {
 			e.preventDefault();
-			
+
 			if (!form) return;
-			
+
 			const btn = form.querySelector('button');
 			if (!btn) return;
-			
+
 			const originalText = btn.innerHTML;
 			const school = form.querySelector('#schoolName')?.value || '';
 			const person = form.querySelector('#fullName')?.value || '';
@@ -56,16 +56,16 @@ function WorkshopPage() {
 			const email = form.querySelector('#emailId')?.value || '';
 			const state = form.querySelector('#state')?.value || '';
 			const msg = form.querySelector('#message')?.value || '';
-			
+
 			// Validate required fields
 			if (!school || !person || !phone) {
 				alert('Please fill in all required fields');
 				return;
 			}
-			
+
 			btn.innerText = 'Opening WhatsApp...';
 			btn.style.opacity = '0.7';
-			
+
 			setTimeout(() => {
 				try {
 					const businessPhone = '918197984847';
@@ -75,7 +75,7 @@ function WorkshopPage() {
 						`*Phone Number:* ${phone}%0a` +
 						`*Email:* ${email}%0a` +
 						`*State:* ${state}%0a` +
-						`*Message:* ${msg}%0a%0a` ;
+						`*Message:* ${msg}%0a%0a`;
 					const whatsappUrl = `https://wa.me/${businessPhone}?text=${text}`;
 					window.open(whatsappUrl, '_blank');
 					form.reset();
@@ -104,10 +104,10 @@ function WorkshopPage() {
 
 	return (
 		<div className="workshop-page-root">
-			<SEO 
+			<SEO
 				title="STEM Robotics Workshops for Schools | TechyGuide India"
 				description="Join TechyGuide STEM robotics workshops for schools. Practical learning in robotics, IoT, electronics & mechatronics with certifications nationwide."
-				canonical="https://techyguide.com/stem-robotics-workshops-for-schools-india"
+				canonical="https://techyguide.in/stem-robotics-workshops-for-schools-india"
 			/>
 			<a href="#contact-section" className="floating-cta">
 				<i className="fas fa-file-invoice-dollar"></i> Get Proposal
@@ -236,7 +236,7 @@ function WorkshopPage() {
 									<h4>Learning Outcome:</h4>
 									<p>Participants will understand basic robotics concepts, simple mechanisms, beginner electronics, and hands-on creative prototyping.</p>
 								</div>
-							<a href="#contact-section" className="btn-primary full-width">Book Now</a>
+								<a href="#contact-section" className="btn-primary full-width">Book Now</a>
 							</div>
 						</div>
 
@@ -277,7 +277,7 @@ function WorkshopPage() {
 									<h4>Learning Outcome:</h4>
 									<p>Participants will gain practical exposure to robotics, motion mechanisms, sensors, and real-world robot applications with hands-on building experience.</p>
 								</div>
-							<a href="#contact-section" className="btn-primary full-width">Book Now</a>
+								<a href="#contact-section" className="btn-primary full-width">Book Now</a>
 							</div>
 						</div>
 
@@ -437,59 +437,59 @@ function WorkshopPage() {
 				</div>
 
 				<div className="marquee-wrapper">
-						<div className="marquee-content">
-							{/* set A */}
-							<div className="testimonial-card">
-								<p>"This is an AMAZING GIFT for me!"</p>
-								<div className="user"><span>- Student</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"The TeBoT robotics kit was fantastic to learn with."</p>
-								<div className="user"><span>- School Principal</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"TechyGuide workshops brought real innovation to our labs."</p>
-								<div className="user"><span>- Science HOD</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"My daughter loved the 3D Pen activity."</p>
-								<div className="user"><span>- Parent</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"This is an AMAZING GIFT for me!"</p>
-								<div className="user"><span>- Student</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"The TeBoT robotics kit was fantastic to learn with."</p>
-								<div className="user"><span>- School Principal</span></div>
-							</div>
-
-							{/* set B (duplicate for seamless loop) */}
-							<div className="testimonial-card">
-								<p>"This is an AMAZING GIFT for me!"</p>
-								<div className="user"><span>- Student</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"The TeBoT robotics kit was fantastic to learn with."</p>
-								<div className="user"><span>- School Principal</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"TechyGuide workshops brought real innovation to our labs."</p>
-								<div className="user"><span>- Science HOD</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"My daughter loved the 3D Pen activity."</p>
-								<div className="user"><span>- Parent</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"This is an AMAZING GIFT for me!"</p>
-								<div className="user"><span>- Student</span></div>
-							</div>
-							<div className="testimonial-card">
-								<p>"The TeBoT robotics kit was fantastic to learn with."</p>
-								<div className="user"><span>- School Principal</span></div>
-							</div>
+					<div className="marquee-content">
+						{/* set A */}
+						<div className="testimonial-card">
+							<p>"This is an AMAZING GIFT for me!"</p>
+							<div className="user"><span>- Student</span></div>
 						</div>
+						<div className="testimonial-card">
+							<p>"The TeBoT robotics kit was fantastic to learn with."</p>
+							<div className="user"><span>- School Principal</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"TechyGuide workshops brought real innovation to our labs."</p>
+							<div className="user"><span>- Science HOD</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"My daughter loved the 3D Pen activity."</p>
+							<div className="user"><span>- Parent</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"This is an AMAZING GIFT for me!"</p>
+							<div className="user"><span>- Student</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"The TeBoT robotics kit was fantastic to learn with."</p>
+							<div className="user"><span>- School Principal</span></div>
+						</div>
+
+						{/* set B (duplicate for seamless loop) */}
+						<div className="testimonial-card">
+							<p>"This is an AMAZING GIFT for me!"</p>
+							<div className="user"><span>- Student</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"The TeBoT robotics kit was fantastic to learn with."</p>
+							<div className="user"><span>- School Principal</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"TechyGuide workshops brought real innovation to our labs."</p>
+							<div className="user"><span>- Science HOD</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"My daughter loved the 3D Pen activity."</p>
+							<div className="user"><span>- Parent</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"This is an AMAZING GIFT for me!"</p>
+							<div className="user"><span>- Student</span></div>
+						</div>
+						<div className="testimonial-card">
+							<p>"The TeBoT robotics kit was fantastic to learn with."</p>
+							<div className="user"><span>- School Principal</span></div>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -553,7 +553,7 @@ function WorkshopPage() {
 						</form>
 					</div>
 				</div>
-				
+
 			</section>
 		</div>
 	);

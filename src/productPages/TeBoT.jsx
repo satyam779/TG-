@@ -602,7 +602,7 @@ function TeBoT() {
             <SEO
                 title="TeBOT Robotics Kit for Classrooms | 50+ STEM Projects"
                 description="TeBOT is a robotics and IoT learning kit designed for school classrooms in India. Students can build 50+ hands-on STEM projects using safe, reusable components."
-                canonical="https://techyguide.com/tebot-robotics-kit-for-schools/"
+                canonical="https://techyguide.in/tebot-robotics-kit-for-schools/"
             />
             <header className="tebot-hero-section" id="home" ref={heroSectionRef}>
                 <canvas className="tebot-hero-canvas" aria-hidden="true" ref={heroCanvasRef}></canvas>

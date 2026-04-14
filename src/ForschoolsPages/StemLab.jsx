@@ -35,17 +35,17 @@ function StemLab() {
         // 1. SMOOTH SCROLLING FOR HERO BUTTON
         // ==========================================
         const scrollButton = document.querySelector('.stemlab-page-root .scroll-to-programs');
-        if(scrollButton) {
+        if (scrollButton) {
             scrollButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 const programsSection = document.getElementById('programs');
-                
+
                 if (programsSection) {
-                    const yOffset = -50; 
+                    const yOffset = -50;
                     const y = programsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    
+
                     window.scrollTo({
-                        top: y, 
+                        top: y,
                         behavior: 'smooth'
                     });
                 }
@@ -63,7 +63,7 @@ function StemLab() {
                 const updateCount = () => {
                     const target = +counter.getAttribute('data-target');
                     const count = +counter.innerText;
-                    
+
                     const inc = target / speed;
 
                     if (count < target) {
@@ -93,7 +93,7 @@ function StemLab() {
         }, statsObserverOptions);
 
         const statsSection = document.querySelector('.stemlab-page-root .stats-section');
-        if(statsSection) {
+        if (statsSection) {
             statsObserver.observe(statsSection);
         }
 
@@ -102,7 +102,7 @@ function StemLab() {
         // ==========================================
         const vpCards = document.querySelectorAll('.stemlab-page-root .vp-card');
 
-        if(vpCards.length > 0) {
+        if (vpCards.length > 0) {
             const vpObserverOptions = {
                 root: null,
                 threshold: 0.15
@@ -114,7 +114,7 @@ function StemLab() {
                         setTimeout(() => {
                             entry.target.classList.add('visible');
                         }, index * 150);
-                        
+
                         observer.unobserve(entry.target);
                     }
                 });
@@ -158,12 +158,12 @@ function StemLab() {
         const form = document.querySelector('.stemlab-page-root #enquiryForm');
         const formHandler = (e) => {
             e.preventDefault();
-            
+
             if (!form) return;
-            
+
             const btn = form.querySelector('button');
             if (!btn) return;
-            
+
             const originalText = btn.innerHTML;
             const school = form.querySelector('#schoolName')?.value || '';
             const person = form.querySelector('#fullName')?.value || '';
@@ -171,16 +171,16 @@ function StemLab() {
             const email = form.querySelector('#emailId')?.value || '';
             const state = form.querySelector('#state')?.value || '';
             const msg = form.querySelector('#message')?.value || '';
-            
+
             // Validate required fields
             if (!school || !person || !phone) {
                 alert('Please fill in all required fields');
                 return;
             }
-            
+
             btn.innerText = 'Opening WhatsApp...';
             btn.style.opacity = '0.7';
-            
+
             setTimeout(() => {
                 try {
                     const businessPhone = '918197984847';
@@ -190,7 +190,7 @@ function StemLab() {
                         `*Phone Number:* ${phone}%0a` +
                         `*Email:* ${email}%0a` +
                         `*State:* ${state}%0a` +
-                        `*Message:* ${msg}%0a%0a` ;
+                        `*Message:* ${msg}%0a%0a`;
                     const whatsappUrl = `https://wa.me/${businessPhone}?text=${text}`;
                     window.open(whatsappUrl, '_blank');
                     form.reset();
@@ -217,10 +217,10 @@ function StemLab() {
 
     return (
         <div className="stemlab-page-root">
-            <SEO 
+            <SEO
                 title="STEM Labs for Schools in India | Hands-on STEM Education | TechyGuide"
                 description="TechyGuide STEM Labs empower students through hands-on Science, Technology, Engineering & Math learning. Practical STEM programs for schools across India."
-                canonical="https://techyguide.com/stem-labs-for-schools"
+                canonical="https://techyguide.in/stem-labs-for-schools"
             />
             <a href="#contact-section" className="floating-cta" onClick={handleGetProposalClick}>
                 <i className="fas fa-file-invoice-dollar"></i> Get Proposal
@@ -232,7 +232,7 @@ function StemLab() {
                             <span className="sub-heading">Welcome to StemLabs</span>
                             <h1 className="section-title"> STEM Lab <span className="highlight-orange">School Innovation Learning</span></h1>
                             <p className="section-desc">
-                                Welcome to StemLabs, where we nurture young innovators through experiential STEM education. Our unique DICE methodology—Design Thinking, Innovation, Creativity, and Entrepreneurship—sparks curiosity and builds future-ready skills through hands-on, practical learning. 
+                                Welcome to StemLabs, where we nurture young innovators through experiential STEM education. Our unique DICE methodology—Design Thinking, Innovation, Creativity, and Entrepreneurship—sparks curiosity and builds future-ready skills through hands-on, practical learning.
                             </p>
                             <div className="intro-buttons">
                                 <button className="btn-primary" onClick={handleHeroProjectsClick}>Our Projects</button>
@@ -240,7 +240,7 @@ function StemLab() {
                         </div>
 
                         <div className="hero-image">
-                            <img src={heroImage} alt="Students building STEM project" onError={(e) => e.target.style.display='none'} />
+                            <img src={heroImage} alt="Students building STEM project" onError={(e) => e.target.style.display = 'none'} />
                         </div>
                     </div>
                 </section>
@@ -285,7 +285,7 @@ function StemLab() {
                                 </div>
                                 <div className="vp-body">
                                     <h3>Science</h3>
-                                    
+
                                     <p>Science builds a strong foundation of curiosity, observation, and logical thinking. Students explore core scientific concepts through hands-on experiments, real-world examples, and inquiry-based learning. The focus is on understanding how the natural and physical world works, encouraging questioning, hypothesis formation, and evidence-based conclusions.</p>
                                 </div>
                             </div>
@@ -294,7 +294,7 @@ function StemLab() {
                                 <div className="vp-img"><div className="vp-letter">T</div></div>
                                 <div className="vp-body">
                                     <h3>Technology</h3>
-                                    
+
                                     <p>Technology introduces learners to the practical use of tools, systems, and digital solutions. Students gain exposure to basic programming logic, robotics, electronics, and digital creativity. Through interactive learning and model-based activities, they understand how technology is designed, applied, and improved to solve real-life problems, preparing them for a technology-driven future.</p>
                                 </div>
                             </div>
@@ -303,7 +303,7 @@ function StemLab() {
                                 <div className="vp-img"><div className="vp-letter">E</div></div>
                                 <div className="vp-body">
                                     <h3>Engineering</h3>
-                                    
+
                                     <p>Engineering develops problem-solving and design thinking skills by transforming ideas into functional solutions. Students engage in building structures, machines, and working models using engineering principles. The learning process includes planning, designing, testing, and optimizing projects, helping students understand how engineering impacts industries, infrastructure, and everyday life.</p>
                                 </div>
                             </div>
@@ -312,7 +312,7 @@ function StemLab() {
                                 <div className="vp-img"><div className="vp-letter">M</div></div>
                                 <div className="vp-body">
                                     <h3>Mathematics</h3>
-                                    
+
                                     <p>Mathematics strengthens analytical reasoning, accuracy, and logical decision-making. Students apply mathematical concepts such as numbers, patterns, measurements, and data analysis within STEM projects and real-world scenarios. Rather than rote learning, the focus is on practical application, enabling learners to use mathematics as a powerful tool for innovation and research.</p>
                                 </div>
                             </div>
@@ -404,7 +404,7 @@ function StemLab() {
                             <h2>Lab <span className="highlight-teal">Gallery</span> & Models</h2>
                             <p>A glimpse into the innovative machines our students build.</p>
                         </div>
-                        
+
                         <div className="gallery-grid">
                             <div className="gallery-item">
                                 <div className="gallery-overlay">
@@ -463,7 +463,7 @@ function StemLab() {
                             <div className="testimonial-card">
                                 <div className="quote-icon"><i className="fas fa-quote-left"></i></div>
                                 <p className="review-text">
-                                    "The hands-on approach has completely changed how our students perceive science. 
+                                    "The hands-on approach has completely changed how our students perceive science.
                                     The kits are durable and the curriculum is perfectly aligned with our academic goals."
                                 </p>
                                 <div className="reviewer-info">
@@ -475,7 +475,7 @@ function StemLab() {
                             <div className="testimonial-card">
                                 <div className="quote-icon"><i className="fas fa-quote-left"></i></div>
                                 <p className="review-text">
-                                    "My son used to struggle with math concepts, but building models helped him visualize 
+                                    "My son used to struggle with math concepts, but building models helped him visualize
                                     the problems. He now loves his physics classes!"
                                 </p>
                                 <div className="reviewer-info">
@@ -487,7 +487,7 @@ function StemLab() {
                             <div className="testimonial-card">
                                 <div className="quote-icon"><i className="fas fa-quote-left"></i></div>
                                 <p className="review-text">
-                                    "StemLabs provided excellent training for our teachers. The transition to a 
+                                    "StemLabs provided excellent training for our teachers. The transition to a
                                     practical-based learning environment was seamless."
                                 </p>
                                 <div className="reviewer-info">
@@ -558,7 +558,7 @@ function StemLab() {
                             </form>
                         </div>
                     </div>
-                    
+
                 </section>
             </main>
         </div>

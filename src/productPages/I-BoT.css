@@ -1,4 +1,3 @@
-
 .ibot-page-root * {
     margin: 0;
     padding: 0;
@@ -208,6 +207,7 @@
 
 .ibot-page-root .ibot-hero-photo-card {
     padding: 0;
+    transform: translateY(60px);
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -263,36 +263,43 @@
     0% {
         transform: translate3d(0, 0, 0);
     }
+
     100% {
         transform: translate3d(2.4%, -2%, 0);
     }
 }
 
 @keyframes ibot-hero-photo-float {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-8px);
     }
 }
 
 @keyframes ibot-hero-badge-float-1 {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-9px);
     }
 }
 
 @keyframes ibot-hero-badge-float-2 {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-8px);
     }
@@ -302,6 +309,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -371,6 +379,7 @@
         width: min(550px, 100%);
         margin: 0 auto;
     }
+
     .ibot-page-root .ibot-hero-visual-ring {
         inset: 5% 8%;
     }
@@ -423,6 +432,7 @@
         top: 85px;
         margin-top: 1rem;
     }
+
     .ibot-page-root .ibot-hero-photo-card {
         padding: 0.6rem;
     }
@@ -603,6 +613,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .ibot-page-root .ibot-hero-root::before,
     .ibot-page-root .ibot-hero-visual-ring,
     .ibot-page-root .ibot-hero-photo,
@@ -1040,7 +1051,7 @@
         grid-template-columns: 1fr;
         gap: 25px;
     }
-    
+
     .hardware-card-media {
         height: clamp(240px, 58vw, 300px);
     }
@@ -1071,6 +1082,7 @@
     box-shadow: 0 5px 20px rgba(0, 90, 85, 0.08);
     display: flex;
 }
+
 .ibot-section.why-best-section {
     background: transparent;
 }
@@ -1113,6 +1125,7 @@
 }
 
 @media (max-width: 768px) {
+
     .why-card-media,
     .why-card-media.large {
         height: clamp(240px, 58vw, 300px);
@@ -1602,6 +1615,7 @@
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(calc(-50% - 10px));
     }
@@ -1611,7 +1625,7 @@
     .project-card {
         width: clamp(200px, 60vw, 250px);
     }
-    
+
     .projects-intro {
         font-size: 1rem;
         margin-bottom: 35px;
@@ -1622,7 +1636,7 @@
     .ibot-section.featured-projects-section {
         padding: 60px 15px;
     }
-    
+
     .project-card {
         width: clamp(180px, 70vw, 220px);
         padding: 20px;

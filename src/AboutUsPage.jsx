@@ -21,10 +21,10 @@ function AboutUsPage() {
 
 	return (
 		<div className="aboutus-page-root">
-			<SEO 
+			<SEO
 				title="About | TechyGuide STEM, Robotics & AI Education Company"
 				description="Learn about TechyGuide, a STEM education and technology company providing robotics kits, AI courses, coding programs, IoT solutions, and hands-on innovation learning."
-				canonical="https://techyguide.com/about-techyguide"
+				canonical="https://techyguide.in/about-techyguide"
 			/>
 			<section
 				className="hero"
@@ -86,13 +86,13 @@ function AboutUsPage() {
 							src={ourjourney}
 							alt="TechyGuide Journey Timeline"
 							className="journey-image"
-                           loading="lazy"
+							loading="lazy"
 						/>
 					</div>
 				</div>
 			</section>
 
-				{/* Meet the Team section — commented out
+			{/* Meet the Team section — commented out
 			<section className="team">
 				<div className="container">
 					<h2>Meet the Team</h2>
@@ -131,7 +131,7 @@ function AboutUsPage() {
 				<div className="container about-grid">
 					<div>
 						<h2 style={{ color: 'orange', textAlign: 'center', fontSize: '2.64rem' }}>Meet Our Founder</h2>
-						<br/>
+						<br />
 						<p>
 							<b>Pradeep Kumar Jena</b> is the visionary founder of TechyGuide, a passionate educator and technology entrepreneur who has dedicated his career to transforming STEM education across India. With a background in engineering and a deep belief in hands-on learning, he built TechyGuide from the ground up to bridge the gap between classroom theory and real-world innovation.
 						</p>
@@ -146,7 +146,7 @@ function AboutUsPage() {
 			<section className="gallery">
 				<div className="container">
 					<h2>Our Team & Workspace</h2>
-                    <br></br>
+					<br></br>
 
 					<div className="workspace-gallery">
 						<div className="workspace-row">

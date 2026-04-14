@@ -143,12 +143,12 @@ function ShopPage() {
     const isPaymentSuccessHash = () => typeof window !== 'undefined' && window.location.hash.includes('payment-success');
 
     const products = [
-        { id: 1, product_id: 9341,title: "Robotic Arm Kit", price: 3499, originalPrice: 4299, rating: 4.8, image: RoboticArmKit, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects."," ", "The robotic arm can fit on your table with middle-sized links."," ", "It helps to reach throughout the table and get hold of things without you to move."," ", "It provides with insights into a palletizing robotic manipulator through hands-on experience."," ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [RoboticArmKit2, RoboticArmKit3, RoboticArmKit4] },
+        { id: 1, product_id: 9341, title: "Robotic Arm Kit", price: 3499, originalPrice: 4299, rating: 4.8, image: RoboticArmKit, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects.", " ", "The robotic arm can fit on your table with middle-sized links.", " ", "It helps to reach throughout the table and get hold of things without you to move.", " ", "It provides with insights into a palletizing robotic manipulator through hands-on experience.", " ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [RoboticArmKit2, RoboticArmKit3, RoboticArmKit4] },
         { id: 2, product_id: 9300, title: "3D Pen", price: 799, originalPrice: 1199, rating: 4.9, category: "3D-Pen", image: pen1, description: "3D Pen is a 3D model printed using 3D printer used for educational purpose by students to design and create three-dimensional objects.", features: ["3D Pen is a 3D model printed using 3D printer used for educational purpose by students to design and create three-dimensional objects."], images: [pen2, pen3, pen4] },
-        { id: 3, product_id: 9377, title: "TechBoT Electronics Kit", price: 899, originalPrice: 1199, rating: 4.8, image: TechBotElectronicsKit1, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects."," ", "The robotic arm can fit on your table with middle-sized links."," ", "It helps to reach throughout the table and get hold of things without you to move."," ", "It provides with insights into a palletizing robotic manipulator through hands-on experience."," ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [TechBotElectronicsKit2, TechBotElectronicsKit3, TechBotElectronicsKit4] },
-        { id: 4, product_id: 9384, title: "TechBoT Arduino Kit", price: 2499, originalPrice: 3499, rating: 4.8, image: TechBotArdiunoKit1, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects."," ", "The robotic arm can fit on your table with middle-sized links."," ", "It helps to reach throughout the table and get hold of things without you to move."," ", "It provides with insights into a palletizing robotic manipulator through hands-on experience."," ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [TechBotArdiunoKit2, TechBotArdiunoKit3, TechBotArdiunoKit4] },
-        { id: 5, product_id: 9389, title: "TeBoT Champ Kit", price: 6399, originalPrice: 7999, rating: 4.8, image: TeBotChampKit1, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects."," ", "The robotic arm can fit on your table with middle-sized links."," ", "It helps to reach throughout the table and get hold of things without you to move."," ", "It provides with insights into a palletizing robotic manipulator through hands-on experience."," ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [TeBotChampKit2, TeBotChampKit3, TeBotChampKit4] },
-        { id: 6, product_id: 9396, title: "TeBoT Basic Kit", price: 5599, originalPrice: 6999, rating: 4.8, image: TeBotBasicKit1, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects."," ", "The robotic arm can fit on your table with middle-sized links."," ", "It helps to reach throughout the table and get hold of things without you to move."," ", "It provides with insights into a palletizing robotic manipulator through hands-on experience."," ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [TeBotBasicKit2, TeBotBasicKit3, TeBotBasicKit4] },
+        { id: 3, product_id: 9377, title: "TechBoT Electronics Kit", price: 899, originalPrice: 1199, rating: 4.8, image: TechBotElectronicsKit1, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects.", " ", "The robotic arm can fit on your table with middle-sized links.", " ", "It helps to reach throughout the table and get hold of things without you to move.", " ", "It provides with insights into a palletizing robotic manipulator through hands-on experience.", " ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [TechBotElectronicsKit2, TechBotElectronicsKit3, TechBotElectronicsKit4] },
+        { id: 4, product_id: 9384, title: "TechBoT Arduino Kit", price: 2499, originalPrice: 3499, rating: 4.8, image: TechBotArdiunoKit1, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects.", " ", "The robotic arm can fit on your table with middle-sized links.", " ", "It helps to reach throughout the table and get hold of things without you to move.", " ", "It provides with insights into a palletizing robotic manipulator through hands-on experience.", " ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [TechBotArdiunoKit2, TechBotArdiunoKit3, TechBotArdiunoKit4] },
+        { id: 5, product_id: 9389, title: "TeBoT Champ Kit", price: 6399, originalPrice: 7999, rating: 4.8, image: TeBotChampKit1, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects.", " ", "The robotic arm can fit on your table with middle-sized links.", " ", "It helps to reach throughout the table and get hold of things without you to move.", " ", "It provides with insights into a palletizing robotic manipulator through hands-on experience.", " ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [TeBotChampKit2, TeBotChampKit3, TeBotChampKit4] },
+        { id: 6, product_id: 9396, title: "TeBoT Basic Kit", price: 5599, originalPrice: 6999, rating: 4.8, image: TeBotBasicKit1, description: "An  microcontroller receives control commands from the TechyGuide mobile application via Bluetooth. Each command controls one of the six servo motors, representing different joints of the robotic arm. Servo angles are adjusted incrementally to provide smooth and precise movements. Angle limits are applied to prevent over-rotation and mechanical damage. The system is suitable for pick-and-place tasks, robotics learning, and automation demonstrations.", features: ["This is a four degree of freedom robotic arm capable of picking and placing small objects.", " ", "The robotic arm can fit on your table with middle-sized links.", " ", "It helps to reach throughout the table and get hold of things without you to move.", " ", "It provides with insights into a palletizing robotic manipulator through hands-on experience.", " ", "Robotic arm teaches advanced robotics concepts like Motion Planning, Inverse Kinematics, etc."], images: [TeBotBasicKit2, TeBotBasicKit3, TeBotBasicKit4] },
         { id: 7, product_id: 9403, title: "TeBot Advance Kit", price: 6999, originalPrice: 9999, rating: 4.9, image: TeBotAdvanceKit1, description: "TeBot Advance Kit is an ultimate robotics learning solution designed for young innovators. It supports 50+ hands-on projects with structured course materials and integrates multiple sensors for real-world experimentation. The kit includes short-circuit protection and a 1-year manufacturing warranty on the microcontroller for safe and long-term classroom use.", features: ["☑ 50+ Robotics Projects", "☑ Multi-Sensor Integration", "☑ Inbuilt Sensors for Easy Handling", "☑ Short Circuit Protection", "☑ 1-Year Microcontroller Warranty", "☑ Reusable & Modular Components"], images: [TeBotAdvanceKit2, TeBotAdvanceKit3, TeBotAdvanceKit4] },
         { id: 8, product_id: 9411, title: "I-BoT Advance Kit", price: 7599, originalPrice: 9999, rating: 4.6, image: IBotAdvanceKit1, description: "I-BoT Advance Kit is a premium robotics platform supporting 100+ diverse projects. It integrates seamlessly with multiple sensors and is suitable for Robotics, IoT, and AI-based applications. Designed with advanced circuitry protection for reliable performance.", features: ["☑ 100+ Advanced Projects", "☑ AI & IoT Compatibility", "☑ Multi-Sensor Integration", "☑ Advanced Circuit Protection", "☑ Inbuilt Sensors", "☑ 1-Year Warranty"], images: [IBotAdvanceKit2, IBotAdvanceKit3, IBotAdvanceKit4] },
         { id: 9, product_id: 9418, title: "I-BoT Starter Kit", price: 6399, originalPrice: 7999, rating: 4.8, image: IBotStarterKit1, description: "I-BoT Starter Kit introduces students to robotics fundamentals through 20+ guided projects. It supports Robotics, IoT, and AI learning while offering modular configuration and easy sensor integration.", features: ["☑ 20+ Guided Projects", "☑ Modular Design", "☑ Sensor Integration", "☑ Short Circuit Protection", "☑ Beginner Friendly", "☑ Robotics, IoT & AI Support"], images: [IBotStarterKit2, IBotStarterKit3, IBotStarterKit4] },
@@ -429,16 +429,16 @@ function ShopPage() {
 
     useEffect(() => {
         if (!isModalOpen || currentMediaList.length === 0) return;
-        
+
         // Check if current slide is a video or YouTube - if so, don't auto-scroll
         const currentMedia = currentMediaList[currentSliderIndex];
         const isVideo = currentMedia && (currentMedia.includes('.mp4') || currentMedia.includes('video'));
         const isYoutube = currentMedia && (currentMedia.includes('youtube.com') || currentMedia.includes('youtu.be'));
-        
+
         if (isVideo || isYoutube) {
             return; // Don't auto-scroll for videos
         }
-        
+
         const interval = setInterval(() => {
             setCurrentSliderIndex((prev) => {
                 let nextIndex = prev + 1;
@@ -514,7 +514,7 @@ function ShopPage() {
         if (!existing) {
             addToCart(item);
         }
-        
+
         closeModal();
         setCurrentCourse(null);
         setTimeout(() => {
@@ -567,7 +567,7 @@ function ShopPage() {
         if (!url) return null;
         const isVideo = url.includes('.mp4') || url.includes('video');
         const isYoutube = url.includes('youtube.com') || url.includes('youtu.be');
-        
+
         if (isYoutube) {
             const videoId = getYoutubeId(url);
             return (
@@ -607,10 +607,10 @@ function ShopPage() {
 
     return (
         <div className="shop-page-wrapper">
-            <SEO 
+            <SEO
                 title={currentCategory === 'Courses' ? 'STEM Courses | TechyGuide Shop' : 'Robotics & AI Kits | TechyGuide Shop'}
                 description={currentCategory === 'Courses' ? 'Master Robotics, AI, and Coding with TechyGuide expert courses. Hands-on learning modules available for students.' : 'Explore professional-grade robotics kits, Arduino packs, and AI learning tools from TechyGuide.'}
-                canonical="https://techyguide.com/shop"
+                canonical="https://techyguide.in/shop"
             />
             <div className="search-header">
                 <div className="header-content">
@@ -641,7 +641,7 @@ function ShopPage() {
                     <h3>Your Cart</h3>
                     <button onClick={toggleCart} className="close-cart">&times;</button>
                 </div>
-                
+
                 <div className="cart-items-container">
                     {cart.length === 0 ? (
                         <div className="empty-cart-msg">Your cart is empty.</div>
@@ -661,7 +661,7 @@ function ShopPage() {
                             </div>
                         ))
                     )}
-            
+
                 </div>
 
                 <div className="cart-footer">
@@ -791,7 +791,7 @@ function ShopPage() {
                             <div className="course-modal-left">
                                 <div className="course-slider-container">
                                     <button className="course-slider-btn course-prev-btn" onClick={() => setCurrentSliderIndex((prev) => (prev - 1 + currentCourse.images.length) % currentCourse.images.length)}>&#10094;</button>
-                                    
+
                                     <div className="course-main-image-container course-slider-image">
                                         {currentCourse.images && currentCourse.images.map((url, index) => (
                                             <img
@@ -836,7 +836,7 @@ function ShopPage() {
                                     {currentCourse.originalPrice && (
                                         <div className="course-discount-block">
                                             <span className="course-original-price">{formatPrice(currentCourse.originalPrice)}</span>
-                                            <span className="course-discount-tag">{Math.round((1 - currentCourse.price/currentCourse.originalPrice) * 100)}% Off</span>
+                                            <span className="course-discount-tag">{Math.round((1 - currentCourse.price / currentCourse.originalPrice) * 100)}% Off</span>
                                         </div>
                                     )}
                                 </div>
@@ -881,7 +881,7 @@ function ShopPage() {
                                 </div>
 
                                 <div className="course-modal-actions-desktop">
-                                    <div style={{flex: 1}}>
+                                    <div style={{ flex: 1 }}>
                                         {cartItemInCourseModal ? (
                                             <div className="qty-controller">
                                                 <button className="qty-btn" onClick={() => handleQtyChange(currentCourse.id, -1)}>−</button>
@@ -903,7 +903,7 @@ function ShopPage() {
                         </div>
 
                         <div className="course-mobile-bottom-actions">
-                            <div style={{flex: 1}}>
+                            <div style={{ flex: 1 }}>
                                 {cartItemInCourseModal ? (
                                     <div className="qty-controller">
                                         <button className="qty-btn" onClick={() => handleQtyChange(currentCourse.id, -1)}>−</button>
@@ -928,15 +928,15 @@ function ShopPage() {
             {isModalOpen && currentProduct && (
                 <div className="modal">
                     <button className="close-modal" onClick={closeModal}>&times;</button>
-                    
+
                     <div className="modal-overlay" onClick={closeModal}></div>
-                    
+
                     <div className="modal-content fade-in-up">
                         <div className="modal-body">
                             <div className="modal-left">
                                 <div className="slider-container">
                                     <button className="slider-btn prev-btn" onClick={() => changeSlide(-1)}>&#10094;</button>
-                                    
+
                                     <div className="main-image-container">
                                         {currentMediaList.map((url, index) => renderMedia(url, index))}
                                     </div>
@@ -966,15 +966,15 @@ function ShopPage() {
                                     <span className="pd-price">{formatPrice(currentProduct.price)}</span>
                                     <div className="pd-discount-block">
                                         <span className="pd-original-price">{formatPrice(currentProduct.originalPrice)}</span>
-                                        <span className="pd-discount-tag">{Math.round((1 - currentProduct.price/currentProduct.originalPrice) * 100)}% Off</span>
+                                        <span className="pd-discount-tag">{Math.round((1 - currentProduct.price / currentProduct.originalPrice) * 100)}% Off</span>
                                     </div>
                                 </div>
-                                
+
                                 <div className="pd-tabs-nav">
                                     <button className={`tab-btn ${activeTab === 'features' ? 'active' : ''}`} onClick={() => setActiveTab('features')}>Key Features</button>
                                     <button className={`tab-btn ${activeTab === 'description' ? 'active' : ''}`} onClick={() => setActiveTab('description')}>Description</button>
                                 </div>
-                                
+
                                 <div className="pd-tab-container scrollable-content">
                                     <div className={`tab-content ${activeTab === 'features' ? 'active' : ''}`}>
                                         <ul className="pd-features-list">
@@ -987,9 +987,9 @@ function ShopPage() {
                                         <p className="pd-description-text">{currentProduct.description}</p>
                                     </div>
                                 </div>
-                                
+
                                 <div className="modal-actions-desktop">
-                                    <div style={{flex: 1}}>
+                                    <div style={{ flex: 1 }}>
                                         {cartItemInModal ? (
                                             <div className="qty-controller">
                                                 <button className="qty-btn" onClick={() => handleQtyChange(currentProduct.id, -1)}>−</button>
@@ -1011,7 +1011,7 @@ function ShopPage() {
                         </div>
 
                         <div className="mobile-bottom-actions">
-                            <div style={{flex: 1}}>
+                            <div style={{ flex: 1 }}>
                                 {cartItemInModal ? (
                                     <div className="qty-controller">
                                         <button className="qty-btn" onClick={() => handleQtyChange(currentProduct.id, -1)}>−</button>

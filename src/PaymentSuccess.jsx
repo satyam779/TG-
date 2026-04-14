@@ -106,10 +106,10 @@ const PaymentSuccess = () => {
 
   return (
     <div style={styles.page}>
-      <SEO 
+      <SEO
         title="Order Success | TechyGuide"
         description="Your order has been placed successfully. Thank you for choosing TechyGuide."
-        canonical="https://techyguide.com/payment-success"
+        canonical="https://techyguide.in/payment-success"
       />
       <main style={styles.card}>
         <div style={styles.iconWrap} aria-hidden="true">

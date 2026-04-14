@@ -607,7 +607,7 @@ const AddOnKit = () => {
 			<SEO
 				title="Add-on Students Robotics Kits | STEM & AI Expandable Kits"
 				description="Expandable advanced add-on robotics kits for students including robotic arm, humanoid robots, electronics kits, and Arduino learning kits designed for STEM education."
-				canonical="https://techyguide.com/add-on-robotics-kits-for-students"
+				canonical="https://techyguide.in/add-on-robotics-kits-for-students"
 			/>
 			<div className="addonkit">
 				<header className="addon-hero-root" id="home" ref={addonHeroRef}>

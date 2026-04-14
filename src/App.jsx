@@ -64,64 +64,64 @@ function App() {
           <Route path="/ai-robotics-stem-education-india" element={<HomePage />} />
           <Route path="/government-csr-stem-robotics-education-initiatives" element={<ImpactProgramPage />} />
           <Route path="/impact-program" element={<Navigate to="/government-csr-stem-robotics-education-initiatives" replace />} />
-          
+
           <Route path="/i-bot-iot-robotics-kit-for-students/" element={<IBoT />} />
           <Route path="/ibot" element={<Navigate to="/i-bot-iot-robotics-kit-for-students/" replace />} />
-          
+
           <Route path="/tebot-robotics-kit-for-schools" element={<TeBoT />} />
           <Route path="/tebot" element={<Navigate to="/tebot-robotics-kit-for-schools" replace />} />
-          
+
           <Route path="/e-blox-modular-electronics-kit-for-kids/" element={<EBlox />} />
           <Route path="/e-blox" element={<Navigate to="/e-blox-modular-electronics-kit-for-kids/" replace />} />
-          
+
           <Route path="/add-on-robotics-kits-for-students" element={<EAddOnKit />} />
           <Route path="/add-on-kits" element={<Navigate to="/add-on-robotics-kits-for-students" replace />} />
-          
+
           <Route path="/robothrone" element={<RobothronePage />} />
-          
+
           <Route path="/cbse-ai-robotics-lab-setup-nep-2020" element={<AIRoboticsLabCBSE />} />
           <Route path="/ai-roboticslab-cbse" element={<Navigate to="/cbse-ai-robotics-lab-setup-nep-2020" replace />} />
-          
+
           <Route path="/ai-robotics-lab-icse-schools-india" element={<AIRoboticLabICSE />} />
           <Route path="/ai-roboticslab-icse" element={<Navigate to="/ai-robotics-lab-icse-schools-india" replace />} />
-          
+
           <Route path="/stem-labs-for-schools" element={<StemLab />} />
           <Route path="/schools/stem-lab" element={<Navigate to="/stem-labs-for-schools" replace />} />
-          
+
           <Route path="/stem-tinkering-lab-for-schools-india" element={<StemTinkeringLab />} />
           <Route path="/schools/stem-tinkering-lab" element={<Navigate to="/stem-tinkering-lab-for-schools-india" replace />} />
-          
+
           <Route path="/cbse-composite-skill-lab-setup-for-schools-india" element={<CompositeSkillLab />} />
           <Route path="/schools/composite-skill-lab" element={<Navigate to="/cbse-composite-skill-lab-setup-for-schools-india" replace />} />
-          
+
           <Route path="/stem-robotics-workshops-for-schools-india" element={<WorkshopPage />} />
           <Route path="/schools/workshop" element={<Navigate to="/stem-robotics-workshops-for-schools-india" replace />} />
-          
+
           <Route path="/robotics-coding-franchise-india" element={<FranchisePage />} />
           <Route path="/franchise" element={<Navigate to="/robotics-coding-franchise-india" replace />} />
-          
+
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/checkout" element={<CheckOutPage />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
-          
+
           <Route path="/blogs" element={<BlogsPageWrapper />} />
           <Route path="/blog/:id" element={<BlogPostPage />} />
-          
+
           <Route path="/about-techyguide" element={<AboutUsPage />} />
           <Route path="/about-us" element={<Navigate to="/about-techyguide" replace />} />
-          
+
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          
+
           <Route path="/techyguide-partners-stem-education-india" element={<PartnersPage />} />
           <Route path="/partners" element={<Navigate to="/techyguide-partners-stem-education-india" replace />} />
-          
+
           <Route path="/contact-techyguide/" element={<ContactUs />} />
           <Route path="/contact-us" element={<Navigate to="/contact-techyguide/" replace />} />
-          
+
           <Route path="/careers-techyguide-stem-education-jobs" element={<CareersPage />} />
           <Route path="/careers" element={<Navigate to="/careers-techyguide-stem-education-jobs" replace />} />
-          
+
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
@@ -132,7 +132,7 @@ function App() {
 function HomePage() {
   return (
     <>
-      <SEO 
+      <SEO
         title="AI Robotics STEM Education India | Labs, Kits & Courses"
         description="Explore AI, Robotics & STEM education in India with TechyGuide. Build innovation labs, DIY kits, workshops & courses for schools and students."
       />
@@ -154,10 +154,10 @@ function HomePage() {
 function ImpactProgramPage() {
   return (
     <>
-      <SEO 
+      <SEO
         title="Government & CSR STEM Education Programs | TechyGuide Impact"
         description="Explore TechyGuide's Government and CSR initiatives empowering students with STEM, robotics, AI, and coding through innovation labs, workshops, and teacher training across India."
-        canonical="https://techyguide.com/government-csr-stem-robotics-education-initiatives"
+        canonical="https://techyguide.in/government-csr-stem-robotics-education-initiatives"
       />
       <ImpactProgram />
     </>

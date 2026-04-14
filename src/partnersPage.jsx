@@ -164,7 +164,7 @@ function PartnersPage() {
 	useEffect(() => {
 		const root = rootRef.current;
 		const videoElement = videoRef.current;
-		
+
 		if (!root || !videoElement) {
 			return undefined;
 		}
@@ -179,7 +179,7 @@ function PartnersPage() {
 				playPromise.catch(() => {
 					// Retry after a short delay
 					setTimeout(() => {
-						videoElement.play().catch(() => {});
+						videoElement.play().catch(() => { });
 					}, 100);
 				});
 			}
@@ -189,7 +189,7 @@ function PartnersPage() {
 		videoElement.addEventListener("loadeddata", playVideo);
 		videoElement.addEventListener("canplay", playVideo);
 		videoElement.addEventListener("canplaythrough", playVideo);
-		
+
 		// Try to play immediately
 		playVideo();
 
@@ -262,10 +262,10 @@ function PartnersPage() {
 
 	return (
 		<div className="partners-page-root" ref={rootRef}>
-			<SEO 
+			<SEO
 				title="STEM Education Partners in India | TechyGuide Network"
 				description="Discover TechyGuide's partner network across India including STEM lab collaborators, robotics education partners, and technology learning institutions."
-				canonical="https://techyguide.com/techyguide-partners-stem-education-india"
+				canonical="https://techyguide.in/techyguide-partners-stem-education-india"
 			/>
 			<section className="partners-hero-video-section">
 				<video
@@ -287,11 +287,11 @@ function PartnersPage() {
 				<div className="partners-hero-content">
 					<div className="partners-hero-label">COLLABORATIVE ECOSYSTEM</div>
 					<h1>
-						TechyGuide Partners   <br /> 
+						TechyGuide Partners   <br />
 					</h1>
 					<h2 className="partners-gradient-text">Collaborative STEM Network </h2>
 					<p>
-						TechyGuide partners with schools and tech leaders across India to expand STEM learning through robotics labs, AI modules, coding programs and IoT training. 
+						TechyGuide partners with schools and tech leaders across India to expand STEM learning through robotics labs, AI modules, coding programs and IoT training.
 					</p>
 
 					<div className="partners-stat-glass-container">

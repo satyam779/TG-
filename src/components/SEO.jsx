@@ -35,17 +35,17 @@ const SEO = ({ title, description, canonical }) => {
         document.head.appendChild(canonicalLink);
       }
     } else {
-        // Fallback to current URL if no canonical provided
-        let canonicalLink = document.querySelector('link[rel="canonical"]');
-        const url = `https://techyguide.com${location.pathname}`;
-        if (canonicalLink) {
-            canonicalLink.setAttribute('href', url);
-        } else {
-            canonicalLink = document.createElement('link');
-            canonicalLink.setAttribute('rel', 'canonical');
-            canonicalLink.setAttribute('href', url);
-            document.head.appendChild(canonicalLink);
-        }
+      // Fallback to current URL if no canonical provided
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      const url = `https://techyguide.in${location.pathname}`;
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', url);
+      } else {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        canonicalLink.setAttribute('href', url);
+        document.head.appendChild(canonicalLink);
+      }
     }
   }, [title, description, canonical, location]);
 

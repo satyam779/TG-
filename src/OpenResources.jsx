@@ -135,7 +135,7 @@ function OpenResources() {
   const handleSearch = (e) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
-    
+
     const filtered = resources.filter(r =>
       r.title.toLowerCase().includes(term) ||
       r.tags.some(tag => tag.toLowerCase().includes(term))
@@ -147,7 +147,7 @@ function OpenResources() {
   const handleFilter = (category) => {
     setActiveFilter(category);
     setSearchTerm('');
-    
+
     if (category === 'all') {
       setDisplayedResources(resources);
     } else {
@@ -173,10 +173,10 @@ function OpenResources() {
 
   return (
     <div className="openresources-page-root">
-      <SEO 
+      <SEO
         title="Open STEM Learning Library | Robotics, AI & Coding Resources"
         description="Access free STEM learning resources including robotics tutorials, AI coding lessons, IoT projects, Arduino guides, and 3D printing tutorials for students."
-        canonical="https://techyguide.com/open-learning-library-stem-resources"
+        canonical="https://techyguide.in/open-learning-library-stem-resources"
       />
       {view === 'library' ? (
         <>

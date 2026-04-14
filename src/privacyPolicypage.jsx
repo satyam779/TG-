@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
                     let current = '';
                     sections.forEach(section => {
                         const sectionTop = section.offsetTop;
-                        
+
                         if (window.scrollY >= (sectionTop - offset)) {
                             current = section.getAttribute('id');
                         }
@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
-                    
+
                     if (targetSection) {
                         // Calculate scroll position with offset
                         const elementPosition = targetSection.getBoundingClientRect().top;
@@ -77,10 +77,10 @@ export default function PrivacyPolicyPage() {
 
     return (
         <div className="privacy-policy-page-root">
-            <SEO 
+            <SEO
                 title="Privacy Policy | TechyGuide"
                 description="Read TechyGuide's privacy policy to understand how we collect, use, and safeguard your personal information."
-                canonical="https://techyguide.com/privacy-policy"
+                canonical="https://techyguide.in/privacy-policy"
             />
             <style>{`
                 .privacy-policy-page-root .toc ul {
@@ -120,14 +120,14 @@ export default function PrivacyPolicyPage() {
             `}</style>
 
             <div className="container">
-                
+
                 <aside className="sidebar">
                     <div className="sticky-wrapper">
                         <div className="header-group">
                             <h1>Privacy Policy</h1>
                             <p className="last-updated">Last Updated: <span id="current-date"></span></p>
                         </div>
-                        
+
                         <nav className="toc">
                             <ul>
                                 <li><a href="#intro" className="active">Introduction</a></li>
@@ -152,7 +152,7 @@ export default function PrivacyPolicyPage() {
                 </aside>
 
                 <main className="content-area">
-                    
+
                     <section id="intro" className="card intro-card">
                         <div className="card-content">
                             <p className="lead">At <strong>TechyGuide</strong>, we are committed to safeguarding your privacy with the utmost care. This policy outlines how we handle your personal data.</p>
@@ -188,7 +188,7 @@ export default function PrivacyPolicyPage() {
                         <div className="card-content">
                             <h3>How do you get my consent?</h3>
                             <p>We imply consent when you provide personal information to complete a transaction, verify a card, or arrange a delivery. For secondary reasons (like marketing), we will ask for expressed consent directly.</p>
-                            
+
                             <h3>How do I withdraw?</h3>
                             <p>You may withdraw your consent at any time by contacting us.</p>
                         </div>
@@ -274,7 +274,7 @@ export default function PrivacyPolicyPage() {
                         </div>
                         <div className="card-content">
                             <p>To access, correct, amend or delete any personal information, register a complaint, or want more information, contact our Privacy Compliance Officer:</p>
-                            
+
                             <div className="contact-grid">
                                 <div className="contact-item">
                                     <span className="label">Email</span>
@@ -282,7 +282,7 @@ export default function PrivacyPolicyPage() {
                                 </div>
                                 <div className="contact-item">
                                     <span className="label">Mailing Address</span>
-                                    <span className="value">59, C/o – Late Shri Golak Jena,<br/>Raisuan, Haladipada,<br/>Baleshwar – 756027, Odisha</span>
+                                    <span className="value">59, C/o – Late Shri Golak Jena,<br />Raisuan, Haladipada,<br />Baleshwar – 756027, Odisha</span>
                                 </div>
                             </div>
                         </div>
