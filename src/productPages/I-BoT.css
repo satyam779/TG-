@@ -207,7 +207,7 @@
 
 .ibot-page-root .ibot-hero-photo-card {
     padding: 0;
-    transform: translateY(45px);
+    transform: translate(100px, 20px);
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -216,7 +216,7 @@
 }
 
 .ibot-page-root .ibot-hero-photo {
-    width: 100%;
+    width: 80%;
     height: auto;
     display: block;
     border-radius: 18px;
@@ -342,6 +342,16 @@
         top: 8px;
     }
 
+    .ibot-page-root .ibot-hero-photo-card {
+        transform: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ibot-page-root .ibot-hero-photo {
+        margin: 0 auto;
+    }
+
     .ibot-page-root .ibot-hero-badge-one {
         left: 2%;
     }
@@ -435,10 +445,14 @@
 
     .ibot-page-root .ibot-hero-photo-card {
         padding: 0.6rem;
+        transform: none;
+        display: flex;
+        justify-content: center;
     }
 
     .ibot-page-root .ibot-hero-photo {
         border-radius: 20px;
+        margin: 0 auto;
     }
 
     .ibot-page-root .ibot-hero-floating-badge {
@@ -526,10 +540,14 @@
 
     .ibot-page-root .ibot-hero-photo-card {
         padding: 0.5rem;
+        transform: none;
+        display: flex;
+        justify-content: center;
     }
 
     .ibot-page-root .ibot-hero-photo {
         border-radius: 12px;
+        margin: 0 auto;
     }
 
     .ibot-page-root .ibot-hero-floating-badge {
@@ -600,10 +618,14 @@
 
     .ibot-page-root .ibot-hero-photo-card {
         padding: 0.4rem;
+        transform: none;
+        display: flex;
+        justify-content: center;
     }
 
     .ibot-page-root .ibot-hero-photo {
         border-radius: 10px;
+        margin: 0 auto;
     }
 
     .ibot-page-root .ibot-hero-floating-badge {

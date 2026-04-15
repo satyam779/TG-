@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import SEO from './components/SEO';
 import './FranchisePage.css';
 //why choose techyguide section images
@@ -523,22 +523,22 @@ function FranchisePage() {
                     
                     <div className="story-viewport">
                         <div className="story-track">
-                            <div className="story-item"><img src={testimonial1} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial2} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial3} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial4} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial5} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial6} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial7} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial1} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial2} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial3} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial4} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial5} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial6} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial7} alt="Story" loading="lazy" /></div>
                            
 
-                             <div className="story-item"><img src={testimonial1} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial2} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial3} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial4} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial5} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial6} alt="Story" /></div>
-                            <div className="story-item"><img src={testimonial7} alt="Story" /></div>
+                             <div className="story-item"><img src={testimonial1} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial2} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial3} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial4} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial5} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial6} alt="Story" loading="lazy" /></div>
+                            <div className="story-item"><img src={testimonial7} alt="Story" loading="lazy" /></div>
                            
                         </div>
                     </div>

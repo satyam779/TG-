@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import SEO from "./components/SEO";
 import "./ImpactProgram.css";
 import herobgvideo from "./assets/impactImages/Impact program - Hero section.mp4";
@@ -96,12 +96,11 @@ function ImpactProgram() {
             ref={heroVideoRef}
             id="impact-hero-video"
             className="impact-hero-bg-video"
-            src={herobgvideo}
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             aria-hidden="true"
           >
             <source src={herobgvideo} type="video/mp4" />

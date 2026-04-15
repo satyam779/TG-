@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../BlogsPage.css";
 import { Link, useParams } from "react-router-dom";
 import SEO from "../../components/SEO";
 import { fetchPublishedPostById, fetchRecentPublishedPosts } from "../lib/posts";
@@ -165,7 +166,7 @@ function BlogPost() {
 
   return (
     <main className="blog-post-page">
-      <SEO 
+      <SEO
         title={`${post.title} | TechyGuide Blog`}
         description={post.description || `Read about ${post.title} on the TechyGuide STEM and Robotics blog.`}
         image={post.image}
@@ -174,7 +175,7 @@ function BlogPost() {
       <section className="blog-post-hero">
         <div className="blog-post-shell blog-post-hero-grid">
           <div className="blog-post-copy">
-            <Link to="/" className="back-link">
+            <Link to="/blogs" className="back-link">
               {"← Back to all posts"}
             </Link>
             <span className="hero-badge">{post.category}</span>

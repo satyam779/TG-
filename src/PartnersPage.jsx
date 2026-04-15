@@ -278,7 +278,7 @@ function PartnersPage() {
 					className="partners-back-video"
 					id="partners-hero-video"
 					src={heroVideoSrc}
-					preload="auto"
+					preload="metadata"
 				>
 					Your browser does not support the video tag.
 				</video>

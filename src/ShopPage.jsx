@@ -717,6 +717,7 @@ function ShopPage() {
                                         <img
                                             src={course.image}
                                             alt={course.title}
+                                            loading="lazy"
                                             className={course.id === 109 ? 'game-development-course-cover' : ''}
                                         />
                                         <div className="card-overlay">
@@ -746,7 +747,7 @@ function ShopPage() {
                             filteredProducts.map(product => (
                                 <div key={product.id} className="product-card" onClick={() => openProductModal(product.id)}>
                                     <div className="card-img-box">
-                                        <img src={product.image} alt={product.title} />
+                                        <img src={product.image} alt={product.title} loading="lazy" />
                                         <div className="card-overlay">
                                             <button className="view-btn">View Details</button>
                                         </div>

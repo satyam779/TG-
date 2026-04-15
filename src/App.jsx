@@ -8,7 +8,7 @@ import RouteLoader from './components/RouteLoader.jsx'
 import Layout from './components/Layout.jsx'
 import SEO from './components/SEO.jsx'
 
-import './BlogsPage/BlogsPage.css';
+
 
 // Lazy load below-the-fold sections
 const ShopSection = lazy(() => import('./ShopSection'));

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../BlogsPage.css";
 import { Link } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
 import { fetchPublishedPosts } from "../lib/posts";
