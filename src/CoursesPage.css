@@ -572,7 +572,7 @@
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -webkit-user-drag: none;
     border-bottom-left-radius: 150px;
-    margin-left: 50px;
+    padding-left: 50px;
 }
 
 @keyframes imageFadeIn {
@@ -1569,7 +1569,7 @@
     }
 
     .courses-page-container .hero-image {
-        transform: translate(0px, 145px);
+        transform: translate(0px, 130px);
     }
 
     .courses-page-container .hero-img {
@@ -1694,18 +1694,17 @@
 
     .courses-page-container .hero-content {
         text-align: left;
-        margin-left: -50px;
     }
 
     .courses-page-container .hero-image {
         display: flex;
         justify-content: center;
-        transform: translate(100px, 30px);
+        transform: translate(150px, 100px);
     }
 
     .courses-page-container .hero-img {
         max-width: 800px;
-        width: 120%;
+        width: 130%;
         height: auto;
         border-bottom-right-radius: none;
     }
