@@ -227,6 +227,7 @@
     display: block;
     border-radius: 18px;
     animation: none;
+    transform: translate(60px, 70px);
 }
 
 .tebot-page-root .tebot-hero-floating-badge {

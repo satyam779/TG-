@@ -1,4 +1,3 @@
-
 .addonkit-page-root .addon-hero-root {
 	--addon-header-offset: 113px;
 	--addon-bg-0: #083640;
@@ -224,6 +223,7 @@
 	display: block;
 	border-radius: 18px;
 	animation: none;
+	transform: translate(50px, 40px);
 }
 
 .addonkit-page-root .addon-hero-floating-badge {
@@ -282,6 +282,7 @@
 		opacity: 0;
 		transform: translateY(26px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -293,6 +294,7 @@
 		opacity: 0;
 		transform: translateY(24px) scale(0.96);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0) scale(1);
@@ -300,20 +302,24 @@
 }
 
 @keyframes addonHeroPhotoFloat {
+
 	0%,
 	100% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-8px);
 	}
 }
 
 @keyframes addonHeroBadgeFloat {
+
 	0%,
 	100% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-6px);
 	}
@@ -324,6 +330,7 @@
 	0% {
 		transform: translate3d(0, 0, 0);
 	}
+
 	100% {
 		transform: translate3d(2.4%, -2%, 0);
 	}
@@ -333,9 +340,11 @@
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-9px);
 	}
@@ -345,9 +354,11 @@
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-8px);
 	}
@@ -466,9 +477,11 @@
 		top: 85px;
 		margin-top: 1rem;
 	}
+
 	.addonkit-page-root .addon-hero-photo-card {
 		padding: 0.6rem;
 	}
+
 	.addonkit-page-root .addon-hero-photo {
 		border-radius: 20px;
 	}
@@ -630,6 +643,7 @@
 
 
 @media (prefers-reduced-motion: reduce) {
+
 	.addonkit-page-root .addon-hero-root::before,
 	.addonkit-page-root .addon-hero-photo,
 	.addonkit-page-root .addon-hero-badge-one,
@@ -663,7 +677,8 @@
 	max-width: 100%;
 }
 
-.addonkit-page-root html, .addonkit-page-root body {
+.addonkit-page-root html,
+.addonkit-page-root body {
 	font-family: 'Inter', -apple-system, sans-serif;
 }
 
@@ -684,10 +699,10 @@
 
 /* Product Sections Wrapper */
 .addonkit-page-root .products-wrapper {
-    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 55%, #f4fbf7 100%);
-    position: relative;
-    z-index: 1;
-    padding: 40px 0 80px;
+	background: linear-gradient(180deg, #f8fbff 0%, #ffffff 55%, #f4fbf7 100%);
+	position: relative;
+	z-index: 1;
+	padding: 40px 0 80px;
 }
 
 .addonkit-page-root .products-wrapper::before {
@@ -704,20 +719,20 @@
 
 /* Product Sections */
 .addonkit-page-root .product-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 40px 40px;
-    gap: 40px;
+	gap: 40px;
 	margin: 0 auto 28px;
 	background: rgba(255, 255, 255, 0.9);
 	border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    position: relative;
+	border-radius: 20px;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	position: relative;
 	z-index: 2;
-    transform: translateZ(0);
+	transform: translateZ(0);
 	color: #2c3e50;
 	box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
 	backdrop-filter: blur(6px);
@@ -781,7 +796,7 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	display: inline-block;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 	z-index: 10;
 }
 
@@ -836,7 +851,7 @@
 
 .addonkit-page-root .product-image:hover {
 	transform: scale(1.05) rotate(1deg);
-	box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .addonkit-page-root .placeholder-img {
@@ -849,7 +864,7 @@
 	justify-content: center;
 	font-weight: bold;
 	color: white;
-	box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 	font-size: 1.1rem;
 }
 
@@ -877,7 +892,7 @@
 	text-align: center;
 	font-size: 1rem;
 	font-weight: 600;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .addonkit-page-root .special-border {
@@ -913,9 +928,11 @@
 	align-items: center;
 	gap: 12px;
 }
+
 .addonkit-page-root .footer-content h3 {
 	font-size: 2rem;
 }
+
 .addonkit-page-root .footer-content p {
 	font-size: 1.2rem;
 	margin-bottom: 30px;
@@ -931,12 +948,12 @@
 	font-size: 1.1rem;
 	font-weight: 600;
 	cursor: pointer;
-	box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .addonkit-page-root .cta-button:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
 /* Enhanced Animations */
@@ -946,7 +963,7 @@
 
 .addonkit-page-root .grid-item:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .addonkit-page-root .category-tag:hover {
@@ -955,12 +972,14 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-	.addonkit-page-root .product-section, .addonkit-page-root .product-section.reverse {
+
+	.addonkit-page-root .product-section,
+	.addonkit-page-root .product-section.reverse {
 		flex-direction: column;
 		text-align: center;
 		padding: 22px 16px;
 		gap: 18px;
-        margin: 0 auto 22px;
+		margin: 0 auto 22px;
 		width: 100%;
 		max-width: calc(100% - 24px);
 	}
@@ -970,7 +989,7 @@
 		padding: 0;
 		width: 100%;
 	}
-    
+
 	.addonkit-page-root .grid-features {
 		grid-template-columns: 1fr;
 		gap: 10px;
@@ -981,45 +1000,46 @@
 	.addonkit-page-root body {
 		font-size: 14px;
 	}
-    
+
 	.addonkit-page-root .product-section {
 		padding: 16px 12px;
 		margin: 0 0 18px 0;
 		border-radius: 12px;
 		max-width: calc(100% - 20px);
 	}
-    
-	.addonkit-page-root .info-box, .addonkit-page-root .image-box {
+
+	.addonkit-page-root .info-box,
+	.addonkit-page-root .image-box {
 		padding: 0;
 	}
-    
+
 	.addonkit-page-root .product-image {
 		height: 210px;
 		border-radius: 12px;
 	}
-    
 
-    
+
+
 	.addonkit-page-root .info-box h2 {
 		font-size: 1.4rem;
 		margin: 12px 0;
 	}
-    
+
 	.addonkit-page-root .feature-list {
 		margin-top: 15px;
 	}
-    
+
 	.addonkit-page-root .feature-list li {
 		font-size: 0.95rem;
 		margin-bottom: 8px;
 		padding-left: 25px;
 	}
-    
+
 	.addonkit-page-root .category-tag {
 		padding: 5px 10px;
 		font-size: 0.7rem;
 	}
-    
+
 	.addonkit-page-root .cta-button {
 		padding: 12px 30px;
 		font-size: 1rem;
@@ -1031,67 +1051,68 @@
 	.addonkit-page-root body {
 		font-size: 13px;
 	}
-    
+
 	.addonkit-page-root .container {
 		padding: 0 10px;
 	}
-    
+
 	.addonkit-page-root .product-section {
 		padding: 14px 10px;
 		margin: 0 0 16px 0;
 		gap: 12px;
 		max-width: calc(100% - 16px);
 	}
-    
-	.addonkit-page-root .info-box, .addonkit-page-root .image-box {
+
+	.addonkit-page-root .info-box,
+	.addonkit-page-root .image-box {
 		padding: 0;
 	}
-    
+
 	.addonkit-page-root .product-image {
 		height: 250px;
 		border-radius: 12px;
 	}
-    
 
-    
+
+
 	.addonkit-page-root .info-box h2 {
 		font-size: 1.3rem;
 		margin: 10px 0;
 		font-weight: 800;
 	}
-    
+
 	.addonkit-page-root .info-box p {
 		font-size: 0.95rem;
 		line-height: 1.5;
 		font-weight: 500;
 	}
-    
+
 	.addonkit-page-root .feature-list {
 		margin-top: 12px;
 	}
-    
+
 	.addonkit-page-root .feature-list li {
 		font-size: 0.9rem;
 		margin-bottom: 6px;
 		padding-left: 22px;
 		font-weight: 500;
 	}
-    
+
 	.addonkit-page-root .feature-list li::before {
 		font-size: 1rem;
 	}
-    
+
 	.addonkit-page-root .category-tag {
 		padding: 4px 8px;
 		font-size: 0.65rem;
 		margin-bottom: 10px;
 	}
-    
+
 	.addonkit-page-root .grid-item {
 		padding: 15px 10px;
 		font-size: 0.9rem;
 	}
-    
+
 	.addonkit-page-root .cta-button {
 		padding: 10px 25px;
 		font-size: 0.95rem;
@@ -1248,35 +1269,35 @@
 		border-radius: 20px;
 		margin: 20px 15px;
 	}
-    
+
 	.addonkit-page-root .special-features {
 		grid-template-columns: 1fr;
 		gap: 2rem;
 	}
-    
+
 	.addonkit-page-root .special-features.reverse .special-image,
 	.addonkit-page-root .special-features.reverse .tech-specs-special {
 		order: unset;
 	}
-    
+
 	.addonkit-page-root .spec-grid {
 		grid-template-columns: 1fr;
 		gap: 1rem;
 	}
-    
+
 	.addonkit-page-root .special-product-image {
 		height: 300px;
 		border-radius: 20px;
 	}
-    
+
 	.addonkit-page-root .special-header h2 {
 		font-size: 1.8rem;
 	}
-    
+
 	.addonkit-page-root .special-header p {
 		font-size: 1rem;
 	}
-    
+
 	.addonkit-page-root .tech-specs-special h3 {
 		font-size: 1.5rem;
 	}
@@ -1287,38 +1308,38 @@
 		padding: 1.5rem 1.2rem;
 		margin: 15px 10px;
 	}
-    
+
 	.addonkit-page-root .special-header {
 		margin-bottom: 1.5rem;
 	}
-    
+
 	.addonkit-page-root .special-header h2 {
 		font-size: 1.5rem;
 		margin-bottom: 0.8rem;
 	}
-    
+
 	.addonkit-page-root .special-header p {
 		font-size: 0.95rem;
 	}
-    
+
 	.addonkit-page-root .spec-grid {
 		grid-template-columns: 1fr;
 		gap: 0.8rem;
 	}
-    
+
 	.addonkit-page-root .special-product-image {
 		height: 250px;
 		border-radius: 15px;
 	}
-    
+
 	.addonkit-page-root .tech-specs-special {
 		padding: 1.2rem;
 	}
-    
+
 	.addonkit-page-root .tech-specs-special h3 {
 		font-size: 1.3rem;
 	}
-    
+
 	.addonkit-page-root .spec-item {
 		padding: 0.8rem;
 		border-radius: 10px;
@@ -1331,53 +1352,53 @@
 		margin: 12px 8px;
 		border-radius: 12px;
 	}
-    
+
 	.addonkit-page-root .special-header {
 		margin-bottom: 1.2rem;
 	}
-    
+
 	.addonkit-page-root .special-header h2 {
 		font-size: 1.3rem;
 		margin-bottom: 0.6rem;
 	}
-    
+
 	.addonkit-page-root .special-header p {
 		font-size: 0.9rem;
 		line-height: 1.4;
 	}
-    
+
 	.addonkit-page-root .tech-specs-special {
 		padding: 1rem;
 	}
-    
+
 	.addonkit-page-root .tech-specs-special h3 {
 		font-size: 1.2rem;
 		margin-bottom: 1rem;
 	}
-    
+
 	.addonkit-page-root .spec-grid {
 		gap: 0.6rem;
 	}
-    
+
 	.addonkit-page-root .spec-item {
 		padding: 0.7rem;
 		border-radius: 8px;
 		gap: 0.8rem;
 	}
-    
+
 	.addonkit-page-root .spec-item i {
 		font-size: 1.3rem;
 	}
-    
+
 	.addonkit-page-root .spec-item span {
 		font-size: 0.9rem;
 	}
-    
+
 	.addonkit-page-root .special-product-image {
 		height: 200px;
 		border-radius: 12px;
 	}
-    
+
 	.addonkit-page-root .category-tag-special {
 		padding: 8px 15px;
 		font-size: 0.65rem;
@@ -1396,7 +1417,8 @@
 		gap: 10px;
 	}
 
-	.addonkit-page-root .info-box, .addonkit-page-root .image-box {
+	.addonkit-page-root .info-box,
+	.addonkit-page-root .image-box {
 		padding: 5px;
 	}
 

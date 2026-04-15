@@ -225,6 +225,7 @@
     display: block;
     border-radius: 14px;
     animation: none;
+    transform: translate(80px, 70px);
 }
 
 .eblox-page-root .eblox-hero-floating-badge {
