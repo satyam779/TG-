@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import lottie from 'lottie-web';
+import lottie from 'lottie-web/build/player/lottie_light';
 import { Link } from 'react-router-dom';
 import SEO from './components/SEO';
 import { courseDetails } from './coursesModalData';
