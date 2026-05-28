@@ -6,7 +6,6 @@ import herobgvideo from "./assets/impactImages/Impact program - Hero section.mp4
 function ImpactProgram() {
   // Image paths
   const images = {
-    bg2: new URL("./assets/impactImages/bg2.webp", import.meta.url).href,
     bg4: new URL("./assets/impactImages/bg4.webp", import.meta.url).href,
     csrInitiatives: new URL("./assets/impactImages/CSR Initiatives.webp", import.meta.url).href,
     governmentPrograms: new URL("./assets/impactImages/Government Programs.webp", import.meta.url).href,
