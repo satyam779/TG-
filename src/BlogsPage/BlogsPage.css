@@ -197,6 +197,7 @@
   line-height: 1.2;
   margin-bottom: 20px;
   text-wrap: balance;
+  color: hsl(103, 100%, 88%);
 }
 
 .hero-main-meta {

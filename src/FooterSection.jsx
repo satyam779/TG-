@@ -139,17 +139,17 @@ function FooterSection() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/shop" onClick={scrollToTop}>
+                  <Link to="/shop/" onClick={scrollToTop}>
                     Shop
                   </Link>
                 </li>
                 <li>
-                  <Link to="/robotics-coding-franchise-india" onClick={scrollToTop}>
+                  <Link to="/robotics-coding-franchise-india/" onClick={scrollToTop}>
                     Franchise
                   </Link>
                 </li>
                 <li>
-                  <Link to="/robothrone" onClick={scrollToTop}>
+                  <Link to="/robothrone/" onClick={scrollToTop}>
                     {" "}
                     Robothrone{" "}
                   </Link>
@@ -167,12 +167,12 @@ function FooterSection() {
                   </a>
                 </li>
                 <li>
-                  <Link to="/about-techyguide" onClick={scrollToTop}>
+                  <Link to="/about-techyguide/" onClick={scrollToTop}>
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="/techyguide-partners-stem-education-india" onClick={scrollToTop}>
+                  <Link to="/techyguide-partners-stem-education-india/" onClick={scrollToTop}>
                     Partners
                   </Link>
                 </li>
@@ -182,7 +182,7 @@ function FooterSection() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/privacy-policy" onClick={scrollToTop}>
+                  <Link to="/privacy-policy/" onClick={scrollToTop}>
                     Privacy Policy
                   </Link>
                 </li>
@@ -193,19 +193,19 @@ function FooterSection() {
               <h3>Our Offerings</h3>
               <ul className="offerings-list">
                 <li>
-                  <Link to="/tebot" onClick={scrollToTop}>Robotics Products</Link>
+                  <Link to="/tebot-robotics-kit-for-schools/" onClick={scrollToTop}>Robotics Products</Link>
                 </li>
                 <li className="hide-mobile">
-                  <Link to="/ibot" onClick={scrollToTop}>IoT Solutions</Link>
+                  <Link to="/i-bot-iot-robotics-kit-for-students/" onClick={scrollToTop}>IoT Solutions</Link>
                 </li>
                 <li>
-                  <Link to="/courses" onClick={scrollToTop}>AI Courses</Link>
+                  <Link to="/courses/" onClick={scrollToTop}>AI Courses</Link>
                 </li>
                 <li>
-                  <Link to="/courses" onClick={scrollToTop}>Coding Courses</Link>
+                  <Link to="/courses/" onClick={scrollToTop}>Coding Courses</Link>
                 </li>
                 <li>
-                  <Link to="/careers-techyguide-stem-education-jobs" onClick={scrollToTop}>Careers</Link>
+                  <Link to="/careers-techyguide-stem-education-jobs/" onClick={scrollToTop}>Careers</Link>
                 </li>
                 <li>
                   <a href="#">3D Printing</a>
@@ -215,7 +215,7 @@ function FooterSection() {
               <h3>Our Blogs</h3>
               <ul>
                 <li>
-                  <Link to="/blogs" onClick={scrollToTop}>Blogs</Link>
+                  <Link to="/blogs/" onClick={scrollToTop}>Blogs</Link>
                 </li>
               </ul>
             </div>

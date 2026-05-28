@@ -6,6 +6,16 @@ export default defineConfig({
   base: "/",
   plugins: [react()],
   assetsInclude: ["**/*.pdf", "**/*.docx", "**/*.mp4"],
+  server: {
+    proxy: {
+      '/wp-json': {
+        target: 'https://www.techyguide.in',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path
+      }
+    }
+  },
   build: {
     rollupOptions: {
       output: {

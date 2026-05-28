@@ -77,7 +77,7 @@ function Home() {
           {featured ? (
             <>
               <div className="hero-main">
-                <Link to={`/blog/${featured.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+                <Link to={`/blog/${featured.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
                   <div className="hero-main-card">
                     <div className="hero-main-image-wrapper">
                       <img src={featured.image} alt={featured.title} className="hero-main-image" />
@@ -117,7 +117,7 @@ function Home() {
                 </div>
                 <div className="hero-posts">
                   {sidebarPosts.map((blog, index) => (
-                    <Link to={`/blog/${blog.id}`} key={blog.id} style={{ textDecoration: "none", color: "inherit" }}>
+                    <Link to={`/blog/${blog.slug}`} key={blog.id} style={{ textDecoration: "none", color: "inherit" }}>
                       <div className="hero-post-card" style={{ animationDelay: `${index * 0.1}s` }}>
                         <div className="hero-post-number">0{index + 1}</div>
                         <div className="hero-post-image-wrapper">

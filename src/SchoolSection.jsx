@@ -71,7 +71,7 @@ function SchoolSection() {
                   </ul>
                   <div>
                    
-                    <Link className="tab-cta" to="/cbse-ai-robotics-lab-setup-nep-2020"> Explore AI Labs</Link>
+                    <Link className="tab-cta" to="/cbse-ai-robotics-lab-setup-nep-2020/"> Explore AI Labs</Link>
 
                   </div>
                 </div>
@@ -98,7 +98,7 @@ function SchoolSection() {
                   </ul>
                   <div>
                     
-                    <Link className="tab-cta" to="/stem-tinkering-lab-for-schools-india">Explore STEM Labs</Link>
+                    <Link className="tab-cta" to="/stem-tinkering-lab-for-schools-india/">Explore STEM Labs</Link>
 
                   </div>
                 </div>
@@ -127,7 +127,7 @@ function SchoolSection() {
                   </ul>
                   <div>
                     
-                    <Link className="tab-cta" to="/cbse-composite-skill-lab-setup-for-schools-india">Explore Composite Skill Lab</Link>
+                    <Link className="tab-cta" to="/cbse-composite-skill-lab-setup-for-schools-india/">Explore Composite Skill Lab</Link>
 
                   </div>
                 </div>
@@ -153,7 +153,7 @@ function SchoolSection() {
                   </ul>
                   <div>
                     
-                    <Link className="tab-cta" to="/schools/workshop">Explore Workshop</Link>
+                    <Link className="tab-cta" to="/stem-robotics-workshops-for-schools-india/">Explore Workshop</Link>
 
                   </div>
                 </div>

@@ -12,7 +12,7 @@ function FranchiseSection(){
                             Partner with us to bring quality STEM education to your region. We
                             offer comprehensive support and proven business models.
                         </p>
-                        <Link className="franchise-cta" to="/robotics-coding-franchise-india">Become a Franchise Partner</Link>
+                        <Link className="franchise-cta" to="/robotics-coding-franchise-india/">Become a Franchise Partner</Link>
                     </div>
 
                     <div className="features-grid">

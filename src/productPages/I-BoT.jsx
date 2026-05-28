@@ -339,9 +339,9 @@ function IBoT() {
     return (
         <div className="ibot-page-root">
             <SEO
-                title="i-Bot IoT & Robotics Kit | 100+ Wireless STEM Projects | Techyguide"
+                title="i-Bot IoT & Robotics Kit | TechyGuide"
                 description="Master IoT with the i-Bot Advance Kit. Build smart home systems, voice-controlled robots, and 100+ projects using the ESP32 chip."
-                canonical="https://techyguide.in/ibot"
+                canonical="https://www.techyguide.in/i-bot-iot-robotics-kit-for-students/"
             />
             <header className="ibot-hero-root" id="home" ref={ibotHeroRef}>
                 <canvas className="ibot-hero-canvas" aria-hidden="true" ref={ibotHeroCanvasRef}></canvas>

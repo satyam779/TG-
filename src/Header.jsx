@@ -8,10 +8,10 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [schoolsOpen, setSchoolsOpen] = useState(false);
-  const [isTopBarVisible, setIsTopBarVisible] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
   const headerRef = useRef(null);
+  const topBarRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
   const closeMenu = () => {
@@ -59,9 +59,11 @@ function Header() {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
           if (currentScrollY > lastScrollY && currentScrollY > 50) {
-            setIsTopBarVisible(false);
+            if (topBarRef.current) topBarRef.current.classList.add('hidden');
+            if (headerRef.current) headerRef.current.classList.add('shifted');
           } else {
-            setIsTopBarVisible(true);
+            if (topBarRef.current) topBarRef.current.classList.remove('hidden');
+            if (headerRef.current) headerRef.current.classList.remove('shifted');
           }
           lastScrollY = currentScrollY;
           ticking = false;
@@ -76,7 +78,8 @@ function Header() {
   const handleLogoClick = (e) => {
     if (e) e.preventDefault();
     closeMenu();
-    if (location.pathname !== '/' && location.pathname !== '/ai-robotics-stem-education-india') {
+    const isHome = location.pathname === '/' || location.pathname === '/ai-robotics-stem-education-india' || location.pathname === '/ai-robotics-stem-education-india/';
+    if (!isHome) {
       navigate('/');
       setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
     } else {
@@ -89,7 +92,7 @@ function Header() {
     setProductsOpen(false);
     setSchoolsOpen(false);
 
-    const isHome = path === '/' && (location.pathname === '/' || location.pathname === '/ai-robotics-stem-education-india');
+    const isHome = path === '/' && (location.pathname === '/' || location.pathname === '/ai-robotics-stem-education-india' || location.pathname === '/ai-robotics-stem-education-india/');
 
     if (isHome || location.pathname === path) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -103,7 +106,7 @@ function Header() {
 
   return (
     <>
-      <div className={`top-bar ${isTopBarVisible ? '' : 'hidden'}`} id="home">
+      <div className="top-bar" id="home" ref={topBarRef}>
         <div className="container">
           <span>
             <a href="tel:+919114036376"><i className="fas fa-phone-alt"></i> +91 8197984847</a>
@@ -114,11 +117,11 @@ function Header() {
         </div>
       </div>
 
-      <header ref={headerRef} className={isTopBarVisible ? '' : 'shifted'}>
+      <header ref={headerRef}>
         <div className="container nav-container">
           <div className="logo">
             <Link to="/" className="logo-link" onClick={handleLogoClick}>
-              <img src={Logo} alt="TechyGuide Logo" loading="eager" fetchpriority="high" />
+              <img src={Logo} alt="TechyGuide Logo" loading="eager" fetchPriority="high" />
             </Link>
           </div>
 
@@ -132,10 +135,10 @@ function Header() {
                   Products <i className="fas fa-chevron-down"></i>
                 </a>
                 <ul className={`dropdown-menu ${productsOpen ? 'active' : ''}`}>
-                  <li><a href="/tebot-robotics-kit-for-schools" onClick={(e) => { e.preventDefault(); handlePageNavigation('/tebot-robotics-kit-for-schools'); }}>TeBoT</a></li>
+                  <li><a href="/tebot-robotics-kit-for-schools/" onClick={(e) => { e.preventDefault(); handlePageNavigation('/tebot-robotics-kit-for-schools/'); }}>TeBoT</a></li>
                   <li><a href="/i-bot-iot-robotics-kit-for-students/" onClick={(e) => { e.preventDefault(); handlePageNavigation('/i-bot-iot-robotics-kit-for-students/'); }}>I-BoT</a></li>
                   <li><a href="/e-blox-modular-electronics-kit-for-kids/" onClick={(e) => { e.preventDefault(); handlePageNavigation('/e-blox-modular-electronics-kit-for-kids/'); }}>E- Blox</a></li>
-                  <li><a href="/add-on-robotics-kits-for-students" onClick={(e) => { e.preventDefault(); handlePageNavigation('/add-on-robotics-kits-for-students'); }}>Add On Kits</a></li>
+                  <li><a href="/add-on-robotics-kits-for-students/" onClick={(e) => { e.preventDefault(); handlePageNavigation('/add-on-robotics-kits-for-students/'); }}>Add On Kits</a></li>
                 </ul>
               </li>
 

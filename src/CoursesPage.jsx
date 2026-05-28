@@ -606,9 +606,9 @@ function CoursesPage() {
   return (
     <div className="courses-page-container" ref={pageRootRef}>
       <SEO
-        title="STEM & Robotics Courses for Students | TechyGuide Learning"
+        title="STEM & Robotics Courses for Students | TechyGuide"
         description="Join TechyGuide's expert-led courses in robotics, AI, python coding, IoT, and more. Practical hands-on learning designed for the future."
-        canonical="https://techyguide.in/courses"
+        canonical="https://www.techyguide.in/courses/"
       />
       <header className="hero" id="home">
         <div id="heroBackgroundAnimation" className="hero-bg" aria-hidden="true"></div>
@@ -656,7 +656,7 @@ function CoursesPage() {
               <p>Master hardware and automation.</p>
               <p>Master hardware, sensors, and core engineering skills while building and programming intelligent robots.</p>
               <button type="button" className="know-more" data-course="Robotics">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy Robotics course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy Robotics course">Buy Now</Link>
             </article>
 
             <article className="card">
@@ -674,7 +674,7 @@ function CoursesPage() {
               <p>Learn logic and programming.</p>
               <p>Begin your coding journey with Python’s powerful and beginner-friendly syntax, widely used in AI, Data Science and etc.</p>
               <button type="button" className="know-more" data-course="Coding">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy Python Coding course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy Python Coding course">Buy Now</Link>
             </article>
 
             <article className="card">
@@ -692,7 +692,7 @@ function CoursesPage() {
               <p>Discover the future of technology.</p>
               <p>Explore the future of tech. Create smart systems that learn and adapt automatically.</p>
               <button type="button" className="know-more" data-course="AI">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy AI course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy AI course">Buy Now</Link>
             </article>
 
             <article className="card">
@@ -710,7 +710,7 @@ function CoursesPage() {
               <p>Learn mobile app development. </p>
               <p>Students create user-friendly apps for smartphones and tablets using real programming concepts.</p>
               <button type="button" className="know-more" data-course="AppDev">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy App Development course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy App Development course">Buy Now</Link>
             </article>
 
             <article className="card">
@@ -728,7 +728,7 @@ function CoursesPage() {
               <p>Learn website development and coding. </p>
               <p>Students use HTML, CSS and JavaScript to build interactive web pages and web Applications.</p>
               <button type="button" className="know-more" data-course="WebDev">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy Web Development course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy Web Development course">Buy Now</Link>
             </article>
 
             <article className="card">
@@ -746,7 +746,7 @@ function CoursesPage() {
               <p>Learn hardware based game development.</p>
               <p>Build interactive embedded arcade games using Python fundamentals and ESP32 microcontroller.</p>
               <button type="button" className="know-more" data-course="Games">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy Game Development course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy Game Development course">Buy Now</Link>
             </article>
 
             <article className="card">
@@ -764,7 +764,7 @@ function CoursesPage() {
               <p>Learn Internet of Things (IoT) fundamentals and smart device development.</p>
               <p>Build smart automation projects using sensors, WiFi, and connected devices.</p>
               <button type="button" className="know-more" data-course="IoT">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy IoT course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy IoT course">Buy Now</Link>
             </article>
 
             <article className="card">
@@ -782,7 +782,7 @@ function CoursesPage() {
               <p>Learn Scratch programming <br />fundamentals through creative visual coding.</p>
               <p>Build interactive games and animations using events, variables and game logic.</p>
               <button type="button" className="know-more" data-course="Scratch">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy Scratch Programming course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy Scratch Programming course">Buy Now</Link>
             </article>
 
             <article className="card">
@@ -800,7 +800,7 @@ function CoursesPage() {
               <p>Learn electronics fundamentals<br /> through practical circuit building.</p>
               <p>Build interactive electronic projects<br /> using LEDs, motors, sensors, and control circuits.</p>
               <button type="button" className="know-more" data-course="Electronics">Know more</button>
-              <Link to="/shop?category=Courses" className="btn-claim" aria-label="Buy Electronics course">Buy Now</Link>
+              <Link to="/shop/?category=Courses" className="btn-claim" aria-label="Buy Electronics course">Buy Now</Link>
             </article>
           </div>
         </section>
@@ -817,7 +817,7 @@ function CoursesPage() {
               <span id="modalAssessment"></span>
             </div>
 
-            <Link to="/shop?category=Courses" className="btn-claim modal-btn">Buy Now</Link>
+            <Link to="/shop/?category=Courses" className="btn-claim modal-btn">Buy Now</Link>
 
             <div className="modal-body-section">
               <h3>What will you learn</h3>

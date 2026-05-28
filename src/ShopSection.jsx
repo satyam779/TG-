@@ -59,7 +59,7 @@ function ShopSection(){
                                         <p>Design and prototype with 3D printing tools.</p>
                                     </li>
                                 </ul>
-                                <Link className="tab-cta" to="/shop">Shop DIY Kits</Link>
+                                <Link className="tab-cta" to="/shop/">Shop DIY Kits</Link>
                             </div>
                             <div className="tab-image1">
                                 <img src={DIYKIT} alt="Student building robot with TechyGuide DIY kit" />
@@ -88,7 +88,7 @@ function ShopSection(){
                                         <p>Team-based STEM challenges and activities.Project-based learning for school students.</p>
                                     </li>
                                 </ul>
-                                <Link className="tab-cta" to="/courses">View Courses</Link>
+                                <Link className="tab-cta" to="/courses/">View Courses</Link>
                             </div>
                             <div className="tab-image1">
                                 <img src={VirtualLearningImage} alt="Students attending virtual STEM course on TechyGuide platform" />
@@ -116,7 +116,7 @@ function ShopSection(){
                                         <p>Develop confidence through project showcases</p>
                                     </li>
                                 </ul>
-                                 <Link className="tab-cta" to="/schools/workshop">View Workshop</Link>
+                                 <Link className="tab-cta" to="/stem-robotics-workshops-for-schools-india/">View Workshop</Link>
 
                             </div>
                             <div className="tab-image1">

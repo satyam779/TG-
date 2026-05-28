@@ -463,9 +463,9 @@ export default function EBlox() {
     return (
         <div className="eblox-page-root" style={{ overflow: 'hidden', scrollBehavior: 'auto' }}>
             <SEO
-                title="E-Blox Modular Electronics Kit for Kids | STEM Learning"
+                title="E-Blox Modular Electronics Kit | TechyGuide"
                 description="Discover the E-Blox modular electronics kit for kids aged 5-10. Build 20+ STEM projects while learning circuits, renewable energy, and engineering concepts."
-                canonical="https://techyguide.in/e-blox-modular-electronics-kit-for-kids/"
+                canonical="https://www.techyguide.in/e-blox-modular-electronics-kit-for-kids/"
             />
             <header className="eblox-hero-root" id="home" ref={ebloxHeroRef}>
                 <canvas className="eblox-hero-canvas" aria-hidden="true" ref={ebloxHeroCanvasRef}></canvas>

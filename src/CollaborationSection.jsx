@@ -10,9 +10,9 @@ function Collaboration() {
           <p>Partner with TechyGuide to expand STEM education through a proven business model with training, support, and marketing,</p>
           <p> exclusive territory rights, and strong government & CSR collaborations with resellers and distributors.</p>
           <div className="partners">
-              <Link className="partner-box" to="/government-csr-stem-robotics-education-initiatives">Government & CSR</Link>
+              <Link className="partner-box" to="/government-csr-stem-robotics-education-initiatives/">Government & CSR</Link>
 
-            <Link className="partner-box" to="/robotics-coding-franchise-india">Resellers & Distributors</Link>
+            <Link className="partner-box" to="/robotics-coding-franchise-india/">Resellers & Distributors</Link>
           </div>
         </div>
       </section>

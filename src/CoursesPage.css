@@ -1699,7 +1699,7 @@
     .courses-page-container .hero-image {
         display: flex;
         justify-content: center;
-        transform: translate(150px, 60px);
+        transform: translate(150px, 70px);
     }
 
     .courses-page-container .hero-img {

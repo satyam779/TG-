@@ -295,4 +295,10 @@
     font-size: 0.95rem !important;
     line-height: 1.6 !important;
   }
+
+  /* Global Performance Fixes for Mobile Devices */
+  *, *::before, *::after {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
 }

@@ -1,9 +1,119 @@
+# ============================================
+# SPEED OPTIMIZATION: ENFORCE HTTPS & WWW
+# ============================================
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^techyguide\.in [NC]
+  RewriteRule ^(.*)$ https://www.techyguide.in/$1 [L,R=301]
+
+  # Redirect legacy index.php directly to root /
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+  RewriteRule ^index\.php$ / [R=301,L]
+
+  # SEO 301 REDIRECTS (OLD URLs to NEW URLs)
+  RewriteRule ^ai-robotics-lab(/.*)?$ / [R=301,L,NC]
+  RewriteRule ^products-courses(/.*)?$ /shop [R=301,L,NC]
+  RewriteRule ^cart(/.*)?$ /shop [R=301,L,NC]
 </IfModule>
+
+# ============================================
+# REACT HOMEPAGE PRIORITY
+# ============================================
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# ============================================
+# PRIORITY 1: STATIC ASSETS — NEVER REWRITE
+# ============================================
+RewriteRule ^assets/ - [L]
+RewriteRule \.(js|css|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|eot|mp4|webm|map)$ - [L]
+
+# ============================================
+# PRIORITY 2: WORDPRESS API + AJAX + PAYMENT CALLBACKS
+# ============================================
+RewriteCond %{QUERY_STRING} (^|&)wc-ajax= [NC,OR]
+RewriteCond %{QUERY_STRING} (^|&)wc-api= [NC,OR]
+RewriteCond %{REQUEST_URI} ^/wp-json/ [NC]
+RewriteRule ^ index.php [L]
+
+# ============================================
+# PRIORITY 3: WORDPRESS CORE + ADMIN
+# ============================================
+RewriteCond %{REQUEST_URI} ^/(wp-admin|wp-login\.php|wp-content|wp-includes|wp-cron\.php|xmlrpc\.php)(/|$) [NC]
+RewriteRule ^ - [L]
+
+# ============================================
+# PRIORITY 4: REACT ROUTES
+# ============================================
+RewriteRule ^robothrone(/.*)?$ index.html [L]
+RewriteRule ^shop(/.*)?$ index.html [L]
+RewriteRule ^checkout$ index.html [L]
+
+# ============================================
+# PRIORITY 5: WOOCOMMERCE + WORDPRESS PAGES
+# ============================================
+# Redirect WooCommerce "Order Received" to React "Payment Success"
+RewriteRule ^checkout/order-received/ /payment-success [R=301,L,QSA]
+
+# Handle WooCommerce payment-specific pages (order-pay, my-account, etc.)
+# Note: Main "cart" and "checkout" are React, but sub-paths like checkout/order-pay/ are WordPress
+RewriteCond %{REQUEST_URI} ^/(checkout/.+|my-account|product|product-category|product-tag|order-pay|online-robotic-summer-camp-2026|robotic-summer-camp-2026-tg|updates)(/|$) [NC]
+RewriteRule ^ index.php [L]
+
+# ============================================
+# PRIORITY 6: CUSTOM STATIC / WP-DEPENDENT FOLDERS
+# ============================================
+RewriteCond %{REQUEST_URI} ^/(documents|downloads|email-templates|js|attendance|css|\.well-known)(/|$) [NC]
+RewriteRule ^ - [L]
+
+# ============================================
+# PRIORITY 7: EXISTING PHYSICAL FILES / FOLDERS
+# ============================================
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ============================================
+# FINAL: REACT SPA FALLBACK
+# ============================================
+RewriteRule ^ index.html [L]
+
+</IfModule>
+
+# ============================================
+# PERFORMANCE: GZIP COMPRESSION
+# ============================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json image/svg+xml
+</IfModule>
+
+# ============================================
+# PERFORMANCE: BROWSER CACHING
+# ============================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+
+Options -Indexes
+
+
+
+# php -- BEGIN cPanel-generated handler, do not edit
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

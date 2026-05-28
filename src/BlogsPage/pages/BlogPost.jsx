@@ -175,7 +175,7 @@ function BlogPost() {
       <section className="blog-post-hero">
         <div className="blog-post-shell blog-post-hero-grid">
           <div className="blog-post-copy">
-            <Link to="/blogs" className="back-link">
+            <Link to="/blogs/" className="back-link">
               {"← Back to all posts"}
             </Link>
             <span className="hero-badge">{post.category}</span>
@@ -236,7 +236,7 @@ function BlogPost() {
                   {recentPosts.map((recentPost) => (
                     <Link
                       key={recentPost.id}
-                      to={`/blog/${recentPost.id}`}
+                      to={`/blog/${recentPost.slug}/`}
                       className="blog-post-recent-item"
                     >
                       <img

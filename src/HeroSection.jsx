@@ -41,7 +41,7 @@ function HeroSection() {
             <a href="#schools" className="btn btn-hero-primary" onClick={(e) => handleAnchorClick(e, '#schools')}>
               Explore Labs for Schools &#9660;
             </a>
-            <Link to="/shop" className="btn btn-hero-secondary">
+            <Link to="/shop/" className="btn btn-hero-secondary">
               Shop STEM Kits &#10148;
             </Link>
           </div>

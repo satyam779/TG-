@@ -453,17 +453,7 @@ function TeBoT() {
             requestAnimationFrame(animation);
         }
 
-        const handleButtonClick = (event) => {
-            event.preventDefault();
-            const introSection = document.getElementById('introduction');
-            if (introSection) {
-                smoothScrollTo(introSection, 1200);
-            }
-        };
 
-        if (heroButton) {
-            heroButton.addEventListener('click', handleButtonClick);
-        }
 
         const handleAnchorClick = (e) => {
             const target = e.target.closest('a[href^="#"]');
@@ -589,9 +579,7 @@ function TeBoT() {
             if (root) {
                 root.removeEventListener('click', handleAnchorClick);
             }
-            if (heroButton) {
-                heroButton.removeEventListener('click', handleButtonClick);
-            }
+
             document.removeEventListener('keydown', handleKeyDown);
             observer.disconnect();
         };
@@ -600,9 +588,9 @@ function TeBoT() {
     return (
         <div className="tebot-page-root">
             <SEO
-                title="TeBOT Robotics Kit for Classrooms | 50+ STEM Projects"
+                title="TeBoT Robotics Kit for Schools | TechyGuide"
                 description="TeBOT is a robotics and IoT learning kit designed for school classrooms in India. Students can build 50+ hands-on STEM projects using safe, reusable components."
-                canonical="https://techyguide.in/tebot-robotics-kit-for-schools/"
+                canonical="https://www.techyguide.in/tebot-robotics-kit-for-schools/"
             />
             <header className="tebot-hero-section" id="home" ref={heroSectionRef}>
                 <canvas className="tebot-hero-canvas" aria-hidden="true" ref={heroCanvasRef}></canvas>

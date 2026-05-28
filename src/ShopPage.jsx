@@ -608,9 +608,9 @@ function ShopPage() {
     return (
         <div className="shop-page-wrapper">
             <SEO
-                title={currentCategory === 'Courses' ? 'STEM Courses | TechyGuide Shop' : 'Robotics & AI Kits | TechyGuide Shop'}
+                title={currentCategory === 'Courses' ? 'STEM Courses | TechyGuide' : 'Robotics & AI Kits | TechyGuide'}
                 description={currentCategory === 'Courses' ? 'Master Robotics, AI, and Coding with TechyGuide expert courses. Hands-on learning modules available for students.' : 'Explore professional-grade robotics kits, Arduino packs, and AI learning tools from TechyGuide.'}
-                canonical="https://techyguide.in/shop"
+                canonical="https://www.techyguide.in/shop/"
             />
             <div className="search-header">
                 <div className="header-content">

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function BlogCard({ blog }) {
   return (
-    <Link to={`/blog/${blog.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+    <Link to={`/blog/${blog.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
       <div className="card">
         <div className="card-image-wrapper">
           <img src={blog.image} alt={blog.title} />
