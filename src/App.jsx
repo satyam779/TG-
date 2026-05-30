@@ -188,7 +188,7 @@ function HomePage() {
         <SchoolSection />
         <CollaborationSection />
       </Suspense>
-      <Suspense fallback={null}>
+      <Suspense fallback={<RouteLoader />}>
         <FranchiseSection />
         <RobothroneSection />
         <GallerySection />

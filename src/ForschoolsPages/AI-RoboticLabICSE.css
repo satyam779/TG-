@@ -335,7 +335,7 @@
 	border: 0;
 	background: rgba(255, 255, 255, 0.08);
 	backdrop-filter: none;
-	will-change: transform;
+
 	transition: box-shadow 0.35s ease;
 }
 

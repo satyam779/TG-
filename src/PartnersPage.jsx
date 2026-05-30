@@ -344,7 +344,7 @@ function PartnersPage() {
 									<div className="partners-glass-card" data-tilt key={`${partner.name}-duplicate`}>
 										<div className="partners-card-badge">{partner.badge}</div>
 										<div className="partners-card-icon">
-											<img src={partner.logo} alt="" loading="lazy" aria-hidden="true" />
+											<img src={partner.logo} alt={`${partner.name} logo`} loading="lazy" aria-hidden="true" />
 										</div>
 										<h3>{partner.name}</h3>
 										<p className="partners-address">{partner.address}</p>

@@ -171,6 +171,7 @@ export default function RobothronePage() {
           playsInline
           id="robothrone-hero-video"
           src={heroVideo}
+          preload="metadata"
           style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }}
         >
           Your browser does not support the video tag.
@@ -293,13 +294,13 @@ export default function RobothronePage() {
           <div className="robothrone-about-right">
             <div className="robothrone-slider-track" ref={sliderRef}>
               {/* ORIGINAL IMAGES */}
-              <img src={AboutRobothrone1} loading="lazy" decoding="async" width="400" height="250" alt="" />
-              <img src={AboutRobothrone2} loading="lazy" decoding="async" width="400" height="250" alt="" />
-              <img src={AboutRobothrone3} loading="lazy" decoding="async" width="400" height="250" alt="" />
+              <img src={AboutRobothrone1} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition participants working on robots" />
+              <img src={AboutRobothrone2} loading="lazy" decoding="async" width="400" height="250" alt="Students collaborating on a robotics project" />
+              <img src={AboutRobothrone3} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone event showcase with participants" />
               {/* DUPLICATE FOR LOOP */}
-              <img src={AboutRobothrone1} loading="lazy" decoding="async" width="400" height="250" alt="" />
-              <img src={AboutRobothrone2} loading="lazy" decoding="async" width="400" height="250" alt="" />
-              <img src={AboutRobothrone3} loading="lazy" decoding="async" width="400" height="250" alt="" />
+              <img src={AboutRobothrone1} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition participants working on robots" />
+              <img src={AboutRobothrone2} loading="lazy" decoding="async" width="400" height="250" alt="Students collaborating on a robotics project" />
+              <img src={AboutRobothrone3} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone event showcase with participants" />
             </div>
           </div>
         </div>
@@ -353,7 +354,7 @@ export default function RobothronePage() {
         <div className="robothrone-eligibility-grid">
           {/* JUNIOR */}
           <div className="robothrone-eligibility-card">
-            <img src={junior} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={junior} loading="lazy" decoding="async" width="400" height="250" alt="Junior division ages 8 to 10" />
 
             <div className="robothrone-card-head">
               <h3>🧒 Junior</h3>
@@ -371,7 +372,7 @@ export default function RobothronePage() {
 
           {/* INTERMEDIATE */}
           <div className="robothrone-eligibility-card">
-            <img src={intermediate} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={intermediate} loading="lazy" decoding="async" width="400" height="250" alt="Intermediate division ages 11 to 13" />
 
             <div className="robothrone-card-head">
               <h3>🧑‍💻 Intermediate</h3>
@@ -389,7 +390,7 @@ export default function RobothronePage() {
 
           {/* SENIOR */}
           <div className="robothrone-eligibility-card">
-            <img src={senior} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={senior} loading="lazy" decoding="async" width="400" height="250" alt="Senior division ages 14 to 16" />
 
             <div className="robothrone-card-head">
               <h3>🧠 Senior</h3>
@@ -413,31 +414,31 @@ export default function RobothronePage() {
 
         <div className="robothrone-snapshots-grid">
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots1} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots1} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 1" />
           </div>
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots2} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots2} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 2" />
           </div>
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots3} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots3} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 3" />
           </div>
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots4} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots4} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 4" />
           </div>
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots5} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots5} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 5" />
           </div>
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots6} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots6} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 6" />
           </div>
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots7} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots7} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 7" />
           </div>
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots8} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots8} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 8" />
           </div>
           <div className="robothrone-snapshot-card">
-            <img src={CompetitionSnapshots9} loading="lazy" decoding="async" width="400" height="250" alt="" />
+            <img src={CompetitionSnapshots9} loading="lazy" decoding="async" width="400" height="250" alt="Robothrone competition snapshot 9" />
           </div>
         </div>
       </section>
@@ -452,7 +453,7 @@ export default function RobothronePage() {
         <div className="robothrone-themes-grid">
           <div className="robothrone-theme-card">
             <div className="robothrone-theme-top">
-              <img src={scratchProgrammingImage} loading="lazy" decoding="async" width="400" height="250" alt="" />
+              <img src={scratchProgrammingImage} loading="lazy" decoding="async" width="400" height="250" alt="Scratch Programming Challenge theme" />
             </div>
             <div className="robothrone-theme-head">
               <h4>Scratch Programming Challenge</h4>
@@ -468,7 +469,7 @@ export default function RobothronePage() {
 
           <div className="robothrone-theme-card">
             <div className="robothrone-theme-top">
-              <img src={smartHomeHelpers} loading="lazy" decoding="async" width="400" height="250" alt="" />
+              <img src={smartHomeHelpers} loading="lazy" decoding="async" width="400" height="250" alt="Smart Home Helpers theme" />
             </div>
             <div className="robothrone-theme-head">
               <h4>Smart Home Helpers</h4>
@@ -488,7 +489,7 @@ export default function RobothronePage() {
         <div className="robothrone-themes-grid">
           <div className="robothrone-theme-card">
             <div className="robothrone-theme-top">
-              <img src={EnvironmentalMonitoring} loading="lazy" decoding="async" width="400" height="250" alt="" />
+              <img src={EnvironmentalMonitoring} loading="lazy" decoding="async" width="400" height="250" alt="Environmental Monitoring theme" />
             </div>
             <div className="robothrone-theme-head">
               <h4>Environmental Monitoring</h4>
@@ -504,7 +505,7 @@ export default function RobothronePage() {
 
           <div className="robothrone-theme-card">
             <div className="robothrone-theme-top">
-              <img src={SmartTransportation} loading="lazy" decoding="async" width="400" height="250" alt="" />
+              <img src={SmartTransportation} loading="lazy" decoding="async" width="400" height="250" alt="Smart Transportation theme" />
             </div>
             <div className="robothrone-theme-head">
               <h4>Smart Transportation</h4>
@@ -524,7 +525,7 @@ export default function RobothronePage() {
         <div className="robothrone-themes-grid">
           <div className="robothrone-theme-card">
             <div className="robothrone-theme-top">
-              <img src={IndustrySolutions} loading="lazy" decoding="async" width="400" height="250" alt="" />
+              <img src={IndustrySolutions} loading="lazy" decoding="async" width="400" height="250" alt="Industry 4.0 Solutions theme" />
             </div>
             <div className="robothrone-theme-head">
               <h4>Industry 4.0 Solutions</h4>
@@ -540,7 +541,7 @@ export default function RobothronePage() {
 
           <div className="robothrone-theme-card">
             <div className="robothrone-theme-top">
-              <img src={HealthcareInnovation} loading="lazy" decoding="async" width="400" height="250" alt="" />
+              <img src={HealthcareInnovation} loading="lazy" decoding="async" width="400" height="250" alt="Healthcare Innovation theme" />
             </div>
             <div className="robothrone-theme-head">
               <h4>Healthcare Innovation</h4>
@@ -709,7 +710,7 @@ export default function RobothronePage() {
             <a
               href="https://wa.me/919108065026"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               +91 91080 65026
             </a>
@@ -723,7 +724,7 @@ export default function RobothronePage() {
             <a
               href="https://discord.gg/YOUR_SERVER_LINK"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Community Server
             </a>

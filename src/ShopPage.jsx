@@ -580,6 +580,7 @@ function ShopPage() {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                     className={currentSliderIndex === index ? '' : 'hidden'}
                 >
                     <source src={url} type="video/mp4" />

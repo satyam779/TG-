@@ -21,7 +21,7 @@ function renderFormattedText(text) {
           key={`link-${match.index}`}
           href={match[2].trim()}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="blog-post-inline-link"
         >
           {match[1].trim()}

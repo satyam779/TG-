@@ -98,25 +98,25 @@ function AboutUsPage() {
 
 					<div className="team-grid">
 						<div className="team-card">
-							<img src={teamImage} alt="" />
+							<img src={teamImage} alt="Rahul Sharma - Frontend Developer" />
 							<h3>Rahul Sharma</h3>
 							<span>Frontend Developer</span>
 						</div>
 
 						<div className="team-card">
-							<img src={teamImage} alt="" />
+							<img src={teamImage} alt="Anjali Verma - Backend Developer" />
 							<h3>Anjali Verma</h3>
 							<span>Backend Developer</span>
 						</div>
 
 						<div className="team-card">
-							<img src={teamImage} alt="" />
+							<img src={teamImage} alt="Mohit Kumar - Full Stack Engineer" />
 							<h3>Mohit Kumar</h3>
 							<span>Full Stack Engineer</span>
 						</div>
 
 						<div className="team-card">
-							<img src={teamImage} alt="" />
+							<img src={teamImage} alt="Pooja Singh - Project Manager" />
 							<h3>Pooja Singh</h3>
 							<span>Project Manager</span>
 						</div>

@@ -28,7 +28,7 @@ function FooterSection() {
                 <a
                   href="https://www.instagram.com/techyg24"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="footer-social-link"
                   aria-label="TechyGuide on Instagram"
                 >
@@ -39,7 +39,7 @@ function FooterSection() {
                 <a
                   href="https://www.facebook.com/TechyG24/"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="footer-social-link"
                   aria-label="TechyGuide on Facebook"
                 >
@@ -50,7 +50,7 @@ function FooterSection() {
                 <a
                   href="https://www.linkedin.com/company/techyg24/posts/?feedView=all"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="footer-social-link"
                   aria-label="TechyGuide on LinkedIn"
                 >
@@ -61,7 +61,7 @@ function FooterSection() {
                 <a
                   href="https://youtube.com/@techyg24?si=TAAlkWE42fq3vzqJ"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="footer-social-link"
                   aria-label="TechyGuide on YouTube"
                 >

@@ -129,7 +129,7 @@
     pointer-events: none;
     z-index: 0;
     transform: translateZ(0);
-    will-change: transform;
+
 }
 
 .impact-program .impact-hero-overlay {
@@ -854,7 +854,7 @@
     gap: 30px;
     width: max-content;
     animation: impact-scroll 40s linear infinite;
-    will-change: transform;
+
 }
 
 .impact-program .testimonial-track:hover {

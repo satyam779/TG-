@@ -24,6 +24,7 @@ function HeroSection() {
           loop
           muted
           playsInline
+          preload="metadata"
         >
           <source src={herobgvideo} type="video/mp4" />
         </video>

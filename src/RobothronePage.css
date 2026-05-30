@@ -397,7 +397,7 @@
   display: flex;
   width: calc(400px * 8);
   animation: robothrone-aboutScroll 30s linear infinite;
-  will-change: transform;
+
 }
 
 .robothrone-page-root .robothrone-slider-track img {
@@ -944,7 +944,7 @@
     0 20px 45px rgba(0, 0, 0, 0.35),
     inset 0 0 25px rgba(255, 255, 255, 0.22);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  will-change: transform;
+
 }
 
 /* Hover lift + glow */

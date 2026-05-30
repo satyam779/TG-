@@ -139,7 +139,7 @@ function ContactUs() {
 						<div className="map-container">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.64024508474!2d77.6713!3d12.9942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae116c29197455%3A0xdebe7d9cbf33e070!2sTechyGuide%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1700000000000" allowFullScreen loading="lazy" title="Corporate Office"></iframe>
 						</div>
-						<a href="https://www.google.com/maps/dir/?api=1&destination=TechyGuide+Pvt.+Ltd.+Bengaluru&destination_place_id=ChIJVXQb2TIRrjsRcOAzv5x9vt4" target="_blank" rel="noreferrer" className="directions-btn">
+						<a href="https://www.google.com/maps/dir/?api=1&destination=TechyGuide+Pvt.+Ltd.+Bengaluru&destination_place_id=ChIJVXQb2TIRrjsRcOAzv5x9vt4" target="_blank" rel="noopener noreferrer" className="directions-btn">
 							Get Directions <i className="fa-solid fa-location-arrow"></i>
 						</a>
 					</div>
@@ -150,7 +150,7 @@ function ContactUs() {
 						<div className="map-container">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.38!2d86.92!3d21.49!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19fdbe2ef7f815%3A0x97157f00e2609799!2sMAA%20BUDHI%20MANGALA%20TEMPLE!5e0!3m2!1sen!2sin!4v1700000000000" allowFullScreen loading="lazy" title="Registered Office"></iframe>
 						</div>
-						<a href="https://www.google.com/maps/dir/?api=1&destination=MAA+BUDHI+MANGALA+TEMPLE+Balasore&destination_place_id=ChIJXTgfLr_1HDoRmZdg4sB_FZw" target="_blank" rel="noreferrer" className="directions-btn">
+						<a href="https://www.google.com/maps/dir/?api=1&destination=MAA+BUDHI+MANGALA+TEMPLE+Balasore&destination_place_id=ChIJXTgfLr_1HDoRmZdg4sB_FZw" target="_blank" rel="noopener noreferrer" className="directions-btn">
 							Get Directions <i className="fa-solid fa-location-arrow"></i>
 						</a>
 					</div>
