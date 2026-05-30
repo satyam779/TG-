@@ -356,13 +356,15 @@ function TeBoT() {
         };
 
         const handlePointerMove = (event) => {
+            if (event.pointerType === 'touch') return;
             pointer.active = true;
             pointer.x = event.clientX - hero.getBoundingClientRect().left;
             pointer.y = event.clientY - hero.getBoundingClientRect().top;
             applyParallax(event.clientX, event.clientY);
         };
 
-        const handlePointerLeave = () => {
+        const handlePointerLeave = (event) => {
+            if (event.pointerType === 'touch') return;
             pointer.active = false;
             resetParallax();
         };

@@ -261,7 +261,7 @@ function ShopPage() {
             certification: "Junior Robotics Certificate",
             images: [juniorRoboticsCourse2, juniorRoboticsCourse3, juniorRoboticsCourse4]
         },
-    ];
+    ].map(c => ({ ...c, originalPrice: c.price * 2 }));
 
     const [cart, setCart] = useState(() => {
         const savedCart = localStorage.getItem('techyCart');
@@ -308,10 +308,6 @@ function ShopPage() {
     };
 
     const filteredProducts = (() => {
-        if (currentCategory === 'Courses') {
-            return products;
-        }
-
         if (!searchTerm) {
             return products;
         }
@@ -321,10 +317,6 @@ function ShopPage() {
     })();
 
     const filteredCourses = (() => {
-        if (currentCategory !== 'Courses') {
-            return courses;
-        }
-
         if (!searchTerm) {
             return courses;
         }
@@ -681,7 +673,7 @@ function ShopPage() {
             <div className="shop-layout">
                 <div className="mobile-filter-bar">
                     <button className="mobile-cat-btn" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                        <span>{currentCategory === 'All' ? 'Select Category' : currentCategory}</span>
+                        <span>{currentCategory === 'All' ? 'Shop All' : currentCategory === 'Products' ? 'Products' : 'Courses'}</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
                 </div>
@@ -689,7 +681,7 @@ function ShopPage() {
                 <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                     <h3 className="sidebar-title">Categories</h3>
                     <ul className="category-list">
-                        {['All', 'Courses'].map(cat => (
+                        {['All', 'Products', 'Courses'].map(cat => (
                             <li
                                 key={cat}
                                 className={`category-item ${currentCategory === cat ? 'active' : ''}`}
@@ -698,19 +690,92 @@ function ShopPage() {
                                     setIsSidebarOpen(false);
                                 }}
                             >
-                                {cat === 'All' ? 'All Products' : cat}
+                                {cat === 'All' ? 'Shop All' : cat === 'Products' ? 'Products' : 'Courses'}
                             </li>
                         ))}
                     </ul>
                 </aside>
 
                 <main className="main-content">
+                    <div className="promo-banner-container">
+                        <div className="promo-banner">
+                            <div className="promo-left">
+                                <span className="promo-tag">
+                                    ⚡ WHERE YOUNG INVENTORS GROW
+                                </span>
+                                <h3 className="promo-title">India's #1 STEM<br/>Learning Store 🏆</h3>
+                                <p className="promo-desc">From <strong>AI-powered robots</strong> to <strong>live mentor-led courses</strong> — everything your child needs to build, code, and lead the future of technology.</p>
+                                <div className="promo-stats-row">
+                                    <div className="promo-stat">
+                                        <span className="promo-stat-num">500+</span>
+                                        <span className="promo-stat-label">Students</span>
+                                    </div>
+                                    <div className="promo-stat-divider"/>
+                                    <div className="promo-stat">
+                                        <span className="promo-stat-num">15+</span>
+                                        <span className="promo-stat-label">Kits</span>
+                                    </div>
+                                    <div className="promo-stat-divider"/>
+                                    <div className="promo-stat">
+                                        <span className="promo-stat-num">11+</span>
+                                        <span className="promo-stat-label">Courses</span>
+                                    </div>
+                                    <div className="promo-stat-divider"/>
+                                    <div className="promo-stat">
+                                        <span className="promo-stat-num">4.8★</span>
+                                        <span className="promo-stat-label">Rated</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="promo-right">
+                                <div className="promo-emoji-circle">🤖</div>
+                                <div className="promo-right-pills">
+                                    <span className="promo-pill">Robotics</span>
+                                    <span className="promo-pill">AI</span>
+                                    <span className="promo-pill">Coding</span>
+                                    <span className="promo-pill">IoT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="content-header">
-                        <h2 className="section-title">{currentCategory === 'All' ? 'All Products' : 'Courses'}</h2>
-                        <span className="product-count">{currentCategory === 'Courses' ? filteredCourses.length : filteredProducts.length} items</span>
+                        <h2 className="section-title">
+                            {currentCategory === 'All' ? 'All Products & Courses' : currentCategory === 'Products' ? 'Products' : 'Courses'}
+                        </h2>
+                        <span className="product-count">
+                            {currentCategory === 'All' 
+                                ? (filteredProducts.length + filteredCourses.length) 
+                                : currentCategory === 'Products' 
+                                    ? filteredProducts.length 
+                                    : filteredCourses.length} items
+                        </span>
                     </div>
                     <div className="product-grid">
-                        {currentCategory === 'Courses' ? (
+                        {(currentCategory === 'All' || currentCategory === 'Products') && (
+                            filteredProducts.map(product => (
+                                <div key={product.id} className="product-card" onClick={() => openProductModal(product.id)}>
+                                    <div className="card-img-box">
+                                        
+                                        <img src={product.image} alt={product.title} loading="lazy" />
+                                        <div className="card-overlay">
+                                            <button className="view-btn">View Details</button>
+                                        </div>
+                                    </div>
+                                    <div className="card-details">
+                                        <h3 className="card-title">{product.title}</h3>
+                                        <div className="product-price-rating-row">
+                                            <div className="card-price">{formatPrice(product.price)}</div>
+                                            <div className="product-card-rating" aria-label={`Product rating ${product.rating} out of 5`}>
+                                                <span className="product-card-rating-star">★</span>
+                                                <span className="product-card-rating-value">{product.rating}</span>
+                                                <span className="product-card-rating-text">/ 5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        )}
+                        {(currentCategory === 'All' || currentCategory === 'Courses') && (
                             filteredCourses.map(course => (
                                 <div key={course.id} className="product-card" onClick={() => { setCurrentSliderIndex(0); setCurrentCourse(course); }}>
                                     <div className="card-img-box course-card-image">
@@ -733,7 +798,7 @@ function ShopPage() {
                                         </div>
                                         <p className="course-short-description">{course.shortDescription}</p>
                                         <div className="course-price-rating-row">
-                                            <div className="card-price">{formatPrice(course.price)} <span className="original">{formatPrice(course.originalPrice)}</span></div>
+                                            <div className="card-price">{formatPrice(course.price)}</div>
                                             <div className="course-card-rating" aria-label={`Course rating ${course.rating} out of 5`}>
                                                 <span className="course-card-rating-star">★</span>
                                                 <span className="course-card-rating-value">{course.rating}</span>
@@ -743,37 +808,19 @@ function ShopPage() {
                                     </div>
                                 </div>
                             ))
-                        ) : (
-                            filteredProducts.map(product => (
-                                <div key={product.id} className="product-card" onClick={() => openProductModal(product.id)}>
-                                    <div className="card-img-box">
-                                        <img src={product.image} alt={product.title} loading="lazy" />
-                                        <div className="card-overlay">
-                                            <button className="view-btn">View Details</button>
-                                        </div>
-                                    </div>
-                                    <div className="card-details">
-                                        <h3 className="card-title">{product.title}</h3>
-                                        <div className="product-price-rating-row">
-                                            <div className="card-price">{formatPrice(product.price)} <span className="original">{formatPrice(product.originalPrice)}</span></div>
-                                            <div className="product-card-rating" aria-label={`Product rating ${product.rating} out of 5`}>
-                                                <span className="product-card-rating-star">★</span>
-                                                <span className="product-card-rating-value">{product.rating}</span>
-                                                <span className="product-card-rating-text">/ 5</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))
                         )}
                     </div>
-                    {currentCategory === 'Courses' ? (
-                        filteredCourses.length === 0 && (
-                            <div className="no-results"><h3>No courses found.</h3></div>
+                    {currentCategory === 'All' ? (
+                        filteredProducts.length === 0 && filteredCourses.length === 0 && (
+                            <div className="no-results"><h3>No items found.</h3></div>
                         )
-                    ) : (
+                    ) : currentCategory === 'Products' ? (
                         filteredProducts.length === 0 && (
                             <div className="no-results"><h3>No products found.</h3></div>
+                        )
+                    ) : (
+                        filteredCourses.length === 0 && (
+                            <div className="no-results"><h3>No courses found.</h3></div>
                         )
                     )}
                 </main>
@@ -836,8 +883,8 @@ function ShopPage() {
                                     <span className="course-price">{formatPrice(currentCourse.price)}</span>
                                     {currentCourse.originalPrice && (
                                         <div className="course-discount-block">
-                                            <span className="course-original-price">{formatPrice(currentCourse.originalPrice)}</span>
-                                            <span className="course-discount-tag">{Math.round((1 - currentCourse.price / currentCourse.originalPrice) * 100)}% Off</span>
+                                            
+                                            
                                         </div>
                                     )}
                                 </div>
@@ -966,8 +1013,7 @@ function ShopPage() {
                                 <div className="pd-price-block">
                                     <span className="pd-price">{formatPrice(currentProduct.price)}</span>
                                     <div className="pd-discount-block">
-                                        <span className="pd-original-price">{formatPrice(currentProduct.originalPrice)}</span>
-                                        <span className="pd-discount-tag">{Math.round((1 - currentProduct.price / currentProduct.originalPrice) * 100)}% Off</span>
+                                        
                                     </div>
                                 </div>
 

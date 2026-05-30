@@ -391,6 +391,10 @@
 		top: 10px;
 	}
 
+	.addonkit-page-root .addon-hero-photo {
+		transform: translate(0, 0);
+	}
+
 	.addonkit-page-root .addon-hero-badge-one {
 		left: 2%;
 	}

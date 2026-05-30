@@ -1159,11 +1159,11 @@
     font-size: 3.5rem;
     font-weight: 800;
     color: teal;
-    margin-bottom: -1cm;
     font-family: 'Poppins', sans-serif;
     position: relative;
     z-index: 10;
     text-align: center;
+    padding-top: 20px;
 }
 
 .courses-page-container #stories .section-title {
@@ -1699,7 +1699,7 @@
     .courses-page-container .hero-image {
         display: flex;
         justify-content: center;
-        transform: translate(150px, 70px);
+        transform: translate(150px, 85px);
     }
 
     .courses-page-container .hero-img {

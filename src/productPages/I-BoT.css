@@ -349,6 +349,7 @@
     }
 
     .ibot-page-root .ibot-hero-photo {
+        width: 100%;
         margin: 0 auto;
     }
 

@@ -206,6 +206,7 @@ function IBoT() {
         };
 
         const handlePointerMove = (event) => {
+            if (event.pointerType === 'touch') return;
             const rect = hero.getBoundingClientRect();
             pointer.active = true;
             pointer.x = event.clientX - rect.left;
@@ -213,7 +214,8 @@ function IBoT() {
             applyParallax(event.clientX, event.clientY);
         };
 
-        const handlePointerLeave = () => {
+        const handlePointerLeave = (event) => {
+            if (event.pointerType === 'touch') return;
             pointer.active = false;
             resetParallax();
         };

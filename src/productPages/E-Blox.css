@@ -325,6 +325,10 @@
         top: 10px;
     }
 
+    .eblox-page-root .eblox-hero-photo {
+        transform: translate(0, 0);
+    }
+
     .eblox-page-root .eblox-hero-badge-one {
         left: 2%;
     }

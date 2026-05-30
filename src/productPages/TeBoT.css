@@ -349,6 +349,10 @@
         top: 8px;
     }
 
+    .tebot-page-root .tebot-hero-photo {
+        transform: translate(0, 70px);
+    }
+
     .tebot-page-root .tebot-hero-badge-one {
         left: 2%;
     }

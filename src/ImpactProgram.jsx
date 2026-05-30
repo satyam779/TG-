@@ -47,7 +47,16 @@ function ImpactProgram() {
   ];
   const [lightbox, setLightbox] = useState({ open: false, src: "", alt: "" });
   const heroVideoRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const heroVideo = heroVideoRef.current;
@@ -82,7 +91,7 @@ function ImpactProgram() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       observer.disconnect();
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <>
@@ -91,20 +100,22 @@ function ImpactProgram() {
         <section
           className="impact-hero"
         >
-          <video
-            ref={heroVideoRef}
-            id="impact-hero-video"
-            className="impact-hero-bg-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-hidden="true"
-          >
-            <source src={herobgvideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {!isMobile && (
+            <video
+              ref={heroVideoRef}
+              id="impact-hero-video"
+              className="impact-hero-bg-video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            >
+              <source src={herobgvideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
           <div className="impact-hero-overlay" aria-hidden="true" />
 
           <div className="container impact-hero-content">
@@ -187,13 +198,24 @@ function ImpactProgram() {
             <div className="initiatives-grid">
               <div className="initiative-card">
                 <div className="initiative-icon">
-                  <i className="fa-solid fa-landmark"></i>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="svg-icon">
+                    <line x1="3" y1="22" x2="21" y2="22"></line>
+                    <line x1="6" y1="18" x2="6" y2="11"></line>
+                    <line x1="10" y1="18" x2="10" y2="11"></line>
+                    <line x1="14" y1="18" x2="14" y2="11"></line>
+                    <line x1="18" y1="18" x2="18" y2="11"></line>
+                    <path d="M3 11h18L12 2z"></path>
+                  </svg>
                 </div>
                 <h3>Government Programs</h3>
                 
                 <div className="detail-item impact-highlight">
                   <div className="detail-icon">
-                    <i className="fa-solid fa-globe"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="svg-icon">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
                   </div>
                   <h4>Impact</h4>
                   <p>
@@ -213,13 +235,22 @@ function ImpactProgram() {
 
               <div className="initiative-card">
                 <div className="initiative-icon">
-                  <i className="fa-solid fa-handshake"></i>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="svg-icon">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
                 </div>
                 <h3>CSR Initiatives</h3>
                 
                 <div className="detail-item impact-highlight">
                   <div className="detail-icon">
-                    <i className="fa-solid fa-globe"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="svg-icon">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
                   </div>
                   <h4>Impact</h4>
                   <p>
@@ -394,7 +425,20 @@ function ImpactProgram() {
                 <div className="offer-image-wrap">
                 <img src={images.oursolutions1} alt="Fully equipped STEM and robotics lab classroom " className="offer-image" loading="lazy" decoding="async" />
                 </div>
-                <i className="fa-solid fa-microchip"></i>
+                <div className="offer-icon-wrap" style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="svg-icon">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                    <line x1="20" y1="15" x2="23" y2="15"></line>
+                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                    <line x1="1" y1="15" x2="4" y2="15"></line>
+                  </svg>
+                </div>
                 <h3>Future-Ready Labs</h3>
                 <p>
                  Transform classrooms into innovation hubs with fully equipped STEM and robotics labs that support experiential, project-based learning. 
@@ -404,7 +448,11 @@ function ImpactProgram() {
                 <div className="offer-image-wrap">
                 <img src={images.oursolutions2} alt="Educational DIY robotics kits for students " className="offer-image" loading="lazy" decoding="async" />
                 </div>
-                <i className="fa-solid fa-puzzle-piece"></i>
+                <div className="offer-icon-wrap" style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="svg-icon">
+                    <path d="M12 22c-1.3 0-2.4-.8-2.8-2H5a2 2 0 0 1-2-2v-4.2a2.9 2.9 0 0 1-2-2.8A2.9 2.9 0 0 1 3 8.2V4c0-1.1.9-2 2-2h4.2a2.9 2.9 0 0 1 2.8-2A2.9 2.9 0 0 1 14 2h4a2 2 0 0 1 2 2v4.2c1.2.4 2 1.5 2 2.8s-.8 2.4-2 2.8V18a2 2 0 0 1-2 2h-4.2c-.4 1.2-1.5 2-2.8 2z"></path>
+                  </svg>
+                </div>
                 <h3>DIY Learning Kits</h3>
                 <p>
                   Interactive kits that make coding and robotics simple, engaging, and fun — sparking imagination and hands-on discovery.
@@ -414,7 +462,14 @@ function ImpactProgram() {
                 <div className="offer-image-wrap">
                 <img src={images.oursolutions3} alt="Students attending hands-on STEM innovation workshop" className="offer-image" loading="lazy" decoding="async" />
                 </div>
-                <i className="fa-solid fa-users-gear"></i>
+                <div className="offer-icon-wrap" style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="svg-icon">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <circle cx="18" cy="18" r="3"></circle>
+                    <path d="M18 11v2"></path>
+                  </svg>
+                </div>
                 <h3>Engaging Workshops</h3>
                 <p>
                   Immersive workshops for students and teachers to explore technology, innovation, and real-world problem solving. 
@@ -440,7 +495,12 @@ function ImpactProgram() {
                     <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
                   </div>
                   <div className="gallery-overlay">
-                    <i className="fa-solid fa-magnifying-glass-plus"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="svg-icon" style={{ background: 'rgba(0, 0, 0, 0.45)', padding: '6px', borderRadius: '8px', boxSizing: 'initial', width: '24px', height: '24px' }}>
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
                   </div>
                 </div>
               ))}
@@ -611,13 +671,20 @@ Hear from educators, students, and parents who are part of the TechyGuide impact
                 Together, let's empower communities with the power of education, innovation, and technology.         </p>
             <div className="contact-details">
               <a href="tel:+919114036376" className="btn">
-                <i className="fa-solid fa-phone"></i> +91 91140 36376
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                +91 91140 36376
               </a>
               <a
                 href="mailto:reachus@techyguide.in"
                 className="btn btn-outline"
               >
-                <i className="fa-solid fa-envelope"></i> reachus@techyguide.in
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                reachus@techyguide.in
               </a>
             </div>
           </div>

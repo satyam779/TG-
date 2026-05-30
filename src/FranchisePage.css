@@ -324,8 +324,8 @@
 
 /* Mobile Adjustment */
 @media (max-width: 768px) {
-    .franchise-page .story-item { width: 280px; }
-    .franchise-page .story-item img { height: 160px; }
+    .franchise-page .story-item { width: 350px; }
+    .franchise-page .story-item img { height: 230px; }
 }
 
 /* ============ REQUIREMENTS SECTION 4x1 GRID last section  ============ */
@@ -791,11 +791,11 @@
     }
     
     .franchise-page .story-item {
-        width: 280px;
+        width: 350px;
     }
     
     .franchise-page .story-item img {
-        height: 200px;
+        height: 230px;
     }
     
     .franchise-page .story-track {
@@ -905,11 +905,11 @@
     }
     
     .franchise-page .story-item {
-        width: 250px;
+        width: 310px;
     }
     
     .franchise-page .story-item img {
-        height: 180px;
+        height: 200px;
     }
     
     .franchise-page .pillar-img {
