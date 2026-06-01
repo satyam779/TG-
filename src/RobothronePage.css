@@ -43,8 +43,8 @@
 
 /* Hero */
 .robothrone-page-root .robothrone-hero {
-  min-height: 100vh;
-  height: 100vh;
+  min-height: calc(100vh - 80px);
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,17 +76,19 @@
 }
 
 .robothrone-page-root .robothrone-hero h1 {
-  font-size: 3.8rem;
+  font-size: 4.0rem;
   line-height: 1.3;
   color: #008273;
   position: relative;
   z-index: 1;
   padding: 30px 0;
   text-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 2px #ffffff;
 }
 
 .robothrone-page-root .robothrone-hero h1 span {
   color: #ff9500;
+  
 }
 
 .robothrone-page-root .robothrone-subtitle {
@@ -191,14 +193,57 @@
 }
 
 .robothrone-page-root .robothrone-download-btn {
-  background: rgba(255,255,255,0.12);
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.333) !important;
+  background: rgba(255, 255, 255, 0.471);
+  color: #000000;
+  border: 2px solid rgba(255, 255, 255, 0.775) !important;
   transition: transform 0.3s ease;
 }
 
 .robothrone-page-root .robothrone-download-btn:hover {
   transform: translateY(-5px);
+}
+
+/* Winners Badge Link */
+.robothrone-page-root .robothronewinners {
+  display: inline-block;
+  margin-top: 1.5rem;
+  z-index: 2;
+  position: relative;
+  text-decoration: none;
+}
+
+.robothrone-page-root .robothronewinners span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #000000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(255, 149, 0, 0.61), inset 0 0 15px rgba(255, 184, 3, 0.566);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+    background: linear-gradient(135deg, #ffb703 0%, #ff9500 100%);
+
+}
+
+.robothrone-page-root .robothronewinners span:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, rgba(255, 183, 3, 0.15) 0%, rgba(255, 149, 0, 0.15) 100%);
+  color: #ffffff;
+    border: 2px solid rgb(255, 254, 254);
+  box-shadow: 0 8px 25px rgba(255, 149, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes robothrone-float-winner {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 /* Modal Styles */
@@ -1317,14 +1362,16 @@
   }
 
   .robothrone-page-root .robothrone-hero {
-    height: 100vh;
-    min-height: auto;
+    height: auto;
+    min-height: calc(100vh - 80px);
     overflow: hidden;
+    justify-content: flex-start;
+    padding-top: 120px;
   }
 
   /* Hero */
   .robothrone-page-root .robothrone-hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     line-height: 1.25;
     padding: 10px 0;
   }
@@ -1384,6 +1431,13 @@
 
   .robothrone-page-root .robothrone-download-btn {
     width: 100%;
+  }
+
+  /* Winners Badge Link Mobile */
+  .robothrone-page-root .robothronewinners span {
+    font-size: 0.75rem;
+    padding: 10px 12px;
+    line-height: 1.4;
   }
 
   /* Top Badge */

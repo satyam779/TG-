@@ -106,14 +106,33 @@ function Header() {
 
   return (
     <>
+      <style>{`
+        @media (max-width: 768px) {
+          .contact-text, .hide-mobile {
+            display: none !important;
+          }
+          .top-bar-right a i {
+            font-size: 1.1rem !important; /* Make icons slightly larger on mobile for easier tapping */
+          }
+          .robothrone-text {
+            font-weight: bold !important;
+          }
+        }
+      `}</style>
       <div className="top-bar" id="home" ref={topBarRef}>
-        <div className="container">
-          <span>
-            <a href="tel:+918197984847"><i className="fas fa-phone-alt"></i> +91 8197984847</a>
-          </span>
-          <span>
-            <a href="mailto:reachus@techyguide.in"><i className="fas fa-envelope"></i> reachus@techyguide.in</a>
-          </span>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div className="top-bar-left" style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '1.0rem' }}>
+            <span className="robothrone-text">🏆 Robothrone 2026 <span className="hide-mobile">Competition </span></span>
+            <Link to="/robothrone/winners" style={{ background: '#f09a2d', color: '#fff', padding: '2px 8px', borderRadius: '10px', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 'bold', whiteSpace: 'nowrap' }}>Winners</Link>
+          </div>
+          <div className="top-bar-right" style={{ display: 'flex', gap: '15px' }}>
+            <span>
+              <a href="tel:+918197984847" title="Call Us" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}><i className="fas fa-phone-alt" style={{ fontSize: '1.1rem' }}></i> <span className="contact-text">+91 8197984847</span></a>
+            </span>
+            <span>
+              <a href="mailto:reachus@techyguide.in" title="Email Us" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}><i className="fas fa-envelope" style={{ fontSize: '1.1rem' }}></i> <span className="contact-text">reachus@techyguide.in</span></a>
+            </span>
+          </div>
         </div>
       </div>
 

@@ -1,0 +1,879 @@
+/* ==========================================================================
+   ROBOTHRONE WINNERS — Modern Premium Light Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
+
+:root {
+  --rw-bg-light: #f5f7fa;
+  --rw-card-bg: #ffffff;
+  --rw-text-dark: #1e293b;
+  --rw-text-muted: #64748b;
+  
+  /* Rank Colors */
+  --rw-gold: #eab308;
+  --rw-gold-glow: rgba(234, 179, 8, 0.12);
+  --rw-gold-grad: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
+  
+  --rw-silver: #94a3b8;
+  --rw-silver-glow: rgba(148, 163, 184, 0.12);
+  --rw-silver-grad: linear-gradient(135deg, #f8fafc 0%, #94a3b8 50%, #475569 100%);
+  
+  --rw-bronze: #d97706;
+  --rw-bronze-glow: rgba(217, 119, 6, 0.1);
+  --rw-bronze-grad: linear-gradient(135deg, #ffedd5 0%, #d97706 50%, #92400e 100%);
+  
+  /* Transitions */
+  --rw-ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --rw-ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================================================
+   BASE & LAYOUT
+   ========================================================================== */
+
+.rw-page {
+  min-height: 100vh;
+  background-color: var(--rw-bg-light);
+  background-image: 
+    radial-gradient(circle at 50% 0%, #ffffff 0%, var(--rw-bg-light) 75%),
+    radial-gradient(circle at 10% 40%, rgba(234, 179, 8, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(148, 163, 184, 0.03) 0%, transparent 40%);
+  color: var(--rw-text-dark);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.rw-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   AMBIENT PASTEL GLOWS
+   ========================================================================== */
+
+.rw-auras {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1100px;
+  height: 450px;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  opacity: 0.5;
+}
+
+.rw-aura-blob {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  filter: blur(120px);
+  animation: rwAuraPulse 8s infinite alternate ease-in-out;
+}
+
+.rw-aura-silver { background: rgba(148, 163, 184, 0.12); animation-delay: 0s; }
+.rw-aura-gold { background: rgba(234, 179, 8, 0.15); width: 320px; height: 320px; animation-delay: 2s; }
+.rw-aura-bronze { background: rgba(217, 119, 6, 0.1); animation-delay: 4s; }
+
+@keyframes rwAuraPulse {
+  0% { transform: scale(0.95) translateY(0); opacity: 0.6; }
+  100% { transform: scale(1.1) translateY(-15px); opacity: 1; }
+}
+
+/* ==========================================================================
+   CATEGORY TABS (Segmented Light Slider)
+   ========================================================================== */
+
+.rw-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.rw-tab {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  color: #475569;
+  padding: 10px 24px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.25s var(--rw-ease-smooth);
+}
+
+.rw-tab:hover {
+  background: rgba(15, 23, 42, 0.08);
+  color: var(--rw-text-dark);
+}
+
+.rw-tab.active {
+  background: var(--rw-gold-grad);
+  color: #0c0c12;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3);
+}
+
+/* ==========================================================================
+   CARDS GRID & THE 3D MOUNTING
+   ========================================================================== */
+
+.rw-grid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 60px;
+  padding: 160px 0 50px; /* Increased top padding to give room for higher floating laurels! */
+  position: relative;
+  z-index: 2;
+  perspective: 1200px;
+}
+
+/* ==========================================================================
+   POLAROID AWARD CARD SYSTEM
+   ========================================================================== */
+
+.rw-card {
+  border-radius: 18px;
+  width: 100%;
+  max-width: 350px; /* Increased width for a wider and more spacious card look! */
+  box-sizing: border-box;
+  box-shadow: 
+    0 10px 30px rgba(15, 23, 42, 0.05),
+    0 1px 3px rgba(15, 23, 42, 0.02);
+  transition: 
+    transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.15), 
+    box-shadow 0.5s ease,
+    border-color 0.5s ease;
+  color: var(--rw-text-dark);
+  position: relative;
+  overflow: visible;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+/* 3D Static tilt arrangement */
+.rw-card.silver {
+  order: 1;
+  transform: translateY(0px) rotate(-2.5deg) scale(0.98);
+  z-index: 2;
+  background: #f1f5f9;
+  background-image: linear-gradient(175deg, #ffffff 0%, #f8fafc 40%, #e2e8f0 100%);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+.rw-card.gold {
+  order: 2;
+  transform: translateY(-20px) scale(1.04);
+  z-index: 3;
+  background: #fffbeb;
+  background-image: linear-gradient(175deg, #ffffff 0%, #fffdf4 40%, #fef3c7 100%);
+  border-color: rgba(234, 179, 8, 0.32);
+}
+.rw-card.bronze {
+  order: 3;
+  transform: translateY(0px) rotate(2.5deg) scale(0.98);
+  z-index: 1;
+  background: #fff7ed;
+  background-image: linear-gradient(175deg, #ffffff 0%, #fffaf5 40%, #ffedd5 100%);
+  border-color: rgba(217, 119, 6, 0.25);
+}
+
+/* Static Rank-based Shadows */
+.rw-card.gold {
+  box-shadow: 
+    0 16px 36px rgba(15, 23, 42, 0.08),
+    0 0 20px var(--rw-gold-glow);
+}
+.rw-card.silver {
+  box-shadow: 
+    0 10px 24px rgba(15, 23, 42, 0.05),
+    0 0 12px var(--rw-silver-glow);
+}
+.rw-card.bronze {
+  box-shadow: 
+    0 10px 24px rgba(15, 23, 42, 0.05),
+    0 0 12px var(--rw-bronze-glow);
+}
+
+/* ==========================================================================
+   POLAROID IMAGE FRAMING (White instant-photo frame margins)
+   ========================================================================== */
+
+.rw-card-img {
+  position: relative;
+  width: auto;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f1f5f9;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  margin: 14px 14px 0 14px;
+}
+
+.rw-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--rw-ease-smooth);
+}
+
+/* Image hover scale removed */
+
+/* Floating ribbon and trophy styles removed */
+
+/* ==========================================================================
+   POLAROID CARD BODY TEXT
+   ========================================================================== */
+
+.rw-card-body {
+  padding: 22px 20px 22px;
+  text-align: center;
+}
+
+.rw-team {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--rw-text-dark);
+  margin: 0 0 5px;
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+}
+
+.rw-project {
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+  line-height: 1.45;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gold .rw-project { color: #b45309; }
+.silver .rw-project { color: #1e3a8a; }
+.bronze .rw-project { color: #065f46; }
+
+/* Minimalist School Plate (Color-coded by award rank) */
+.rw-school {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  padding: 5px 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  max-width: 95%;
+  box-sizing: border-box;
+}
+
+.gold .rw-school { background: rgba(234, 179, 8, 0.08); color: #854d0e; }
+.silver .rw-school { background: rgba(148, 163, 184, 0.1); color: #334155; }
+.bronze .rw-school { background: rgba(217, 119, 6, 0.07); color: #9a3412; }
+
+.rw-school span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.rw-school svg {
+  flex-shrink: 0;
+}
+.gold .rw-school svg { color: #d97706; }
+.silver .rw-school svg { color: #64748b; }
+.bronze .rw-school svg { color: #b45309; }
+
+.rw-divider {
+  height: 1px;
+  margin: 4px 0 12px;
+}
+.gold .rw-divider { background: rgba(234, 179, 8, 0.12); }
+.silver .rw-divider { background: rgba(148, 163, 184, 0.15); }
+.bronze .rw-divider { background: rgba(217, 119, 6, 0.12); }
+
+/* ==========================================================================
+   DIGITAL PROGRESS METRIC (Score)
+   ========================================================================== */
+
+.rw-score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.rw-score-label {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #94a3b8;
+}
+
+.rw-score-val {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.gold .rw-score-val { color: #b45309; }
+.silver .rw-score-val { color: #1e40af; }
+.bronze .rw-score-val { color: #065f46; }
+
+.rw-score-max {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.rw-bar-track {
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.gold .rw-bar-track { background: rgba(234, 179, 8, 0.12); }
+.silver .rw-bar-track { background: rgba(148, 163, 184, 0.15); }
+.bronze .rw-bar-track { background: rgba(217, 119, 6, 0.12); }
+
+.rw-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s var(--rw-ease-smooth);
+}
+
+.gold .rw-bar-fill { background: var(--rw-gold-grad); }
+.silver .rw-bar-fill { background: var(--rw-silver-grad); }
+.bronze .rw-bar-fill { background: var(--rw-bronze-grad); }
+
+/* ==========================================================================
+   TEAM ROSTER TAGS (Color-coded by award rank)
+   ========================================================================== */
+
+.rw-roster-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.rw-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+  justify-content: flex-start;
+}
+
+.rw-chip {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  transition: all 0.25s var(--rw-ease-smooth);
+}
+
+.gold .rw-chip { background: rgba(234, 179, 8, 0.05); border: 1px solid rgba(234, 179, 8, 0.15); color: #854d0e; }
+.gold .rw-chip:hover { background: rgba(234, 179, 8, 0.1); border-color: rgba(234, 179, 8, 0.3); transform: translateY(-1.5px); }
+
+.silver .rw-chip { background: rgba(148, 163, 184, 0.06); border: 1px solid rgba(148, 163, 184, 0.2); color: #334155; }
+.silver .rw-chip:hover { background: rgba(148, 163, 184, 0.12); border-color: rgba(148, 163, 184, 0.35); transform: translateY(-1.5px); }
+
+.bronze .rw-chip { background: rgba(217, 119, 6, 0.05); border: 1px solid rgba(217, 119, 6, 0.15); color: #9a3412; }
+.bronze .rw-chip:hover { background: rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.3); transform: translateY(-1.5px); }
+
+/* ==========================================================================
+   VIDEO DEMO ACTION BUTTON
+   ========================================================================== */
+
+.rw-video-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s var(--rw-ease-smooth);
+}
+
+.rw-video-btn svg {
+  transition: transform 0.3s var(--rw-ease-elastic);
+}
+
+.gold .rw-video-btn {
+  background: linear-gradient(135deg, #fef08a 0%, #eab308 100%);
+  color: #0c0c12;
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.22);
+}
+.gold .rw-video-btn:hover {
+  box-shadow: 0 6px 20px rgba(234, 179, 8, 0.4);
+  transform: translateY(-2px);
+}
+
+.silver .rw-video-btn {
+  background: linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%);
+  color: #0f172a;
+  box-shadow: 0 4px 12px rgba(148, 163, 184, 0.15);
+}
+.silver .rw-video-btn:hover {
+  box-shadow: 0 6px 20px rgba(148, 163, 184, 0.3);
+  transform: translateY(-2px);
+}
+
+.bronze .rw-video-btn {
+  background: linear-gradient(135deg, #ffedd5 0%, #d97706 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.22);
+}
+.bronze .rw-video-btn:hover {
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+  transform: translateY(-2px);
+}
+
+.rw-video-btn:hover svg {
+  transform: scale(1.2) translateX(1px);
+}
+
+/* ==========================================================================
+   CONFETTI SHAPES (Pastel and Foil drifting particles)
+   ========================================================================== */
+
+.rw-confetti-wrap {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.rw-conf {
+  position: absolute;
+  top: -20px;
+  animation: rwFall linear infinite;
+  opacity: 0.35;
+}
+
+@keyframes rwFall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+  85% { opacity: 0.4; }
+  100% { transform: translateY(110vh) rotate(540deg); opacity: 0; }
+}
+
+.rw-conf:nth-child(4n) {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+}
+
+.rw-conf:nth-child(4n+1) {
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+}
+
+.rw-conf:nth-child(4n+2) {
+  background: linear-gradient(135deg, #ff8c00, #b45309);
+  border-radius: 2px;
+}
+
+.rw-conf:nth-child(4n+3) {
+  background: rgba(15, 23, 42, 0.15);
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   CINEMATIC VIDEO MODAL PLAYER
+   ========================================================================== */
+
+.rw-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: rwFadeIn 0.3s var(--rw-ease-smooth);
+}
+
+@keyframes rwFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.rw-modal {
+  background: var(--rw-card-bg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 860px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 60px rgba(15, 23, 42, 0.15),
+    0 0 50px rgba(234, 179, 8, 0.05);
+  animation: rwPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform: scale(0.94);
+}
+
+@keyframes rwPop {
+  to { transform: scale(1); }
+}
+
+.rw-modal-head {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rw-modal-head h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--rw-text-dark);
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.rw-modal-head p {
+  font-size: 0.8rem;
+  color: var(--rw-text-muted);
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+
+.rw-modal-x {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  color: var(--rw-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s var(--rw-ease-smooth);
+}
+
+.rw-modal-x:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.rw-modal-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: #f1f5f9;
+}
+
+.rw-modal-video video,
+.rw-modal-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0 0 24px 24px; /* Rounds the bottom corners to match the modal */
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Adaptive Grid & Mobile Overrides)
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .rw-page {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .rw-auras {
+    display: none;
+  }
+
+  .rw-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 10px 0;
+  }
+
+  .rw-card.gold,
+  .rw-card.silver,
+  .rw-card.bronze {
+    order: unset;
+    transform: none;
+    max-width: 360px;
+  }
+
+  .rw-card.silver:hover,
+  .rw-card.gold:hover,
+  .rw-card.bronze:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@media (max-width: 600px) {
+  .rw-page {
+    padding-top: 100px;
+  }
+
+  .rw-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: 24px;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 0 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .rw-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rw-tab {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .rw-card {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   FLOATING LAUREL BADGES (Olympic Awards Laurel)
+   ========================================================================== */
+
+.rw-laurel-badge {
+  position: absolute;
+  top: -150px; /* Floats higher to create a beautiful gap between PNGs and cards! */
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  z-index: 10;
+  pointer-events: none;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 6px 12px rgba(15, 23, 42, 0.1));
+  transition: 
+    transform 0.4s var(--rw-ease-elastic),
+    filter 0.4s ease;
+}
+
+.rw-laurel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Beautiful backup design while PNGs are missing */
+.rw-laurel-badge.placeholder-active {
+  background: #ffffff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 
+    0 6px 15px rgba(15, 23, 42, 0.06),
+    0 0 0 3px #ffffff;
+  border: 3px solid;
+  top: -66px; /* Sits beautifully with a gap for smaller circles */
+}
+
+.rw-laurel-gold.placeholder-active { border-color: #ffd700; color: #b45309; }
+.rw-laurel-silver.placeholder-active { border-color: #94a3b8; color: #334155; }
+.rw-laurel-bronze.placeholder-active { border-color: #cd7f32; color: #9a3412; }
+
+.rw-laurel-placeholder-num {
+  display: none;
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.placeholder-active .rw-laurel-placeholder-num {
+  display: block;
+}
+
+/* Laurels color fills matching reference */
+.rw-laurel-gold {
+  color: #eab308;
+}
+.rw-laurel-silver {
+  color: #94a3b8;
+}
+.rw-laurel-bronze {
+  color: #d97706;
+}
+
+@media (max-width: 960px) {
+  .rw-grid {
+    gap: 140px; /* Much larger gap to prevent overlapping with laurels */
+    padding-top: 120px; /* Room for the first card's laurel */
+  }
+
+  .rw-laurel-badge {
+    top: -120px;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+/* Base page styles for context */
+.rw-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/*
+* Robothrone Winners Page - Header Section
+*/
+.rw-header-section {
+  text-align: center;
+  padding: 80px 20px 60px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem; /* 20px */
+}
+
+.rw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(217, 119, 6, 0.05) 100%);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  padding: 8px 24px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #b45309; /* Rich gold/bronze color */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(234, 179, 8, 0.15), inset 0 0 15px rgba(234, 179, 8, 0.05);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.rw-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(234, 179, 8, 0.25), inset 0 0 20px rgba(234, 179, 8, 0.1);
+  border-color: rgba(234, 179, 8, 0.5);
+}
+
+.rw-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0;
+  max-width: 800px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #b8860b 0%, #ffd700 50%, #daa520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0px 4px 8px rgba(218, 165, 32, 0.25));
+}
+
+.rw-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: #475569;
+  font-weight: 500;
+  max-width: 650px;
+  margin: 0;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rw-header-section {
+    padding: 60px 20px 40px;
+    gap: 1rem;
+  }
+
+  .rw-title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+  }
+
+  .rw-subtitle {
+    font-size: 1rem;
+  }
+}
+
+
+/* Confetti styles from the component */
+.rw-confetti-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.rw-conf {
+  position: absolute;
+  top: -20px;
+  background-color: #ffd700;
+  opacity: 0.8;
+  animation: rw-confetti-fall linear infinite;
+}
+
+@keyframes rw-confetti-fall {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+/* Add other styles from the component below this line */
