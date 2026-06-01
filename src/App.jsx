@@ -41,7 +41,6 @@ const AboutUsPage = lazy(() => import('./AboutUsPage.jsx'));
 const PartnersPage = lazy(() => import('./PartnersPage.jsx'));
 const ContactUs = lazy(() => import('./ContactUs.jsx'));
 const CareersPage = lazy(() => import('./CareersPage.jsx'));
-const RobothroneWinners = lazy(() => import('./RobothroneWinners.jsx'));
 const NotFound = lazy(() => import('./404'));
 const BlogHome = lazy(() => import('./BlogsPage/pages/BlogHome'));
 const BlogPost = lazy(() => import('./BlogsPage/pages/BlogPost'));
@@ -103,8 +102,6 @@ function App() {
 
           <Route path="/robothrone/" element={<RobothronePage />} />
           <Route path="/robothrone" element={<Navigate to="/robothrone/" replace />} />
-          <Route path="/robothrone/winners/" element={<RobothroneWinners />} />
-          <Route path="/robothrone/winners" element={<Navigate to="/robothrone/winners/" replace />} />
 
           <Route path="/cbse-ai-robotics-lab-setup-nep-2020/" element={<AIRoboticsLabCBSE />} />
           <Route path="/cbse-ai-robotics-lab-setup-nep-2020" element={<Navigate to="/cbse-ai-robotics-lab-setup-nep-2020/" replace />} />

@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import SEO from './components/SEO';
-import { Link } from 'react-router-dom';
 import './RobothronePage.css';
 
 // Image imports
@@ -169,10 +168,6 @@ export default function RobothronePage() {
       <section className="robothrone-hero" style={{ marginTop: '80px' }}>
         {/* Top Badge */}
 
-        <Link to="/robothrone/winners" className="robothronewinners">
-          <span>🏆 ROBOTHRONE Competition Winners 2026</span>
-        </Link>
-
 
         <video
           autoPlay
@@ -186,7 +181,6 @@ export default function RobothronePage() {
         >
           Your browser does not support the video tag.
         </video>
-        
         <h1>
           🤖 Where Young Minds Build <span>the Future</span>
         </h1>

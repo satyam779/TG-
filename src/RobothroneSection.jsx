@@ -16,8 +16,11 @@ function RobothroneSection() {
           <h1 className="mainHeading"><span className="NationalHeading">National</span> Robotic Innovation Fest</h1>
 
           <div className="event-banner">
-            <div className="event-text"> 
+            <div className="event-text">
+              
               <br></br>
+              
+             
               <p>
                 Where innovation meets competition. Join hundreds of students
                 showcasing their robotics prowess, competing for glory, and
