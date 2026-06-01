@@ -12,6 +12,9 @@ import CompetitionSnapshots2 from './assets/RobothronePageImages/Competition Sna
 import AboutRobothrone3 from './assets/RobothronePageImages/About Robothrone - 3.webp';
 import senior from './assets/RobothronePageImages/Senior 14-16.webp';
 import CompetitionSnapshots3 from './assets/RobothronePageImages/Competition Snapshots - 3.webp';
+import laurelGold from './assets/RobothronePageImages/laurel-gold.png';
+import laurelSilver from './assets/RobothronePageImages/laurel-silver.png';
+import laurelBronze from './assets/RobothronePageImages/laurel-bronze.png';
 
 // ── Data ──
 const DATA = {
@@ -48,9 +51,9 @@ const PLACE_MAP = { 1: { label: '1st Place', cls: 'gold' }, 2: { label: '2nd Pla
 
 // Image asset paths for custom PNG laurels
 const LAUREL_MAP = {
-  1: '/src/assets/RobothronePageImages/laurel-gold.png',
-  2: '/src/assets/RobothronePageImages/laurel-silver.png',
-  3: '/src/assets/RobothronePageImages/laurel-bronze.png'
+  1: laurelGold,
+  2: laurelSilver,
+  3: laurelBronze
 };
 
 // Flexible Laurel Image wrapper with graceful fallback placeholder
