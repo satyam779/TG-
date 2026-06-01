@@ -48,12 +48,12 @@ import projectReport from './assets/RobothronePageImages/project_report.docx';
 // Video files are imported for better Vite handling
 
 export default function RobothronePage() {
-  const [countdownState, setCountdownState] = useState({
-    days: '00',
-    hours: '00',
-    minutes: '00',
-    seconds: '00'
-  });
+  // const [countdownState, setCountdownState] = useState({
+  //   days: '00',
+  //   hours: '00',
+  //   minutes: '00',
+  //   seconds: '00'
+  // });
 
   const [showCardsSection, setShowCardsSection] = useState(false);
   const sliderRef = useRef(null);
