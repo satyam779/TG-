@@ -59,41 +59,41 @@ export default function RobothronePage() {
   const sliderRef = useRef(null);
 
 
-  // Countdown Timer
-  useEffect(() => {
-    const target = new Date("2026-05-31T23:59:59").getTime();
-    let countdownTimer;
+  // // Countdown Timer
+  // useEffect(() => {
+  //   const target = new Date("2026-05-31T23:59:59").getTime();
+  //   let countdownTimer;
 
-    function updateCountdown() {
-      const now = Date.now();
-      let diff = Math.max(0, target - now);
+  //   function updateCountdown() {
+  //     const now = Date.now();
+  //     let diff = Math.max(0, target - now);
 
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff / 3600000) % 24);
-      const m = Math.floor((diff / 60000) % 60);
-      const s = Math.floor((diff / 1000) % 60);
+  //     const d = Math.floor(diff / 86400000);
+  //     const h = Math.floor((diff / 3600000) % 24);
+  //     const m = Math.floor((diff / 60000) % 60);
+  //     const s = Math.floor((diff / 1000) % 60);
 
-      setCountdownState({
-        days: String(d).padStart(2, "0"),
-        hours: String(h).padStart(2, "0"),
-        minutes: String(m).padStart(2, "0"),
-        seconds: String(s).padStart(2, "0")
-      });
+  //     setCountdownState({
+  //       days: String(d).padStart(2, "0"),
+  //       hours: String(h).padStart(2, "0"),
+  //       minutes: String(m).padStart(2, "0"),
+  //       seconds: String(s).padStart(2, "0")
+  //     });
 
-      if (diff === 0 && countdownTimer) {
-        clearInterval(countdownTimer);
-      }
-    }
+  //     if (diff === 0 && countdownTimer) {
+  //       clearInterval(countdownTimer);
+  //     }
+  //   }
 
-    updateCountdown();
-    countdownTimer = setInterval(updateCountdown, 1000);
+  //   updateCountdown();
+  //   countdownTimer = setInterval(updateCountdown, 1000);
 
-    return () => {
-      if (countdownTimer) {
-        clearInterval(countdownTimer);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (countdownTimer) {
+  //       clearInterval(countdownTimer);
+  //     }
+  //   };
+  // }, []);
 
   // Slider hover handler
   useEffect(() => {
