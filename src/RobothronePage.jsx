@@ -62,6 +62,7 @@ export default function RobothronePage() {
   // Countdown Timer
   useEffect(() => {
     const target = new Date("2026-05-31T23:59:59").getTime();
+    let countdownTimer;
 
     function updateCountdown() {
       const now = Date.now();
@@ -79,15 +80,19 @@ export default function RobothronePage() {
         seconds: String(s).padStart(2, "0")
       });
 
-      if (diff === 0) {
+      if (diff === 0 && countdownTimer) {
         clearInterval(countdownTimer);
       }
     }
 
     updateCountdown();
-    const countdownTimer = setInterval(updateCountdown, 1000);
+    countdownTimer = setInterval(updateCountdown, 1000);
 
-    return () => clearInterval(countdownTimer);
+    return () => {
+      if (countdownTimer) {
+        clearInterval(countdownTimer);
+      }
+    };
   }, []);
 
   // Slider hover handler
@@ -192,7 +197,9 @@ export default function RobothronePage() {
           <strong>Next:</strong> <span className="robothrone-final-submission">Final Submission</span>
         </div>
 
-        <div className="robothrone-countdown">
+        {/* Timmer for Robothrone Event */}
+
+        {/* <div className="robothrone-countdown">
           <div className="robothrone-time-box"><span>{countdownState.days}</span><small>DAYS</small></div>
           <div className="robothrone-dots">:</div>
           <div className="robothrone-time-box"><span>{countdownState.hours}</span><small>HOURS</small></div>
@@ -200,10 +207,10 @@ export default function RobothronePage() {
           <div className="robothrone-time-box"><span>{countdownState.minutes}</span><small>MINUTES</small></div>
           <div className="robothrone-dots">:</div>
           <div className="robothrone-time-box"><span>{countdownState.seconds}</span><small>SECONDS</small></div>
-        </div>
+        </div> */}
 
         <div className="robothrone-actions">
-          <button className="robothrone-register-btn" onClick={() => window.open("https://www.techyguide.in/robothrone/register.html", "_blank")}>Register Now</button>
+          <button className="robothrone-register-btn" onClick={() => window.open("/contact-techyguide/", "_blank")}>Register Now</button>
           <button className="robothrone-download-btn" onClick={() => setShowCardsSection(true)}>Download Brochure</button>
         </div>
       </section>

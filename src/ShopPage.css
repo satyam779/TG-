@@ -303,11 +303,26 @@
     background: #f8fafc;
 }
 
-.shop-page-wrapper .course-main-image-container img {
+.shop-page-wrapper .course-main-image-container img,
+.shop-page-wrapper .course-main-image-container video,
+.shop-page-wrapper .course-main-image-container iframe {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    animation:  shopFadeIn 0.3s;
+    animation: shopFadeIn 0.3s;
+}
+
+.shop-page-wrapper .course-main-image-container img {
+    mix-blend-mode: multiply;
+}
+
+.shop-page-wrapper .course-main-image-container video {
+    background: black;
+    border-radius: 8px;
+}
+
+.shop-page-wrapper .course-main-image-container iframe {
+    border: none;
 }
 
 .shop-page-wrapper .course-slider-btn {

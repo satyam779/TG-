@@ -975,68 +975,78 @@ function ShopPage() {
             )}
 
             {isModalOpen && currentProduct && (
-                <div className="modal">
-                    <button className="close-modal" onClick={closeModal}>&times;</button>
+                <div
+                    className="course-modal-overlay"
+                    onClick={closeModal}
+                    style={{ top: `${headerOffset}px`, height: `calc(100vh - ${headerOffset}px)` }}
+                >
+                    <div className="course-modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="course-modal-close-btn" onClick={closeModal} aria-label="Close modal">✕</button>
 
-                    <div className="modal-overlay" onClick={closeModal}></div>
+                        <div className="course-modal-body">
+                            <div className="course-modal-left">
+                                <div className="course-slider-container">
+                                    <button className="course-slider-btn course-prev-btn" onClick={() => changeSlide(-1)}>&#10094;</button>
 
-                    <div className="modal-content fade-in-up">
-                        <div className="modal-body">
-                            <div className="modal-left">
-                                <div className="slider-container">
-                                    <button className="slider-btn prev-btn" onClick={() => changeSlide(-1)}>&#10094;</button>
-
-                                    <div className="main-image-container">
+                                    <div className="course-main-image-container course-slider-image">
                                         {currentMediaList.map((url, index) => renderMedia(url, index))}
                                     </div>
 
-                                    <button className="slider-btn next-btn" onClick={() => changeSlide(1)}>&#10095;</button>
+                                    <button className="course-slider-btn course-next-btn" onClick={() => changeSlide(1)}>&#10095;</button>
                                 </div>
-                                <div className="slider-dots">
+                                <div className="course-slider-dots">
                                     {currentMediaList.map((_, index) => (
                                         <span
                                             key={index}
-                                            className={`dot ${currentSliderIndex === index ? 'active' : ''}`}
+                                            className={`course-dot ${currentSliderIndex === index ? 'active' : ''}`}
                                             onClick={() => setCurrentSliderIndex(index)}
                                         ></span>
                                     ))}
                                 </div>
                             </div>
 
-                            <div className="modal-right">
-                                <div className="pd-header">
-                                    <h1 className="pd-title">{currentProduct.title}</h1>
-                                    <div className="pd-meta">
-                                        <span className="rating-badge">★ <span>{currentProduct.rating}</span></span>
-                                        <span className="review-count">124 Reviews</span>
+                            <div className="course-modal-right">
+                                <div className="course-header">
+                                    <h1 className="course-title">{currentProduct.title}</h1>
+                                    <div className="course-meta">
+                                        <span className="course-rating-badge">★ <span>{currentProduct.rating}</span></span>
+                                        <span className="course-review-count">124 Reviews</span>
                                     </div>
                                 </div>
-                                <div className="pd-price-block">
-                                    <span className="pd-price">{formatPrice(currentProduct.price)}</span>
-                                    <div className="pd-discount-block">
-                                        
+                                <div className="course-price-block">
+                                    <span className="course-price">{formatPrice(currentProduct.price)}</span>
+                                    {currentProduct.originalPrice && (
+                                        <div className="course-discount-block">
+                                            <span className="course-original-price">{formatPrice(currentProduct.originalPrice)}</span>
+                                            <span className="course-discount-tag">{Math.round((1 - currentProduct.price / currentProduct.originalPrice) * 100)}% OFF</span>
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className="course-tabs-nav">
+                                    <button className={`course-tab-btn ${activeTab === 'features' ? 'active' : ''}`} onClick={() => setActiveTab('features')}>Key Features</button>
+                                    <button className={`course-tab-btn ${activeTab === 'description' ? 'active' : ''}`} onClick={() => setActiveTab('description')}>Description</button>
+                                </div>
+
+                                <div className="course-tab-container scrollable-content">
+                                    <div className={`course-tab-content ${activeTab === 'features' ? 'active' : ''}`}>
+                                        {currentProduct.features && currentProduct.features.length > 0 && (
+                                            <div>
+                                                <h4>Key Features</h4>
+                                                <ul className="course-features-list">
+                                                    {currentProduct.features.map((feature, i) => (
+                                                        <li key={i}>{feature}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div className={`course-tab-content ${activeTab === 'description' ? 'active' : ''}`}>
+                                        <p className="course-description-text">{currentProduct.description}</p>
                                     </div>
                                 </div>
 
-                                <div className="pd-tabs-nav">
-                                    <button className={`tab-btn ${activeTab === 'features' ? 'active' : ''}`} onClick={() => setActiveTab('features')}>Key Features</button>
-                                    <button className={`tab-btn ${activeTab === 'description' ? 'active' : ''}`} onClick={() => setActiveTab('description')}>Description</button>
-                                </div>
-
-                                <div className="pd-tab-container scrollable-content">
-                                    <div className={`tab-content ${activeTab === 'features' ? 'active' : ''}`}>
-                                        <ul className="pd-features-list">
-                                            {currentProduct.features.map((feature, i) => (
-                                                <li key={i}>{feature}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    <div className={`tab-content ${activeTab === 'description' ? 'active' : ''}`}>
-                                        <p className="pd-description-text">{currentProduct.description}</p>
-                                    </div>
-                                </div>
-
-                                <div className="modal-actions-desktop">
+                                <div className="course-modal-actions-desktop">
                                     <div style={{ flex: 1 }}>
                                         {cartItemInModal ? (
                                             <div className="qty-controller">
@@ -1058,7 +1068,7 @@ function ShopPage() {
                             </div>
                         </div>
 
-                        <div className="mobile-bottom-actions">
+                        <div className="course-mobile-bottom-actions">
                             <div style={{ flex: 1 }}>
                                 {cartItemInModal ? (
                                     <div className="qty-controller">
