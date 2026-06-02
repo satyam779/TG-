@@ -10,6 +10,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [schoolsOpen, setSchoolsOpen] = useState(false);
+  const [topBarHeight, setTopBarHeight] = useState(33);
   const navigate = useNavigate();
   const location = useLocation();
   const headerRef = useRef(null);
@@ -101,6 +102,24 @@ function Header() {
     };
   }, []);
 
+  // Measure actual top bar height dynamically
+  useEffect(() => {
+    const updateHeight = () => {
+      if (topBarRef.current) {
+        setTopBarHeight(topBarRef.current.offsetHeight);
+      }
+    };
+    
+    updateHeight();
+    const timer = setTimeout(updateHeight, 150);
+    
+    window.addEventListener('resize', updateHeight);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', updateHeight);
+    };
+  }, []);
+
   const handleLogoClick = (e) => {
     if (e) e.preventDefault();
     closeMenu();
@@ -133,6 +152,9 @@ function Header() {
   return (
     <>
       <style>{`
+        :root {
+          --top-bar-height: ${topBarHeight}px;
+        }
         .robothrone-text {
           font-weight: 600; /* Little bold in desktop view */
         }
