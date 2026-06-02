@@ -107,6 +107,9 @@ function Header() {
   return (
     <>
       <style>{`
+        .robothrone-text {
+          font-weight: 600; /* Little bold in desktop view */
+        }
         @media (max-width: 768px) {
           .contact-text, .hide-mobile {
             display: none !important;
