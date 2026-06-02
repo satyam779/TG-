@@ -33,7 +33,7 @@
 
 /* Header Variables */
 :root {
-    --header-top: 40px; /* Increase this value (e.g. 45px, 50px) to shift the header container further down */
+    --header-top: 36px; /* Offset to align header container directly below the top bar (35px Lottie + padding) */
 }
 
 /* Header */
