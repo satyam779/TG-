@@ -9,21 +9,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
 .robothrone-page-root * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 .robothrone-page-root {
   scroll-behavior: smooth;
   background: #ffffff;
   color: #000;
   overflow-x: hidden;
 }
-
 .robothrone-page-root h1 {
   color: #ff9500;
 }
@@ -83,12 +79,10 @@
   z-index: 1;
   padding: 30px 0;
   text-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
-  -webkit-text-stroke: 2px #ffffff;
 }
 
 .robothrone-page-root .robothrone-hero h1 span {
-  color: #ff9500;
-  
+  color: #ff9500;  
 }
 
 .robothrone-page-root .robothrone-subtitle {

@@ -122,7 +122,7 @@ function Header() {
       <div className="top-bar" id="home" ref={topBarRef}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
           <div className="top-bar-left" style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '1.0rem' }}>
-            <span className="robothrone-text">🏆 Robothrone 2026 <span className="hide-mobile">Competition </span></span>
+            <span className="robothrone-text">🏆 ROBOTHRONE 2026 <span className="hide-mobile">Competition </span></span>
             <Link to="/robothrone/winners" style={{ background: '#f09a2d', color: '#fff', padding: '2px 8px', borderRadius: '10px', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 'bold', whiteSpace: 'nowrap' }}>Winners</Link>
           </div>
           <div className="top-bar-right" style={{ display: 'flex', gap: '15px' }}>
