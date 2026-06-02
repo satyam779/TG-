@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Logo from './assets/logo.webp'
 import './Header.css';
+import lottie from 'lottie-web/build/player/lottie_light';
+import trophyLottieJson from './assets/CoursesPageImages/745fc364-117b-11ee-b7ec-9f18a8a356e0.json?url';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,6 +14,7 @@ function Header() {
   const location = useLocation();
   const headerRef = useRef(null);
   const topBarRef = useRef(null);
+  const trophyRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
   const closeMenu = () => {
@@ -75,6 +78,29 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Load Lottie trophy animation
+  useEffect(() => {
+    let anim = null;
+    if (trophyRef.current) {
+      try {
+        anim = lottie.loadAnimation({
+          container: trophyRef.current,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: trophyLottieJson,
+        });
+      } catch (err) {
+        console.error("Error loading Lottie trophy animation:", err);
+      }
+    }
+    return () => {
+      if (anim) {
+        anim.destroy();
+      }
+    };
+  }, []);
+
   const handleLogoClick = (e) => {
     if (e) e.preventDefault();
     closeMenu();
@@ -125,7 +151,10 @@ function Header() {
       <div className="top-bar" id="home" ref={topBarRef}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
           <div className="top-bar-left" style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '1.0rem' }}>
-            <span className="robothrone-text">🏆 ROBOTHRONE 2026 <span className="hide-mobile">Competition </span></span>
+            <span className="robothrone-text" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <span ref={trophyRef} style={{ width: '40px', height: '40px', display: 'inline-block' }}></span>
+              ROBOTHRONE 2026 <span className="hide-mobile">Competition </span>
+            </span>
             <Link to="/robothrone/winners" style={{ background: '#f09a2d', color: '#fff', padding: '2px 8px', borderRadius: '10px', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 'bold', whiteSpace: 'nowrap' }}>Winners</Link>
           </div>
           <div className="top-bar-right" style={{ display: 'flex', gap: '15px' }}>

@@ -2,7 +2,7 @@
 .top-bar {
     background-color: #008273;
     color: var(--white);
-    padding: 8px 0;
+    padding: 2px 0;
     font-size: 0.9rem;
     position: fixed;
     top: 0;
