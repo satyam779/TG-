@@ -708,7 +708,7 @@ function ShopPage() {
                                 <p className="promo-desc">From <strong>AI-powered robots</strong> to <strong>live mentor-led courses</strong> — everything your child needs to build, code, and lead the future of technology.</p>
                                 <div className="promo-stats-row">
                                     <div className="promo-stat">
-                                        <span className="promo-stat-num">500+</span>
+                                        <span className="promo-stat-num">5000+</span>
                                         <span className="promo-stat-label">Students</span>
                                     </div>
                                     <div className="promo-stat-divider"/>

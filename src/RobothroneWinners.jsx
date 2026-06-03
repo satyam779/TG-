@@ -22,27 +22,27 @@ const DATA = {
     label: 'Junior',
     age: '8–10',
     winners: [
-      { id: 'j1', place: 1, trophy: '🏆', team: 'Pixel Pioneers', project: 'Smart Flora — IoT Plant Hydration Monitor', school: 'Delhi Public School, Bangalore East', members: ['Aarav Sharma', 'Ananya Goel'], score: 98.5, img: AboutRobothrone1, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
-      { id: 'j2', place: 2, trophy: '🥈', team: 'Eco Bots', project: 'Trash-to-Treasure Sorting Assister', school: 'The Heritage School, Kolkata', members: ['Rahul Sen', 'Diya Mukherjee'], score: 95.2, img: junior, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
-      { id: 'j3', place: 3, trophy: '🥉', team: 'Scratch Masters', project: 'Ocean Clean-up Retro Arcade Game', school: 'Podar International School, Mumbai', members: ['Vihaan Patel', 'Kiara Shah'], score: 91.8, img: CompetitionSnapshots1, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_3' }
+      { id: 'j1', place: 1, trophy: '🏆', team: 'Electra', project: 'Rescue Game', school: 'EPIC DIGITAL LAB', members: ['Alankar', 'Kiyara'], score: 79, img: AboutRobothrone1, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
+      { id: 'j2', place: 2, trophy: '🥈', team: 'Robonex', project: 'Autometic Hand Wash Dispenser', school: 'EPIC DIGITAL LAB', members: ['Aadipt', 'Riyana'], score: 80, img: junior, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
+      { id: 'j3', place: 3, trophy: '🥉', team: 'Jagrit-Jasmit', project: 'Autometic Street Light', school: 'ST. Andrews School', members: ['Jagrit', 'Jasmeet'], score: 79, img: CompetitionSnapshots1, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_3' }
     ]
   },
   intermediate: {
     label: 'Intermediate',
     age: '11–13',
     winners: [
-      { id: 'i1', place: 1, trophy: '🏆', team: 'Neural Knights', project: 'AI-Powered Smart Home Energy Saver', school: 'DAV Public School, Dwarka, New Delhi', members: ['Kabir Malhotra', 'Riya Kapoor'], score: 99.0, img: AboutRobothrone2, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_4' },
-      { id: 'i2', place: 2, trophy: '🥈', team: 'Aqua Tech', project: 'River Garbage Skimmer Prototype', school: 'National Public School, Indiranagar, Bangalore', members: ['Aditya Hegde', 'Shreya Prasad'], score: 96.4, img: intermediate, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_5' },
-      { id: 'i3', place: 3, trophy: '🥉', team: 'Circuit Breakers', project: 'Elderly Care Alert & Automated Pill Dispenser', school: "St. Xavier's High School, Fort, Mumbai", members: ["Ethan D'Souza", 'Zoya Khan'], score: 93.5, img: CompetitionSnapshots2, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_6' }
+      { id: 'i1', place: 1, trophy: '🏆', team: 'FireFalcon', project: 'AGNI Auto Fire Fighting Robot', school: 'Public English Medium School, Phulbani', members: ['Ansuman', 'Kiran'], score: 94, img: AboutRobothrone2, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_4' },
+      { id: 'i2', place: 2, trophy: '🥈', team: 'VisionX', project: 'NAMRATA AI Face Attendance System', school: 'Public English Medium School, Phulbani', members: ['Namrata Mishara'], score: 93, img: intermediate, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_5' },
+      { id: 'i3', place: 3, trophy: '🥉', team: 'Vector', project: 'Visionsort', school: "EPIC DIGITAL LABS", members: ["Ved Gala", 'Samantha'], score: 92, img: CompetitionSnapshots2, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_6' }
     ]
   },
   senior: {
     label: 'Senior',
     age: '14–16',
     winners: [
-      { id: 's1', place: 1, trophy: '🏆', team: 'Aero Gladiators', project: 'Autonomous Drone for Forest Fire Detection', school: 'Amity International School, Sector 44, Noida', members: ['Arjun Verma', 'Meera Nair'], score: 99.5, img: AboutRobothrone3, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
-      { id: 's2', place: 2, trophy: '🥈', team: 'Visionaries', project: 'Real-Time Sign Language Interpreter Glove', school: 'Don Bosco Senior Secondary School, Chennai', members: ['Siddharth Raj', 'Tarun Kumar'], score: 97.8, img: senior, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_8' },
-      { id: 's3', place: 3, trophy: '🥉', team: 'Bionic Bros', project: 'Low-Cost Smart Prosthetic Arm Hand Control', school: 'Birla High School, Kolkata', members: ['Rohan Das', 'Aryan Bose'], score: 94.2, img: CompetitionSnapshots3, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_9' }
+      { id: 's1', place: 1, trophy: '🏆', team: 'VIKAS_TNEPUC-CHARAN_TNEPUC', project: 'Carbo Toxified', school: 'TNEPUC', members: ['Vikas', 'Charan'], score: 87, img: AboutRobothrone3, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
+      { id: 's2', place: 2, trophy: '🥈', team: 'KEERTHANA_TNEPUC-KAVANA_TNEPUC', project: 'Healthhawk', school: 'TNEPUC', members: ['Keerthana', 'Kavana'], score: 82, img: senior, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_8' },
+      { id: 's3', place: 3, trophy: '🥉', team: 'Volt', project: 'Robotic Hand', school: 'EPIC DIGITAL LABS', members: ['Aditya', 'Advarya'], score: 94.2, img: CompetitionSnapshots3, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_9' }
     ]
   }
 };
