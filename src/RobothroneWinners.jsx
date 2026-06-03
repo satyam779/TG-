@@ -22,8 +22,8 @@ const DATA = {
     label: 'Junior',
     age: '8–10',
     winners: [
-      { id: 'j1', place: 1, trophy: '🏆', team: 'Electra', project: 'Rescue Game', school: 'EPIC DIGITAL LAB', members: ['Alankar', 'Kiyara'], score: 79, img: AboutRobothrone1, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
-      { id: 'j2', place: 2, trophy: '🥈', team: 'Robonex', project: 'Autometic Hand Wash Dispenser', school: 'EPIC DIGITAL LAB', members: ['Aadipt', 'Riyana'], score: 80, img: junior, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
+      { id: 'j1', place: 1, trophy: '🏆', team: 'Electra', project: 'Rescue Game', school: 'EPIC DIGITAL LAB', members: ['Alankar', 'Riyana'], score: 79, img: AboutRobothrone1, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
+      { id: 'j2', place: 2, trophy: '🥈', team: 'Robonex', project: 'Autometic Hand Wash Dispenser', school: 'EPIC DIGITAL LAB', members: ['Aadipt', 'Kiyara'], score: 80, img: junior, video: 'https://techyguide-my.sharepoint.com/personal/robothrone_techyguide_in/_layouts/15/embed.aspx?UniqueId=9675219b-371f-4d0e-9ccc-a9ad07af0379&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create' },
       { id: 'j3', place: 3, trophy: '🥉', team: 'Jagrit-Jasmit', project: 'Autometic Street Light', school: 'ST. Andrews School', members: ['Jagrit', 'Jasmeet'], score: 79, img: CompetitionSnapshots1, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_3' }
     ]
   },
@@ -45,6 +45,25 @@ const DATA = {
       { id: 's3', place: 3, trophy: '🥉', team: 'Volt', project: 'Robotic Hand', school: 'EPIC DIGITAL LABS', members: ['Aditya', 'Advarya'], score: 94.2, img: CompetitionSnapshots3, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_9' }
     ]
   }
+};
+
+const APPRECIATION_DATA = {
+  junior: [
+    { prize: '1st', group: 'Electra', innovation: 23, tech: 27, functionality: 17, presentation: 12, impact: 6, total: 85 },
+    { prize: '2nd', group: 'Robonex', innovation: 21, tech: 22, functionality: 18, presentation: 11, impact: 8, total: 80 },
+    { prize: '3rd', group: 'Jagrit-Jasmit', innovation: 21, tech: 24, functionality: 16, presentation: 9, impact: 9, total: 79 },
+  ],
+  intermediate: [
+    { prize: '1st', group: 'FireFalcon', innovation: 24, tech: 29, functionality: 18, presentation: 14, impact: 9, total: 94 },
+    { prize: '2nd', group: 'VisionX', innovation: 23, tech: 28, functionality: 19, presentation: 14, impact: 9, total: 93 },
+    { prize: '3rd', group: 'Vector', innovation: 24, tech: 27, functionality: 18, presentation: 14, impact: 9, total: 92 },
+    { prize: '4th', group: 'Rishi Segregator (Appreciation for Best functionality and real world Impact)', innovation: 23, tech: 27, functionality: 19, presentation: 13, impact: 9, total: 91 },
+  ],
+  senior: [
+    { prize: '1st', group: 'VIKAS_TNEPUC-CHARAN_TNEPUC', innovation: 23, tech: 26, functionality: 17, presentation: 12, impact: 9, total: 87 },
+    { prize: '2nd', group: 'KEERTHANA_TNEPUC-KAVANA_TNEPUC', innovation: 22, tech: 25, functionality: 14, presentation: 12, impact: 9, total: 82 },
+    { prize: '3rd', group: 'Volt', innovation: 21, tech: 25, functionality: 16, presentation: 11, impact: 8, total: 81 },
+  ]
 };
 
 const PLACE_MAP = { 1: { label: '1st Place', cls: 'gold' }, 2: { label: '2nd Place', cls: 'silver' }, 3: { label: '3rd Place', cls: 'bronze' } };
@@ -211,6 +230,93 @@ export default function RobothroneWinners() {
               </article>
             );
           })}
+        </section>
+
+        {/* Appreciation Section */}
+        <section className="rw-appreciation-section">
+          <div className="rw-appreciation-title-area">
+            <div className="rw-appreciation-badge">💯Evaluation Scorecards</div>
+            <h2 className="rw-appreciation-title">Appreciation for Best Functionality and Real-world Impact</h2>
+            <p className="rw-appreciation-subtitle">
+              Detailed scorecards representing the jury's evaluation of teams across key performance criteria.
+            </p>
+          </div>
+
+          <div className="rw-scorecards-stack">
+            {Object.entries(APPRECIATION_DATA).map(([catKey, list]) => {
+              const label = catKey === 'junior' ? 'Junior Category (Ages 8-10)' :
+                            catKey === 'intermediate' ? 'Intermediate Category (Ages 11-13)' :
+                            'Senior Category (Ages 14-16)';
+              return (
+                <div key={catKey} className="rw-scorecard-card">
+                  <h3>{label}</h3>
+                  <div className="rw-table-wrapper">
+                    <table className="rw-score-table">
+                      <thead>
+                        <tr>
+                          <th>Prize</th>
+                          <th>Group</th>
+                          <th>Innovation &amp; Creativity (25)</th>
+                          <th>Technical Implementation (30)</th>
+                          <th>Functionality (20)</th>
+                          <th>Presentation &amp; Doc. (15)</th>
+                          <th>Real-World Impact (10)</th>
+                          <th>Total Score (100)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {list.map((row, index) => {
+                          const medalClass = row.prize === '1st' ? 'gold' : 
+                                             row.prize === '2nd' ? 'silver' : 
+                                             row.prize === '3rd' ? 'bronze' : 'other';
+                          return (
+                            <tr key={index}>
+                              <td>
+                                <span className={`rw-table-medal ${medalClass}`}>
+                                  {row.prize}
+                                </span>
+                              </td>
+                              <td style={{ fontWeight: 600 }}>{row.group}</td>
+                              <td>
+                                <span className="rw-score-cell">{row.innovation}</span>
+                                <span className="rw-score-max-cell">/25</span>
+                              </td>
+                              <td>
+                                <span className="rw-score-cell">{row.tech}</span>
+                                <span className="rw-score-max-cell">/30</span>
+                              </td>
+                              <td>
+                                <span className="rw-score-cell">{row.functionality}</span>
+                                <span className="rw-score-max-cell">/20</span>
+                              </td>
+                              <td>
+                                <span className="rw-score-cell">{row.presentation}</span>
+                                <span className="rw-score-max-cell">/15</span>
+                              </td>
+                              <td>
+                                <span className="rw-score-cell">{row.impact}</span>
+                                <span className="rw-score-max-cell">/10</span>
+                              </td>
+                              <td>
+                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                                  <span className={`rw-total-score-badge ${medalClass}-bg`}>
+                                    {row.total} <span style={{ fontSize: '0.65rem', marginLeft: '2px', opacity: 0.7 }}>/100</span>
+                                  </span>
+                                  <div className="rw-bar-mini">
+                                    <div className={`rw-bar-mini-fill ${medalClass}`} style={{ width: `${row.total}%` }}></div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </section>
       </div>
 
