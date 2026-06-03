@@ -3,15 +3,15 @@ import SEO from './components/SEO';
 import './RobothroneWinners.css';
 
 // Winner images
-import AboutRobothrone1 from './assets/RobothronePageImages/About Robothrone - 1.webp';
-import junior from './assets/RobothronePageImages/Junior 8-10.webp';
-import CompetitionSnapshots1 from './assets/RobothronePageImages/Competition Snapshots - 1.webp';
-import AboutRobothrone2 from './assets/RobothronePageImages/About Robothrone - 2.webp';
-import intermediate from './assets/RobothronePageImages/Intermediate 11-13.webp';
-import CompetitionSnapshots2 from './assets/RobothronePageImages/Competition Snapshots - 2.webp';
-import AboutRobothrone3 from './assets/RobothronePageImages/About Robothrone - 3.webp';
-import senior from './assets/RobothronePageImages/Senior 14-16.webp';
-import CompetitionSnapshots3 from './assets/RobothronePageImages/Competition Snapshots - 3.webp';
+import i1 from './assets/RobothronePageImages/i1.png';
+import i2 from './assets/RobothronePageImages/i2.png';
+import i3 from './assets/RobothronePageImages/i3.png';
+import j1 from './assets/RobothronePageImages/j1.png';
+import j2 from './assets/RobothronePageImages/j2.png';
+import j3 from './assets/RobothronePageImages/j3.png';
+import s1 from './assets/RobothronePageImages/s1.png';
+import s2 from './assets/RobothronePageImages/s2.png';
+import s3 from './assets/RobothronePageImages/s3.png';
 import laurelGold from './assets/RobothronePageImages/laurel-gold.png';
 import laurelSilver from './assets/RobothronePageImages/laurel-silver.png';
 import laurelBronze from './assets/RobothronePageImages/laurel-bronze.png';
@@ -22,27 +22,27 @@ const DATA = {
     label: 'Junior',
     age: '8–10',
     winners: [
-      { id: 'j1', place: 1, trophy: '🏆', team: 'Electra', project: 'Rescue Game', school: 'EPIC DIGITAL LAB', members: ['Alankar', 'Riyana'], score: 79, img: AboutRobothrone1, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
-      { id: 'j2', place: 2, trophy: '🥈', team: 'Robonex', project: 'Autometic Hand Wash Dispenser', school: 'EPIC DIGITAL LAB', members: ['Aadipt', 'Kiyara'], score: 80, img: junior, video: 'https://techyguide-my.sharepoint.com/personal/robothrone_techyguide_in/_layouts/15/embed.aspx?UniqueId=9675219b-371f-4d0e-9ccc-a9ad07af0379&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create' },
-      { id: 'j3', place: 3, trophy: '🥉', team: 'Jagrit-Jasmit', project: 'Autometic Street Light', school: 'ST. Andrews School', members: ['Jagrit', 'Jasmeet'], score: 79, img: CompetitionSnapshots1, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_3' }
+      { id: 'j1', place: 1, trophy: '🏆', team: 'Electra', project: 'Rescue Game', school: 'EPIC DIGITAL LAB', members: ['Alankar', 'Riyana'], score: 79, img: j1, video: 'https://www.youtube.com/embed/XrRFg0DZ_AY' },
+      { id: 'j2', place: 2, trophy: '🥈', team: 'Robonex', project: 'Autometic Hand Wash Dispenser', school: 'EPIC DIGITAL LAB', members: ['Aadipt', 'Kiyara'], score: 80, img: j2, video: 'https://www.youtube.com/embed/KCQ5qDKcp54' },
+      { id: 'j3', place: 3, trophy: '🥉', team: 'Jagrit-Jasmeet', project: 'Autometic Street Light', school: 'ST. Andrews School', members: ['Jagrit', 'Jasmeet'], score: 79, img: j3, video: 'https://www.youtube.com/embed/ut0T2ekKc2g' }
     ]
   },
   intermediate: {
     label: 'Intermediate',
     age: '11–13',
     winners: [
-      { id: 'i1', place: 1, trophy: '🏆', team: 'FireFalcon', project: 'AGNI Auto Fire Fighting Robot', school: 'Public English Medium School, Phulbani', members: ['Ansuman', 'Kiran'], score: 94, img: AboutRobothrone2, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_4' },
-      { id: 'i2', place: 2, trophy: '🥈', team: 'VisionX', project: 'NAMRATA AI Face Attendance System', school: 'Public English Medium School, Phulbani', members: ['Namrata Mishara'], score: 93, img: intermediate, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_5' },
-      { id: 'i3', place: 3, trophy: '🥉', team: 'Vector', project: 'Visionsort', school: "EPIC DIGITAL LABS", members: ["Ved Gala", 'Samantha'], score: 92, img: CompetitionSnapshots2, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_6' }
+      { id: 'i1', place: 1, trophy: '🏆', team: 'FireFalcon', project: 'AGNI Auto Fire Fighting Robot', school: 'Public English Medium School, Phulbani', members: ['Ansuman', 'Kiran'], score: 94, img: i1, video: 'https://www.youtube.com/embed/cXpdSEk4H9Y' },
+      { id: 'i2', place: 2, trophy: '🥈', team: 'VisionX', project: 'NAMRATA AI Face Attendance System', school: 'Public English Medium School, Phulbani', members: ['Namrata Mishara'], score: 93, img: i2, video: 'https://www.youtube.com/embed/OAmW9IC6W-U' },
+      { id: 'i3', place: 3, trophy: '🥉', team: 'Vector', project: 'Visionsort', school: "EPIC DIGITAL LABS", members: ["Ved Gala", 'Samantha'], score: 92, img: i3, video: 'https://www.youtube.com/embed/9AVuLfXwj2Q' }
     ]
   },
   senior: {
     label: 'Senior',
     age: '14–16',
     winners: [
-      { id: 's1', place: 1, trophy: '🏆', team: 'VIKAS_TNEPUC-CHARAN_TNEPUC', project: 'Carbo Toxified', school: 'TNEPUC', members: ['Vikas', 'Charan'], score: 87, img: AboutRobothrone3, video: 'https://www.youtube.com/embed/xmnoCihbOQw' },
-      { id: 's2', place: 2, trophy: '🥈', team: 'KEERTHANA_TNEPUC-KAVANA_TNEPUC', project: 'Healthhawk', school: 'TNEPUC', members: ['Keerthana', 'Kavana'], score: 82, img: senior, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_8' },
-      { id: 's3', place: 3, trophy: '🥉', team: 'Volt', project: 'Robotic Hand', school: 'EPIC DIGITAL LABS', members: ['Aditya', 'Advarya'], score: 94.2, img: CompetitionSnapshots3, video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE_9' }
+      { id: 's1', place: 1, trophy: '🏆', team: 'VIKAS_TNEPUC-CHARAN_TNEPUC', project: 'Carbo Toxified', school: 'TNEPUC', members: ['Vikas', 'Charan'], score: 87, img: s1, video: 'https://www.youtube.com/embed/bzEJOcte2sU' },
+      { id: 's2', place: 2, trophy: '🥈', team: 'KEERTHANA_TNEPUC-KAVANA_TNEPUC', project: 'Healthhawk', school: 'TNEPUC', members: ['Keerthana', 'Kavana'], score: 82, img: s2, video: 'https://www.youtube.com/embed/aF_VbHzDS88' },
+      { id: 's3', place: 3, trophy: '🥉', team: 'Volt', project: 'Robotic Hand', school: 'EPIC DIGITAL LABS', members: ['Aditya', 'Advarya'], score: 94.2, img: s3, video: 'https://www.youtube.com/embed/rKFw2GbRkdQ' }
     ]
   }
 };
