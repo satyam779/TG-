@@ -23,7 +23,7 @@ const DATA = {
     label: 'Junior',
     age: '8–10',
     winners: [
-      { id: 'j1', place: 1, trophy: '🏆', team: 'Electra', project: 'Rescue Game', school: 'EPIC DIGITAL LAB', members: ['Alankar', 'Riyana'], score: 79, img: j1, video: 'https://www.youtube.com/embed/XrRFg0DZ_AY' },
+      { id: 'j1', place: 1, trophy: '🏆', team: 'Electra', project: 'Rescue Game', school: 'EPIC DIGITAL LAB', members: ['Alankar', 'Riyana'], score: 85, img: j1, video: 'https://www.youtube.com/embed/XrRFg0DZ_AY' },
       { id: 'j2', place: 2, trophy: '🥈', team: 'Robonex', project: 'Autometic Hand Wash Dispenser', school: 'EPIC DIGITAL LAB', members: ['Aadipt', 'Kiyara'], score: 80, img: j2, video: 'https://www.youtube.com/embed/KCQ5qDKcp54' },
       { id: 'j3', place: 3, trophy: '🥉', team: 'Jagrit-Jasmeet', project: 'Autometic Street Light', school: 'ST. Andrews School', members: ['Jagrit', 'Jasmeet'], score: 79, img: j3, video: 'https://www.youtube.com/embed/ut0T2ekKc2g' }
     ]
@@ -43,7 +43,7 @@ const DATA = {
     winners: [
       { id: 's1', place: 1, trophy: '🏆', team: 'VIKAS_TNEPUC-CHARAN_TNEPUC', project: 'Carbo Toxified', school: 'TNEPUC', members: ['Vikas', 'Charan'], score: 87, img: s1, video: 'https://www.youtube.com/embed/bzEJOcte2sU' },
       { id: 's2', place: 2, trophy: '🥈', team: 'KEERTHANA_TNEPUC-KAVANA_TNEPUC', project: 'Healthhawk', school: 'TNEPUC', members: ['Keerthana', 'Kavana'], score: 82, img: s2, video: 'https://www.youtube.com/embed/aF_VbHzDS88' },
-      { id: 's3', place: 3, trophy: '🥉', team: 'Volt', project: 'Robotic Hand', school: 'EPIC DIGITAL LABS', members: ['Aditya', 'Advarya'], score: 94.2, img: s3, video: 'https://www.youtube.com/embed/rKFw2GbRkdQ' }
+      { id: 's3', place: 3, trophy: '🥉', team: 'Volt', project: 'Robotic Hand', school: 'EPIC DIGITAL LABS', members: ['Aditya', 'Advarya'], score: 81, img: s3, video: 'https://www.youtube.com/embed/rKFw2GbRkdQ' }
     ]
   }
 };
@@ -325,10 +325,7 @@ export default function RobothroneWinners() {
         <section className="rw-appreciation-section">
           <div className="rw-appreciation-title-area">
             <div className="rw-appreciation-badge">💯Evaluation Scorecards</div>
-            <h2 className="rw-appreciation-title">Appreciation for Best Functionality and Real-world Impact</h2>
-            <p className="rw-appreciation-subtitle">
-              Detailed scorecards representing the jury's evaluation of teams across key performance criteria.
-            </p>
+  
           </div>
 
           <div className="rw-scorecards-stack">
