@@ -586,35 +586,35 @@ export default function RobothronePage() {
             <div className="robothrone-criteria">
               <span>Innovation & Creativity</span>
               <div className="robothrone-bar">
-                <div className="robothrone-fill robothrone-pink" style={{ width: '25%' }}>25%</div>
+                <div className="robothrone-fill robothrone-pink" style={{ width: '80%' }}>80%</div>
               </div>
             </div>
 
             <div className="robothrone-criteria">
               <span>Technical Implementation</span>
               <div className="robothrone-bar">
-                <div className="robothrone-fill robothrone-blue" style={{ width: '30%' }}>30%</div>
+                <div className="robothrone-fill robothrone-blue" style={{ width: '90%' }}>90%</div>
               </div>
             </div>
 
             <div className="robothrone-criteria">
               <span>Functionality</span>
               <div className="robothrone-bar">
-                <div className="robothrone-fill robothrone-green" style={{ width: '20%' }}>20%</div>
+                <div className="robothrone-fill robothrone-green" style={{ width: '80%' }}>80%</div>
               </div>
             </div>
 
             <div className="robothrone-criteria">
               <span>Presentation & Documentation</span>
               <div className="robothrone-bar">
-                <div className="robothrone-fill robothrone-orange" style={{ width: '15%' }}>15%</div>
+                <div className="robothrone-fill robothrone-orange" style={{ width: '75%' }}>75%</div>
               </div>
             </div>
 
             <div className="robothrone-criteria">
               <span>Real-World Impact</span>
               <div className="robothrone-bar">
-                <div className="robothrone-fill robothrone-cyan" style={{ width: '10%' }}>10%</div>
+                <div className="robothrone-fill robothrone-cyan" style={{ width: '60%' }}>60%</div>
               </div>
             </div>
           </div>
