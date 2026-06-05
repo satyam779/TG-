@@ -17,6 +17,12 @@ import laurelGold from './assets/RobothronePageImages/laurel-gold.png';
 import laurelSilver from './assets/RobothronePageImages/laurel-silver.png';
 import laurelBronze from './assets/RobothronePageImages/laurel-bronze.png';
 
+// Special Recognition Award Graphic Images
+import schoolSpiritAward from './assets/RobothronePageImages/School spirit award.png';
+import schoolOfTheYear from './assets/RobothronePageImages/Schhol of the year.png';
+import roboticsExcellenceAward from './assets/RobothronePageImages/Robotics Excellence award.png';
+import mentorOfTheYearAward from './assets/RobothronePageImages/Mentor of the year award.png';
+
 // ── Data  ──
 const DATA = {
   junior: {
@@ -71,34 +77,22 @@ const SPECIAL_AWARDS = [
   {
     id: 'sa1',
     title: 'School Spirit Award',
-    subtitle: 'Robothrone 2.0',
-    recipient: 'Gyan Vikash',
-    location: 'Govindpur, Berhampur',
-    iconType: 'spirit'
+    img: schoolSpiritAward
   },
   {
     id: 'sa2',
     title: 'School of the Year',
-    subtitle: 'Robothrone 2.0',
-    recipient: 'Shree Guru Vidyadhiraj New English Pre-University College',
-    location: '',
-    iconType: 'school'
+    img: schoolOfTheYear
   },
   {
     id: 'sa3',
     title: 'Robotics Excellence Award',
-    subtitle: 'Robothrone 2.0',
-    recipient: 'Abhyash Techno School',
-    location: '',
-    iconType: 'excellence'
+    img: roboticsExcellenceAward
   },
   {
     id: 'sa4',
     title: 'Mentor of the Year Award',
-    subtitle: 'Robothrone 2.0',
-    recipient: 'Prachi Kumatekar',
-    location: 'EPIC DIGITAL LAB',
-    iconType: 'mentor'
+    img: mentorOfTheYearAward
   }
 ];
 
@@ -135,40 +129,6 @@ function LaurelBadge({ rank }) {
   );
 }
 
-function AwardIcon({ type }) {
-  switch (type) {
-    case 'spirit':
-      return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-        </svg>
-      );
-    case 'school':
-      return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-          <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-        </svg>
-      );
-    case 'excellence':
-      return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="8" r="7" />
-          <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-        </svg>
-      );
-    case 'mentor':
-      return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.5 1 3.5.7.8 1.3 1.5 1.5 2.5" />
-          <line x1="9" y1="18" x2="15" y2="18" />
-          <line x1="10" y1="22" x2="14" y2="22" />
-        </svg>
-      );
-    default:
-      return null;
-  }
-}
 
 // Static confetti (no Math.random during render)
 const CONFETTI = Array.from({ length: 30 }, (_, i) => ({
@@ -417,26 +377,8 @@ export default function RobothroneWinners() {
 
           <div className="rw-special-awards-grid">
             {SPECIAL_AWARDS.map((award) => (
-              <div key={award.id} className={`rw-special-award-card rw-card-${award.iconType}`}>
-                <div className="rw-special-award-icon-container">
-                  <AwardIcon type={award.iconType} />
-                </div>
-                <div className="rw-special-award-tag">{award.subtitle}</div>
-                <h3 className="rw-special-award-title">{award.title}</h3>
-                <div className="rw-special-award-divider" />
-                <div className="rw-special-award-recipient">
-                  <div className="rw-special-award-label">Recipient</div>
-                  <div className="rw-special-award-name">{award.recipient}</div>
-                  {award.location && (
-                    <div className="rw-special-award-location">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px', verticalAlign: 'middle', display: 'inline-block' }}>
-                        <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
-                      {award.location}
-                    </div>
-                  )}
-                </div>
+              <div key={award.id} className="rw-special-award-img-card">
+                <img src={award.img} alt={award.title} loading="lazy" />
               </div>
             ))}
           </div>
