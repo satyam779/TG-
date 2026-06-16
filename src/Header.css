@@ -2,7 +2,7 @@
 .top-bar {
     background-color: #008273;
     color: var(--white);
-    padding: 2px 0;
+    padding: 6px 0;
     font-size: 0.9rem;
     position: fixed;
     top: 0;
@@ -17,10 +17,40 @@
     transform: translateY(-100%);
 }
 
-.top-bar .container {
+.top-bar-container {
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+}
+
+.top-bar-trophy {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+}
+
+.top-bar-winners-btn {
+    background: #f09a2d;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.top-bar-right {
+    display: flex;
+    gap: 15px;
 }
 
 /* Fix for Inverted Phone Icon */
@@ -33,7 +63,8 @@
 
 /* Header Variables */
 :root {
-    --header-top: 36px; /* Offset to align header container directly below the top bar (35px Lottie + padding) */
+    --header-top: 39px;
+    /* Offset to align header container directly below the top bar (35px Lottie + padding) */
 }
 
 /* Header */
@@ -244,9 +275,8 @@ nav ul li a:hover {
         font-size: 0.75rem;
     }
 
-    .top-bar .container {
-        justify-content: center;
-        gap: 12px;
+    .top-bar-container {
+        justify-content: space-between;
     }
 
     .nav-container {
@@ -355,6 +385,29 @@ nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
+    :root {
+        --header-top: 29px;
+    }
+
+    .top-bar-trophy {
+        width: 25px;
+        height: 25px;
+    }
+
+    .top-bar-left {
+        font-size: 0.72rem;
+    }
+
+    .top-bar-winners-btn {
+        font-size: 0.72rem;
+        padding: 2px 6px;
+        border-radius: 8px;
+    }
+
+    .top-bar-right {
+        gap: 8px;
+    }
+
     .top-bar {
         display: block;
         /* ensure top-bar is visible on small screens */
